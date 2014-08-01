@@ -1,0 +1,61 @@
+body{
+	background-color: #000000;
+	
+	/*background: url(../img/placeholder.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+}
+.data {
+	visibility:hidden;
+	display: none;
+	padding-left:61.4%;
+	padding-top:10%;
+	padding-bottom:6%;
+	margin-left:-200px;
+	width:400px;
+
+	/*visibility: hidden;*/
+}
+.placeholder-card {
+	position:relative;
+	width:400px;
+	height:246px;
+	background:#FFFFFF;
+	margin-top:30px;
+	overflow: scroll;
+	font-size:16px;
+}
+.placeholder-card #data-main {
+	padding-top: 30px;
+	font-size:24px;
+	line-height:26px;
+}
+.placeholder-card>div{
+	
+	overflow: scroll;
+	padding:35px;
+	padding-top:15px;
+}
+.placeholder-card .logo {
+	padding:0;
+	padding-top:18px;
+}
+.placeholder-card .bottom-line {
+	padding:0;
+	margin:0;
+	position:absolute;
+	bottom:0;
+	right:0;
+	font-size: 8px;
+	width:400px;
+	height: 14px;
+	line-height: 14px;
+	background: #FF0000;
+	text-align: center;
+	color:#FFFFFF;
+}
+.placeholder-card #main-text span {
+	font-weight: normal;
+}
