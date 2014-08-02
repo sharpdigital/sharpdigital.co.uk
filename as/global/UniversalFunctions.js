@@ -83,7 +83,7 @@ function UniversalFunctions(){
 				this._children[childIndexes[1].index] = childIndexes[0].child;
 			}else{
 				console.log("Error - Cannot find children");
-				console.log(this._children);
+				//console.log(this._children);
 			}
 			if(this.root){
 				this.root.sortDepths();
@@ -228,7 +228,7 @@ function UniversalFunctions(){
 			for(var ex = 0; ex < obj._listeners[e.type].length; ex++){
 				if(e.fn === obj._listeners[e.type][ex].fn){
 					exists = true;
-					console.log("FUNCTION EXISTS");
+					//console.log("FUNCTION EXISTS");
 				}
 			}
 			if(!exists){
@@ -408,17 +408,17 @@ function UniversalFunctions(){
 			this.__addHoverListeners();
 
 			this.sync.on("start", function(event) {
-				console.log("SyncStart");
+				//console.log("SyncStart");
 		    });
 			
 		    this.sync.on("update", function(event) {
-		    	console.log("update "+this.name);
+		    	//console.log("update "+this.name);
 		       	this._parent.scroller(event);
 		    });
 
 		    /*this.sync.on("end", function(event) {
 		    });*/	
-			console.log("activateSync");
+			//console.log("activateSync");
 		}
 	};
 	this.removeSync = function(type){
@@ -535,7 +535,7 @@ function UniversalFunctions(){
 			var font_p = this.currentTarget.autoSize === true ? 1 : this.currentTarget.autoSize;
 			this.currentTarget.width = t.offsetWidth;
 			this.currentTarget.height = t.offsetHeight*font_p;
-            console.log(this.currentTarget.name+": "+this.currentTarget.width+" "+this.currentTarget.height);
+            //console.log(this.currentTarget.name+": "+this.currentTarget.width+" "+this.currentTarget.height);
 		}
 		
 	};

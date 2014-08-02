@@ -18,7 +18,6 @@ define(function(require, exports, module) {
 
     var video_size = {width:1920, height:1080};
     var card_size = {width:400, height:246};
-
     var no_video = false;
     var video;
     var placeholder;
@@ -98,25 +97,31 @@ define(function(require, exports, module) {
 
 
         $.sammy(function(){
-              this.get('#:page',function(){
-                if(this.params['page']){
 
-                  console.log(this.params['page']);
-                  switchMenu(this.params['page']);
-                }
-
-              });
+            this.get('/', function(){
+                switchMenu(undefined);
+            });
+            this.get('/#:page',function(){
+             
+                if(data.pages[this.params['page']]){
+                    var new_page = this.params['page'];
+                    switchMenu(this.params['page']);
+                }else{
+                    //this.setLocation('#');
+                    location.hash = '#';
+                }   
+            });
           }).run();
 
-        console.log("hash ready");
+        //console.log("hash ready");
         /**/
         
 
     }
     function bgClick(){
         console.log("bgClick");
-        closeMenu(act);
-        act = null;
+        switchMenu(act);
+        act = undefined;
     }
 
     function createVideo(_parent){
@@ -470,8 +475,11 @@ define(function(require, exports, module) {
             }
             act = _act;
         }else{
-            closeMenu(act);
-            act = null;
+            if(data.pages[act]){
+                closeMenu(act);
+                act = undefined;
+            }
+            
         }
         
         /*var page = data.pages[act][0];
@@ -547,15 +555,15 @@ define(function(require, exports, module) {
 
     function getHeightOfElement(e){
         setTimeout(function(){
-            console.log(e);
-            console.log(e.origin);
-            console.log("getHeightOfElement "+e.currentTarget.name);
-            console.log($("."+e.currentTarget.name));
+            //console.log(e);
+            //console.log(e.origin);
+            //console.log("getHeightOfElement "+e.currentTarget.name);
+            //console.log($("."+e.currentTarget.name));
             //console.log(document.getElementById(e.currentTarget.name).getBoundingClientRect());
             //console.log(window.getComputedStyle(document.getElementById(e.currentTarget.name), ""))
             var newW = document.getElementById(e.currentTarget.name).offsetWidth;//$("."+e.currentTarget.name).height();
             var newH = document.getElementById(e.currentTarget.name).offsetHeight;//$("."+e.currentTarget.name).width();
-            console.log(newW+" "+newH);
+           // console.log(newW+" "+newH);
             //e.currentTarget.height = newH;
         }, 1000);
         
