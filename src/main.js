@@ -183,6 +183,9 @@ define(function(require, exports, module) {
         mainCard.addChild(logo);
         
         logo.addContent("img/sharp_logo.png");
+        logo.addEventListener("click", function(){
+            location.hash = '#';
+        });
         //logo.scaleX = 1.111;
         logo.width = 132;
         logo.height = 40;
