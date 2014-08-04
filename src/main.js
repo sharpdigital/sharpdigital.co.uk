@@ -120,8 +120,8 @@ define(function(require, exports, module) {
     }
     function bgClick(){
         console.log("bgClick");
-        switchMenu(act);
-        act = undefined;
+        //switchMenu(act);
+        //act = undefined;
     }
 
     function createVideo(_parent){
