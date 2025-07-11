@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sharpdigital.co.uk/sitemap.xml
+
+# Block access to private files
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.log$
+
+# Allow access to CSS and JS files
+Allow: /styles.css
+Allow: /scripts.js
+Allow: /img/
+Allow: /font/
+
+# Crawl delay
+Crawl-delay: 1

@@ -1,0 +1,40 @@
+{
+    "name": "#sharp - Digital Transformation Consultancy",
+    "short_name": "#sharp",
+    "description": "Leading digital transformation consultancy specializing in AI-powered solutions for customer experience, operational efficiency, and data analytics.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ED2224",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "img/sharp_logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/sharp_logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "lang": "en-GB",
+    "dir": "ltr",
+    "scope": "/",
+    "categories": ["business", "consulting", "technology"],
+    "screenshots": [
+        {
+            "src": "img/screenshot-wide.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide"
+        },
+        {
+            "src": "img/screenshot-narrow.png",
+            "sizes": "640x1136",
+            "type": "image/png",
+            "form_factor": "narrow"
+        }
+    ]
+}
