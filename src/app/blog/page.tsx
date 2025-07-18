@@ -62,28 +62,28 @@ export default async function BlogPage() {
           {posts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post) => (
-                <Card key={post.sys.id} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                <Card key={post.id} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-sm text-primary font-body">
-                        {formatDate(post.fields.publishDate)}
+                        {formatDate(post.publish_date || '')}
                       </span>
                       <span className="text-sm text-charcoal font-body">
-                        by {post.fields.author}
+                        by {post.author || 'Unknown'}
                       </span>
                     </div>
                     <CardTitle className="text-xl font-heading text-charcoal line-clamp-2">
-                      <Link href={`/blog/${post.fields.slug}`} className="hover:text-primary transition-colors">
-                        {post.fields.title}
+                      <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
+                        {post.title}
                       </Link>
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">
                     <p className="text-base text-charcoal font-body leading-relaxed mb-4 line-clamp-3">
-                      {post.fields.excerpt}
+                      {post.excerpt}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {post.fields.tags.map((tag) => (
+                      {post.tags.map((tag) => (
                         <Link key={tag} href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}>
                           <Badge variant="secondary" className="text-xs hover:bg-primary hover:text-white transition-colors">
                             {tag}
@@ -92,7 +92,7 @@ export default async function BlogPage() {
                       ))}
                     </div>
                     <Link 
-                      href={`/blog/${post.fields.slug}`}
+                      href={`/blog/${post.slug}`}
                       className="inline-flex items-center text-primary font-body text-sm hover:text-primary-hover transition-colors"
                     >
                       Read More

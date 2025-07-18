@@ -84,7 +84,7 @@ export default async function ServicesPage() {
                 'data-and-analytics': { from: 'from-purple-sharp', to: 'to-magenta-sharp' },
               };
 
-              const colors = colorMapping[service.fields.slug] || { from: 'from-gray-400', to: 'to-gray-600' };
+              const colors = colorMapping[service.slug] || { from: 'from-gray-400', to: 'to-gray-600' };
 
               const iconMapping: { [key: string]: React.ReactNode } = {
                 'customer-experience': (
@@ -107,14 +107,14 @@ export default async function ServicesPage() {
 
               return (
                 <ServiceCard
-                  key={service.sys.id}
-                  title={service.fields.title}
-                  description={service.fields.description}
-                  features={service.fields.features}
+                  key={service.id}
+                  title={service.title}
+                  description={service.description || ''}
+                  features={service.features}
                   gradientFrom={colors.from}
                   gradientTo={colors.to}
-                  href={`/services/${service.fields.slug}`}
-                  icon={iconMapping[service.fields.slug] || (
+                  href={`/services/${service.slug}`}
+                  icon={iconMapping[service.slug] || (
                     <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     </svg>

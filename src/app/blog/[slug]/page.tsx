@@ -20,7 +20,7 @@ export async function generateStaticParams() {
   const posts = await getBlogPosts();
   
   return posts.map((post) => ({
-    slug: post.fields.slug,
+    slug: post.slug,
   }));
 }
 
@@ -36,16 +36,16 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   return {
-    title: `${post.fields.title} | #sharp Blog`,
-    description: post.fields.excerpt,
-    keywords: post.fields.tags.join(', '),
+    title: `${post.title} | #sharp Blog`,
+    description: post.excerpt || '',
+    keywords: post.tags.join(', '),
     openGraph: {
-      title: post.fields.title,
-      description: post.fields.excerpt,
+      title: post.title,
+      description: post.excerpt || '',
       type: 'article',
-      publishedTime: post.fields.publishDate,
-      authors: [post.fields.author],
-      tags: post.fields.tags,
+      publishedTime: post.publish_date || '',
+      authors: [post.author || ''],
+      tags: post.tags,
     },
   };
 }
@@ -61,7 +61,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   // Get related posts (same tags, excluding current post)
   const allPosts = await getBlogPosts();
   const relatedPosts = allPosts
-    .filter(p => p.sys.id !== post.sys.id && p.fields.tags.some(tag => post.fields.tags.includes(tag)))
+    .filter(p => p.id !== post.id && p.tags.some(tag => post.tags.includes(tag)))
     .slice(0, 3);
 
   return (
@@ -72,20 +72,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="text-center">
             <div className="flex items-center justify-center gap-4 mb-6">
               <span className="text-primary font-body text-lg">
-                {formatDate(post.fields.publishDate)}
+                {formatDate(post.publish_date || '')}
               </span>
               <span className="text-charcoal font-body text-lg">
-                by {post.fields.author}
+                by {post.author || 'Unknown'}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-heading leading-tight text-charcoal mb-6">
-              {post.fields.title}
+              {post.title}
             </h1>
             <p className="text-xl text-charcoal font-body leading-relaxed max-w-3xl mx-auto mb-8">
-              {post.fields.excerpt}
+              {post.excerpt}
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {post.fields.tags.map((tag) => (
+              {post.tags.map((tag) => (
                 <Link key={tag} href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}>
                   <Badge variant="outline" className="text-base px-4 py-2 hover:bg-primary hover:text-white transition-colors">
                     {tag}
@@ -101,7 +101,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="prose prose-lg max-w-none">
-            <RichTextRenderer content={post.fields.content} />
+            <RichTextRenderer content={post.content} />
           </article>
         </div>
       </section>
@@ -121,35 +121,35 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedPosts.map((relatedPost) => (
-                <Card key={relatedPost.sys.id} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                <Card key={relatedPost.id} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-sm text-primary font-body">
-                        {formatDate(relatedPost.fields.publishDate)}
+                        {formatDate(relatedPost.publish_date || '')}
                       </span>
                       <span className="text-sm text-charcoal font-body">
-                        by {relatedPost.fields.author}
+                        by {relatedPost.author || 'Unknown'}
                       </span>
                     </div>
                     <CardTitle className="text-xl font-heading text-charcoal line-clamp-2">
-                      <Link href={`/blog/${relatedPost.fields.slug}`} className="hover:text-primary transition-colors">
-                        {relatedPost.fields.title}
+                      <Link href={`/blog/${relatedPost.slug}`} className="hover:text-primary transition-colors">
+                        {relatedPost.title}
                       </Link>
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">
                     <p className="text-base text-charcoal font-body leading-relaxed mb-4 line-clamp-3">
-                      {relatedPost.fields.excerpt}
+                      {relatedPost.excerpt}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {relatedPost.fields.tags.map((tag) => (
+                      {relatedPost.tags.map((tag) => (
                         <Badge key={tag} variant="secondary" className="text-xs">
                           {tag}
                         </Badge>
                       ))}
                     </div>
                     <Link 
-                      href={`/blog/${relatedPost.fields.slug}`}
+                      href={`/blog/${relatedPost.slug}`}
                       className="inline-flex items-center text-primary font-body text-sm hover:text-primary-hover transition-colors"
                     >
                       Read More

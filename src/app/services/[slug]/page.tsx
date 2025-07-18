@@ -18,7 +18,7 @@ export async function generateStaticParams() {
   const services = await getServices();
   
   return services.map((service) => ({
-    slug: service.fields.slug,
+    slug: service.slug,
   }));
 }
 
@@ -34,9 +34,9 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   }
 
   return {
-    title: `${service.fields.title} - Digital Transformation Services | #sharp`,
-    description: service.fields.description,
-    keywords: `${service.fields.title.toLowerCase()}, digital transformation, ${service.fields.features.join(', ').toLowerCase()}`,
+    title: `${service.title} - Digital Transformation Services | #sharp`,
+    description: service.description || '',
+    keywords: `${service.title.toLowerCase()}, digital transformation, ${service.features.join(', ').toLowerCase()}`,
   };
 }
 
@@ -66,7 +66,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     },
   };
 
-  const colors = colorMapping[service.fields.slug] || { 
+  const colors = colorMapping[service.slug] || { 
     gradient: 'from-gray-400 to-gray-600',
     text: 'text-gray-600',
     bg: 'bg-gray-600'
@@ -98,17 +98,17 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className={`w-24 h-24 mx-auto mb-8 bg-gradient-to-br ${colors.gradient} rounded-full flex items-center justify-center`}>
-              {iconMapping[service.fields.slug] || (
+              {iconMapping[service.slug] || (
                 <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
               )}
             </div>
             <h1 className="text-4xl md:text-5xl font-heading leading-tight text-charcoal mb-6">
-              {service.fields.title}
+              {service.title}
             </h1>
             <p className="text-xl text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
-              {service.fields.description}
+              {service.description}
             </p>
           </div>
         </div>
@@ -117,7 +117,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       {/* Main Content */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <RichTextRenderer content={service.fields.content} />
+          <RichTextRenderer content={service.content} />
         </div>
       </section>
 
@@ -129,12 +129,12 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               Key Features
             </h2>
             <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
-              Our comprehensive approach to {service.fields.title.toLowerCase()} includes these essential components.
+              Our comprehensive approach to {service.title.toLowerCase()} includes these essential components.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {service.fields.features.map((feature, index) => (
+            {service.features.map((feature, index) => (
               <Card key={index} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
                 <CardHeader className="text-center pb-4">
                   <div className={`w-12 h-12 mx-auto mb-4 ${colors.bg} rounded-full flex items-center justify-center`}>
@@ -165,7 +165,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               Our Process
             </h2>
             <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
-              We follow a proven methodology to ensure successful {service.fields.title.toLowerCase()} implementation.
+              We follow a proven methodology to ensure successful {service.title.toLowerCase()} implementation.
             </p>
           </div>
 
@@ -217,10 +217,10 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
-            Ready to Transform Your {service.fields.title}?
+            Ready to Transform Your {service.title}?
           </h2>
           <p className="text-lg text-charcoal font-body leading-relaxed mb-8">
-            Let&apos;s discuss how we can help you achieve your digital transformation goals with our proven {service.fields.title.toLowerCase()} solutions.
+            Let&apos;s discuss how we can help you achieve your digital transformation goals with our proven {service.title.toLowerCase()} solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

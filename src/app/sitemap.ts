@@ -49,7 +49,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Service pages
   const servicePages = services.map((service) => ({
-    url: `${baseUrl}/services/${service.fields.slug}`,
+    url: `${baseUrl}/services/${service.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
@@ -57,8 +57,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Blog posts
   const blogPages = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.fields.slug}`,
-    lastModified: new Date(post.fields.publishDate),
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.publish_date || ''),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))
