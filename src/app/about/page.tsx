@@ -97,12 +97,12 @@ export default async function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member) => (
-              <Card key={member.id} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+              <Card key={member.$id} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
                 <CardContent className="p-8 text-center">
-                  {member.image_url && (
+                  {member.imageUrl && (
                     <div className="mb-6">
                       <Image
-                        src={member.image_url}
+                        src={member.imageUrl}
                         alt={`${member.name} photo`}
                         width={120}
                         height={120}
@@ -120,13 +120,13 @@ export default async function AboutPage() {
                   </p>
                   
                   <div className="text-sm text-charcoal font-body mb-6">
-                    <RichTextRenderer content={member.bio} />
+                    <RichTextRenderer content={member.bio || null} />
                   </div>
                   
                   <div className="flex justify-center space-x-4">
-                    {member.linkedin_url && (
+                    {member.linkedinUrl && (
                       <a
-                        href={member.linkedin_url}
+                        href={member.linkedinUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary hover:text-primary-hover transition-colors duration-200"

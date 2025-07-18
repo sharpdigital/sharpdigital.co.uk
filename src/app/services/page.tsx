@@ -107,7 +107,7 @@ export default async function ServicesPage() {
 
               return (
                 <ServiceCard
-                  key={service.id}
+                  key={service.$id}
                   title={service.title}
                   description={service.description || ''}
                   features={service.features}

@@ -1,9 +1,9 @@
-import { BlogPost, Service, TeamMember } from './supabase';
+import { BlogPost, Service, TeamMember } from './appwrite';
 
-// Fallback blog posts with simplified structure (no sys/fields nesting)
+// Fallback blog posts with Appwrite document structure
 export const fallbackBlogPosts: BlogPost[] = [
   {
-    id: '1',
+    $id: '1',
     title: 'AI Strategy Implementation Guide',
     slug: 'ai-strategy-implementation-guide',
     excerpt: 'A comprehensive guide to implementing AI strategies in your digital transformation journey with proven methodologies.',
@@ -27,14 +27,14 @@ Our proven framework has helped dozens of companies successfully integrate AI in
 
 Start by assessing your current data infrastructure and identifying clear use cases where AI can provide measurable business impact.`,
     author: 'Loreen',
-    publish_date: '2024-03-15T10:00:00Z',
+    publishDate: '2024-03-15T10:00:00Z',
     tags: ['AI', 'Digital Transformation', 'Strategy'],
-    featured_image_url: null,
-    created_at: '2024-03-15T10:00:00Z',
-    updated_at: '2024-03-15T10:00:00Z',
+    featuredImageUrl: undefined,
+    $createdAt: '2024-03-15T10:00:00Z',
+    $updatedAt: '2024-03-15T10:00:00Z',
   },
   {
-    id: '2',
+    $id: '2',
     title: 'Customer Experience Optimization',
     slug: 'customer-experience-optimization',
     excerpt: 'How to optimize customer touchpoints for exceptional journeys through strategic digital transformation.',
@@ -63,14 +63,14 @@ This creates experiences that not only meet but exceed customer expectations.
 - Higher conversion rates
 - Better brand perception`,
     author: 'Janos',
-    publish_date: '2024-03-10T10:00:00Z',
+    publishDate: '2024-03-10T10:00:00Z',
     tags: ['Customer Experience', 'UX', 'Digital Transformation'],
-    featured_image_url: null,
-    created_at: '2024-03-10T10:00:00Z',
-    updated_at: '2024-03-10T10:00:00Z',
+    featuredImageUrl: undefined,
+    $createdAt: '2024-03-10T10:00:00Z',
+    $updatedAt: '2024-03-10T10:00:00Z',
   },
   {
-    id: '3',
+    $id: '3',
     title: 'Data-Driven Decision Making',
     slug: 'data-driven-decision-making',
     excerpt: 'Transform your data into actionable business intelligence with advanced analytics and visualization tools.',
@@ -98,18 +98,18 @@ Our methodology helps organizations move from intuition-based to evidence-based 
 - Dashboard creation
 - Team training and enablement`,
     author: 'Loreen',
-    publish_date: '2024-03-05T10:00:00Z',
+    publishDate: '2024-03-05T10:00:00Z',
     tags: ['Data Analytics', 'Business Intelligence', 'Decision Making'],
-    featured_image_url: null,
-    created_at: '2024-03-05T10:00:00Z',
-    updated_at: '2024-03-05T10:00:00Z',
+    featuredImageUrl: undefined,
+    $createdAt: '2024-03-05T10:00:00Z',
+    $updatedAt: '2024-03-05T10:00:00Z',
   },
 ];
 
-// Fallback services with simplified structure
+// Fallback services with Appwrite document structure
 export const fallbackServices: Service[] = [
   {
-    id: '1',
+    $id: '1',
     title: 'Customer Experience',
     slug: 'customer-experience',
     description: 'Optimize every touchpoint for exceptional customer journeys through digital transformation, user journey mapping, and personalization strategies.',
@@ -137,11 +137,11 @@ We work with you to create experiences that not only meet but exceed customer ex
     features: ['Journey Mapping', 'Touchpoint Optimization', 'Personalization'],
     icon: 'customer-experience',
     color: 'orange-sharp',
-    order_index: 1,
-    created_at: '2024-03-01T10:00:00Z',
+    orderIndex: 1,
+    $createdAt: '2024-03-01T10:00:00Z',
   },
   {
-    id: '2',
+    $id: '2',
     title: 'Operational Efficiency',
     slug: 'operational-efficiency',
     description: 'Streamline processes through intelligent automation, workflow optimization, and digital tool integration to improve efficiency.',
@@ -168,11 +168,11 @@ Our proven methodology includes:
     features: ['Process Automation', 'Workflow Optimization', 'Digital Tools'],
     icon: 'operational-efficiency',
     color: 'sky-sharp',
-    order_index: 2,
-    created_at: '2024-03-01T10:00:00Z',
+    orderIndex: 2,
+    $createdAt: '2024-03-01T10:00:00Z',
   },
   {
-    id: '3',
+    $id: '3',
     title: 'Data & Analytics',
     slug: 'data-and-analytics',
     description: 'Transform data into actionable business intelligence through BI dashboards, predictive analytics, and data visualization.',
@@ -199,15 +199,15 @@ Our comprehensive data strategy includes:
     features: ['BI Dashboards', 'Predictive Analytics', 'Data Visualization'],
     icon: 'data-analytics',
     color: 'purple-sharp',
-    order_index: 3,
-    created_at: '2024-03-01T10:00:00Z',
+    orderIndex: 3,
+    $createdAt: '2024-03-01T10:00:00Z',
   },
 ];
 
-// Fallback team members with simplified structure
+// Fallback team members with Appwrite document structure
 export const fallbackTeamMembers: TeamMember[] = [
   {
-    id: '1',
+    $id: '1',
     name: 'Loreen',
     role: 'Digital Transformation Strategist',
     bio: `# About Loreen
@@ -223,13 +223,13 @@ Loreen is a seasoned digital transformation expert with over 10 years of experie
 - Strategic Planning
 
 Loreen has successfully led digital transformation initiatives for companies ranging from startups to Fortune 500 enterprises, consistently delivering measurable business results.`,
-    image_url: null,
-    linkedin_url: 'https://linkedin.com/in/loreen',
+    imageUrl: undefined,
+    linkedinUrl: 'https://linkedin.com/in/loreen',
     email: 'loreen@sharp.com',
-    created_at: '2024-03-01T10:00:00Z',
+    $createdAt: '2024-03-01T10:00:00Z',
   },
   {
-    id: '2',
+    $id: '2',
     name: 'Janos',
     role: 'Customer Experience Lead',
     bio: `# About Janos
@@ -245,10 +245,10 @@ Janos brings deep expertise in customer experience optimization and user researc
 - UX/UI Optimization
 
 Janos has a unique ability to combine data-driven insights with human psychology to create experiences that resonate with users and drive business results.`,
-    image_url: null,
-    linkedin_url: 'https://linkedin.com/in/janos',
+    imageUrl: undefined,
+    linkedinUrl: 'https://linkedin.com/in/janos',
     email: 'janos@sharp.com',
-    created_at: '2024-03-01T10:00:00Z',
+    $createdAt: '2024-03-01T10:00:00Z',
   },
 ];
 

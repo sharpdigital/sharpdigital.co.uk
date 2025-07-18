@@ -19,7 +19,8 @@
       "Bash(npm install:*)",
       "Bash(npm uninstall:*)",
       "Bash(npx supabase:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(appwrite init:*)"
     ],
     "deny": []
   }

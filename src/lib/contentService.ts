@@ -1,12 +1,12 @@
 import {
-  getBlogPosts as supabaseGetBlogPosts,
-  getBlogPost as supabaseGetBlogPost,
-  getBlogPostsByTag as supabaseGetBlogPostsByTag,
-  getServices as supabaseGetServices,
-  getService as supabaseGetService,
-  getTeamMembers as supabaseGetTeamMembers,
-  getAllTags as supabaseGetAllTags,
-} from './supabase';
+  getBlogPosts as appwriteGetBlogPosts,
+  getBlogPost as appwriteGetBlogPost,
+  getBlogPostsByTag as appwriteGetBlogPostsByTag,
+  getServices as appwriteGetServices,
+  getService as appwriteGetService,
+  getTeamMembers as appwriteGetTeamMembers,
+  getAllTags as appwriteGetAllTags,
+} from './appwrite';
 
 import {
   getFallbackBlogPosts,
@@ -17,23 +17,24 @@ import {
   getFallbackTags,
 } from './fallbackContent';
 
-import type { BlogPost, Service, TeamMember } from './supabase';
+import type { BlogPost, Service, TeamMember } from './appwrite';
 
-// Check if Supabase is configured
-const isSupabaseConfigured = () => {
+// Check if Appwrite is configured
+const isAppwriteConfigured = () => {
   return !!(
-    process.env.NEXT_PUBLIC_SUPABASE_URL && 
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT && 
+    process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID &&
+    process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID
   );
 };
 
-// Content service functions that use Supabase when available, fallback content otherwise
+// Content service functions that use Appwrite when available, fallback content otherwise
 export async function getBlogPosts(limit = 100): Promise<BlogPost[]> {
-  if (isSupabaseConfigured()) {
+  if (isAppwriteConfigured()) {
     try {
-      return await supabaseGetBlogPosts(limit);
+      return await appwriteGetBlogPosts(limit);
     } catch (error) {
-      console.warn('Supabase not available, using fallback content', error);
+      console.warn('Appwrite not available, using fallback content', error);
       return getFallbackBlogPosts();
     }
   }
@@ -41,11 +42,11 @@ export async function getBlogPosts(limit = 100): Promise<BlogPost[]> {
 }
 
 export async function getBlogPost(slug: string): Promise<BlogPost | null> {
-  if (isSupabaseConfigured()) {
+  if (isAppwriteConfigured()) {
     try {
-      return await supabaseGetBlogPost(slug);
+      return await appwriteGetBlogPost(slug);
     } catch (error) {
-      console.warn('Supabase not available, using fallback content', error);
+      console.warn('Appwrite not available, using fallback content', error);
       return getFallbackBlogPost(slug);
     }
   }
@@ -53,11 +54,11 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
 }
 
 export async function getBlogPostsByTag(tag: string, limit = 10): Promise<BlogPost[]> {
-  if (isSupabaseConfigured()) {
+  if (isAppwriteConfigured()) {
     try {
-      return await supabaseGetBlogPostsByTag(tag, limit);
+      return await appwriteGetBlogPostsByTag(tag, limit);
     } catch (error) {
-      console.warn('Supabase not available, using fallback content', error);
+      console.warn('Appwrite not available, using fallback content', error);
       const allPosts = getFallbackBlogPosts();
       return allPosts.filter(post => post.tags.includes(tag)).slice(0, limit);
     }
@@ -67,11 +68,11 @@ export async function getBlogPostsByTag(tag: string, limit = 10): Promise<BlogPo
 }
 
 export async function getServices(): Promise<Service[]> {
-  if (isSupabaseConfigured()) {
+  if (isAppwriteConfigured()) {
     try {
-      return await supabaseGetServices();
+      return await appwriteGetServices();
     } catch (error) {
-      console.warn('Supabase not available, using fallback content', error);
+      console.warn('Appwrite not available, using fallback content', error);
       return getFallbackServices();
     }
   }
@@ -79,11 +80,11 @@ export async function getServices(): Promise<Service[]> {
 }
 
 export async function getService(slug: string): Promise<Service | null> {
-  if (isSupabaseConfigured()) {
+  if (isAppwriteConfigured()) {
     try {
-      return await supabaseGetService(slug);
+      return await appwriteGetService(slug);
     } catch (error) {
-      console.warn('Supabase not available, using fallback content', error);
+      console.warn('Appwrite not available, using fallback content', error);
       return getFallbackService(slug);
     }
   }
@@ -91,11 +92,11 @@ export async function getService(slug: string): Promise<Service | null> {
 }
 
 export async function getTeamMembers(): Promise<TeamMember[]> {
-  if (isSupabaseConfigured()) {
+  if (isAppwriteConfigured()) {
     try {
-      return await supabaseGetTeamMembers();
+      return await appwriteGetTeamMembers();
     } catch (error) {
-      console.warn('Supabase not available, using fallback content', error);
+      console.warn('Appwrite not available, using fallback content', error);
       return getFallbackTeamMembers();
     }
   }
@@ -103,11 +104,11 @@ export async function getTeamMembers(): Promise<TeamMember[]> {
 }
 
 export async function getAllTags(): Promise<string[]> {
-  if (isSupabaseConfigured()) {
+  if (isAppwriteConfigured()) {
     try {
-      return await supabaseGetAllTags();
+      return await appwriteGetAllTags();
     } catch (error) {
-      console.warn('Supabase not available, using fallback content', error);
+      console.warn('Appwrite not available, using fallback content', error);
       return getFallbackTags();
     }
   }

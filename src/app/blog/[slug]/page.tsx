@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       title: post.title,
       description: post.excerpt || '',
       type: 'article',
-      publishedTime: post.publish_date || '',
+      publishedTime: post.publishDate || '',
       authors: [post.author || ''],
       tags: post.tags,
     },
@@ -61,7 +61,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   // Get related posts (same tags, excluding current post)
   const allPosts = await getBlogPosts();
   const relatedPosts = allPosts
-    .filter(p => p.id !== post.id && p.tags.some(tag => post.tags.includes(tag)))
+    .filter(p => p.$id !== post.$id && p.tags.some(tag => post.tags.includes(tag)))
     .slice(0, 3);
 
   return (
@@ -72,7 +72,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="text-center">
             <div className="flex items-center justify-center gap-4 mb-6">
               <span className="text-primary font-body text-lg">
-                {formatDate(post.publish_date || '')}
+                {formatDate(post.publishDate || '')}
               </span>
               <span className="text-charcoal font-body text-lg">
                 by {post.author || 'Unknown'}
@@ -101,7 +101,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="prose prose-lg max-w-none">
-            <RichTextRenderer content={post.content} />
+            <RichTextRenderer content={post.content || null} />
           </article>
         </div>
       </section>
@@ -121,11 +121,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedPosts.map((relatedPost) => (
-                <Card key={relatedPost.id} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                <Card key={relatedPost.$id} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-sm text-primary font-body">
-                        {formatDate(relatedPost.publish_date || '')}
+                        {formatDate(relatedPost.publishDate || '')}
                       </span>
                       <span className="text-sm text-charcoal font-body">
                         by {relatedPost.author || 'Unknown'}

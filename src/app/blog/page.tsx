@@ -62,11 +62,11 @@ export default async function BlogPage() {
           {posts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post) => (
-                <Card key={post.id} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                <Card key={post.$id} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-sm text-primary font-body">
-                        {formatDate(post.publish_date || '')}
+                        {formatDate(post.publishDate || '')}
                       </span>
                       <span className="text-sm text-charcoal font-body">
                         by {post.author || 'Unknown'}
