@@ -4,25 +4,26 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the website for #sharp (https://sharpdigital.co.uk/), a digital agency specialized in digital transformation consultancy. The project is migrating from a static HTML site to a Next.js-based statically generated website with Contentful headless CMS.
+This is the website for #sharp (https://sharpdigital.co.uk/), a digital agency specialized in digital transformation consultancy. The project has migrated from a static HTML site to a Next.js-based statically generated website with Appwrite.
 
 ## Migration Goal
 
-**Target Architecture**: Next.js static site generation with Contentful CMS, TailwindCSS + Shadcn/UI, deployed via GitHub Actions to GitHub Pages.
+**Target Architecture**: Next.js static site generation with Appwrite, TailwindCSS + Shadcn/UI, deployed via GitHub Actions to GitHub Pages.
 
 ## Tech Stack
 
 - **Framework**: Next.js (static generation)
-- **CMS**: Contentful (headless)
+- **CMS data**: Appwrite (headless database)
+- **Package Manager**: Bun (fast, efficient)
 - **Styling**: TailwindCSS with Shadcn/UI components
 - **Deployment**: GitHub Actions → GitHub Pages
 
 ## Development Commands
 
 Currently no build process exists. Future Next.js implementation will need:
-- `npm run dev` - Development server
-- `npm run build` - Static site generation
-- `npm run start` - Production preview
+- `bun run dev` - Development server
+- `bun run build` - Static site generation
+- `bun run start` - Production preview
 
 ## Design System Requirements
 
@@ -41,7 +42,7 @@ Currently no build process exists. Future Next.js implementation will need:
 ### Layout Components
 - **Header**: Logo + navigation menu
 - **Body**: Page-specific content
-- **Footer**: Copyright, links (T&C, privacy policy, llm.txt)
+- **Footer**: Copyright, links (T&C, privacy policy, llms.txt)
 
 ### Pages & Routes
 
@@ -69,4 +70,4 @@ Currently no build process exists. Future Next.js implementation will need:
 
 ## Content Management
 
-Content managed through Contentful CMS and fetched at build time for static generation.
+Content is stored in Appwrite and fetched at build time for static generation.

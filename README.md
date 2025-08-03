@@ -1,16 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# #sharp Digital Website
+
+This is the website for #sharp (https://sharpdigital.co.uk/), a digital agency specialized in digital transformation consultancy. Built with [Next.js](https://nextjs.org) and [Appwrite](https://appwrite.io/) for content management.
+
+## Tech Stack
+
+- **Framework**: Next.js (static generation)
+- **CMS**: Appwrite (headless NoSQL database)
+- **Package Manager**: Bun (fast, efficient)
+- **Styling**: TailwindCSS with Shadcn/UI components
+- **Deployment**: GitHub Actions → GitHub Pages
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
 bun dev
 ```
 
@@ -18,7 +22,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
+
+For production deployment, configure:
+
+```bash
+NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
+NEXT_PUBLIC_APPWRITE_PROJECT_ID=your_project_id  
+NEXT_PUBLIC_APPWRITE_DATABASE_ID=your_database_id
+```
 
 ## Learn More
 
