@@ -18,7 +18,6 @@
       "Bash(git commit:*)",
       "Bash(npm install:*)",
       "Bash(npm uninstall:*)",
-      "Bash(npx supabase:*)",
       "Bash(npm run build:*)",
       "Bash(appwrite init:*)"
     ],
