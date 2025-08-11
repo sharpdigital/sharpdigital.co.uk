@@ -1,0 +1,22 @@
+{
+  "name": "#sharp - Digital Transformation Consultancy",
+  "short_name": "#sharp",
+  "description": "Leading digital transformation consultancy helping businesses navigate their digital evolution with proven strategies.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/img/sharp_logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/img/sharp_logo_w264.png",
+      "sizes": "264x264",
+      "type": "image/png"
+    }
+  ]
+}

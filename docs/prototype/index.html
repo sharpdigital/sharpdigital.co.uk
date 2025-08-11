@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#sharp - Digital Transformation Consultancy | AI-Powered Solutions</title>
+    <meta name="description" content="Leading digital transformation consultancy specializing in AI-powered solutions for customer experience, operational efficiency, and data analytics. Proven methodologies, measurable results.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sharpdigital.co.uk/">
+    <meta property="og:title" content="#sharp - Digital Transformation Consultancy">
+    <meta property="og:description" content="AI-powered digital transformation solutions that drive measurable business impact.">
+    <meta property="og:image" content="https://sharpdigital.co.uk/img/sharp_logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sharpdigital.co.uk/">
+    <meta property="twitter:title" content="#sharp - Digital Transformation Consultancy">
+    <meta property="twitter:description" content="AI-powered digital transformation solutions that drive measurable business impact.">
+    <meta property="twitter:image" content="https://sharpdigital.co.uk/img/sharp_logo.png">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/img/sharp_logo.svg">
+    <link rel="apple-touch-icon" href="/img/sharp_logo.png">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#ED2224">
+    <meta name="msapplication-TileColor" content="#ED2224">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="keywords" content="digital transformation, AI consulting, customer experience, operational efficiency, data analytics, business transformation, AI solutions, digital strategy">
+    <meta name="author" content="#sharp Digital Transformation Consultancy">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sharpdigital.co.uk/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ED2224',
+                        'primary-hover': '#D41E20',
+                        'primary-active': '#C01A1C',
+                        charcoal: '#333333',
+                        'orange-sharp': '#ED8421',
+                        'yellow-sharp': '#EDEA21',
+                        'lime-sharp': '#8BED21',
+                        'green-sharp': '#25ED21',
+                        'mint-sharp': '#21ED84',
+                        'cyan-sharp': '#21EDEA',
+                        'sky-sharp': '#218BED',
+                        'blue-sharp': '#2125ED',
+                        'purple-sharp': '#8421ED',
+                        'magenta-sharp': '#EA21ED',
+                        'pink-sharp': '#ED218B',
+                        success: '#25ED21',
+                        warning: '#EDEA21',
+                        error: '#ED2224',
+                        info: '#218BED',
+                    },
+                    fontFamily: {
+                        'heading': ['Frutiger45Light', 'Inter', 'sans-serif'],
+                        'body': ['Georgia', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'bounce-gentle': 'bounceGentle 2s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        bounceGentle: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-charcoal font-body">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded-md z-50">
+        Skip to main content
+    </a>
+
+    <!-- Header Navigation -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-40" id="header">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center" aria-label="Sharp Digital - Home">
+                        <img src="img/sharp_logo.svg" alt="#sharp logo" class="h-10 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="font-heading text-base text-charcoal hover:text-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md px-2 py-1">
+                        Home
+                    </a>
+                    <a href="#about" class="font-heading text-base text-charcoal hover:text-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md px-2 py-1">
+                        About
+                    </a>
+                    <a href="#services" class="font-heading text-base text-charcoal hover:text-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md px-2 py-1">
+                        Services
+                    </a>
+                    <a href="#blog" class="font-heading text-base text-charcoal hover:text-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md px-2 py-1">
+                        Blog
+                    </a>
+                    <a href="#contact" class="bg-primary text-white font-heading text-base px-6 py-3 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-charcoal hover:text-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-b border-gray-200">
+                <a href="#home" class="block font-heading text-base text-charcoal hover:text-primary hover:bg-gray-50 px-3 py-2 rounded-md transition-colors duration-200">
+                    Home
+                </a>
+                <a href="#about" class="block font-heading text-base text-charcoal hover:text-primary hover:bg-gray-50 px-3 py-2 rounded-md transition-colors duration-200">
+                    About
+                </a>
+                <a href="#services" class="block font-heading text-base text-charcoal hover:text-primary hover:bg-gray-50 px-3 py-2 rounded-md transition-colors duration-200">
+                    Services
+                </a>
+                <a href="#blog" class="block font-heading text-base text-charcoal hover:text-primary hover:bg-gray-50 px-3 py-2 rounded-md transition-colors duration-200">
+                    Blog
+                </a>
+                <a href="#contact" class="block bg-primary text-white font-heading text-base px-6 py-3 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 mx-3 mt-4">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Carousel Section -->
+        <section id="home" class="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-32" aria-label="Hero section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative">
+                    <!-- Carousel Container -->
+                    <div class="carousel-container relative overflow-hidden rounded-lg bg-white shadow-xl">
+                        <!-- Carousel Slides -->
+                        <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
+                            <!-- Slide 1: Customer Experience -->
+                            <div class="carousel-slide w-full flex-none">
+                                <div class="flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16">
+                                    <div class="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
+                                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading leading-tight text-charcoal mb-6">
+                                            Transforming Businesses Through
+                                            <span class="text-primary">AI-Powered Digital Solutions</span>
+                                        </h1>
+                                        <div class="mb-6">
+                                            <h2 class="text-xl md:text-2xl font-heading text-orange-sharp mb-4">
+                                                Customer Experience
+                                            </h2>
+                                            <p class="text-lg text-charcoal font-body leading-relaxed">
+                                                Optimize every touchpoint for exceptional customer journeys
+                                            </p>
+                                        </div>
+                                        <a href="#services" class="inline-flex items-center bg-primary text-white font-heading text-base px-8 py-4 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                            Learn More
+                                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="lg:w-1/2 flex justify-center">
+                                        <div class="w-64 h-64 bg-gradient-to-br from-orange-sharp to-yellow-sharp rounded-full flex items-center justify-center">
+                                            <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: Operational Efficiency -->
+                            <div class="carousel-slide w-full flex-none">
+                                <div class="flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16">
+                                    <div class="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
+                                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading leading-tight text-charcoal mb-6">
+                                            Transforming Businesses Through
+                                            <span class="text-primary">AI-Powered Digital Solutions</span>
+                                        </h1>
+                                        <div class="mb-6">
+                                            <h2 class="text-xl md:text-2xl font-heading text-sky-sharp mb-4">
+                                                Operational Efficiency
+                                            </h2>
+                                            <p class="text-lg text-charcoal font-body leading-relaxed">
+                                                Streamline processes through intelligent automation
+                                            </p>
+                                        </div>
+                                        <a href="#services" class="inline-flex items-center bg-primary text-white font-heading text-base px-8 py-4 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                            Learn More
+                                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="lg:w-1/2 flex justify-center">
+                                        <div class="w-64 h-64 bg-gradient-to-br from-sky-sharp to-blue-sharp rounded-full flex items-center justify-center">
+                                            <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3: Data & Analytics -->
+                            <div class="carousel-slide w-full flex-none">
+                                <div class="flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16">
+                                    <div class="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
+                                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading leading-tight text-charcoal mb-6">
+                                            Transforming Businesses Through
+                                            <span class="text-primary">AI-Powered Digital Solutions</span>
+                                        </h1>
+                                        <div class="mb-6">
+                                            <h2 class="text-xl md:text-2xl font-heading text-purple-sharp mb-4">
+                                                Data & Analytics
+                                            </h2>
+                                            <p class="text-lg text-charcoal font-body leading-relaxed">
+                                                Transform data into actionable business intelligence
+                                            </p>
+                                        </div>
+                                        <a href="#services" class="inline-flex items-center bg-primary text-white font-heading text-base px-8 py-4 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                            Learn More
+                                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="lg:w-1/2 flex justify-center">
+                                        <div class="w-64 h-64 bg-gradient-to-br from-purple-sharp to-magenta-sharp rounded-full flex items-center justify-center">
+                                            <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M3 3v18h18v-2H5V3H3z"/>
+                                                <path d="M7 12l4-4 4 4 4-4v3l-4 4-4-4-4 4V12z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Carousel Navigation -->
+                        <button class="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-3 shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" aria-label="Previous slide">
+                            <svg class="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button class="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-3 shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" aria-label="Next slide">
+                            <svg class="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        <!-- Carousel Indicators -->
+                        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                            <button class="carousel-indicator w-3 h-3 rounded-full bg-primary bg-opacity-60 hover:bg-opacity-100 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" data-slide="0" aria-label="Go to slide 1"></button>
+                            <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-60 hover:bg-opacity-100 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" data-slide="1" aria-label="Go to slide 2"></button>
+                            <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-60 hover:bg-opacity-100 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" data-slide="2" aria-label="Go to slide 3"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- #sharp Statement Section -->
+        <section id="about" class="py-20 bg-white" aria-label="About Sharp">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-center lg:text-left">
+                        <img src="img/sharp_logo.svg" alt="#sharp logo" class="h-20 w-auto mx-auto lg:mx-0 mb-6">
+                    </div>
+                    <div class="text-center lg:text-left">
+                        <h2 class="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
+                            <span class="text-primary">#sharp</span> helps companies walking on the road of digital transformation
+                        </h2>
+                        <p class="text-lg text-charcoal font-body leading-relaxed mb-6">
+                            Expert guidance for your digital transformation journey with proven methodologies and measurable results. We combine business acumen with technical expertise to guide organizations through their digital evolution.
+                        </p>
+                        <a href="#contact" class="inline-flex items-center bg-primary text-white font-heading text-base px-8 py-4 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                            Get Started
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-50" aria-label="Our services">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
+                        Our Service Areas
+                    </h2>
+                    <p class="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+                        Comprehensive digital transformation across three key areas
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Customer Experience Card -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-200 text-center">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-orange-sharp to-yellow-sharp rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-heading leading-snug text-charcoal mb-4">
+                            Customer Experience
+                        </h3>
+                        <p class="text-base font-body leading-normal text-charcoal mb-6">
+                            Optimize every touchpoint for exceptional customer journeys through digital transformation, user journey mapping, and personalization strategies.
+                        </p>
+                        <ul class="text-sm text-charcoal font-body mb-6 space-y-2">
+                            <li>• Journey Mapping</li>
+                            <li>• Touchpoint Optimization</li>
+                            <li>• Personalization</li>
+                        </ul>
+                        <a href="#contact" class="inline-flex items-center bg-primary text-white font-heading text-base px-6 py-3 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                            Learn More
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Operational Efficiency Card -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-200 text-center">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-sky-sharp to-blue-sharp rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-heading leading-snug text-charcoal mb-4">
+                            Operational Efficiency
+                        </h3>
+                        <p class="text-base font-body leading-normal text-charcoal mb-6">
+                            Streamline processes through intelligent automation, workflow optimization, and digital tool integration to improve efficiency.
+                        </p>
+                        <ul class="text-sm text-charcoal font-body mb-6 space-y-2">
+                            <li>• Process Automation</li>
+                            <li>• Workflow Optimization</li>
+                            <li>• Digital Tools</li>
+                        </ul>
+                        <a href="#contact" class="inline-flex items-center bg-primary text-white font-heading text-base px-6 py-3 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                            Learn More
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Data & Analytics Card -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-200 text-center">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-purple-sharp to-magenta-sharp rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 3v18h18v-2H5V3H3z"/>
+                                <path d="M7 12l4-4 4 4 4-4v3l-4 4-4-4-4 4V12z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-heading leading-snug text-charcoal mb-4">
+                            Data & Analytics
+                        </h3>
+                        <p class="text-base font-body leading-normal text-charcoal mb-6">
+                            Transform data into actionable business intelligence through BI dashboards, predictive analytics, and data visualization.
+                        </p>
+                        <ul class="text-sm text-charcoal font-body mb-6 space-y-2">
+                            <li>• BI Dashboards</li>
+                            <li>• Predictive Analytics</li>
+                            <li>• Data Visualization</li>
+                        </ul>
+                        <a href="#contact" class="inline-flex items-center bg-primary text-white font-heading text-base px-6 py-3 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                            Learn More
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-20 bg-white" aria-label="Latest blog posts">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
+                        Latest Insights & Thought Leadership
+                    </h2>
+                    <p class="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+                        Digital transformation expertise and industry insights
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+                        <div class="aspect-video bg-gradient-to-br from-orange-sharp to-yellow-sharp"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-heading leading-normal text-charcoal mb-2">
+                                AI Strategy Implementation Guide
+                            </h3>
+                            <p class="text-sm font-body leading-snug text-charcoal mb-4">
+                                A comprehensive guide to implementing AI strategies in your digital transformation journey with proven methodologies.
+                            </p>
+                            <div class="flex items-center text-xs font-body leading-snug text-gray-500 mb-4">
+                                <span>By Loreen • March 15, 2024</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center text-primary hover:text-primary-hover font-heading text-sm transition-colors duration-200">
+                                Read More
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 2 -->
+                    <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+                        <div class="aspect-video bg-gradient-to-br from-sky-sharp to-blue-sharp"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-heading leading-normal text-charcoal mb-2">
+                                Customer Experience Optimization
+                            </h3>
+                            <p class="text-sm font-body leading-snug text-charcoal mb-4">
+                                How to optimize customer touchpoints for exceptional journeys through strategic digital transformation.
+                            </p>
+                            <div class="flex items-center text-xs font-body leading-snug text-gray-500 mb-4">
+                                <span>By Janos • March 10, 2024</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center text-primary hover:text-primary-hover font-heading text-sm transition-colors duration-200">
+                                Read More
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 3 -->
+                    <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+                        <div class="aspect-video bg-gradient-to-br from-purple-sharp to-magenta-sharp"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-heading leading-normal text-charcoal mb-2">
+                                Data-Driven Decision Making
+                            </h3>
+                            <p class="text-sm font-body leading-snug text-charcoal mb-4">
+                                Transform your data into actionable business intelligence with advanced analytics and visualization tools.
+                            </p>
+                            <div class="flex items-center text-xs font-body leading-snug text-gray-500 mb-4">
+                                <span>By Loreen • March 5, 2024</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center text-primary hover:text-primary-hover font-heading text-sm transition-colors duration-200">
+                                Read More
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-flex items-center bg-transparent text-primary border-2 border-primary font-heading text-base px-6 py-3 rounded-md hover:bg-primary hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                        View All Posts
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-50" aria-label="Contact us">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
+                        Contact Us
+                    </h2>
+                    <p class="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto mb-4">
+                        Ready to start your digital transformation journey?
+                    </p>
+                    <p class="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+                        Let's discuss how we can help you succeed.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="bg-white rounded-lg shadow-sm p-8">
+                        <h3 class="text-2xl font-heading leading-snug text-charcoal mb-6">
+                            Get in Touch
+                        </h3>
+                        <form class="space-y-6" id="contact-form" novalidate>
+                            <!-- Name Field -->
+                            <div>
+                                <label for="name" class="block font-heading text-sm font-semibold text-charcoal mb-2">
+                                    Name <span class="text-primary">*</span>
+                                </label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full bg-white border border-gray-200 rounded px-4 py-3 font-body text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200"
+                                    placeholder="Your full name">
+                                <div class="error-message text-sm text-primary mt-1 hidden"></div>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div>
+                                <label for="email" class="block font-heading text-sm font-semibold text-charcoal mb-2">
+                                    Email <span class="text-primary">*</span>
+                                </label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full bg-white border border-gray-200 rounded px-4 py-3 font-body text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200"
+                                    placeholder="your.email@company.com">
+                                <div class="error-message text-sm text-primary mt-1 hidden"></div>
+                            </div>
+
+                            <!-- Company Field -->
+                            <div>
+                                <label for="company" class="block font-heading text-sm font-semibold text-charcoal mb-2">
+                                    Company
+                                </label>
+                                <input type="text" id="company" name="company"
+                                    class="w-full bg-white border border-gray-200 rounded px-4 py-3 font-body text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200"
+                                    placeholder="Your company name">
+                            </div>
+
+                            <!-- Phone Field -->
+                            <div>
+                                <label for="phone" class="block font-heading text-sm font-semibold text-charcoal mb-2">
+                                    Phone
+                                </label>
+                                <input type="tel" id="phone" name="phone"
+                                    class="w-full bg-white border border-gray-200 rounded px-4 py-3 font-body text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200"
+                                    placeholder="+44 (0) 20 1234 5678">
+                            </div>
+
+                            <!-- Service Interest Field -->
+                            <div>
+                                <label for="service" class="block font-heading text-sm font-semibold text-charcoal mb-2">
+                                    Service Interest
+                                </label>
+                                <select id="service" name="service"
+                                    class="w-full bg-white border border-gray-200 rounded px-4 py-3 font-body text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200">
+                                    <option value="">Select a service</option>
+                                    <option value="customer-experience">Customer Experience</option>
+                                    <option value="operational-efficiency">Operational Efficiency</option>
+                                    <option value="data-analytics">Data & Analytics</option>
+                                    <option value="general-consultation">General Consultation</option>
+                                </select>
+                            </div>
+
+                            <!-- Message Field -->
+                            <div>
+                                <label for="message" class="block font-heading text-sm font-semibold text-charcoal mb-2">
+                                    Message <span class="text-primary">*</span>
+                                </label>
+                                <textarea id="message" name="message" rows="5" required
+                                    class="w-full bg-white border border-gray-200 rounded px-4 py-3 font-body text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200 resize-vertical"
+                                    placeholder="Tell us about your digital transformation needs..."></textarea>
+                                <div class="error-message text-sm text-primary mt-1 hidden"></div>
+                            </div>
+
+                            <!-- Privacy Consent -->
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="privacy" name="privacy" type="checkbox" required
+                                        class="w-4 h-4 border-2 border-gray-200 rounded text-primary focus:ring-primary focus:ring-2">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="privacy" class="font-body text-charcoal">
+                                        I agree to the <a href="#" class="text-primary hover:text-primary-hover underline">privacy policy</a> and <a href="#" class="text-primary hover:text-primary-hover underline">terms of service</a>
+                                    </label>
+                                    <div class="error-message text-sm text-primary mt-1 hidden"></div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div>
+                                <button type="submit"
+                                    class="w-full bg-primary text-white font-heading text-base px-6 py-3 rounded-md hover:bg-primary-hover active:bg-primary-active disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span class="button-text">Send Message</span>
+                                    <svg class="button-icon ml-2 w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="bg-white rounded-lg shadow-sm p-8">
+                        <h3 class="text-2xl font-heading leading-snug text-charcoal mb-6">
+                            Contact Information
+                        </h3>
+                        <div class="space-y-6">
+                            <p class="text-base font-body leading-relaxed text-charcoal">
+                                We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                            </p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-primary mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                    <span class="font-body text-charcoal">hello@sharp.com</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-primary mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                    <span class="font-body text-charcoal">+44 (0) 20 1234 5678</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-primary mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                    <span class="font-body text-charcoal">London, UK</span>
+                                </div>
+                            </div>
+
+                            <div class="border-t border-gray-200 pt-6">
+                                <h4 class="font-heading text-lg text-charcoal mb-3">Response Time</h4>
+                                <ul class="space-y-2 text-sm font-body text-charcoal">
+                                    <li>• Within 24 hours</li>
+                                    <li>• Business hours: 9-6 GMT</li>
+                                    <li>• Emergency support available</li>
+                                </ul>
+                            </div>
+
+                            <div class="border-t border-gray-200 pt-6">
+                                <h4 class="font-heading text-lg text-charcoal mb-3">Office Hours</h4>
+                                <p class="text-sm font-body text-charcoal">
+                                    Monday - Friday<br>
+                                    9:00 AM - 6:00 PM GMT
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-12 px-6 lg:px-8" aria-label="Footer">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <p class="text-sm font-body text-charcoal mb-4">
+                    &copy; 2024 #sharp. All rights reserved.
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="font-body text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                        Terms & Conditions
+                    </a>
+                    <a href="#" class="font-body text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                        Privacy Policy
+                    </a>
+                    <a href="#" class="font-body text-sm text-gray-600 hover:text-primary transition-colors duration-200">
+                        llm.txt
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
