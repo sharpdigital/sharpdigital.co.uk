@@ -64,20 +64,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <Image 
-                src="/img/sharp_logo.svg" 
-                alt="#sharp logo" 
-                width={200} 
-                height={80} 
+              <Image
+                src="/img/sharp_logo.svg"
+                alt="#sharp logo"
+                width={200}
+                height={80}
                 className="h-20 w-auto mx-auto lg:mx-0 mb-6"
               />
             </div>
             <div className="text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
-                <span className="text-primary">#sharp</span> helps companies walking on the road of digital transformation
+                <span className="text-primary">#sharp</span> simplifies digital transformation for ambitious businesses
               </h2>
               <p className="text-lg text-charcoal font-body leading-relaxed mb-6">
-                Expert guidance for your digital transformation journey with proven methodologies and measurable results. We combine business acumen with technical expertise to guide organizations through their digital evolution.
+                Expert guidance throughout your digital transformation journey, led by seasoned industry professionals. We combine business acumen with technical expertise to guide organisations through their digital evolution, one click at a time.
               </p>
               <Link href="/contact">
                 <Button className="inline-flex items-center bg-primary text-white font-heading text-base px-8 py-4 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
@@ -177,8 +177,8 @@ export default function Home() {
                 <div className="flex items-center text-xs font-body leading-snug text-gray-500 mb-4">
                   <span>By Loreen • March 15, 2024</span>
                 </div>
-                <Link 
-                  href="/blog/ai-strategy-implementation-guide" 
+                <Link
+                  href="/blog/ai-strategy-implementation-guide"
                   className="inline-flex items-center text-primary hover:text-primary-hover font-heading text-sm transition-colors duration-200"
                 >
                   Read More
@@ -202,8 +202,8 @@ export default function Home() {
                 <div className="flex items-center text-xs font-body leading-snug text-gray-500 mb-4">
                   <span>By Janos • March 10, 2024</span>
                 </div>
-                <Link 
-                  href="/blog/customer-experience-optimization" 
+                <Link
+                  href="/blog/customer-experience-optimization"
                   className="inline-flex items-center text-primary hover:text-primary-hover font-heading text-sm transition-colors duration-200"
                 >
                   Read More
@@ -227,8 +227,8 @@ export default function Home() {
                 <div className="flex items-center text-xs font-body leading-snug text-gray-500 mb-4">
                   <span>By Loreen • March 5, 2024</span>
                 </div>
-                <Link 
-                  href="/blog/data-driven-decision-making" 
+                <Link
+                  href="/blog/data-driven-decision-making"
                   className="inline-flex items-center text-primary hover:text-primary-hover font-heading text-sm transition-colors duration-200"
                 >
                   Read More
@@ -242,8 +242,8 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <Link href="/blog">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="inline-flex items-center bg-transparent text-primary border-2 border-primary font-heading text-base px-6 py-3 rounded-md hover:bg-primary hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 View All Posts
