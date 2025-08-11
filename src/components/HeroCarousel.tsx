@@ -19,8 +19,8 @@ const HeroCarousel = () => {
 
   const slides: Slide[] = [
     {
-      title: "Transforming Businesses Through",
-      subtitle: "Customer Experience",
+      title: "Transforming Customer Experience",
+      subtitle: "Seamlessly",
       description: "Optimize every touchpoint for exceptional customer journeys",
       color: "text-orange-sharp",
       gradientFrom: "from-orange-sharp",
@@ -32,8 +32,8 @@ const HeroCarousel = () => {
       )
     },
     {
-      title: "Transforming Businesses Through",
-      subtitle: "Operational Efficiency",
+      title: "Transforming business operations",
+      subtitle: "Smoothly",
       description: "Streamline processes through intelligent automation",
       color: "text-sky-sharp",
       gradientFrom: "from-sky-sharp",
@@ -45,8 +45,8 @@ const HeroCarousel = () => {
       )
     },
     {
-      title: "Transforming Businesses Through",
-      subtitle: "Data & Analytics",
+      title: "Leverage sharp insights with",
+      subtitle: "Unmatched data & analytics",
       description: "Transform data into actionable business intelligence",
       color: "text-purple-sharp",
       gradientFrom: "from-purple-sharp",
@@ -88,7 +88,7 @@ const HeroCarousel = () => {
           {/* Carousel Container */}
           <div className="carousel-container relative overflow-hidden rounded-lg bg-white shadow-xl">
             {/* Carousel Slides */}
-            <div 
+            <div
               className="carousel-slides flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
@@ -128,18 +128,18 @@ const HeroCarousel = () => {
             </div>
 
             {/* Carousel Navigation */}
-            <button 
+            <button
               onClick={prevSlide}
-              className="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-3 shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" 
+              className="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-3 shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               aria-label="Previous slide"
             >
               <svg className="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            <button 
+            <button
               onClick={nextSlide}
-              className="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-3 shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" 
+              className="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-3 shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               aria-label="Next slide"
             >
               <svg className="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,8 +154,8 @@ const HeroCarousel = () => {
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
-                    index === currentSlide 
-                      ? 'bg-primary bg-opacity-100' 
+                    index === currentSlide
+                      ? 'bg-primary bg-opacity-100'
                       : 'bg-white bg-opacity-60 hover:bg-opacity-100'
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
