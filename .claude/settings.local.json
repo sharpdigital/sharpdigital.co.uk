@@ -19,7 +19,10 @@
       "Bash(npm install:*)",
       "Bash(npm uninstall:*)",
       "Bash(npm run build:*)",
-      "Bash(appwrite init:*)"
+      "Bash(appwrite init:*)",
+      "Bash(curl:*)",
+      "Bash(docker-compose:*)",
+      "Bash(appwrite client:*)"
     ],
     "deny": []
   }

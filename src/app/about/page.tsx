@@ -21,18 +21,18 @@ export default async function AboutPage() {
       <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <Image 
-              src="/img/sharp_logo.svg" 
-              alt="#sharp logo" 
-              width={120} 
-              height={48} 
+            <Image
+              src="/img/sharp_logo.svg"
+              alt="#sharp logo"
+              width={120}
+              height={48}
               className="mx-auto mb-8"
             />
             <h1 className="text-4xl md:text-5xl font-heading leading-tight text-charcoal mb-6">
               About <span className="text-primary">#sharp</span>
             </h1>
             <p className="text-xl text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
-              We help companies navigate their digital transformation journey with proven methodologies and measurable results.
+              Your unfair advantage in an unrelenting digital age. We don’t just help you transform, we help you innovate measurable impact.
             </p>
           </div>
         </div>
@@ -46,36 +46,36 @@ export default async function AboutPage() {
               Our Story
             </h2>
           </div>
-          
+
           {
             <div className="space-y-6">
               <p className="text-lg text-charcoal font-body leading-relaxed">
-                <span className="text-primary font-heading text-2xl">#sharp</span> was founded with a simple yet powerful vision: to make digital transformation accessible and successful for organizations of all sizes. We believe that every company deserves to thrive in the digital age, and we&apos;re here to make that happen.
+                <span className="text-primary font-heading text-2xl">#sharp</span> was founded with a simple yet powerful vision: to make digital transformation accessible and successful for organisations of all sizes. We believe that every company deserves to thrive in the digital age, and we&apos;re here to make that happen.
               </p>
-              
+
               <p className="text-lg text-charcoal font-body leading-relaxed">
-                Our journey began when we recognized that many organizations were struggling with digital transformation initiatives. Despite having access to cutting-edge technology, they lacked the strategic guidance and proven methodologies needed to achieve their goals. That&apos;s where we come in.
+                Our journey began when we recognized that many organisations were struggling with digital transformation initiatives. Despite having access to cutting-edge technology, they lacked the strategic guidance and tools to achieve their goals. That&apos;s where we come in.
               </p>
-              
+
               <p className="text-lg text-charcoal font-body leading-relaxed">
                 We combine deep business acumen with cutting-edge technical expertise to deliver solutions that drive real business value. Our approach is collaborative, data-driven, and focused on sustainable results.
               </p>
-              
+
               <div className="bg-gray-50 p-8 rounded-lg mt-8">
                 <h3 className="text-2xl font-heading text-charcoal mb-4">Our Mission</h3>
                 <p className="text-lg text-charcoal font-body leading-relaxed">
-                  To empower organizations to successfully navigate their digital transformation journey through expert guidance, proven methodologies, and cutting-edge solutions that deliver measurable business impact.
+                  To empower businesses to thrive in the digital era by delivering innovative, data-driven strategies and seamless technology solutions. We bridge the gap between vision and execution, enabling organisations to transform, scale, and lead with confidence.
                 </p>
               </div>
-              
+
               <div className="bg-gray-50 p-8 rounded-lg mt-6">
                 <h3 className="text-2xl font-heading text-charcoal mb-4">Our Values</h3>
                 <ul className="space-y-3 text-lg text-charcoal font-body">
-                  <li>• <strong>Excellence:</strong> We deliver exceptional results through proven methodologies</li>
+                  <li>• <strong>Excellence:</strong> We deliver exceptional results by turning digital ambition into measurable success</li>
                   <li>• <strong>Innovation:</strong> We stay ahead of the curve with cutting-edge solutions</li>
-                  <li>• <strong>Collaboration:</strong> We work as partners, not just consultants</li>
-                  <li>• <strong>Transparency:</strong> We provide clear, honest guidance throughout the journey</li>
-                  <li>• <strong>Impact:</strong> We focus on measurable business outcomes</li>
+                  <li>• <strong>Collaboration:</strong> We collaborate and partner with your team - seamlesslessly</li>
+                  <li>• <strong>Transparency:</strong> We provide clear, honest guidance throughout.</li>
+                  <li>• <strong>Impact:</strong> We focus on measurable business outcomes.</li>
                 </ul>
               </div>
             </div>
@@ -110,19 +110,19 @@ export default async function AboutPage() {
                       />
                     </div>
                   )}
-                  
+
                   <h3 className="text-2xl font-heading text-charcoal mb-2">
                     {member.name}
                   </h3>
-                  
+
                   <p className="text-primary font-heading text-base mb-4">
                     {member.role}
                   </p>
-                  
+
                   <div className="text-sm text-charcoal font-body mb-6">
                     <RichTextRenderer content={member.bio || null} />
                   </div>
-                  
+
                   <div className="flex justify-center space-x-4">
                     {member.linkedinUrl && (
                       <a
@@ -137,7 +137,7 @@ export default async function AboutPage() {
                         </svg>
                       </a>
                     )}
-                    
+
                     {member.email && (
                       <a
                         href={`mailto:${member.email}`}
