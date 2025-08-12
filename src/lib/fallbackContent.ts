@@ -20,7 +20,7 @@ The key to successful AI implementation lies in understanding your business obje
 Our proven framework has helped dozens of companies successfully integrate AI into their operations, resulting in:
 
 - Increased efficiency
-- Better customer experiences  
+- Better customer experiences
 - Significant cost savings
 
 ## Getting Started
@@ -51,7 +51,7 @@ We'll explore proven strategies for mapping customer journeys, identifying pain 
 Our approach combines:
 
 - Data analytics
-- User research  
+- User research
 - Cutting-edge technology
 
 This creates experiences that not only meet but exceed customer expectations.
@@ -212,7 +212,7 @@ export const fallbackTeamMembers: TeamMember[] = [
     role: 'Digital Transformation Strategist',
     bio: `# About Loreen
 
-Loreen is a seasoned digital transformation expert with over 10 years of experience helping organizations navigate their digital evolution. She specializes in AI strategy implementation and data-driven decision making.
+Loreen is a seasoned digital transformation expert with over 10 years of experience helping organisations navigate their digital evolution. She specializes in AI strategy implementation and data-driven decision-making.
 
 ## Expertise
 
@@ -234,7 +234,7 @@ Loreen has successfully led digital transformation initiatives for companies ran
     role: 'Customer Experience Lead',
     bio: `# About Janos
 
-Janos brings deep expertise in customer experience optimization and user research. With a background in both technology and psychology, he helps organizations create truly user-centered digital experiences.
+Janos brings deep expertise in customer experience optimization and user research. With a background in both technology and psychology, he helps organisations create truly user-centred digital experiences.
 
 ## Expertise
 
