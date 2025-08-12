@@ -37,16 +37,16 @@ export default async function ServicesPage() {
               What is Digital Transformation?
             </h2>
           </div>
-          
+
           <div className="space-y-6">
             <p className="text-lg text-charcoal font-body leading-relaxed">
               Digital transformation is the integration of digital technology into all areas of a business, fundamentally changing how you operate and deliver value to customers. It&apos;s also a cultural change that requires organizations to continually challenge the status quo, experiment, and get comfortable with failure.
             </p>
-            
+
             <p className="text-lg text-charcoal font-body leading-relaxed">
               At <span className="text-primary font-heading">#sharp</span>, we understand that digital transformation isn&apos;t just about technology—it&apos;s about people, processes, and culture. Our approach ensures that your transformation initiatives deliver real, measurable business value.
             </p>
-            
+
             <div className="bg-gray-50 p-8 rounded-lg mt-8">
               <h3 className="text-2xl font-heading text-charcoal mb-4">Our AI Transformation Approach</h3>
               <p className="text-lg text-charcoal font-body leading-relaxed mb-4">

@@ -18,7 +18,7 @@ interface BlogPostPageProps {
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
-  
+
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -27,7 +27,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await getBlogPost(slug);
-  
+
   if (!post) {
     return {
       title: 'Post Not Found - #sharp',
@@ -148,7 +148,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         </Badge>
                       ))}
                     </div>
-                    <Link 
+                    <Link
                       href={`/blog/${relatedPost.slug}`}
                       className="inline-flex items-center text-primary font-body text-sm hover:text-primary-hover transition-colors"
                     >
@@ -172,7 +172,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             Ready to Transform Your Business?
           </h2>
           <p className="text-lg text-charcoal font-body leading-relaxed mb-8">
-            Let&apos;s discuss how we can help you achieve your digital transformation goals with proven strategies and expert guidance.
+            Let&apos;s talk about your digital transformation goals and how our expert guidance can bring it life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -181,8 +181,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </Button>
             </Link>
             <Link href="/blog">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="bg-transparent text-primary border-2 border-primary font-heading text-base px-8 py-4 rounded-md hover:bg-primary hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 More Articles
