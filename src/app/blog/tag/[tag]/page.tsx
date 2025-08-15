@@ -16,7 +16,7 @@ interface TagPageProps {
 
 export async function generateStaticParams() {
   const tags = await getAllTags();
-  
+
   return tags.map((tag) => ({
     tag: tag.toLowerCase().replace(/\s+/g, '-'),
   }));
@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: TagPageProps): Promise<Metadata> {
   const { tag } = await params;
   const displayTag = tag.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-  
+
   return {
     title: `${displayTag} Articles - #sharp Blog`,
     description: `Expert insights and articles about ${displayTag.toLowerCase()} in digital transformation from the #sharp team.`,
@@ -36,21 +36,21 @@ export async function generateMetadata({ params }: TagPageProps): Promise<Metada
 export default async function TagPage({ params }: TagPageProps) {
   const { tag } = await params;
   const displayTag = tag.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-  
+
   // Get all tags and find the matching one (case-insensitive)
   const allTags = await getAllTags();
   const originalTag = allTags.find(t => t.toLowerCase().replace(/\s+/g, '-') === tag);
-  
+
   if (!originalTag) {
     notFound();
   }
-  
+
   const posts = await getBlogPostsByTag(originalTag);
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-charcoal py-20 lg:py-24">
+      <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="mb-6">
@@ -84,11 +84,11 @@ export default async function TagPage({ params }: TagPageProps) {
                 const isCurrentTag = tagSlug === tag;
                 return (
                   <Link key={tagItem} href={`/blog/tag/${tagSlug}`}>
-                    <Badge 
-                      variant={isCurrentTag ? "default" : "outline"} 
+                    <Badge
+                      variant={isCurrentTag ? "default" : "outline"}
                       className={`text-base px-4 py-2 transition-colors ${
-                        isCurrentTag 
-                          ? 'bg-primary text-white' 
+                        isCurrentTag
+                          ? 'bg-primary text-white'
                           : 'hover:bg-primary hover:text-white'
                       }`}
                     >
@@ -137,11 +137,11 @@ export default async function TagPage({ params }: TagPageProps) {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.map((tagItem) => (
                       <Link key={tagItem} href={`/blog/tag/${tagItem.toLowerCase().replace(/\s+/g, '-')}`}>
-                        <Badge 
-                          variant={tagItem === originalTag ? "default" : "secondary"} 
+                        <Badge
+                          variant={tagItem === originalTag ? "default" : "secondary"}
                           className={`text-xs transition-colors ${
-                            tagItem === originalTag 
-                              ? 'bg-primary text-white' 
+                            tagItem === originalTag
+                              ? 'bg-primary text-white'
                               : 'hover:bg-primary hover:text-white'
                           }`}
                         >
@@ -150,7 +150,7 @@ export default async function TagPage({ params }: TagPageProps) {
                       </Link>
                     ))}
                   </div>
-                  <Link 
+                  <Link
                     href={`/blog/${post.slug}`}
                     className="inline-flex items-center text-primary font-body text-sm hover:text-primary-hover transition-colors"
                   >

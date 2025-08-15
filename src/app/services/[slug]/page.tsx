@@ -16,7 +16,7 @@ interface ServicePageProps {
 
 export async function generateStaticParams() {
   const services = await getServices();
-  
+
   return services.map((service) => ({
     slug: service.slug,
   }));
@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
   const { slug } = await params;
   const service = await getService(slug);
-  
+
   if (!service) {
     return {
       title: 'Service Not Found - #sharp',
@@ -49,24 +49,24 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   }
 
   const colorMapping: { [key: string]: { gradient: string; text: string; bg: string } } = {
-    'customer-experience': { 
+    'customer-experience': {
       gradient: 'from-orange-sharp to-yellow-sharp',
       text: 'text-orange-sharp',
       bg: 'bg-orange-sharp'
     },
-    'operational-efficiency': { 
+    'operational-efficiency': {
       gradient: 'from-sky-sharp to-blue-sharp',
       text: 'text-sky-sharp',
       bg: 'bg-sky-sharp'
     },
-    'data-and-analytics': { 
+    'data-and-analytics': {
       gradient: 'from-purple-sharp to-magenta-sharp',
       text: 'text-purple-sharp',
       bg: 'bg-purple-sharp'
     },
   };
 
-  const colors = colorMapping[service.slug] || { 
+  const colors = colorMapping[service.slug] || {
     gradient: 'from-gray-400 to-gray-600',
     text: 'text-gray-600',
     bg: 'bg-gray-600'
@@ -94,7 +94,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-charcoal py-20 lg:py-24">
+      <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className={`w-24 h-24 mx-auto mb-8 bg-gradient-to-br ${colors.gradient} rounded-full flex items-center justify-center`}>
@@ -229,8 +229,8 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               </Button>
             </Link>
             <Link href="/services">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="bg-transparent text-primary border-2 border-primary font-heading text-base px-8 py-4 rounded-md hover:bg-primary hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 View All Services

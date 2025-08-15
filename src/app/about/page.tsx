@@ -18,7 +18,7 @@ export default async function AboutPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-charcoal py-20 lg:py-24">
+      <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Image
