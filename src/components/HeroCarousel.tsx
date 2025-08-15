@@ -82,7 +82,7 @@ const HeroCarousel = () => {
   }, [slides.length]);
 
   return (
-    <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-32" aria-label="Hero section">
+    <section className="relative bg-charcoal py-20 lg:py-32" aria-label="Hero section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
           {/* Carousel Container */}
