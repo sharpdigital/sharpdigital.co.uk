@@ -22,7 +22,9 @@
       "Bash(appwrite init:*)",
       "Bash(curl:*)",
       "Bash(docker-compose:*)",
-      "Bash(appwrite client:*)"
+      "Bash(appwrite client:*)",
+      "Bash(git restore:*)",
+      "mcp__sequential-thinking__sequentialthinking"
     ],
     "deny": []
   }
