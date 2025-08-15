@@ -94,7 +94,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-24">
+      <section className="relative bg-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className={`w-24 h-24 mx-auto mb-8 bg-gradient-to-br ${colors.gradient} rounded-full flex items-center justify-center`}>
@@ -104,10 +104,10 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 </svg>
               )}
             </div>
-            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-charcoal mb-6">
+            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
               {service.title}
             </h1>
-            <p className="text-xl text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-white font-body leading-relaxed max-w-3xl mx-auto">
               {service.description}
             </p>
           </div>

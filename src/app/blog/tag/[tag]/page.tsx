@@ -50,18 +50,18 @@ export default async function TagPage({ params }: TagPageProps) {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-24">
+      <section className="relative bg-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="mb-6">
-              <Badge variant="outline" className="text-lg px-6 py-3 mb-4">
+              <Badge variant="secondary" className="text-lg px-6 py-3 mb-4 bg-charcoal text-white border border-white">
                 {displayTag}
               </Badge>
             </div>
-            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-charcoal mb-6">
+            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
               {displayTag} <span className="text-primary">Articles</span>
             </h1>
-            <p className="text-xl text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-white font-body leading-relaxed max-w-3xl mx-auto">
               Expert insights and practical guidance on {displayTag.toLowerCase()} from the #sharp team.
             </p>
           </div>
