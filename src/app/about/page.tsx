@@ -18,20 +18,20 @@ export default async function AboutPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-24">
+      <section className="relative bg-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Image
-              src="/img/sharp_logo.svg"
+              src="/img/sharp_logo_invert.svg"
               alt="#sharp logo"
               width={120}
               height={48}
               className="mx-auto mb-8"
             />
-            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-charcoal mb-6">
+            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
               About <span className="text-primary">#sharp</span>
             </h1>
-            <p className="text-xl text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-white font-body leading-relaxed max-w-3xl mx-auto">
               Your unfair advantage in an unrelenting digital age. We don’t just help you transform, we help you innovate measurable impact.
             </p>
           </div>
