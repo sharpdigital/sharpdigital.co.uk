@@ -67,27 +67,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-24">
+      <section className="relative bg-charcoal py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center gap-4 mb-6">
               <span className="text-primary font-body text-lg">
                 {formatDate(post.publishDate || '')}
               </span>
-              <span className="text-charcoal font-body text-lg">
+              <span className="text-white font-body text-lg">
                 by {post.author || 'Unknown'}
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-charcoal mb-6">
+            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
               {post.title}
             </h1>
-            <p className="text-xl text-charcoal font-body leading-relaxed max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-white font-body leading-relaxed max-w-3xl mx-auto mb-8">
               {post.excerpt}
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {post.tags.map((tag) => (
                 <Link key={tag} href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}>
-                  <Badge variant="outline" className="text-base px-4 py-2 hover:bg-primary hover:text-white transition-colors">
+                  <Badge variant="secondary" className="text-base px-4 py-2 bg-charcoal text-white border border-white hover:bg-primary hover:border-primary transition-colors">
                     {tag}
                   </Badge>
                 </Link>

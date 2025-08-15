@@ -16,13 +16,13 @@ export default async function ServicesPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 lg:py-24">
+      <section className="relative bg-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-charcoal mb-6">
+            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
               Our <span className="text-primary">Services</span>
             </h1>
-            <p className="text-xl text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-white font-body leading-relaxed max-w-3xl mx-auto">
               Comprehensive digital transformation solutions across three key areas that drive measurable business impact.
             </p>
           </div>
