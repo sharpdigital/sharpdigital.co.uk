@@ -135,6 +135,7 @@ We work with you to create experiences that not only meet but exceed customer ex
 - Improved brand loyalty
 - Better customer lifetime value`,
     features: ['Journey Mapping', 'Touchpoint Optimization', 'Personalization'],
+    image: 'analyse.jpg',
     icon: 'customer-experience',
     color: 'orange-sharp',
     orderIndex: 1,
@@ -166,6 +167,7 @@ Our proven methodology includes:
 - Enhanced employee satisfaction
 - Better resource utilization`,
     features: ['Process Automation', 'Workflow Optimization', 'Digital Tools'],
+    image: 'analyse.jpg',
     icon: 'operational-efficiency',
     color: 'sky-sharp',
     orderIndex: 2,
@@ -197,6 +199,7 @@ Our comprehensive data strategy includes:
 - Competitive advantage through analytics
 - Improved ROI on data investments`,
     features: ['BI Dashboards', 'Predictive Analytics', 'Data Visualization'],
+    image: 'analyse.jpg',
     icon: 'data-analytics',
     color: 'purple-sharp',
     orderIndex: 3,
