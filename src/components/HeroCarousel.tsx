@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
 interface Slide {
@@ -12,6 +13,7 @@ interface Slide {
   gradientFrom: string;
   gradientTo: string;
   icon: React.ReactNode;
+  imageUrl: string;
 }
 
 const HeroCarousel = () => {
@@ -25,6 +27,7 @@ const HeroCarousel = () => {
       color: "text-orange-sharp",
       gradientFrom: "from-orange-sharp",
       gradientTo: "to-yellow-sharp",
+      imageUrl: "/img/customerExperience.jpg",
       icon: (
         <svg className="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -38,6 +41,7 @@ const HeroCarousel = () => {
       color: "text-sky-sharp",
       gradientFrom: "from-sky-sharp",
       gradientTo: "to-blue-sharp",
+      imageUrl: "/img/automation.jpg",
       icon: (
         <svg className="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -51,6 +55,7 @@ const HeroCarousel = () => {
       color: "text-purple-sharp",
       gradientFrom: "from-purple-sharp",
       gradientTo: "to-magenta-sharp",
+      imageUrl: "/img/analyse.jpg",
       icon: (
         <svg className="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 24 24">
           <path d="M3 3v18h18v-2H5V3H3z"/>
@@ -93,9 +98,23 @@ const HeroCarousel = () => {
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {slides.map((slide, index) => (
-                <div key={index} className="carousel-slide w-full flex-none">
-                  <div className="flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16">
-                    <div className="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
+                <div key={index} className="carousel-slide w-full flex-none relative">
+                  {/* Background Image for Right Side */}
+                  <div className="absolute inset-0 lg:left-1/2 lg:w-1/2">
+                    <Image
+                      src={slide.imageUrl}
+                      alt={slide.title}
+                      fill
+                      className="object-cover"
+                      priority={index === currentSlide}
+                    />
+                    {/* Fade to left gradient overlay - only covers left 1/5th */}
+                    <div className="absolute inset-y-0 left-0 w-1/5 bg-gradient-to-r from-white to-transparent"></div>
+                  </div>
+                  
+                  {/* Content Container */}
+                  <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16 min-h-[500px]">
+                    <div className="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 bg-white/90 lg:bg-transparent p-6 lg:p-0 rounded-lg lg:rounded-none">
                       <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading leading-tight text-charcoal mb-6">
                         {slide.title}
                         <span className="text-primary block">AI-Powered Digital Solutions</span>
@@ -117,11 +136,8 @@ const HeroCarousel = () => {
                         </Button>
                       </Link>
                     </div>
-                    <div className="lg:w-1/2 flex justify-center">
-                      <div className={`w-64 h-64 bg-gradient-to-br ${slide.gradientFrom} ${slide.gradientTo} rounded-full flex items-center justify-center`}>
-                        {slide.icon}
-                      </div>
-                    </div>
+                    {/* Right side space for background image */}
+                    <div className="lg:w-1/2 hidden lg:block"></div>
                   </div>
                 </div>
               ))}

@@ -86,6 +86,12 @@ export default async function ServicesPage() {
 
               const colors = colorMapping[service.slug] || { from: 'from-gray-400', to: 'to-gray-600' };
 
+              const imageMapping: { [key: string]: string } = {
+                'customer-experience': '/img/customerExperience.jpg',
+                'operational-efficiency': '/img/automation.jpg',
+                'data-and-analytics': '/img/analyse.jpg',
+              };
+
               const iconMapping: { [key: string]: React.ReactNode } = {
                 'customer-experience': (
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -114,6 +120,7 @@ export default async function ServicesPage() {
                   gradientFrom={colors.from}
                   gradientTo={colors.to}
                   href={`/services/${service.slug}`}
+                  imageUrl={imageMapping[service.slug]}
                   icon={iconMapping[service.slug] || (
                     <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
