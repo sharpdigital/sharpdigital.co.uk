@@ -24,7 +24,11 @@
       "Bash(docker-compose:*)",
       "Bash(appwrite client:*)",
       "Bash(git restore:*)",
-      "mcp__sequential-thinking__sequentialthinking"
+      "mcp__sequential-thinking__sequentialthinking",
+      "mcp__appwrite__users_list",
+      "Bash(appwrite databases:*)",
+      "Bash(appwrite login:*)",
+      "mcp__appwrite__databases_list"
     ],
     "deny": []
   }
