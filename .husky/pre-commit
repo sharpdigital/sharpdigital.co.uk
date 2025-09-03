@@ -1,0 +1,14 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Run type checking
+echo "🔍 Running TypeScript type check..."
+bunx tsc --noEmit
+
+# Run linting and formatting on staged files
+echo "🧹 Running lint-staged..."
+bunx lint-staged
+
+# Run build to catch any build errors
+echo "🏗️ Running build check..."
+bun run build
