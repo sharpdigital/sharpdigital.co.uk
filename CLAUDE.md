@@ -21,6 +21,7 @@ This is the website for #sharp (https://sharpdigital.co.uk/), a digital agency s
 ## Development Commands
 
 Currently no build process exists. Future Next.js implementation will need:
+
 - `bun run dev` - Development server
 - `bun run build` - Static site generation
 - `bun run start` - Production preview
@@ -28,11 +29,13 @@ Currently no build process exists. Future Next.js implementation will need:
 ## Design System Requirements
 
 ### Typography
-- **Headings/Titles**: Frutiger45Light (sans-serif) from `/font/` directory
+
+- **Headings/Titles**: Manrope (sans-serif) from `/font/` directory
 - **Body/Paragraphs**: Web-safe serif font
 - **Logo**: Use `img/sharp_logo.svg`
 
 ### Layout
+
 - **Background**: White (clean, professional)
 - **Components**: Shadcn/UI with TailwindCSS
 - **Navigation**: Home, About, Services, Blog, Contact
@@ -40,6 +43,7 @@ Currently no build process exists. Future Next.js implementation will need:
 ## Site Structure & Content
 
 ### Layout Components
+
 - **Header**: Logo + navigation menu
 - **Body**: Page-specific content
 - **Footer**: Copyright, links (T&C, privacy policy, llms.txt)
@@ -51,11 +55,13 @@ Currently no build process exists. Future Next.js implementation will need:
 **About (/about)**: Expanded #sharp statement, our story, meet the team (Loreen, Janos)
 
 **Services (/services)**: What is Digital Transformation, AI Transformation approach, service areas
+
 - `/services/customer-experience`
-- `/services/operational-efficiency` 
+- `/services/operational-efficiency`
 - `/services/data-and-analytics`
 
 **Blog (/blog)**: Recent blog entries
+
 - `/blog/tag/[tag]` - Filtered by tag
 - `/blog/[slug]` - Individual posts with related articles
 

@@ -29,15 +29,15 @@ module.exports = {
         info: '#218BED',
       },
       fontFamily: {
-        'heading': ['Frutiger45Light', 'Inter', 'sans-serif'],
-        'body': ['Georgia', 'serif'],
-        'sans': ['Inter', 'sans-serif'],
+        heading: ['Manrope', 'Inter', 'sans-serif'],
+        body: ['Inter', 'serif'],
+        sans: ['Inter', 'sans-serif'],
       },
       container: {
         center: true,
-        padding: "2rem",
+        padding: '2rem',
         screens: {
-          "2xl": "1400px",
+          '2xl': '1400px',
         },
       },
       animation: {
@@ -62,4 +62,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

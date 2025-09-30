@@ -4,10 +4,11 @@
 
 /* Frutiger font face declarations */
 @font-face {
-  font-family: 'Frutiger45Light';
-  src: url('/font/frutiger-light.woff') format('woff'),
-       url('/font/frutiger-light.ttf') format('truetype'),
-       url('/font/frutiger-light.eot') format('embedded-opentype');
+  font-family: 'Manrope';
+  src:
+    url('/font/frutiger-light.woff') format('woff'),
+    url('/font/frutiger-light.ttf') format('truetype'),
+    url('/font/frutiger-light.eot') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -26,7 +27,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
   }
-  
+
   .line-clamp-3 {
     overflow: hidden;
     display: -webkit-box;

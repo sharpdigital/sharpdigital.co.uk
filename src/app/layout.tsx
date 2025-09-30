@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter, Manrope } from 'next/font/google';
+import './globals.css';
 
 const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+  variable: '--font-inter',
+  subsets: ['latin'],
+});
+
+const manrope = Manrope({
+  variable: '--font-manrope',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
@@ -13,8 +18,10 @@ export const metadata: Metadata = {
     template: '%s | #sharp',
     default: 'Digital Transformation Consultancy | #sharp',
   },
-  description: 'Leading digital transformation consultancy helping businesses navigate their digital evolution with proven strategies in customer experience, operational efficiency, and data analytics.',
-  keywords: 'digital transformation, AI transformation, customer experience, operational efficiency, data analytics, business consulting, digital strategy',
+  description:
+    'Leading digital transformation consultancy helping businesses navigate their digital evolution with proven strategies in customer experience, operational efficiency, and data analytics.',
+  keywords:
+    'digital transformation, AI transformation, customer experience, operational efficiency, data analytics, business consulting, digital strategy',
   authors: [{ name: '#sharp' }],
   creator: '#sharp',
   publisher: '#sharp',
@@ -24,7 +31,8 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: 'https://sharpdigital.co.uk',
     title: 'Digital Transformation Consultancy | #sharp',
-    description: 'Leading digital transformation consultancy helping businesses navigate their digital evolution with proven strategies.',
+    description:
+      'Leading digital transformation consultancy helping businesses navigate their digital evolution with proven strategies.',
     siteName: '#sharp',
     images: [
       {
@@ -38,7 +46,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Digital Transformation Consultancy | #sharp',
-    description: 'Leading digital transformation consultancy helping businesses navigate their digital evolution with proven strategies.',
+    description:
+      'Leading digital transformation consultancy helping businesses navigate their digital evolution with proven strategies.',
     images: ['/img/sharp_logo_w264.png'],
   },
   icons: {
