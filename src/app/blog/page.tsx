@@ -24,15 +24,13 @@ export default async function BlogPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
-              Our <span className="text-primary">Insights</span>
-            </h1>
-            <p className="text-xl text-white font-body leading-relaxed max-w-3xl mx-auto">
-              Expert perspectives on digital transformation, AI implementation, and business
-              optimization from the #sharp team.
-            </p>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
+            Our <span className="text-primary">Insights</span>
+          </h1>
+          <p className="text-xl text-white font-body leading-relaxed px-1">
+            Expert perspectives on digital transformation, AI implementation, and business
+            optimization from the #sharp team.
+          </p>
         </div>
       </section>
 

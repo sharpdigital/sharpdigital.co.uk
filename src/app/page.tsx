@@ -64,7 +64,7 @@ export default function Home() {
       <HeroCarousel />
 
       {/* #sharp Statement Section */}
-      <section className="py-20 bg-white" aria-label="About Sharp">
+      <section className="py-19 bg-white" aria-label="About Sharp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="lg:text-left">
@@ -116,7 +116,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               Our Service Areas
             </h2>
-            <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-charcoal font-body leading-relaxed">
               Comprehensive digital transformation across three key areas
             </p>
           </div>
@@ -178,7 +178,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               Latest Insights & Thought Leadership
             </h2>
-            <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-charcoal font-body leading-relaxed">
               Digital transformation expertise and industry insights
             </p>
           </div>

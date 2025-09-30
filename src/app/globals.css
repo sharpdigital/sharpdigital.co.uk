@@ -52,6 +52,7 @@
   }
 
   .text-4xl {
+    font-size: 2.6rem;
     line-height: 1.26;
   }
 
@@ -59,14 +60,46 @@
     margin-bottom: 2.5rem;
   }
 
-  .py-20 {
+  .px-4 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .px-6 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .px-8 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .py-19 {
     padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .py-20 {
+    padding-top: 4.8rem;
     padding-bottom: 8rem;
   }
 
   .py-24 {
     padding-top: 8rem;
     padding-bottom: 11.6rem;
+  }
+
+  .mb-4 {
+    margin-bottom: 2rem;
+  }
+
+  .p-6 {
+    padding: 1.6em 2rem;
+  }
+
+  .p-8 {
+    padding: 2.6em 3rem;
   }
 
   .mb-6 {
@@ -81,5 +114,9 @@
 
   h1.carousel-title {
     font-size: 2.9rem;
+  }
+
+  .space-y-6 > div {
+    margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse))) !important;
   }
 }

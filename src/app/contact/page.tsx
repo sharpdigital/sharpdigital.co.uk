@@ -18,15 +18,13 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
-              Let&apos;s <span className="text-primary">Connect</span>
-            </h1>
-            <p className="text-xl text-white font-body leading-relaxed max-w-3xl mx-auto">
-              Ready to start your digital transformation journey? We&apos;re here to help you
-              succeed with expert guidance and proven strategies.
-            </p>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
+            Let&apos;s <span className="text-primary">Connect</span>
+          </h1>
+          <p className="text-xl text-white font-body leading-relaxed px-1">
+            Ready to start your digital transformation journey? We&apos;re here to help you succeed
+            with expert guidance and proven strategies.
+          </p>
         </div>
       </section>
 
@@ -125,12 +123,12 @@ export default function ContactPage() {
 
       {/* Next Steps Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               What Happens Next?
             </h2>
-            <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-charcoal font-body leading-relaxed">
               Once you reach out, here&apos;s what you can expect from our process.
             </p>
           </div>

@@ -21,22 +21,20 @@ export default async function AboutPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
-              About <span className="text-primary">#sharp</span>
-            </h1>
-            <p className="text-xl text-white font-body leading-relaxed max-w-3xl mx-auto">
-              Your unfair advantage in an unrelenting digital age.
-              <br />
-              We don’t just help you transform, we help you innovate measurable impact.
-            </p>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
+            About <span className="text-primary">#sharp</span>
+          </h1>
+          <p className="text-xl text-white font-body leading-relaxed px-1">
+            Your unfair advantage in an unrelenting digital age.
+            <br />
+            We don’t just help you transform, we help you innovate measurable impact.
+          </p>
         </div>
       </section>
 
       {/* Company Story Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               Our Story
@@ -110,7 +108,7 @@ export default async function AboutPage() {
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               Meet Our Team
             </h2>
-            <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-charcoal font-body leading-relaxed">
               Our expert team brings decades of combined experience in digital transformation,
               technology, and business strategy.
             </p>
@@ -184,7 +182,7 @@ export default async function AboutPage() {
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               Our Approach
             </h2>
-            <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-charcoal font-body leading-relaxed">
               We follow a proven methodology that ensures successful digital transformation
               outcomes.
             </p>

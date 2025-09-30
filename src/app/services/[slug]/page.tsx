@@ -103,11 +103,11 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         )}
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
               {service.title}
             </h1>
-            <p className="text-xl text-white font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-white font-body leading-relaxed px-1">
               {service.description}
             </p>
           </div>
@@ -116,7 +116,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
       {/* Main Content */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <RichTextRenderer content={service.content || null} />
         </div>
       </section>
@@ -128,7 +128,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               Key Features
             </h2>
-            <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-charcoal font-body leading-relaxed">
               Our comprehensive approach to {service.title.toLowerCase()} includes these essential
               components.
             </p>
@@ -169,7 +169,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               Our Process
             </h2>
-            <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-charcoal font-body leading-relaxed">
               We follow a proven methodology to ensure successful {service.title.toLowerCase()}{' '}
               implementation.
             </p>
@@ -221,7 +221,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
       {/* Call to Action */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
             Ready to Transform Your {service.title}?
           </h2>

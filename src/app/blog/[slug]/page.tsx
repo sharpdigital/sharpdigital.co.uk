@@ -68,39 +68,35 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <Layout>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <span className="text-primary font-body text-lg">
-                {formatDate(post.publishDate || '')}
-              </span>
-              <span className="text-white font-body text-lg">by {post.author || 'Unknown'}</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
-              {post.title}
-            </h1>
-            <p className="text-xl text-white font-body leading-relaxed max-w-3xl mx-auto mb-8">
-              {post.excerpt}
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {post.tags.map((tag) => (
-                <Link key={tag} href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}>
-                  <Badge
-                    variant="secondary"
-                    className="text-base px-4 py-2 bg-charcoal text-white border border-white hover:bg-primary hover:border-primary transition-colors"
-                  >
-                    {tag}
-                  </Badge>
-                </Link>
-              ))}
-            </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <span className="text-primary font-body text-lg">
+              {formatDate(post.publishDate || '')}
+            </span>
+            <span className="text-white font-body text-lg">by {post.author || 'Unknown'}</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
+            {post.title}
+          </h1>
+          <p className="text-xl text-white font-body leading-relaxed px-1">{post.excerpt}</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {post.tags.map((tag) => (
+              <Link key={tag} href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}>
+                <Badge
+                  variant="secondary"
+                  className="text-base px-4 py-2 bg-charcoal text-white border border-white hover:bg-primary hover:border-primary transition-colors"
+                >
+                  {tag}
+                </Badge>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Article Content */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="prose prose-lg max-w-none">
             <RichTextRenderer content={post.content || null} />
           </article>
@@ -115,7 +111,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
                 Related Articles
               </h2>
-              <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg text-charcoal font-body leading-relaxed">
                 Continue exploring our insights on digital transformation and business optimization.
               </p>
             </div>
@@ -184,7 +180,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* Call to Action */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
             Ready to Transform Your Business?
           </h2>

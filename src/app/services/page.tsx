@@ -20,21 +20,19 @@ export default async function ServicesPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
-              Our <span className="text-primary">Services</span>
-            </h1>
-            <p className="text-xl text-white font-body leading-relaxed max-w-3xl mx-auto">
-              Comprehensive digital transformation solutions across three key areas that drive
-              measurable business impact.
-            </p>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
+            Our <span className="text-primary">Services</span>
+          </h1>
+          <p className="text-xl text-white font-body leading-relaxed px-1">
+            Comprehensive digital transformation solutions across three key areas that drive
+            measurable business impact.
+          </p>
         </div>
       </section>
 
       {/* What is Digital Transformation Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               What is Digital Transformation?
@@ -49,7 +47,7 @@ export default async function ServicesPage() {
               the status quo, experiment, and get comfortable with failure.
             </p>
 
-            <p className="text-lg text-charcoal font-body leading-relaxed">
+            <p className="text-lg text-charcoal font-body leading-relaxed mb-6">
               At <span className="text-primary font-heading">#sharp</span>, we understand that
               digital transformation isn&apos;t just about technology—it&apos;s about people,
               processes, and culture. Our approach ensures that your transformation initiatives
@@ -83,7 +81,7 @@ export default async function ServicesPage() {
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               Our Service Areas
             </h2>
-            <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-charcoal font-body leading-relaxed">
               We focus on three core areas that are essential for successful digital transformation.
             </p>
           </div>
@@ -157,7 +155,7 @@ export default async function ServicesPage() {
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               Why Choose <span className="text-primary">#sharp</span>?
             </h2>
-            <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-charcoal font-body leading-relaxed">
               We bring proven methodologies, deep expertise, and a track record of successful
               transformations.
             </p>
