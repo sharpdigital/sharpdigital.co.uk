@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import Layout from '@/components/Layout';
 import ServiceCard from '@/components/ServiceCard';
 import { getServices } from '@/lib/contentService';
+import ShaderBackground from '@/components/ShaderBackground';
 
 export const metadata: Metadata = {
   title: 'Digital Transformation Services - #sharp',
@@ -19,7 +20,8 @@ export default async function ServicesPage() {
     <Layout>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ShaderBackground className="background-shader" />
+        <div className="relative z-index-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
             Our <span className="text-primary">Services</span>
           </h1>
