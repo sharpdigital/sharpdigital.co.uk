@@ -18,7 +18,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
               Let&apos;s <span className="text-primary">Connect</span>
             </h1>
@@ -126,7 +126,7 @@ export default function ContactPage() {
       {/* Next Steps Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               What Happens Next?
             </h2>
@@ -136,7 +136,7 @@ export default function ContactPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
+            <div className="">
               <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
                 <span className="text-white font-heading text-xl">1</span>
               </div>
@@ -147,7 +147,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="">
               <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
                 <span className="text-white font-heading text-xl">2</span>
               </div>
@@ -158,7 +158,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="">
               <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
                 <span className="text-white font-heading text-xl">3</span>
               </div>

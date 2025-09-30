@@ -24,7 +24,7 @@ export default async function BlogPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
               Our <span className="text-primary">Insights</span>
             </h1>
@@ -39,7 +39,7 @@ export default async function BlogPage() {
       {/* Tags Filter */}
       <section className="py-12 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <div className="mb-8">
             <h2 className="text-2xl font-heading text-charcoal mb-4">Browse by Topic</h2>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/blog">
@@ -136,7 +136,7 @@ export default async function BlogPage() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-16">
+            <div className="py-16">
               <h3 className="text-2xl font-heading text-charcoal mb-4">No blog posts found</h3>
               <p className="text-lg text-charcoal font-body">
                 We&apos;re working on bringing you fresh insights. Check back soon!

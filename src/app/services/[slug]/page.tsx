@@ -103,7 +103,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         )}
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
               {service.title}
             </h1>
@@ -124,7 +124,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       {/* Key Features */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               Key Features
             </h2>
@@ -140,7 +140,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 key={index}
                 className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200"
               >
-                <CardHeader className="text-center pb-4">
+                <CardHeader className="pb-4">
                   <div
                     className={`w-12 h-12 mx-auto mb-4 ${colors.bg} rounded-full flex items-center justify-center`}
                   >
@@ -150,7 +150,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                   </div>
                   <CardTitle className={`text-lg font-heading ${colors.text}`}>{feature}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center pt-0">
+                <CardContent className="pt-0">
                   <p className="text-sm text-charcoal font-body leading-relaxed">
                     Expert implementation of {feature.toLowerCase()} to drive measurable business
                     results.
@@ -165,7 +165,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               Our Process
             </h2>
@@ -176,7 +176,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
+            <div className="">
               <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
                 <span className="text-white font-heading text-xl">1</span>
               </div>
@@ -186,7 +186,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="">
               <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
                 <span className="text-white font-heading text-xl">2</span>
               </div>
@@ -196,7 +196,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="">
               <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
                 <span className="text-white font-heading text-xl">3</span>
               </div>
@@ -206,7 +206,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="">
               <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
                 <span className="text-white font-heading text-xl">4</span>
               </div>
@@ -221,7 +221,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
       {/* Call to Action */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
             Ready to Transform Your {service.title}?
           </h2>

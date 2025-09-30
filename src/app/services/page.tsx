@@ -20,7 +20,7 @@ export default async function ServicesPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
               Our <span className="text-primary">Services</span>
             </h1>
@@ -35,7 +35,7 @@ export default async function ServicesPage() {
       {/* What is Digital Transformation Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               What is Digital Transformation?
             </h2>
@@ -79,7 +79,7 @@ export default async function ServicesPage() {
       {/* Services Grid */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               Our Service Areas
             </h2>
@@ -153,7 +153,7 @@ export default async function ServicesPage() {
       {/* Why Choose Sharp Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
               Why Choose <span className="text-primary">#sharp</span>?
             </h2>
@@ -164,7 +164,7 @@ export default async function ServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center">
+            <div className="">
               <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 6.5 15.5 8zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" />
@@ -177,7 +177,7 @@ export default async function ServicesPage() {
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="">
               <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -190,7 +190,7 @@ export default async function ServicesPage() {
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="">
               <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />

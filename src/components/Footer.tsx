@@ -3,9 +3,12 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-12 px-6 lg:px-8" aria-label="Footer">
+    <footer
+      className="bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-12 px-6 lg:px-8"
+      aria-label="Footer"
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center">
+        <div className="">
           <p className="text-sm font-body text-white mb-4">
             &copy; {new Date().getFullYear()} #sharp. All rights reserved.
           </p>

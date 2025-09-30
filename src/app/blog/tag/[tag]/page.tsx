@@ -52,7 +52,7 @@ export default async function TagPage({ params }: TagPageProps) {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <div className="mb-6">
               <Badge
                 variant="secondary"
@@ -75,7 +75,7 @@ export default async function TagPage({ params }: TagPageProps) {
       {/* Tags Filter */}
       <section className="py-12 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <div className="mb-8">
             <h2 className="text-2xl font-heading text-charcoal mb-4">Browse by Topic</h2>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/blog">

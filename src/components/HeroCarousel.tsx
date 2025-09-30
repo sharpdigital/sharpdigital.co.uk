@@ -117,7 +117,7 @@ const HeroCarousel = () => {
 
                   {/* Content Container */}
                   <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16 min-h-[500px]">
-                    <div className="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0 bg-white/90 lg:bg-transparent p-6 lg:p-0 rounded-lg lg:rounded-none">
+                    <div className="lg:w-1/2 lg:text-left mb-8 lg:mb-0 bg-white/90 lg:bg-transparent p-6 lg:p-0 rounded-lg lg:rounded-none">
                       <h1 className="carousel-title text-3xl md:text-4xl lg:text-5xl font-heading leading-tight text-charcoal mb-6">
                         {slide.title}
                         <span className="text-primary block">AI-Powered Digital Solutions</span>

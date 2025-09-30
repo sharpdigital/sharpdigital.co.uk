@@ -80,7 +80,9 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-tap-highlight" content="no" />
       </head>
-      <body className={`${inter.variable} antialiased font-sans bg-white text-gray-900`}>
+      <body
+        className={`${inter.variable} ${manrope.variable} antialiased font-sans bg-white text-gray-900`}
+      >
         {children}
       </body>
     </html>
