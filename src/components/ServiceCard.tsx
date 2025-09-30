@@ -25,7 +25,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   imageUrl,
 }) => {
   return (
-    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+    <div className="bg-white border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
       {imageUrl ? (
         <div className="aspect-video w-full mb-2">
           <Image
@@ -52,7 +52,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           ))}
         </ul>
         <Link href={href}>
-          <Button className="w-full inline-flex items-center bg-primary text-white font-heading text-base px-6 py-3 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+          <Button className="w-full inline-flex items-center bg-primary text-white font-heading text-base px-6 py-3 hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
             Learn More
             {/* <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path

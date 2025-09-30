@@ -63,7 +63,7 @@ export default async function AboutPage() {
                 data-driven, and focused on sustainable results.
               </p>
 
-              <div className="bg-gray-50 p-8 rounded-lg mt-8">
+              <div className="bg-gray-50 p-8 mt-8">
                 <h3 className="text-2xl font-heading text-charcoal mb-4">Our Mission</h3>
                 <p className="text-lg text-charcoal font-body leading-relaxed">
                   To empower businesses to thrive in the digital era by delivering innovative,
@@ -73,7 +73,7 @@ export default async function AboutPage() {
                 </p>
               </div>
 
-              <div className="bg-gray-50 p-8 rounded-lg mt-6">
+              <div className="bg-gray-50 p-8 mt-6">
                 <h3 className="text-2xl font-heading text-charcoal mb-4">Our Values</h3>
                 <ul className="space-y-3 text-lg text-charcoal font-body">
                   <li>

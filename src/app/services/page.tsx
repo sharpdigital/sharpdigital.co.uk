@@ -54,7 +54,7 @@ export default async function ServicesPage() {
               deliver real, measurable business value.
             </p>
 
-            <div className="bg-gray-50 p-8 rounded-lg mt-8">
+            <div className="bg-gray-50 p-8 mt-8">
               <h3 className="text-2xl font-heading text-charcoal mb-4">
                 Our AI Transformation Approach
               </h3>

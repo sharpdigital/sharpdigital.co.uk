@@ -94,7 +94,7 @@ const HeroCarousel = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
           {/* Carousel Container */}
-          <div className="carousel-container relative overflow-hidden rounded-lg bg-white shadow-xl">
+          <div className="carousel-container relative overflow-hidden bg-white shadow-xl">
             {/* Carousel Slides */}
             <div
               className="carousel-slides flex transition-transform duration-500 ease-in-out"
@@ -117,7 +117,7 @@ const HeroCarousel = () => {
 
                   {/* Content Container */}
                   <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16 min-h-[500px]">
-                    <div className="lg:w-1/2 lg:text-left mb-8 lg:mb-0 bg-white/90 lg:bg-transparent p-6 lg:p-0 rounded-lg lg:rounded-none">
+                    <div className="lg:w-1/2 lg:text-left mb-8 lg:mb-0 bg-white/90 lg:bg-transparent p-6 lg:p-0 lg:rounded-none">
                       <h1 className="carousel-title text-3xl md:text-4xl lg:text-5xl font-heading leading-tight text-charcoal mb-6">
                         {slide.title}
                         <span className="text-primary block">AI-Powered Digital Solutions</span>
@@ -131,7 +131,7 @@ const HeroCarousel = () => {
                         </p>
                       </div>
                       <Link href="/services">
-                        <Button className="inline-flex items-center bg-primary text-white font-heading text-base px-8 py-4 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                        <Button className="inline-flex items-center bg-primary text-white font-heading text-base px-8 py-4 hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                           Learn More
                           <svg
                             className="ml-2 w-5 h-5"

@@ -190,14 +190,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button className="bg-primary text-white font-heading text-base px-8 py-4 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+              <Button className="bg-primary text-white font-heading text-base px-8 py-4 hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                 Get Started
               </Button>
             </Link>
             <Link href="/blog">
               <Button
                 variant="outline"
-                className="bg-transparent text-primary border-2 border-primary font-heading text-base px-8 py-4 rounded-md hover:bg-primary hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                className="bg-transparent text-primary border-2 border-primary font-heading text-base px-8 py-4 hover:bg-primary hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 More Articles
               </Button>

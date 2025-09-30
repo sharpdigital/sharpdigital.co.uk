@@ -220,7 +220,7 @@ This document defines the comprehensive visual design system for #sharp's digita
 - **Hover**: Darken 10% (#D41E20)
 - **Active**: Darken 15% (#C01A1C)
 - **Disabled**: 50% opacity
-- **Tailwind**: `bg-primary text-white font-heading text-base px-6 py-3 rounded-md hover:bg-primary-hover active:bg-primary-active disabled:opacity-50 transition-colors duration-200`
+- **Tailwind**: `bg-primary text-white font-heading text-base px-6 py-3 hover:bg-primary-hover active:bg-primary-active disabled:opacity-50 transition-colors duration-200`
 
 #### Secondary Button
 
@@ -232,7 +232,7 @@ This document defines the comprehensive visual design system for #sharp's digita
 - **Border Radius**: 6px
 - **Hover**: Primary Red background, White text
 - **Active**: Darken 15% (#C01A1C)
-- **Tailwind**: `bg-transparent text-primary border-2 border-primary font-heading text-base px-6 py-2.5 rounded-md hover:bg-primary hover:text-white active:bg-primary-active transition-colors duration-200`
+- **Tailwind**: `bg-transparent text-primary border-2 border-primary font-heading text-base px-6 py-2.5 hover:bg-primary hover:text-white active:bg-primary-active transition-colors duration-200`
 
 #### Tertiary Button
 
@@ -243,7 +243,7 @@ This document defines the comprehensive visual design system for #sharp's digita
 - **Padding**: 8px 16px
 - **Hover**: Light Gray background (#F8F9FA)
 - **Active**: Medium Gray background (#E9ECEF)
-- **Tailwind**: `bg-transparent text-charcoal font-heading text-base px-4 py-2 rounded-md hover:bg-gray-50 active:bg-gray-100 transition-colors duration-200`
+- **Tailwind**: `bg-transparent text-charcoal font-heading text-base px-4 py-2 hover:bg-gray-50 active:bg-gray-100 transition-colors duration-200`
 
 #### Button Sizes
 
@@ -310,7 +310,7 @@ This document defines the comprehensive visual design system for #sharp's digita
 - **Padding**: 24px
 - **Shadow**: 0 2px 4px rgba(0,0,0,0.1)
 - **Hover**: Slight shadow increase
-- **Tailwind**: `bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-200`
+- **Tailwind**: `bg-white border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-200`
 
 #### Service Card
 
@@ -322,7 +322,7 @@ This document defines the comprehensive visual design system for #sharp's digita
 - **Title**: H4 styling
 - **Description**: Body Regular
 - **CTA**: Primary Button
-- **Tailwind**: `bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-200`
+- **Tailwind**: `bg-white border border-gray-200 p-8 shadow-sm hover:shadow-md transition-shadow duration-200`
 - **Icon**: `w-12 h-12 mb-4`
 - **Title**: `text-2xl font-heading leading-snug text-charcoal mb-4`
 - **Description**: `text-base font-body leading-normal text-charcoal mb-6`
@@ -336,7 +336,7 @@ This document defines the comprehensive visual design system for #sharp's digita
 - **Title**: H5 styling
 - **Excerpt**: Body Small
 - **Meta**: Caption styling
-- **Tailwind**: `bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden`
+- **Tailwind**: `bg-white shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden`
 - **Image**: `w-full aspect-video object-cover`
 - **Content**: `p-6`
 - **Title**: `text-xl font-heading leading-normal text-charcoal mb-2`
@@ -380,7 +380,7 @@ This document defines the comprehensive visual design system for #sharp's digita
 - **Text**: Dark Green (#155724)
 - **Icon**: Checkmark
 - **Padding**: 16px 20px
-- **Tailwind**: `bg-green-50 border border-success text-green-800 px-5 py-4 rounded-md flex items-center space-x-3`
+- **Tailwind**: `bg-green-50 border border-success text-green-800 px-5 py-4 flex items-center space-x-3`
 - **Icon**: `w-5 h-5 text-success`
 
 #### Warning Message
@@ -390,7 +390,7 @@ This document defines the comprehensive visual design system for #sharp's digita
 - **Text**: Dark Yellow (#856404)
 - **Icon**: Warning triangle
 - **Padding**: 16px 20px
-- **Tailwind**: `bg-yellow-50 border border-warning text-yellow-800 px-5 py-4 rounded-md flex items-center space-x-3`
+- **Tailwind**: `bg-yellow-50 border border-warning text-yellow-800 px-5 py-4 flex items-center space-x-3`
 - **Icon**: `w-5 h-5 text-warning`
 
 #### Error Message
@@ -400,7 +400,7 @@ This document defines the comprehensive visual design system for #sharp's digita
 - **Text**: Dark Red (#721C24)
 - **Icon**: X mark
 - **Padding**: 16px 20px
-- **Tailwind**: `bg-red-50 border border-error text-red-800 px-5 py-4 rounded-md flex items-center space-x-3`
+- **Tailwind**: `bg-red-50 border border-error text-red-800 px-5 py-4 flex items-center space-x-3`
 - **Icon**: `w-5 h-5 text-error`
 
 ---

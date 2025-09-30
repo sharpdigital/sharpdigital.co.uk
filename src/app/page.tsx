@@ -87,7 +87,7 @@ export default function Home() {
                 organisations through their digital evolution, one click at a time.
               </p>
               <Link href="/contact">
-                <Button className="inline-flex items-center bg-primary text-white font-heading text-base px-8 py-4 rounded-md hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                <Button className="inline-flex items-center bg-primary text-white font-heading text-base px-8 py-4 hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                   Get Started
                   <svg
                     className="ml-2 w-5 h-5"
@@ -185,7 +185,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Blog Post 1 */}
-            <article className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+            <article className="bg-white shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
               <div className="aspect-video bg-gradient-to-br from-orange-sharp to-yellow-sharp"></div>
               <div className="p-6">
                 <h3 className="text-xl font-heading leading-normal text-charcoal mb-2">
@@ -221,7 +221,7 @@ export default function Home() {
             </article>
 
             {/* Blog Post 2 */}
-            <article className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+            <article className="bg-white shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
               <div className="aspect-video bg-gradient-to-br from-sky-sharp to-blue-sharp"></div>
               <div className="p-6">
                 <h3 className="text-xl font-heading leading-normal text-charcoal mb-2">
@@ -257,7 +257,7 @@ export default function Home() {
             </article>
 
             {/* Blog Post 3 */}
-            <article className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+            <article className="bg-white shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
               <div className="aspect-video bg-gradient-to-br from-purple-sharp to-magenta-sharp"></div>
               <div className="p-6">
                 <h3 className="text-xl font-heading leading-normal text-charcoal mb-2">
@@ -297,7 +297,7 @@ export default function Home() {
             <Link href="/blog">
               <Button
                 variant="outline"
-                className="inline-flex items-center bg-transparent text-primary border-2 border-primary font-heading text-base px-6 py-3 rounded-md hover:bg-primary hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                className="inline-flex items-center bg-transparent text-primary border-2 border-primary font-heading text-base px-6 py-3 hover:bg-primary hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 View All Posts
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
