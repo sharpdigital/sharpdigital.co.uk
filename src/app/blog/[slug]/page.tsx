@@ -61,7 +61,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   // Get related posts (same tags, excluding current post)
   const allPosts = await getBlogPosts();
   const relatedPosts = allPosts
-    .filter(p => p.$id !== post.$id && p.tags.some(tag => post.tags.includes(tag)))
+    .filter((p) => p.$id !== post.$id && p.tags.some((tag) => post.tags.includes(tag)))
     .slice(0, 3);
 
   return (
@@ -69,14 +69,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center max-w-3xl mx-auto">
             <div className="flex items-center justify-center gap-4 mb-6">
               <span className="text-primary font-body text-lg">
                 {formatDate(post.publishDate || '')}
               </span>
-              <span className="text-white font-body text-lg">
-                by {post.author || 'Unknown'}
-              </span>
+              <span className="text-white font-body text-lg">by {post.author || 'Unknown'}</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
               {post.title}
@@ -87,7 +85,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="flex flex-wrap justify-center gap-3">
               {post.tags.map((tag) => (
                 <Link key={tag} href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}>
-                  <Badge variant="secondary" className="text-base px-4 py-2 bg-charcoal text-white border border-white hover:bg-primary hover:border-primary transition-colors">
+                  <Badge
+                    variant="secondary"
+                    className="text-base px-4 py-2 bg-charcoal text-white border border-white hover:bg-primary hover:border-primary transition-colors"
+                  >
                     {tag}
                   </Badge>
                 </Link>
@@ -121,7 +122,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedPosts.map((relatedPost) => (
-                <Card key={relatedPost.$id} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                <Card
+                  key={relatedPost.$id}
+                  className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200"
+                >
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-sm text-primary font-body">
@@ -132,7 +136,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       </span>
                     </div>
                     <CardTitle className="text-xl font-heading text-charcoal line-clamp-2">
-                      <Link href={`/blog/${relatedPost.slug}`} className="hover:text-primary transition-colors">
+                      <Link
+                        href={`/blog/${relatedPost.slug}`}
+                        className="hover:text-primary transition-colors"
+                      >
                         {relatedPost.title}
                       </Link>
                     </CardTitle>
@@ -153,8 +160,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       className="inline-flex items-center text-primary font-body text-sm hover:text-primary-hover transition-colors"
                     >
                       Read More
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      <svg
+                        className="w-4 h-4 ml-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
                       </svg>
                     </Link>
                   </CardContent>
@@ -172,7 +189,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             Ready to Transform Your Business?
           </h2>
           <p className="text-lg text-charcoal font-body leading-relaxed mb-8">
-            Let&apos;s talk about your digital transformation goals and how our expert guidance can bring it life.
+            Let&apos;s talk about your digital transformation goals and how our expert guidance can
+            bring it life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

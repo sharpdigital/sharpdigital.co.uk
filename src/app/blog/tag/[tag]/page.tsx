@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: TagPageProps): Promise<Metadata> {
   const { tag } = await params;
-  const displayTag = tag.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  const displayTag = tag.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase());
 
   return {
     title: `${displayTag} Articles - #sharp Blog`,
@@ -35,11 +35,11 @@ export async function generateMetadata({ params }: TagPageProps): Promise<Metada
 
 export default async function TagPage({ params }: TagPageProps) {
   const { tag } = await params;
-  const displayTag = tag.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  const displayTag = tag.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase());
 
   // Get all tags and find the matching one (case-insensitive)
   const allTags = await getAllTags();
-  const originalTag = allTags.find(t => t.toLowerCase().replace(/\s+/g, '-') === tag);
+  const originalTag = allTags.find((t) => t.toLowerCase().replace(/\s+/g, '-') === tag);
 
   if (!originalTag) {
     notFound();
@@ -52,9 +52,12 @@ export default async function TagPage({ params }: TagPageProps) {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center max-w-3xl mx-auto">
             <div className="mb-6">
-              <Badge variant="secondary" className="text-lg px-6 py-3 mb-4 bg-charcoal text-white border border-white">
+              <Badge
+                variant="secondary"
+                className="text-lg px-6 py-3 mb-4 bg-charcoal text-white border border-white"
+              >
                 {displayTag}
               </Badge>
             </div>
@@ -62,7 +65,8 @@ export default async function TagPage({ params }: TagPageProps) {
               {displayTag} <span className="text-primary">Articles</span>
             </h1>
             <p className="text-xl text-white font-body leading-relaxed max-w-3xl mx-auto">
-              Expert insights and practical guidance on {displayTag.toLowerCase()} from the #sharp team.
+              Expert insights and practical guidance on {displayTag.toLowerCase()} from the #sharp
+              team.
             </p>
           </div>
         </div>
@@ -75,7 +79,10 @@ export default async function TagPage({ params }: TagPageProps) {
             <h2 className="text-2xl font-heading text-charcoal mb-4">Browse by Topic</h2>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/blog">
-                <Badge variant="outline" className="text-base px-4 py-2 hover:bg-primary hover:text-white transition-colors">
+                <Badge
+                  variant="outline"
+                  className="text-base px-4 py-2 hover:bg-primary hover:text-white transition-colors"
+                >
                   All Posts
                 </Badge>
               </Link>
@@ -85,11 +92,9 @@ export default async function TagPage({ params }: TagPageProps) {
                 return (
                   <Link key={tagItem} href={`/blog/tag/${tagSlug}`}>
                     <Badge
-                      variant={isCurrentTag ? "default" : "outline"}
+                      variant={isCurrentTag ? 'default' : 'outline'}
                       className={`text-base px-4 py-2 transition-colors ${
-                        isCurrentTag
-                          ? 'bg-primary text-white'
-                          : 'hover:bg-primary hover:text-white'
+                        isCurrentTag ? 'bg-primary text-white' : 'hover:bg-primary hover:text-white'
                       }`}
                     >
                       {tagItem}
@@ -114,7 +119,10 @@ export default async function TagPage({ params }: TagPageProps) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
-              <Card key={post.$id} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+              <Card
+                key={post.$id}
+                className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200"
+              >
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-sm text-primary font-body">
@@ -125,7 +133,10 @@ export default async function TagPage({ params }: TagPageProps) {
                     </span>
                   </div>
                   <CardTitle className="text-xl font-heading text-charcoal line-clamp-2">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="hover:text-primary transition-colors"
+                    >
                       {post.title}
                     </Link>
                   </CardTitle>
@@ -136,9 +147,12 @@ export default async function TagPage({ params }: TagPageProps) {
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.map((tagItem) => (
-                      <Link key={tagItem} href={`/blog/tag/${tagItem.toLowerCase().replace(/\s+/g, '-')}`}>
+                      <Link
+                        key={tagItem}
+                        href={`/blog/tag/${tagItem.toLowerCase().replace(/\s+/g, '-')}`}
+                      >
                         <Badge
-                          variant={tagItem === originalTag ? "default" : "secondary"}
+                          variant={tagItem === originalTag ? 'default' : 'secondary'}
                           className={`text-xs transition-colors ${
                             tagItem === originalTag
                               ? 'bg-primary text-white'
@@ -155,8 +169,18 @@ export default async function TagPage({ params }: TagPageProps) {
                     className="inline-flex items-center text-primary font-body text-sm hover:text-primary-hover transition-colors"
                   >
                     Read More
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <svg
+                      className="w-4 h-4 ml-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
                     </svg>
                   </Link>
                 </CardContent>

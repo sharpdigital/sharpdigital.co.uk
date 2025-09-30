@@ -53,24 +53,24 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     'customer-experience': {
       gradient: 'from-orange-sharp to-yellow-sharp',
       text: 'text-orange-sharp',
-      bg: 'bg-orange-sharp'
+      bg: 'bg-orange-sharp',
     },
     'operational-efficiency': {
       gradient: 'from-sky-sharp to-blue-sharp',
       text: 'text-sky-sharp',
-      bg: 'bg-sky-sharp'
+      bg: 'bg-sky-sharp',
     },
     'data-and-analytics': {
       gradient: 'from-purple-sharp to-magenta-sharp',
       text: 'text-purple-sharp',
-      bg: 'bg-purple-sharp'
+      bg: 'bg-purple-sharp',
     },
   };
 
   const colors = colorMapping[service.slug] || {
     gradient: 'from-gray-400 to-gray-600',
     text: 'text-gray-600',
-    bg: 'bg-gray-600'
+    bg: 'bg-gray-600',
   };
 
   const imageMapping: { [key: string]: string } = {
@@ -78,7 +78,6 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     'operational-efficiency': '/img/automation.jpg',
     'data-and-analytics': '/img/analyse.jpg',
   };
-
 
   return (
     <Layout>
@@ -97,14 +96,14 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <div className="absolute inset-0 bg-charcoal/70"></div>
           </div>
         )}
-        
+
         {/* Fallback Background */}
         {!imageMapping[service.slug] && (
           <div className="absolute inset-0 z-0 bg-gradient-to-br from-charcoal via-gray-950 to-charcoal"></div>
         )}
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
               {service.title}
             </h1>
@@ -130,26 +129,31 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               Key Features
             </h2>
             <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
-              Our comprehensive approach to {service.title.toLowerCase()} includes these essential components.
+              Our comprehensive approach to {service.title.toLowerCase()} includes these essential
+              components.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {service.features.map((feature, index) => (
-              <Card key={index} className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+              <Card
+                key={index}
+                className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200"
+              >
                 <CardHeader className="text-center pb-4">
-                  <div className={`w-12 h-12 mx-auto mb-4 ${colors.bg} rounded-full flex items-center justify-center`}>
+                  <div
+                    className={`w-12 h-12 mx-auto mb-4 ${colors.bg} rounded-full flex items-center justify-center`}
+                  >
                     <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                     </svg>
                   </div>
-                  <CardTitle className={`text-lg font-heading ${colors.text}`}>
-                    {feature}
-                  </CardTitle>
+                  <CardTitle className={`text-lg font-heading ${colors.text}`}>{feature}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center pt-0">
                   <p className="text-sm text-charcoal font-body leading-relaxed">
-                    Expert implementation of {feature.toLowerCase()} to drive measurable business results.
+                    Expert implementation of {feature.toLowerCase()} to drive measurable business
+                    results.
                   </p>
                 </CardContent>
               </Card>
@@ -166,7 +170,8 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               Our Process
             </h2>
             <p className="text-lg text-charcoal font-body leading-relaxed max-w-3xl mx-auto">
-              We follow a proven methodology to ensure successful {service.title.toLowerCase()} implementation.
+              We follow a proven methodology to ensure successful {service.title.toLowerCase()}{' '}
+              implementation.
             </p>
           </div>
 
@@ -221,7 +226,8 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             Ready to Transform Your {service.title}?
           </h2>
           <p className="text-lg text-charcoal font-body leading-relaxed mb-8">
-            Let&apos;s discuss how we can help you achieve your digital transformation goals with our proven {service.title.toLowerCase()} solutions.
+            Let&apos;s discuss how we can help you achieve your digital transformation goals with
+            our proven {service.title.toLowerCase()} solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
