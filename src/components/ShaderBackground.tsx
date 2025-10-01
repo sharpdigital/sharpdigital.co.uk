@@ -20,6 +20,10 @@ export default function ShaderBackground({ className, paused, children }: Props)
   const locResRef = useRef<WebGLUniformLocation | null>(null);
   const bufferRef = useRef<WebGLBuffer | null>(null);
 
+  // ✱ PARALLAX: config + rAF throttle state
+  const PARALLAX_STRENGTH = -0.3; // move 8% of scroll distance (subtle)
+  const parallaxTickingRef = useRef(false); // rAF throttle
+
   // --- Minimal vertex shader (full-screen triangle)
   const vert = `
 attribute vec2 a_position;
@@ -90,8 +94,11 @@ vec4 extractAlpha(vec3 colorIn)
 const vec3 color1 = vec3(0.311765, 0.262745, 0.996078);
 const vec3 color2 = vec3(0.998039, 0.260784, 0.213725);
 const vec3 color3 = vec3(0.8062745, 0.078431, 0.600000);
-const float innerRadius = 5.0;
-const float noiseScale = 4.0;
+
+// ✱ use a normalized inner radius (0–1), not 5.0
+const float innerRadius = 0.225;
+
+const float noiseScale = 10.0;
 
 float light1(float intensity, float attenuation, float dist)
 {
@@ -113,21 +120,21 @@ void draw( out vec4 _FragColor, in vec2 vUv )
 
   // ring
   n0 = snoise3( vec3(uv * noiseScale, time * 0.5) ) * 0.5 + 0.5;
-  r0 = mix(mix(innerRadius, 1.0, 0.4), mix(innerRadius, 1.0, 0.6), n0);
+  r0 = mix(mix(innerRadius, 1.0, 0.4), mix(innerRadius, 1.0, 0.7), n0);
   d0 = distance(uv, r0 / len * uv);
   v0 = light1(1.0, 10.0, d0);
   v0 *= smoothstep(r0 * 1.05, r0, len);
-  cl = cos(ang + time * 2.0) * 0.5 + 0.5;
+  cl = cos(ang + time * 0.6) * 0.5 + 0.5;
 
   // high light
-  float a = time * -1.0;
+  float a = time * -0.5;
   vec2 pos = vec2(cos(a), sin(a)) * r0;
-  d = distance(uv, pos);
-  v1 = light2(1.5, 55.0, d);
-  v1 *= light1(1.0, 50.0 , d0);
+  d = distance(uv, pos) * 0.2;
+  v1 = light2(1.5, 355.0, d);
+  v1 *= light1(1.0, 450.0 , d0);
 
   // back decay
-  v2 = smoothstep(1.0, mix(innerRadius, 1.0, n0 * 0.5), len);
+  v2 = smoothstep(1.0, mix(innerRadius, 0.5, n0 * 0.5), len);
 
   // hole
   v3 = smoothstep(innerRadius, mix(innerRadius, 1.0, 0.5), len);
@@ -146,7 +153,9 @@ void draw( out vec4 _FragColor, in vec2 vUv )
 void main() {
   vec2 fragCoord = gl_FragCoord.xy;
   vec2 res = iResolution;
-  vec2 uv = (fragCoord * 2.0 - res) / res.y;
+
+  // ✱ normalize by the shorter side so the circle fits any aspect
+  vec2 uv = (fragCoord - 0.5 * res) / min(res.x, res.y);
 
   vec4 col;
   draw(col, uv);
@@ -267,11 +276,37 @@ void main() {
     };
     rafRef.current = requestAnimationFrame(loop);
 
+    // ✱ PARALLAX: apply translateY based on window scroll (rAF-throttled)
+    const applyParallax = () => {
+      /* parallaxTickingRef.current = false;
+      if (!canvasRef.current) return;
+      const y = window.scrollY * PARALLAX_STRENGTH;
+      // use translate3d for better GPU compositing
+      canvasRef.current.style.transform = `translate3d(0, ${y}px, 0)`;
+      // optional: hint for smoother animations
+      canvasRef.current.style.willChange = 'transform'; */
+    };
+
+    const onScroll = () => {
+      if (parallaxTickingRef.current) return;
+      parallaxTickingRef.current = true;
+      requestAnimationFrame(applyParallax);
+    };
+
+    // set initial position (in case page loads scrolled)
+    applyParallax();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      window.removeEventListener('scroll', onScroll);
       ro.disconnect();
       if (bufferRef.current) gl.deleteBuffer(bufferRef.current);
       if (programRef.current) gl.deleteProgram(programRef.current);
+      if (canvasRef.current) {
+        canvasRef.current.style.transform = '';
+        canvasRef.current.style.willChange = '';
+      }
       glRef.current = null;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
