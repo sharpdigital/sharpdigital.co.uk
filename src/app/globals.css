@@ -45,6 +45,10 @@
     font-weight: 410;
   }
 
+  .text-2xl {
+    font-size: 1.68rem;
+  }
+
   .text-5xl {
     font-size: 5rem;
     line-height: 1.32;
@@ -54,10 +58,6 @@
   .text-4xl {
     font-size: 2.6rem;
     line-height: 1.26;
-  }
-
-  .mb-6 {
-    margin-bottom: 2.5rem;
   }
 
   .px-4 {
@@ -90,20 +90,36 @@
     padding-bottom: 11.6rem;
   }
 
-  .mb-4 {
-    margin-bottom: 2rem;
-  }
-
   .p-6 {
-    padding: 1.6em 2rem;
+    padding: 1.1em 1.75rem;
   }
 
   .p-8 {
     padding: 2.6em 3rem;
   }
 
+  .mb-4 {
+    margin-bottom: 2rem;
+  }
+
   .mb-6 {
-    margin-bottom: 2.9rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .mb-16 {
+    margin-bottom: 4.4rem;
+  }
+
+  .mb-26 {
+    margin-bottom: 2.75rem;
+  }
+
+  .mb-36 {
+    margin-bottom: 2.7rem;
+  }
+
+  .mb-46 {
+    margin-bottom: 2.7rem;
   }
 
   .text-xl {
@@ -117,19 +133,32 @@
   }
 
   .space-y-6 > div {
-    margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse))) !important;
+    margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse))) !important;
   }
 
   .background-shader {
     z-index: 0;
-    position: absolute;
+    position: fixed;
     inset: 0 0 0 0;
+    background: #222;
   }
 
   .background-shader > canvas {
-    inset: 0;
+    inset: 0 0 0 0;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.4;
+  }
+
+  .max-w-7xl {
+    max-width: 66em;
+  }
+
+  .gap-8 {
+    gap: 1rem;
+  }
+
+  .leading-snug {
+    margin-bottom: 2rem;
   }
 }

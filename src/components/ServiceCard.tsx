@@ -25,7 +25,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   imageUrl,
 }) => {
   return (
-    <div className="bg-white border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+    <div className="bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
       {imageUrl ? (
         <div className="aspect-video w-full mb-2">
           <Image
@@ -43,16 +43,18 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           {icon}
         </div>
       )}
-      <div className="p-6">
-        <h3 className="text-2xl font-heading leading-snug text-charcoal mb-4">{title}</h3>
+      <div className="p-6 flex flex-col">
+        <h3 className="text-2xl min-h-[2.7em] font-heading leading-snug text-charcoal mb-4">
+          {title}
+        </h3>
         <p className="text-base font-body leading-normal text-charcoal mb-6">{description}</p>
-        <ul className="text-sm text-charcoal font-body mb-6 space-y-2">
+        <ul className="text-sm text-charcoal font-body mb-46 space-y-2">
           {features.map((feature, index) => (
             <li key={index}>• {feature}</li>
           ))}
         </ul>
         <Link href={href}>
-          <Button className="w-full inline-flex items-center bg-primary text-white font-heading text-base px-6 py-3 hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+          <Button className="w-full mb-[0.5rem] inline-flex items-center bg-primary text-white font-heading text-base px-6 py-3 hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
             Learn More
             {/* <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
