@@ -51,8 +51,6 @@ export const metadata: Metadata = {
     images: ['/img/sharp_logo_w264.png'],
   },
   icons: {
-    icon: '/img/sharp_logo.svg',
-    shortcut: '/img/sharp_logo.svg',
     apple: '/img/sharp_logo_w264.png',
   },
   manifest: '/manifest.json',
