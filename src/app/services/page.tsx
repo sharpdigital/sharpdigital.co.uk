@@ -4,6 +4,8 @@ import Layout from '@/components/Layout';
 import ServiceCard from '@/components/ServiceCard';
 import { getServices } from '@/lib/contentService';
 import ShaderBackground from '@/components/ShaderBackground';
+import AccordionPanel from '@/components/accordion/AccordionPanel';
+import { sanitize } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Digital Transformation Services - #sharp',
@@ -12,6 +14,33 @@ export const metadata: Metadata = {
   keywords:
     'digital transformation services, customer experience, operational efficiency, data analytics, AI solutions',
 };
+
+const accordion: { title: string; column: { title: string; details: string } }[] = [
+  {
+    title: 'Proven Methodologies',
+    column: {
+      title: 'Tried & True Systems',
+      details:
+        'Our battle-tested frameworks and methodologies have helped dozens of organizations achieve successful digital transformation.',
+    },
+  },
+  {
+    title: 'Measurable Results',
+    column: {
+      title: 'Verifiable Performance',
+      details:
+        'We focus on delivering tangible business outcomes with clear metrics and KPIs that demonstrate ROI.',
+    },
+  },
+  {
+    title: 'Expert Team',
+    column: {
+      title: 'Specialized Professionals',
+      details:
+        'Our team combines deep technical expertise with business acumen to deliver solutions that work in the real world.',
+    },
+  },
+];
 
 export default async function ServicesPage() {
   const services = await getServices();
@@ -162,8 +191,37 @@ export default async function ServicesPage() {
                 transformations.
               </p>
             </div>
+            <div className="w-full">
+              {accordion?.map(
+                (element: { title: string; column: { title: string; details: string } }) => {
+                  const { title, column } = element;
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  return (
+                    <AccordionPanel title={title} key={title}>
+                      {[column].map((col) => {
+                        const { title, details } = col;
+                        return (
+                          <div className="accordion-column" key={title}>
+                            {!details ? null : (
+                              <>
+                                <div className="accordion-column-title">{title}</div>
+                                <div
+                                  className="accordion-column-details alt-font"
+                                  dangerouslySetInnerHTML={{
+                                    __html: sanitize(details),
+                                  }}
+                                ></div>
+                              </>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </AccordionPanel>
+                  );
+                }
+              )}
+            </div>
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="">
                 <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -202,7 +260,7 @@ export default async function ServicesPage() {
                   solutions that work in the real world.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </Layout>

@@ -21,7 +21,7 @@ export default function ShaderBackground({ className, paused, children }: Props)
   const bufferRef = useRef<WebGLBuffer | null>(null);
 
   // ✱ PARALLAX: config + rAF throttle state
-  const PARALLAX_STRENGTH = -0.3; // move 8% of scroll distance (subtle)
+  const PARALLAX_STRENGTH = -0.3;
   const parallaxTickingRef = useRef(false); // rAF throttle
 
   // --- Minimal vertex shader (full-screen triangle)
