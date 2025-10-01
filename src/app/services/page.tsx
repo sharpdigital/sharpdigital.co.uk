@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 const accordion: { title: string; column: { title: string; details: string } }[] = [
   {
-    title: 'Proven Methodologies',
+    title: 'Proven <span class="text-primary">Methodologies</span>',
     column: {
       title: 'Tried & True Systems',
       details:
@@ -25,7 +25,7 @@ const accordion: { title: string; column: { title: string; details: string } }[]
     },
   },
   {
-    title: 'Measurable Results',
+    title: 'Measurable <span class="text-primary">Results</span>',
     column: {
       title: 'Verifiable Performance',
       details:
@@ -33,7 +33,7 @@ const accordion: { title: string; column: { title: string; details: string } }[]
     },
   },
   {
-    title: 'Expert Team',
+    title: 'Expert <span class="text-primary">Team</span>',
     column: {
       title: 'Specialized Professionals',
       details:

@@ -3,6 +3,7 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import { AccordionIconGraphics } from './AccordionIconGraphics';
 import './accordion.css';
+import { sanitize } from '@/lib/utils';
 
 const MOBILE_SAFE_RESIZE = 'mobile-safe-resize';
 
@@ -69,7 +70,12 @@ const AccordionPanel: FC<AccordionPanelProps> = ({ title, startOpen, children })
   return (
     <div className="accordion-panel" ref={containerRef}>
       <div className="accordion-panel-header" onClick={onOpenToggle} ref={headerRef}>
-        <div className="accordion-panel-title font-heading">{title}</div>
+        <div
+          className="accordion-panel-title font-heading"
+          dangerouslySetInnerHTML={{
+            __html: sanitize(title),
+          }}
+        ></div>
         <AccordionIconGraphics className={open.current ? 'open' : undefined} />
       </div>
 
