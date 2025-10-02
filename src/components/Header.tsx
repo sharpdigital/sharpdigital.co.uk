@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import AnimButton from './ui/AnimButton';
 
 const buttonClass =
   'font-heading text-base text-charcoal hover:text-primary transition-colors duration-200 focus:outline-none focus:text-primary px-2 py-1';
@@ -48,9 +49,9 @@ const Header = () => {
               Blog
             </Link>
             <Link href="/contact">
-              <Button className="bg-primary text-white font-heading text-base px-6 py-3 hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                Contact
-              </Button>
+              <AnimButton>
+                <div className="font-heading text-base px-6 py-2">Contact</div>
+              </AnimButton>
             </Link>
           </div>
 

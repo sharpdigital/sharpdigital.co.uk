@@ -1,0 +1,41 @@
+/* TODO: define primary red color better */
+
+:root {
+  --primaryColor: rgba(237, 34, 36, var(--tw-text-opacity, 1));
+  --secondaryColor: white;
+  --transitionTime: 0.3s;
+  --transitionIn: transform var(--transitionTime) cubic-bezier(0.32, 0.01, 0.39, 0.99);
+}
+
+.anim-button {
+  border: 1px solid var(--primaryColor);
+  position: relative;
+  overflow: hidden;
+}
+
+.anim-button-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: var(--transitionIn);
+  overflow: hidden;
+}
+
+.anim-button-top-slider {
+  background: var(--primaryColor);
+  color: var(--secondaryColor);
+  transition: var(--transitionIn);
+}
+
+.anim-button-bottom {
+  background: var(--secondaryColor);
+  color: var(--primaryColor);
+}
+
+.anim-button:hover .anim-button-top {
+  transform: translateX(100%);
+}
+
+.anim-button:hover .anim-button-top-slider {
+  transform: translateX(-100%);
+}
