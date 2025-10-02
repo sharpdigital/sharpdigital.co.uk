@@ -22,7 +22,7 @@ const Header = () => {
         <div className="relative flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center" aria-label="Sharp Digital - Home">
+            <Link href="/" className="flex items-center mt-[5px]" aria-label="Sharp Digital - Home">
               <Image
                 src="/img/sharp_logo.svg"
                 alt="#sharp logo"

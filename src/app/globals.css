@@ -170,4 +170,8 @@
     bottom: 0;
     background-color: white;
   }
+
+  .text-grey {
+    color: #a0a0a0;
+  }
 }
