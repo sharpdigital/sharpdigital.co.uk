@@ -42,7 +42,7 @@
 }
 
 .accordion-panel-title {
-  padding-bottom: calc(var(--headerSmallFontSize) * 0.2);
+  padding-bottom: calc(var(--headerSmallFontSize) * 0.1);
   font-size: var(--headerSmallFontSize);
   font-weight: 100;
 }
@@ -68,6 +68,13 @@
   font-size: var(--textFontSize);
   line-height: 1.5;
   padding-bottom: calc(var(--titleFontSize) * 3);
+}
+
+.accordion-icon {
+  --color: var(--secondaryColor);
+  background: var(--primaryColor);
+  padding: 0.8rem;
+  margin-right: 2.1em;
 }
 
 .accordion-icon-graphics {

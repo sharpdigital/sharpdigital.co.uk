@@ -11,11 +11,11 @@ interface AccordionPanelProps {
   title: string;
   startOpen?: boolean;
   children: React.ReactNode;
-  icon?: string;
-  iconBackground?: string;
+  icon?: React.ReactNode;
+  iconBackground?: boolean;
 }
 
-const AccordionPanel: FC<AccordionPanelProps> = ({ title, startOpen, children }) => {
+const AccordionPanel: FC<AccordionPanelProps> = ({ title, startOpen, icon, children }) => {
   const [_, setRender] = useState(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const headerRef = useRef<HTMLDivElement | null>(null);
@@ -72,6 +72,7 @@ const AccordionPanel: FC<AccordionPanelProps> = ({ title, startOpen, children })
   return (
     <div className="accordion-panel" ref={containerRef}>
       <div className="accordion-panel-header" onClick={onOpenToggle} ref={headerRef}>
+        {icon ? <div className="accordion-icon">{icon}</div> : null}
         <div
           className="accordion-panel-title font-heading"
           dangerouslySetInnerHTML={{

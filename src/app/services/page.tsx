@@ -6,6 +6,9 @@ import { getServices } from '@/lib/contentService';
 import ShaderBackground from '@/components/ShaderBackground';
 import AccordionPanel from '@/components/accordion/AccordionPanel';
 import { sanitize } from '@/lib/utils';
+import FlaskIcon from '@/components/icons/FlaskIcon';
+import MeasureIcon from '@/components/icons/MeasureIcon';
+import TeamIcon from '@/components/icons/TeamIcon';
 
 export const metadata: Metadata = {
   title: 'Digital Transformation Services - #sharp',
@@ -15,9 +18,16 @@ export const metadata: Metadata = {
     'digital transformation services, customer experience, operational efficiency, data analytics, AI solutions',
 };
 
-const accordion: { title: string; column: { title: string; details: string } }[] = [
+type AccordionPanelProps = {
+  title: string;
+  column: { title: string; details: string };
+  icon?: React.ReactNode;
+};
+
+const accordion: AccordionPanelProps[] = [
   {
     title: 'Proven Methodologies',
+    icon: <FlaskIcon />,
     column: {
       title: 'Tried & True Systems',
       details:
@@ -27,6 +37,7 @@ const accordion: { title: string; column: { title: string; details: string } }[]
   {
     /* title: 'Measurable <span class="text-primary">Results</span>', */
     title: 'Measurable Results',
+    icon: <MeasureIcon />,
     column: {
       title: 'Verifiable Performance',
       details:
@@ -35,6 +46,7 @@ const accordion: { title: string; column: { title: string; details: string } }[]
   },
   {
     title: 'Expert Team',
+    icon: <TeamIcon />,
     column: {
       title: 'Specialized Professionals',
       details:
@@ -193,34 +205,32 @@ export default async function ServicesPage() {
               </p>
             </div>
             <div className="w-full">
-              {accordion?.map(
-                (element: { title: string; column: { title: string; details: string } }) => {
-                  const { title, column } = element;
+              {accordion?.map((element: AccordionPanelProps) => {
+                const { title, column, icon } = element;
 
-                  return (
-                    <AccordionPanel title={title} key={title}>
-                      {[column].map((col) => {
-                        const { title, details } = col;
-                        return (
-                          <div className="accordion-column" key={title}>
-                            {!details ? null : (
-                              <>
-                                <div className="accordion-column-title">{title}</div>
-                                <div
-                                  className="accordion-column-details alt-font"
-                                  dangerouslySetInnerHTML={{
-                                    __html: sanitize(details),
-                                  }}
-                                ></div>
-                              </>
-                            )}
-                          </div>
-                        );
-                      })}
-                    </AccordionPanel>
-                  );
-                }
-              )}
+                return (
+                  <AccordionPanel title={title} key={title} icon={icon}>
+                    {[column].map((col) => {
+                      const { title, details } = col;
+                      return (
+                        <div className="accordion-column" key={title}>
+                          {!details ? null : (
+                            <>
+                              <div className="accordion-column-title">{title}</div>
+                              <div
+                                className="accordion-column-details alt-font"
+                                dangerouslySetInnerHTML={{
+                                  __html: sanitize(details),
+                                }}
+                              ></div>
+                            </>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </AccordionPanel>
+                );
+              })}
             </div>
             {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="">

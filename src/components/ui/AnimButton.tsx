@@ -8,9 +8,10 @@ interface AnimButtonProps {
   fullWidth?: boolean;
   open?: boolean;
   children: React.ReactNode;
+  className?: string;
 }
 
-const AnimButton: FC<AnimButtonProps> = ({ children, fullWidth, open }) => {
+const AnimButton: FC<AnimButtonProps> = ({ children, fullWidth, open, className }) => {
   const btnRef = useRef<HTMLButtonElement | null>(null);
 
   useLayoutEffect(() => {
@@ -36,7 +37,7 @@ const AnimButton: FC<AnimButtonProps> = ({ children, fullWidth, open }) => {
   return (
     <button
       ref={btnRef}
-      className={`anim-button${open ? ' open' : ''}`}
+      className={`anim-button${open ? ' open' : ''}${className ? ` ${className}` : ''}`}
       style={fullWidth ? { width: '100%' } : {}}
     >
       <div className="anim-button-text">{children}</div>
