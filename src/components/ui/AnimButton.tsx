@@ -1,6 +1,6 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useLayoutEffect, useRef } from 'react';
 import './ui.css';
 
 interface AnimButtonProps {
@@ -9,12 +9,32 @@ interface AnimButtonProps {
 }
 
 const AnimButton: FC<AnimButtonProps> = ({ children }) => {
+  const btnRef = useRef<HTMLButtonElement | null>(null);
+
+  useLayoutEffect(() => {
+    const el = btnRef.current;
+    if (!el) return;
+
+    const setCoverSize = () => {
+      const w = el.offsetWidth;
+      const h = el.offsetHeight;
+      const L = Math.max(w, h);
+      const side = (L / Math.SQRT2) * 1.3;
+      el.style.setProperty('--width', `${side}px`);
+      el.style.setProperty('--height', `${side}px`);
+    };
+
+    const ro = new ResizeObserver(setCoverSize);
+    ro.observe(el);
+    setCoverSize();
+
+    return () => ro.disconnect();
+  }, []);
+
   return (
-    <button className="anim-button">
-      <div className="anim-button-top">
-        <div className="anim-button-top-slider">{children}</div>
-      </div>
-      <div className="anim-button-bottom">{children}</div>
+    <button ref={btnRef} className="anim-button">
+      <div className="anim-button-text">{children}</div>
+      <div className="anim-button-top"></div>
     </button>
   );
 };
