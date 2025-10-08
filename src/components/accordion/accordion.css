@@ -73,8 +73,8 @@
 .accordion-icon {
   --color: var(--secondaryColor);
   background: var(--primaryColor);
-  padding: 0.8rem;
-  margin-right: 2.1em;
+  padding: 0.89rem;
+  margin-right: 2.2em;
 }
 
 .accordion-icon-graphics {
