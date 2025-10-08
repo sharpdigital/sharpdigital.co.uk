@@ -11,6 +11,8 @@ interface AccordionPanelProps {
   title: string;
   startOpen?: boolean;
   children: React.ReactNode;
+  icon?: string;
+  iconBackground?: string;
 }
 
 const AccordionPanel: FC<AccordionPanelProps> = ({ title, startOpen, children }) => {

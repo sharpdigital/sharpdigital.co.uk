@@ -3,16 +3,17 @@
 :root {
   --primaryColor: rgba(237, 34, 36, var(--tw-text-opacity, 1));
   --secondaryColor: white;
-  --transitionTime: 0.7s;
-  --transitionIn: transform var(--transitionTime) cubic-bezier(0.32, 0.01, 0.39, 0.99);
-  --colorIn: color calc(var(--transitionTime) * 0.8) cubic-bezier(0.32, 0.01, 0.39, 0.99);
-  --colorOut: color calc(var(--transitionTime) * 1) cubic-bezier(0.73, 0.01, 0.1, 0.99);
+  --transitionTime: 0.65s;
+  --transitionIn: transform calc(var(--transitionTime) * 0.8) cubic-bezier(0.2, 0.01, 0.39, 0.99);
+  --colorIn: color calc(var(--transitionTime) * 0.8) cubic-bezier(0.2, 0.01, 0.39, 0.99);
+  --colorOut: color calc(var(--transitionTime) * 0.7) cubic-bezier(0.2, 0.01, 0.39, 0.99);
   --hoverRotation: -45deg;
 }
 
 .anim-button {
   --width: 200px;
   --height: 200px;
+  --color: var(--secondaryColor);
   border: 1px solid var(--primaryColor);
   position: relative;
   overflow: hidden;
@@ -39,14 +40,20 @@
 .anim-button-text {
   position: relative;
   z-index: 1;
-  color: var(--secondaryColor);
+  color: var(--color);
   transition: var(--colorOut);
 }
 
+.anim-button:hover,
+.anim-button.open {
+  --color: var(--primaryColor);
+}
+
 .anim-button:hover .anim-button-text {
-  color: var(--primaryColor);
   transition: var(--colorIn);
 }
-.anim-button:hover .anim-button-top {
-  transform: rotate(var(--hoverRotation)) translateY(100%);
+
+.anim-button:hover .anim-button-top,
+.anim-button.open .anim-button-top {
+  transform: rotate(var(--hoverRotation)) translateY(50%);
 }

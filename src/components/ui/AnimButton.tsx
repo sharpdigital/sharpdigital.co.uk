@@ -5,10 +5,12 @@ import './ui.css';
 
 interface AnimButtonProps {
   invert?: boolean;
+  fullWidth?: boolean;
+  open?: boolean;
   children: React.ReactNode;
 }
 
-const AnimButton: FC<AnimButtonProps> = ({ children }) => {
+const AnimButton: FC<AnimButtonProps> = ({ children, fullWidth, open }) => {
   const btnRef = useRef<HTMLButtonElement | null>(null);
 
   useLayoutEffect(() => {
@@ -32,7 +34,11 @@ const AnimButton: FC<AnimButtonProps> = ({ children }) => {
   }, []);
 
   return (
-    <button ref={btnRef} className="anim-button">
+    <button
+      ref={btnRef}
+      className={`anim-button${open ? ' open' : ''}`}
+      style={fullWidth ? { width: '100%' } : {}}
+    >
       <div className="anim-button-text">{children}</div>
       <div className="anim-button-top"></div>
     </button>

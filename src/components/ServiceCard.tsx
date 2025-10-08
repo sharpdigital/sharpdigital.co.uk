@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import AnimButton from './ui/AnimButton';
 
 interface ServiceCardProps {
   title: string;
@@ -25,7 +26,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   imageUrl,
 }) => {
   return (
-    <div className="bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+    <div className="bg-white overflow-hidden">
       {imageUrl ? (
         <div className="aspect-video w-full mb-2">
           <Image
@@ -53,9 +54,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             <li key={index}>• {feature}</li>
           ))}
         </ul>
-        <Link href={href}>
-          <Button className="w-full mb-[0.5rem] inline-flex items-center bg-primary text-white font-heading text-base px-6 py-3 hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-            Learn More
+        <Link href={href} className="mb-[0.5rem]">
+          <AnimButton fullWidth>
+            <div className="px-6 py-2">Learn More</div>
             {/* <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
@@ -64,7 +65,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg> */}
-          </Button>
+          </AnimButton>
         </Link>
       </div>
     </div>
