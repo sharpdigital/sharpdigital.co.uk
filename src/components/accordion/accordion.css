@@ -73,8 +73,19 @@
 .accordion-icon {
   --color: var(--secondaryColor);
   background: var(--primaryColor);
-  padding: 0.89rem;
+  /* padding: 0.89rem; */
   margin-right: 2.2em;
+  height: 70%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion-icon svg {
+  --size: 2.16rem;
+  width: var(--size);
+  height: var(--size);
 }
 
 .accordion-icon-graphics {

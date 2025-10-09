@@ -24,6 +24,16 @@ type AccordionPanelProps = {
   icon?: React.ReactNode;
 };
 
+type CarouselSetup = {
+  title: string;
+  subTitle: string;
+  textTitle: string;
+  text: string;
+  buttonText: string;
+  buttonLink: string;
+  image: string;
+};
+
 const accordion: AccordionPanelProps[] = [
   {
     title: 'Proven Methodologies',

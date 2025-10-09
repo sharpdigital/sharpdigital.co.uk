@@ -1,7 +1,6 @@
 'use client';
 
 import { FC, useLayoutEffect, useRef } from 'react';
-import './ui.css';
 
 interface AnimButtonProps {
   invert?: boolean;

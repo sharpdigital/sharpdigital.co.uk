@@ -5,6 +5,7 @@ import Layout from '@/components/Layout';
 import HeroCarousel from '@/components/HeroCarousel';
 import ServiceCard from '@/components/ServiceCard';
 import { Button } from '@/components/ui/button';
+import Carousel, { exampleSetup } from '@/components/caroussel/Carousel';
 
 export default function Home() {
   const organizationSchema = {
@@ -61,7 +62,8 @@ export default function Home() {
         }}
       />
       {/* Hero Carousel Section */}
-      <HeroCarousel />
+      {/* <HeroCarousel /> */}
+      <Carousel setup={exampleSetup} />
 
       {/* #sharp Statement Section */}
       <section className="py-19 bg-white" aria-label="About Sharp">

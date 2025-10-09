@@ -3,6 +3,7 @@
 :root {
   --primaryColor: rgba(237, 34, 36, var(--tw-text-opacity, 1));
   --secondaryColor: white;
+  --fontColor: rgb(51, 51, 51);
   --transitionTime: 0.65s;
   --transitionIn: transform calc(var(--transitionTime) * 0.8) cubic-bezier(0.2, 0.01, 0.39, 0.99);
   --colorIn: color calc(var(--transitionTime) * 0.8) cubic-bezier(0.2, 0.01, 0.39, 0.99);
@@ -11,12 +12,13 @@
 }
 
 .anim-button {
-  --width: 200px;
-  --height: 200px;
+  --width: 2000px;
+  --height: 2000px;
   --color: var(--secondaryColor);
   border: 1px solid var(--primaryColor);
   position: relative;
   overflow: hidden;
+  background: var(--secondaryColor);
 }
 
 .anim-button-top {
@@ -56,4 +58,8 @@
 .anim-button:hover .anim-button-top,
 .anim-button.open .anim-button-top {
   transform: rotate(var(--hoverRotation)) translateY(50%);
+}
+
+.title-font {
+  font-family: Manrope, Inter, sans-serif;
 }
