@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import './carousel.css';
 import AnimButton from '../ui/AnimButton';
 
@@ -17,11 +17,12 @@ export type CarouselSetup = {
 type Props = {
   setup: CarouselSetup[];
   interval?: number; // ms
+  hasMouse?: boolean;
 };
 
 const carouselTextDelay = 0.2;
 
-export default function Carousel({ setup, interval = 6000 }: Props) {
+const Carousel: FC<Props> = ({ setup, interval = 6000, hasMouse }: Props) => {
   const [index, setIndex] = useState(0);
   const [startIndex, setStartIndex] = useState(-1);
   const [mounted, setMounted] = useState(false);
@@ -118,6 +119,11 @@ export default function Carousel({ setup, interval = 6000 }: Props) {
 
       {/* Indicators */}
       <div className="carousel-indicators" role="tablist" aria-label="Carousel indicators">
+        {!!hasMouse && (
+          <div className="carousel-mouse">
+            <div className="carousel-mouse-scroll"></div>
+          </div>
+        )}
         {setup.map((_, i) => (
           <button
             key={`ind-${i}`}
@@ -135,7 +141,9 @@ export default function Carousel({ setup, interval = 6000 }: Props) {
       </div>
     </div>
   );
-}
+};
+
+export default Carousel;
 
 /** Example content (3 slides) with constant title2 */
 export const exampleSetup: CarouselSetup[] = [

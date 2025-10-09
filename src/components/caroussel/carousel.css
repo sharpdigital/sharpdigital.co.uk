@@ -203,3 +203,61 @@
   color: var(--fontColor);
   font-size: var(--largeText);
 }
+
+/*
+*
+*   Mouse Scroll Animation
+*
+*/
+
+.carousel-mouse {
+  position: absolute;
+  width: 22px;
+  height: 42px;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -12px;
+  border-radius: 15px;
+  border: 2px solid var(--secondaryColor);
+  animation: intro 1s backwards;
+  animation-delay: 4s;
+}
+
+.carousel-mouse-scroll {
+  display: block;
+  width: 3px;
+  height: 3px;
+  margin: 6px auto;
+  border-radius: 4px;
+  background: var(--secondaryColor);
+  animation: finger 4.8s infinite;
+  animation-delay: 4.8s;
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes finger {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

@@ -63,7 +63,7 @@ export default function Home() {
       />
       {/* Hero Carousel Section */}
       {/* <HeroCarousel /> */}
-      <Carousel setup={exampleSetup} />
+      <Carousel setup={exampleSetup} hasMouse />
 
       {/* #sharp Statement Section */}
       <section className="py-19 bg-white" aria-label="About Sharp">
