@@ -230,7 +230,7 @@
   margin: 6px auto;
   border-radius: 4px;
   background: var(--secondaryColor);
-  animation: finger 4.8s infinite;
+  animation: finger 4s infinite;
   animation-delay: 4.8s;
 }
 
@@ -251,13 +251,17 @@
     opacity: 1;
   }
 
-  50% {
+  26% {
     opacity: 0;
     transform: translateY(20px);
   }
 
-  100% {
+  40% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(0px);
+  }
+
+  50% {
+    opacity: 1;
   }
 }

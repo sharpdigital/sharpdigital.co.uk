@@ -54,6 +54,8 @@
 
 .accordion-column {
   --padding: calc(var(--titleFontSize) * 0.75);
+  padding-left: 6.6em;
+  padding-right: 6.6em;
   flex: 1;
 }
 
@@ -61,7 +63,7 @@
   font-size: var(--titleFontSize);
   line-height: 1.25;
   padding-top: var(--padding);
-  padding-bottom: var(--padding);
+  padding-bottom: calc(var(--padding) * 0.57);
 }
 
 .accordion-column-details {
@@ -73,17 +75,17 @@
 .accordion-icon {
   --color: var(--secondaryColor);
   background: var(--primaryColor);
-  /* padding: 0.89rem; */
-  margin-right: 2.2em;
-  height: 70%;
-  aspect-ratio: 1 / 1;
-  display: flex;
+  aspect-ratio: 1;
   justify-content: center;
   align-items: center;
+  height: 58.4%;
+  margin-right: 2.9em;
+  display: flex;
+  border-radius: 50%;
 }
 
 .accordion-icon svg {
-  --size: 2.16rem;
+  --size: 53%;
   width: var(--size);
   height: var(--size);
 }
