@@ -57,7 +57,7 @@
 
   .text-4xl {
     font-size: 2.6rem;
-    line-height: 1.26;
+    line-height: 1.224;
   }
 
   .px-4 {
@@ -85,6 +85,11 @@
     padding-bottom: 8rem;
   }
 
+  .py-21 {
+    padding-top: 4.8rem;
+    padding-bottom: 8.7rem;
+  }
+
   .py-24 {
     padding-top: 8rem;
     padding-bottom: 11.6rem;
@@ -106,8 +111,16 @@
     margin-bottom: 1.75rem;
   }
 
+  .mb-8 {
+    margin-bottom: 1.25rem;
+  }
+
+  .mb-7 {
+    margin-bottom: 2.6rem;
+  }
+
   .mb-16 {
-    margin-bottom: 4.4rem;
+    margin-bottom: 4.2rem;
   }
 
   .mb-26 {
@@ -173,5 +186,9 @@
 
   .text-grey {
     color: #a0a0a0;
+  }
+
+  .intro-container {
+    grid-template-columns: repeat(1, 0.5fr 1fr) !important;
   }
 }
