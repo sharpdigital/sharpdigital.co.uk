@@ -3,13 +3,14 @@ import { Metadata } from 'next';
 import Layout from '@/components/Layout';
 import ServiceCard from '@/components/ServiceCard';
 import { getServices } from '@/lib/contentService';
-import ShaderBackground from '@/components/ShaderBackground';
 import AccordionPanel from '@/components/accordion/AccordionPanel';
 import { sanitize } from '@/lib/utils';
 import FlaskIcon from '@/components/icons/FlaskIcon';
 import MeasureIcon from '@/components/icons/MeasureIcon';
 import TeamIcon from '@/components/icons/TeamIcon';
-import CardSection from '../sections/CardSection';
+import CardSection from '../../components/sections/CardSection';
+import ZoomBackground from '@/components/ZoomBackground';
+import PageHeader from '@/components/sections/PageHeader';
 
 export const metadata: Metadata = {
   title: 'Digital Transformation Services - #sharp',
@@ -71,20 +72,17 @@ export default async function ServicesPage() {
 
   return (
     <>
-      <ShaderBackground className="background-shader" />
       <Layout>
-        {/* Hero Section */}
-        <section className="relative bg-transparent from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
-          <div className="relative z-index-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-36">
+        <PageHeader
+          title={
+            <>
               Our <span className="text-primary">Services</span>
-            </h1>
-            <p className="text-xl text-white font-body leading-relaxed px-1">
-              Comprehensive digital transformation solutions across three key areas that drive
-              measurable business impact.
-            </p>
-          </div>
-        </section>
+            </>
+          }
+          description="Comprehensive digital transformation solutions across three key areas that drive
+              measurable business impact."
+          image="/img/services_bg.jpg"
+        />
 
         {/* What is Digital Transformation Section */}
         <section className="py-20 bg-white">

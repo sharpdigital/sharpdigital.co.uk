@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import Layout from '@/components/Layout';
 import ContactForm from '@/components/ContactForm';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import PageHeader from '@/components/sections/PageHeader';
 
 export const metadata: Metadata = {
   title: 'Contact Us - Digital Transformation Consultancy | #sharp',
@@ -15,18 +16,20 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
+      <PageHeader
+        title={
+          <>
             Let&apos;s <span className="text-primary">Connect</span>
-          </h1>
-          <p className="text-xl text-white font-body leading-relaxed px-1">
+          </>
+        }
+        description={
+          <>
             Ready to start your digital transformation journey? We&apos;re here to help you succeed
             with expert guidance and proven strategies.
-          </p>
-        </div>
-      </section>
+          </>
+        }
+        image="/img/contact_bg.jpg"
+      />
 
       {/* Contact Form Section */}
       <section className="py-20 bg-white">

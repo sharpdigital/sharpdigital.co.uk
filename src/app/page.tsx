@@ -7,7 +7,7 @@ import ServiceCard from '@/components/ServiceCard';
 import { Button } from '@/components/ui/button';
 import Carousel, { exampleSetup } from '@/components/caroussel/Carousel';
 import AnimButton from '@/components/ui/AnimButton';
-import CardSection from './sections/CardSection';
+import CardSection from '../components/sections/CardSection';
 import { getServices } from '@/lib/contentService';
 
 export default async function Home() {

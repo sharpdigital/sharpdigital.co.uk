@@ -112,10 +112,16 @@
   left: 0.5rem;
   height: 50%;
   aspect-ratio: 1 /1;
-  background: white;
+  background-color: transparent;
   border-radius: 50%;
   transform: translateY(-50%);
   border: 0.5px solid var(--primaryColor);
+  transition: background-color 0.36s cubic-bezier(0.01, 0.82, 0.43, 1);
+}
+
+.tag-button:hover::after {
+  background-color: var(--secondaryColor);
+  transition: background-color 0.36s cubic-bezier(0.7, 0.01, 0.8, 0.99);
 }
 
 .tag-button-inside {

@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { getBlogPostsByTag, getAllTags } from '@/lib/contentService';
 import { formatDate } from '@/lib/utils';
+import PageHeader from '@/components/sections/PageHeader';
 
 interface TagPageProps {
   params: Promise<{
@@ -49,26 +50,21 @@ export default async function TagPage({ params }: TagPageProps) {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-6">
-            <Badge
-              variant="secondary"
-              className="text-lg px-6 py-3 mb-4 bg-charcoal text-white border border-white"
-            >
-              {displayTag}
-            </Badge>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
+      <PageHeader
+        title={
+          <>
             {displayTag} <span className="text-primary">Articles</span>
-          </h1>
-          <p className="text-xl text-white font-body leading-relaxed px-1">
+          </>
+        }
+        description={
+          <>
             Expert insights and practical guidance on {displayTag.toLowerCase()} from the #sharp
             team.
-          </p>
-        </div>
-      </section>
+          </>
+        }
+        image="/img/blog_bg.jpg"
+        tags={[displayTag]}
+      />
 
       {/* Tags Filter */}
       <section className="py-12 bg-white border-b border-gray-200">

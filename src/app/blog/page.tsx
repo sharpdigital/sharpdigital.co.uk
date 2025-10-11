@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { getBlogPosts, getAllTags } from '@/lib/contentService';
 import { formatDate } from '@/lib/utils';
+import PageHeader from '@/components/sections/PageHeader';
 
 export const metadata: Metadata = {
   title: 'Blog - Digital Transformation Insights | #sharp',
@@ -21,18 +22,20 @@ export default async function BlogPage() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
+      <PageHeader
+        title={
+          <>
             Our <span className="text-primary">Insights</span>
-          </h1>
-          <p className="text-xl text-white font-body leading-relaxed px-1">
+          </>
+        }
+        description={
+          <>
             Expert perspectives on digital transformation, AI implementation, and business
             optimization from the #sharp team.
-          </p>
-        </div>
-      </section>
+          </>
+        }
+        image="/img/blog_bg.jpg"
+      />
 
       {/* Tags Filter */}
       <section className="py-12 bg-white border-b border-gray-200">

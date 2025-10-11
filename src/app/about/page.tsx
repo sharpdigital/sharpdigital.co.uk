@@ -5,6 +5,7 @@ import Layout from '@/components/Layout';
 import RichTextRenderer from '@/components/RichTextRenderer';
 import { Card, CardContent } from '@/components/ui/card';
 import { getTeamMembers } from '@/lib/contentService';
+import PageHeader from '@/components/sections/PageHeader';
 
 export const metadata: Metadata = {
   title: 'About #sharp - Digital Transformation Consultancy',
@@ -18,19 +19,21 @@ export default async function AboutPage() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-6">
+      <PageHeader
+        title={
+          <>
             About <span className="text-primary">#sharp</span>
-          </h1>
-          <p className="text-xl text-white font-body leading-relaxed px-1">
+          </>
+        }
+        description={
+          <>
             Your unfair advantage in an unrelenting digital age.
             <br />
             We don’t just help you transform, we help you innovate measurable impact.
-          </p>
-        </div>
-      </section>
+          </>
+        }
+        image="/img/about_bg.jpg"
+      />
 
       {/* Company Story Section */}
       <section className="py-20 bg-white">

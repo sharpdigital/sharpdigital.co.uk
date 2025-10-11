@@ -1,0 +1,39 @@
+import { FC } from 'react';
+import ZoomBackground from '../ZoomBackground';
+import TagButton from '../ui/TagButton';
+
+interface Props {
+  title?: string | React.ReactNode;
+  description?: string | React.ReactNode;
+  image?: string;
+  tags?: string[];
+}
+
+const PageHeader: FC<Props> = ({ title, description, image, tags }) => {
+  console.log('||||', tags);
+
+  return (
+    <section className="relative bg-transparent from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
+      <ZoomBackground image={image} />
+      <div className="relative z-index-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-36">
+          {title}
+        </h1>
+        <p className="text-xl text-white font-body leading-relaxed px-1">
+          <>
+            {description}
+            {tags ? (
+              <div className="mt-6">
+                {[...(tags ?? [])].map((tag) => (
+                  <TagButton key={tag} text={tag} />
+                ))}
+              </div>
+            ) : null}
+          </>
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default PageHeader;
