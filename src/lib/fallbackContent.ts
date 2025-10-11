@@ -1,4 +1,4 @@
-import { BlogPost, Service, TeamMember } from './appwrite';
+import { BlogPost, CardSum, TeamMember } from './appwrite';
 
 // Fallback blog posts with Appwrite document structure
 export const fallbackBlogPosts: BlogPost[] = [
@@ -6,7 +6,8 @@ export const fallbackBlogPosts: BlogPost[] = [
     $id: '1',
     title: 'AI Strategy Implementation Guide',
     slug: 'ai-strategy-implementation-guide',
-    excerpt: 'A comprehensive guide to implementing AI strategies in your digital transformation journey with proven methodologies.',
+    excerpt:
+      'A comprehensive guide to implementing AI strategies in your digital transformation journey with proven methodologies.',
     content: `# AI Strategy Implementation Guide
 
 Digital transformation is no longer optional—it's essential for business survival and growth. In this comprehensive guide, we'll explore proven methodologies for implementing AI strategies that drive real business value.
@@ -37,7 +38,8 @@ Start by assessing your current data infrastructure and identifying clear use ca
     $id: '2',
     title: 'Customer Experience Optimization',
     slug: 'customer-experience-optimization',
-    excerpt: 'How to optimize customer touchpoints for exceptional journeys through strategic digital transformation.',
+    excerpt:
+      'How to optimize customer touchpoints for exceptional journeys through strategic digital transformation.',
     content: `# Customer Experience Optimization
 
 Customer experience optimization is at the heart of successful digital transformation. Today's customers expect seamless, personalized interactions across all touchpoints.
@@ -73,7 +75,8 @@ This creates experiences that not only meet but exceed customer expectations.
     $id: '3',
     title: 'Data-Driven Decision Making',
     slug: 'data-driven-decision-making',
-    excerpt: 'Transform your data into actionable business intelligence with advanced analytics and visualization tools.',
+    excerpt:
+      'Transform your data into actionable business intelligence with advanced analytics and visualization tools.',
     content: `# Data-Driven Decision Making
 
 In today's data-rich environment, the ability to make informed decisions quickly is a competitive advantage. Data-driven decision making transforms raw information into strategic insights.
@@ -107,12 +110,14 @@ Our methodology helps organizations move from intuition-based to evidence-based 
 ];
 
 // Fallback services with Appwrite document structure
-export const fallbackServices: Service[] = [
+export const fallbackServices: CardSum[] = [
   {
     $id: '1',
     title: 'Customer Experience',
     slug: 'customer-experience',
-    description: 'Optimize every touchpoint for exceptional customer journeys through digital transformation, user journey mapping, and personalization strategies.',
+    image: '/img/service_1.jpg',
+    description:
+      'Optimize every touchpoint for exceptional customer journeys through digital transformation, user journey mapping, and personalization strategies.',
     content: `# Customer Experience Transformation
 
 Customer experience transformation is about creating seamless, personalized interactions that delight customers at every touchpoint. We help organizations map their customer journeys, identify pain points, and implement digital solutions that enhance satisfaction and loyalty.
@@ -135,8 +140,6 @@ We work with you to create experiences that not only meet but exceed customer ex
 - Improved brand loyalty
 - Better customer lifetime value`,
     features: ['Journey Mapping', 'Touchpoint Optimization', 'Personalization'],
-    icon: 'customer-experience',
-    color: 'orange-sharp',
     orderIndex: 1,
     $createdAt: '2024-03-01T10:00:00Z',
   },
@@ -144,7 +147,9 @@ We work with you to create experiences that not only meet but exceed customer ex
     $id: '2',
     title: 'Operational Efficiency',
     slug: 'operational-efficiency',
-    description: 'Streamline processes through intelligent automation, workflow optimization, and digital tool integration to improve efficiency.',
+    image: '/img/service_2.jpg',
+    description:
+      'Streamline processes through intelligent automation, workflow optimization, and digital tool integration to improve efficiency.',
     content: `# Operational Efficiency Transformation
 
 Operational efficiency transformation focuses on streamlining processes, eliminating waste, and leveraging technology to maximize productivity. We help organizations identify bottlenecks, implement automation solutions, and optimize workflows for peak performance.
@@ -166,8 +171,6 @@ Our proven methodology includes:
 - Enhanced employee satisfaction
 - Better resource utilization`,
     features: ['Process Automation', 'Workflow Optimization', 'Digital Tools'],
-    icon: 'operational-efficiency',
-    color: 'sky-sharp',
     orderIndex: 2,
     $createdAt: '2024-03-01T10:00:00Z',
   },
@@ -175,7 +178,9 @@ Our proven methodology includes:
     $id: '3',
     title: 'Data & Analytics',
     slug: 'data-and-analytics',
-    description: 'Transform data into actionable business intelligence through BI dashboards, predictive analytics, and data visualization.',
+    image: '/img/service_3.jpg',
+    description:
+      'Transform data into actionable business intelligence through BI dashboards, predictive analytics, and data visualization.',
     content: `# Data & Analytics Transformation
 
 Data and analytics transformation enables organizations to make informed decisions based on insights rather than intuition. We help businesses build robust data pipelines, implement advanced analytics, and create compelling visualizations that drive strategic decision-making.
@@ -197,8 +202,6 @@ Our comprehensive data strategy includes:
 - Competitive advantage through analytics
 - Improved ROI on data investments`,
     features: ['BI Dashboards', 'Predictive Analytics', 'Data Visualization'],
-    icon: 'data-analytics',
-    color: 'purple-sharp',
     orderIndex: 3,
     $createdAt: '2024-03-01T10:00:00Z',
   },
@@ -258,15 +261,15 @@ export function getFallbackBlogPosts(): BlogPost[] {
 }
 
 export function getFallbackBlogPost(slug: string): BlogPost | null {
-  return fallbackBlogPosts.find(post => post.slug === slug) || null;
+  return fallbackBlogPosts.find((post) => post.slug === slug) || null;
 }
 
-export function getFallbackServices(): Service[] {
+export function getFallbackServices(): CardSum[] {
   return fallbackServices;
 }
 
-export function getFallbackService(slug: string): Service | null {
-  return fallbackServices.find(service => service.slug === slug) || null;
+export function getFallbackService(slug: string): CardSum | null {
+  return fallbackServices.find((service) => service.slug === slug) || null;
 }
 
 export function getFallbackTeamMembers(): TeamMember[] {
@@ -274,6 +277,6 @@ export function getFallbackTeamMembers(): TeamMember[] {
 }
 
 export function getFallbackTags(): string[] {
-  const allTags = fallbackBlogPosts.flatMap(post => post.tags);
+  const allTags = fallbackBlogPosts.flatMap((post) => post.tags);
   return [...new Set(allTags)].sort();
 }

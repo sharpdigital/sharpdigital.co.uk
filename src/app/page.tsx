@@ -107,6 +107,8 @@ export default async function Home() {
         setup={services}
         title="Our Service Areas"
         description="We focus on three core areas that are essential for successful digital transformation."
+        isGrid
+        hasBackground
       />
 
       {/* Blog Section */}

@@ -17,12 +17,12 @@ import {
   getFallbackTags,
 } from './fallbackContent';
 
-import type { BlogPost, Service, TeamMember } from './appwrite';
+import type { BlogPost, CardSum, TeamMember } from './appwrite';
 
 // Check if Appwrite is configured
 const isAppwriteConfigured = () => {
   return !!(
-    process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT && 
+    process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT &&
     process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID &&
     process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID
   );
@@ -60,14 +60,14 @@ export async function getBlogPostsByTag(tag: string, limit = 10): Promise<BlogPo
     } catch (error) {
       console.warn('Appwrite not available, using fallback content', error);
       const allPosts = getFallbackBlogPosts();
-      return allPosts.filter(post => post.tags.includes(tag)).slice(0, limit);
+      return allPosts.filter((post) => post.tags.includes(tag)).slice(0, limit);
     }
   }
   const allPosts = getFallbackBlogPosts();
-  return allPosts.filter(post => post.tags.includes(tag)).slice(0, limit);
+  return allPosts.filter((post) => post.tags.includes(tag)).slice(0, limit);
 }
 
-export async function getServices(): Promise<Service[]> {
+export async function getServices(): Promise<CardSum[]> {
   if (isAppwriteConfigured()) {
     try {
       return await appwriteGetServices();
@@ -79,7 +79,7 @@ export async function getServices(): Promise<Service[]> {
   return getFallbackServices();
 }
 
-export async function getService(slug: string): Promise<Service | null> {
+export async function getService(slug: string): Promise<CardSum | null> {
   if (isAppwriteConfigured()) {
     try {
       return await appwriteGetService(slug);

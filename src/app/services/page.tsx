@@ -133,6 +133,8 @@ export default async function ServicesPage() {
           setup={services}
           title="Our Service Areas"
           description="We focus on three core areas that are essential for successful digital transformation."
+          isGrid
+          hasBackground
         />
 
         {/* Why Choose Sharp Section */}
