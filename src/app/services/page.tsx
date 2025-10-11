@@ -79,8 +79,13 @@ export default async function ServicesPage() {
               Our <span className="text-primary">Services</span>
             </>
           }
-          description="Comprehensive digital transformation solutions across three key areas that drive
-              measurable business impact."
+          description={
+            <>
+              Comprehensive digital transformation solutions across three key areas
+              <br />
+              that drive measurable business impact.
+            </>
+          }
           image="/img/services_bg.jpg"
         />
 

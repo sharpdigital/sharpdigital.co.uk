@@ -30,8 +30,10 @@ export default async function BlogPage() {
         }
         description={
           <>
-            Expert perspectives on digital transformation, AI implementation, and business
-            optimization from the #sharp team.
+            Expert perspectives on digital transformation, AI implementation,
+            <br />
+            and business optimization from the{' '}
+            <span style={{ color: 'var(--primaryColor)' }}>#sharp</span> team.
           </>
         }
         image="/img/blog_bg.jpg"

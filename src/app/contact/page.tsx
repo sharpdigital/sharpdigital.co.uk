@@ -24,8 +24,8 @@ export default function ContactPage() {
         }
         description={
           <>
-            Ready to start your digital transformation journey? We&apos;re here to help you succeed
-            with expert guidance and proven strategies.
+            Ready to start your digital transformation journey? <br />
+            We&apos;re here to help you succeed with expert guidance and proven strategies.
           </>
         }
         image="/img/contact_bg.jpg"
