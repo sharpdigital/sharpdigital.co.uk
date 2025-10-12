@@ -336,4 +336,24 @@
   .large-bottom-button a {
     width: 100%;
   }
+
+  .content-card {
+    padding: 2.6em 3rem 3em 3em;
+    margin-top: 1rem !important;
+  }
+
+  .content-card-title {
+    margin-bottom: 2.26rem;
+    font-size: 1.8rem;
+  }
+
+  .content-title > span,
+  .content-text > span,
+  .content-card-title > span,
+  .content-card-description > span {
+    color: var(--primaryColor);
+  }
+  .content-card-list > span {
+    font-weight: 600;
+  }
 }

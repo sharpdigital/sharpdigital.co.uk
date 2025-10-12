@@ -10,7 +10,7 @@ const MOBILE_SAFE_RESIZE = 'mobile-safe-resize';
 export type AccordionItem = {
   title: string;
   column: { title: string; details: string };
-  icon?: React.ReactNode;
+  icon?: React.ReactNode | string;
 };
 
 interface AccordionPanelProps {

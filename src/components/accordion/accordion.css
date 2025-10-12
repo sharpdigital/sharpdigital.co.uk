@@ -75,13 +75,17 @@
 .accordion-icon {
   --color: var(--secondaryColor);
   background: var(--primaryColor);
+  font-family: Manrope, sans-serif;
+  font-weight: 330;
   aspect-ratio: 1;
   justify-content: center;
   align-items: center;
   height: 58.4%;
-  margin-right: 2.9em;
+  margin-right: 2.9rem;
   display: flex;
   border-radius: 50%;
+  color: var(--secondaryColor);
+  font-size: 1.5rem;
 }
 
 .accordion-icon svg {

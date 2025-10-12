@@ -16,6 +16,7 @@ interface Props {
   largeButtonText?: string;
   largeButtonLink?: string;
   secondaryButton?: boolean;
+  noCardButton?: boolean;
 }
 
 const CardSection: FC<Props> = ({
@@ -29,6 +30,7 @@ const CardSection: FC<Props> = ({
   largeButtonText,
   largeButtonLink,
   secondaryButton,
+  noCardButton,
 }) => {
   return (
     <section className={`py-20 ${hasBackground ? 'bg-gray-50' : ''}`}>
@@ -61,6 +63,7 @@ const CardSection: FC<Props> = ({
                 buttonText={setupItem.buttonText}
                 linkBase={linkBase}
                 secondaryButton={secondaryButton}
+                noButton={noCardButton}
               />
             );
           })}

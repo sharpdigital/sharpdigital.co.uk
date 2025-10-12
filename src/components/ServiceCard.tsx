@@ -21,6 +21,7 @@ interface ServiceCardProps {
   linkBase?: string;
   minTitleHeight?: string;
   secondaryButton?: boolean;
+  noButton?: boolean;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -37,6 +38,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   linkBase = '/',
   minTitleHeight = '2.7em',
   secondaryButton,
+  noButton,
 }) => {
   return (
     <div className={`service-card${!isGrid ? ' horizontal' : ''}`}>
@@ -63,7 +65,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             {!!subTitle && <div className="service-card-subtitle">{subTitle}</div>}
             {!!details && <div className="service-card-details title-font">{details}</div>}
           </h3>
-          <p className="text-base font-body leading-normal text-charcoal mb-6">{description}</p>
+          <p
+            className="text-base font-body leading-normal text-charcoal mb-6"
+            style={noButton ? { marginBottom: '1.24rem' } : undefined}
+          >
+            {description}
+          </p>
           {!!features && (
             <ul className="text-sm text-charcoal font-body mb-46 space-y-2">
               {features.map((feature, index) => (
@@ -78,16 +85,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
               ))}
             </div>
           ) : null}
-          <div className="flex-1"></div>
-          <Link href={`${linkBase}${href}`} className="mb-[0.5rem]">
-            {secondaryButton ? (
-              <div className="service-card-secondary-button underlined">{buttonText}</div>
-            ) : (
-              <AnimButton fullWidth>
-                <div className="px-6 py-2">{buttonText}</div>
-              </AnimButton>
-            )}
-          </Link>
+
+          {!noButton && (
+            <>
+              <div className="flex-1"></div>
+              <Link href={`${linkBase}${href}`} className="mb-[0.5rem]">
+                {secondaryButton ? (
+                  <div className="service-card-secondary-button underlined">{buttonText}</div>
+                ) : (
+                  <AnimButton fullWidth>
+                    <div className="px-6 py-2">{buttonText}</div>
+                  </AnimButton>
+                )}
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </div>

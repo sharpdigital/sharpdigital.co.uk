@@ -14,6 +14,7 @@ import AccordionSection from '@/components/sections/AccordionSection';
 import StrategyIcon from '@/components/icons/StrategyIcon';
 import DesignIcon from '@/components/icons/DesignIcon';
 import ExecuteIcon from '@/components/icons/ExecuteIcon';
+import ContentSection, { ContentSectionProps } from '@/components/sections/ContentSection';
 
 export const metadata: Metadata = {
   title: 'About #sharp - Digital Transformation Consultancy',
@@ -52,6 +53,41 @@ const approachAccordion: AccordionItem[] = [
   },
 ];
 
+const contentSetup: ContentSectionProps = {
+  title: 'Our Story',
+  description: [
+    `Born from a simple yet powerful vision, <span>#sharp</span> was created to make digital
+    transformation accessible and successful for organisations of all sizes. We believe that every
+    company deserves to thrive in the digital age, and we&apos;re here to make that happen.`,
+    `Our journey began when we recognised that many organisations were struggling with digital
+    transformation initiatives. Despite having access to cutting-edge technology, they lacked the
+    strategic guidance and tools to achieve their goals. That&apos;s where we come in.`,
+    `We combine deep business acumen with cutting-edge technical expertise to deliver solutions
+    that drive real business value. Our approach is collaborative, data-driven, and focused on
+    sustainable results.`,
+  ],
+  cards: [
+    {
+      title: 'Our <span>Mission</span>',
+      text: [
+        `To empower businesses to thrive in the digital era by delivering innovative, data-driven
+        strategies and seamless technology solutions. We bridge the gap between vision and
+        execution, enabling organisations to transform, scale, and lead with confidence.`,
+      ],
+    },
+    {
+      title: 'Our <span>Values</span>',
+      list: [
+        `<strong>Excellence:</strong> We deliver exceptional results by turning digital ambition into measurable success`,
+        `<strong>Innovation:</strong> We stay ahead of the curve with cutting-edge solutions`,
+        `<strong>Collaboration:</strong> We collaborate and partner with your team – seamlessly`,
+        `<strong>Transparency:</strong> We provide clear, honest guidance throughout`,
+        `<strong>Impact:</strong> We focus on measurable business outcomes`,
+      ],
+    },
+  ],
+};
+
 export default async function AboutPage() {
   /* const teamMembers = await getTeamMembers(); */
   // TODO: make it dynamic
@@ -76,74 +112,7 @@ export default async function AboutPage() {
       />
 
       {/* Company Story Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-26">
-            Our Story
-          </h2>
-
-          <div className="space-y-6">
-            <p className="text-lg text-charcoal font-body leading-relaxed">
-              Born from a simple yet powerful vision,{' '}
-              <span className="text-primary font-heading">#sharp</span> was created to make digital
-              transformation accessible and successful for organisations of all sizes. We believe
-              that every company deserves to thrive in the digital age, and we&apos;re here to make
-              that happen.
-            </p>
-
-            <p className="text-lg text-charcoal font-body leading-relaxed">
-              Our journey began when we recognised that many organisations were struggling with
-              digital transformation initiatives. Despite having access to cutting-edge technology,
-              they lacked the strategic guidance and tools to achieve their goals. That&apos;s where
-              we come in.
-            </p>
-
-            <p className="text-lg text-charcoal font-body leading-relaxed mb-6">
-              We combine deep business acumen with cutting-edge technical expertise to deliver
-              solutions that drive real business value. Our approach is collaborative, data-driven,
-              and focused on sustainable results.
-            </p>
-
-            <div className="bg-gray-50 p-8 mt-8">
-              <h3 className="text-2xl font-heading text-charcoal mb-6">
-                Our <span className="text-primary">Mission</span>
-              </h3>
-              <p className="text-lg text-charcoal font-body leading-relaxed mb-4">
-                To empower businesses to thrive in the digital era by delivering innovative,
-                data-driven strategies and seamless technology solutions. We bridge the gap between
-                vision and execution, enabling organisations to transform, scale, and lead with
-                confidence.
-              </p>
-            </div>
-
-            <div className="small-top-gap bg-gray-50 p-8">
-              <h3 className="text-2xl font-heading text-charcoal mb-6">
-                Our <span className="text-primary">Values</span>
-              </h3>
-              <ul className="space-y-3 text-lg text-charcoal font-body">
-                <li>
-                  • <strong>Excellence:</strong> We deliver exceptional results by turning digital
-                  ambition into measurable success
-                </li>
-                <li>
-                  • <strong>Innovation:</strong> We stay ahead of the curve with cutting-edge
-                  solutions
-                </li>
-                <li>
-                  • <strong>Collaboration:</strong> We collaborate and partner with your team –
-                  seamlessly
-                </li>
-                <li>
-                  • <strong>Transparency:</strong> We provide clear, honest guidance throughout
-                </li>
-                <li>
-                  • <strong>Impact:</strong> We focus on measurable business outcomes
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContentSection {...contentSetup} />
 
       {/* Team Section */}
       <CardSection
