@@ -40,13 +40,14 @@ export interface CardSum {
   slug: string;
   description?: string | null;
   content?: string | null; // markdown content
-  features: string[];
+  features?: string[];
   image?: string | null;
   orderIndex?: number | null;
   tags?: string[];
   $createdAt: string;
   author?: string | null;
   publishDate?: string | null; // ISO date string
+  buttonText?: string;
 }
 
 export interface TeamMember {

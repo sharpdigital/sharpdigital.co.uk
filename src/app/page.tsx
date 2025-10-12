@@ -9,9 +9,13 @@ import Carousel, { exampleSetup } from '@/components/caroussel/Carousel';
 import AnimButton from '@/components/ui/AnimButton';
 import CardSection from '../components/sections/CardSection';
 import { getServices } from '@/lib/contentService';
+import { fallbackBlogCards } from '@/lib/fallbackContent';
 
 export default async function Home() {
   const services = await getServices();
+  // TODO: get this card list from the backend
+  // Suggestion: store all blog cards in store (without content) and filter on frontend
+  const news = [...fallbackBlogCards];
 
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -79,7 +83,7 @@ export default async function Home() {
                 alt="#sharp logo"
                 width={200}
                 height={80}
-                className="h-20 w-auto mx-auto lg:mx-0 mb-6"
+                className="h-20 w-[14em] mx-auto lg:mx-0 mb-6"
               />
             </div>
             <div className="lg:text-left">
@@ -109,6 +113,15 @@ export default async function Home() {
         description="We focus on three core areas that are essential for successful digital transformation."
         isGrid
         hasBackground
+      />
+
+      <CardSection
+        setup={news}
+        title="Latest Insights & Thought Leadership"
+        description="Digital transformation expertise and industry insights"
+        isGrid
+        minTitleHeight={'4em'}
+        linkBase="/blog/"
       />
 
       {/* Blog Section */}

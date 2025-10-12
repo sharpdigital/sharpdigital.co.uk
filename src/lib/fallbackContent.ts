@@ -109,6 +109,50 @@ Our methodology helps organizations move from intuition-based to evidence-based 
   },
 ];
 
+//TODO: define news on the backend
+
+export const fallbackBlogCards: CardSum[] = [
+  {
+    $id: '1',
+    title: 'AI Strategy Implementation Guide',
+    slug: 'ai-strategy-implementation-guide',
+    image: '/img/blog_1.jpg',
+    description:
+      'A comprehensive guide to implementing AI strategies in your digital transformation journey with proven methodologies.',
+    /* features: ['Journey Mapping', 'Touchpoint Optimization', 'Personalization'], */
+    orderIndex: 1,
+    author: 'Loreen',
+    $createdAt: '2024-03-01T10:00:00Z',
+    buttonText: 'Read More',
+  },
+  {
+    $id: '2',
+    title: 'Customer Experience Optimization',
+    slug: 'customer-experience-optimization',
+    image: '/img/blog_2.jpg',
+    description:
+      'How to optimize customer touchpoints for exceptional journeys through strategic digital transformation.',
+    /* features: ['Customer Journey Design', 'Experience Mapping', 'Service Design'], */
+    orderIndex: 2,
+    author: 'Janos',
+    $createdAt: '2024-03-10T10:00:00Z',
+    buttonText: 'Read More',
+  },
+  {
+    $id: '3',
+    title: 'Data-Driven Decision Making',
+    slug: 'data-driven-decision-making',
+    image: '/img/blog_3.jpg',
+    description:
+      'Transform your data into actionable business intelligence with advanced analytics and visualization tools.',
+    /* features: ['Analytics', 'Data Visualization', 'Insights Automation'], */
+    orderIndex: 3,
+    author: 'Loreen',
+    $createdAt: '2024-03-15T10:00:00Z',
+    buttonText: 'Read More',
+  },
+];
+
 // Fallback services with Appwrite document structure
 export const fallbackServices: CardSum[] = [
   {

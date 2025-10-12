@@ -197,7 +197,7 @@
   }
 
   .intro-container {
-    grid-template-columns: repeat(1, 0.5fr 1fr) !important;
+    grid-template-columns: repeat(1, 0.44fr 1fr) !important;
   }
 
   .service-card {

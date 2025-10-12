@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -9,11 +11,14 @@ interface ServiceCardProps {
   title: string;
   details?: string;
   description: string;
-  features: string[];
+  features?: string[];
   href: string;
   imageUrl?: string;
   tags?: string[];
   isGrid?: boolean;
+  buttonText?: string;
+  linkBase?: string;
+  minTitleHeight?: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -25,6 +30,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   imageUrl,
   tags,
   isGrid,
+  buttonText = 'Learn More',
+  linkBase = '/',
+  minTitleHeight = '2.7em',
 }) => {
   return (
     <div className="service-card">
@@ -43,15 +51,17 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         ) : null}
         <div className="service-card-text p-6 flex flex-col">
           <h3 className="text-2xl font-heading leading-snug text-charcoal mb-4">
-            <div className="min-h-[2.7em]">{title}</div>
+            <div style={{ minHeight: minTitleHeight }}>{title}</div>
             {!!details && <div className="service-card-details">{details}</div>}
           </h3>
           <p className="text-base font-body leading-normal text-charcoal mb-6">{description}</p>
-          <ul className="text-sm text-charcoal font-body mb-46 space-y-2">
-            {features.map((feature, index) => (
-              <li key={index}>• {feature}</li>
-            ))}
-          </ul>
+          {!!features && (
+            <ul className="text-sm text-charcoal font-body mb-46 space-y-2">
+              {features.map((feature, index) => (
+                <li key={index}>• {feature}</li>
+              ))}
+            </ul>
+          )}
           {tags && tags.length ? (
             <div className="service-card-tags mb-4">
               {tags.map((tag: string) => (
@@ -60,9 +70,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             </div>
           ) : null}
           <div className="flex-1"></div>
-          <Link href={href} className="mb-[0.5rem]">
+          <Link href={`${linkBase}${href}`} className="mb-[0.5rem]">
             <AnimButton fullWidth>
-              <div className="px-6 py-2">Learn More</div>
+              <div className="px-6 py-2">{buttonText}</div>
             </AnimButton>
           </Link>
         </div>
