@@ -19,7 +19,7 @@ const PageHeader: FC<Props> = ({ title, description, image, tags }) => {
         <h1 className="text-4xl md:text-5xl font-heading leading-tight text-white mb-36">
           {title}
         </h1>
-        <p className="text-xl text-white font-body leading-relaxed px-1">
+        <div className="text-xl text-white font-body leading-relaxed px-1">
           <>
             {description}
             {tags ? (
@@ -30,7 +30,7 @@ const PageHeader: FC<Props> = ({ title, description, image, tags }) => {
               </div>
             ) : null}
           </>
-        </p>
+        </div>
       </div>
     </section>
   );
