@@ -3,14 +3,14 @@
 import { FC, useLayoutEffect, useRef } from 'react';
 
 interface AnimButtonProps {
-  invert?: boolean;
+  inverted?: boolean;
   fullWidth?: boolean;
   open?: boolean;
   children: React.ReactNode;
   className?: string;
 }
 
-const AnimButton: FC<AnimButtonProps> = ({ children, fullWidth, open, className }) => {
+const AnimButton: FC<AnimButtonProps> = ({ children, fullWidth, open, className, inverted }) => {
   const btnRef = useRef<HTMLButtonElement | null>(null);
 
   useLayoutEffect(() => {
@@ -36,7 +36,7 @@ const AnimButton: FC<AnimButtonProps> = ({ children, fullWidth, open, className 
   return (
     <button
       ref={btnRef}
-      className={`anim-button${open ? ' open' : ''}${className ? ` ${className}` : ''}`}
+      className={`anim-button${open ? ' open' : ''}${className ? ` ${className}` : ''}${inverted ? ' inverted' : ''}`}
       style={fullWidth ? { width: '100%' } : {}}
     >
       <div className="anim-button-text">{children}</div>

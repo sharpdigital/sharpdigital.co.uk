@@ -35,11 +35,15 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   minTitleHeight = '2.7em',
 }) => {
   return (
-    <div className="service-card">
+    <div className={`service-card${!isGrid ? ' horizontal' : ''}`}>
       <div className="service-card-shadow"></div>
       <div className="service-card-content bg-white overflow-hidden">
         {imageUrl ? (
-          <div className="service-card-image aspect-video w-full mb-2">
+          <div
+            className={
+              isGrid ? 'service-card-image aspect-video w-full mb-2' : 'service-card-image'
+            }
+          >
             <Image
               src={imageUrl}
               alt={title}

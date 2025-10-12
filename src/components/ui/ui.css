@@ -12,7 +12,8 @@
   --hoverRotation: -45deg;
 }
 
-.anim-button {
+.anim-button,
+.anim-button.inverted:hover {
   --width: 2000px;
   --height: 2000px;
   --color: var(--secondaryColor);
@@ -22,7 +23,8 @@
   background: var(--secondaryColor);
 }
 
-.anim-button-top {
+.anim-button-top,
+.anim-button.inverted:hover .anim-button-top {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -34,13 +36,15 @@
   background: var(--primaryColor);
 }
 
-.anim-button-top-slider {
+.anim-button-top-slider,
+.anim-button.inverted:hover .anim-button-top-slider {
   color: var(--secondaryColor);
   transition: var(--transitionIn);
   transform: rotate(calc(-1 * var(--hoverRotation)));
 }
 
-.anim-button-text {
+.anim-button-text,
+.anim-button.inverted:hover .anim-button-text {
   position: relative;
   z-index: 1;
   color: var(--color);
@@ -48,16 +52,19 @@
 }
 
 .anim-button:hover,
-.anim-button.open {
+.anim-button.open,
+.anim-button.inverted {
   --color: var(--primaryColor);
 }
 
-.anim-button:hover .anim-button-text {
+.anim-button:hover .anim-button-text,
+.anim-button.inverted .anim-button-text {
   transition: var(--colorIn);
 }
 
 .anim-button:hover .anim-button-top,
-.anim-button.open .anim-button-top {
+.anim-button.open .anim-button-top,
+.anim-button.inverted .anim-button-top {
   transform: rotate(var(--hoverRotation)) translateY(50%);
 }
 

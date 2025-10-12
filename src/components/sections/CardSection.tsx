@@ -2,6 +2,8 @@ import ServiceCard from '@/components/ServiceCard';
 import { CardSum } from '@/lib/appwrite';
 import { formatDate } from '@/lib/utils';
 import { FC } from 'react';
+import AnimButton from '../ui/AnimButton';
+import Link from 'next/link';
 
 interface Props {
   setup: CardSum[];
@@ -11,6 +13,8 @@ interface Props {
   hasBackground?: boolean;
   minTitleHeight?: string;
   linkBase?: string;
+  largeButtonText?: string;
+  largeButtonLink?: string;
 }
 
 const CardSection: FC<Props> = ({
@@ -21,6 +25,8 @@ const CardSection: FC<Props> = ({
   hasBackground,
   minTitleHeight,
   linkBase,
+  largeButtonText,
+  largeButtonLink,
 }) => {
   return (
     <section className={`py-20 ${hasBackground ? 'bg-gray-50' : ''}`}>
@@ -32,7 +38,7 @@ const CardSection: FC<Props> = ({
           <p className="text-lg text-charcoal font-body leading-relaxed">{description}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={isGrid ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : ''}>
           {setup.map((setupItem) => {
             let details;
             if (setupItem.author || setupItem.$createdAt) {
@@ -55,6 +61,15 @@ const CardSection: FC<Props> = ({
             );
           })}
         </div>
+        {largeButtonText && largeButtonLink ? (
+          <div className="large-bottom-button">
+            <Link href={largeButtonLink}>
+              <AnimButton fullWidth inverted>
+                <div className="large-button py-2">{largeButtonText}</div>
+              </AnimButton>
+            </Link>
+          </div>
+        ) : null}
       </div>
     </section>
   );
