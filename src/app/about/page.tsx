@@ -6,6 +6,8 @@ import RichTextRenderer from '@/components/RichTextRenderer';
 import { Card, CardContent } from '@/components/ui/card';
 import { getTeamMembers } from '@/lib/contentService';
 import PageHeader from '@/components/sections/PageHeader';
+import { fallbackTeamMemberCards } from '@/lib/fallbackContent';
+import CardSection from '@/components/sections/CardSection';
 
 export const metadata: Metadata = {
   title: 'About #sharp - Digital Transformation Consultancy',
@@ -15,7 +17,9 @@ export const metadata: Metadata = {
 };
 
 export default async function AboutPage() {
-  const teamMembers = await getTeamMembers();
+  /* const teamMembers = await getTeamMembers(); */
+  // TODO: make it dynamic
+  const teamMembers = [...fallbackTeamMemberCards];
 
   return (
     <Layout>
@@ -38,145 +42,80 @@ export default async function AboutPage() {
       {/* Company Story Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
-              Our Story
-            </h2>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-26">
+            Our Story
+          </h2>
 
-          {
-            <div className="space-y-6">
-              <p className="text-lg text-charcoal font-body leading-relaxed">
-                <span className="text-primary font-heading text-2xl">#sharp</span> was founded with
-                a simple yet powerful vision: to make digital transformation accessible and
-                successful for organisations of all sizes. We believe that every company deserves to
-                thrive in the digital age, and we&apos;re here to make that happen.
+          <div className="space-y-6">
+            <p className="text-lg text-charcoal font-body leading-relaxed">
+              Born from a simple yet powerful vision,{' '}
+              <span className="text-primary font-heading">#sharp</span> was created to make digital
+              transformation accessible and successful for organisations of all sizes. We believe
+              that every company deserves to thrive in the digital age, and we&apos;re here to make
+              that happen.
+            </p>
+
+            <p className="text-lg text-charcoal font-body leading-relaxed">
+              Our journey began when we recognised that many organisations were struggling with
+              digital transformation initiatives. Despite having access to cutting-edge technology,
+              they lacked the strategic guidance and tools to achieve their goals. That&apos;s where
+              we come in.
+            </p>
+
+            <p className="text-lg text-charcoal font-body leading-relaxed mb-6">
+              We combine deep business acumen with cutting-edge technical expertise to deliver
+              solutions that drive real business value. Our approach is collaborative, data-driven,
+              and focused on sustainable results.
+            </p>
+
+            <div className="bg-gray-50 p-8 mt-8">
+              <h3 className="text-2xl font-heading text-charcoal mb-6">Our Mission</h3>
+              <p className="text-lg text-charcoal font-body leading-relaxed mb-4">
+                To empower businesses to thrive in the digital era by delivering innovative,
+                data-driven strategies and seamless technology solutions. We bridge the gap between
+                vision and execution, enabling organisations to transform, scale, and lead with
+                confidence.
               </p>
-
-              <p className="text-lg text-charcoal font-body leading-relaxed">
-                Our journey began when we recognized that many organisations were struggling with
-                digital transformation initiatives. Despite having access to cutting-edge
-                technology, they lacked the strategic guidance and tools to achieve their goals.
-                That&apos;s where we come in.
-              </p>
-
-              <p className="text-lg text-charcoal font-body leading-relaxed">
-                We combine deep business acumen with cutting-edge technical expertise to deliver
-                solutions that drive real business value. Our approach is collaborative,
-                data-driven, and focused on sustainable results.
-              </p>
-
-              <div className="bg-gray-50 p-8 mt-8">
-                <h3 className="text-2xl font-heading text-charcoal mb-4">Our Mission</h3>
-                <p className="text-lg text-charcoal font-body leading-relaxed">
-                  To empower businesses to thrive in the digital era by delivering innovative,
-                  data-driven strategies and seamless technology solutions. We bridge the gap
-                  between vision and execution, enabling organisations to transform, scale, and lead
-                  with confidence.
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-8 mt-6">
-                <h3 className="text-2xl font-heading text-charcoal mb-4">Our Values</h3>
-                <ul className="space-y-3 text-lg text-charcoal font-body">
-                  <li>
-                    • <strong>Excellence:</strong> We deliver exceptional results by turning digital
-                    ambition into measurable success
-                  </li>
-                  <li>
-                    • <strong>Innovation:</strong> We stay ahead of the curve with cutting-edge
-                    solutions
-                  </li>
-                  <li>
-                    • <strong>Collaboration:</strong> We collaborate and partner with your team -
-                    seamlesslessly
-                  </li>
-                  <li>
-                    • <strong>Transparency:</strong> We provide clear, honest guidance throughout.
-                  </li>
-                  <li>
-                    • <strong>Impact:</strong> We focus on measurable business outcomes.
-                  </li>
-                </ul>
-              </div>
             </div>
-          }
+
+            <div className="small-top-gap bg-gray-50 p-8">
+              <h3 className="text-2xl font-heading text-charcoal mb-6">
+                Our <span className="text-primary">Values</span>
+              </h3>
+              <ul className="space-y-3 text-lg text-charcoal font-body">
+                <li>
+                  • <strong>Excellence:</strong> We deliver exceptional results by turning digital
+                  ambition into measurable success
+                </li>
+                <li>
+                  • <strong>Innovation:</strong> We stay ahead of the curve with cutting-edge
+                  solutions
+                </li>
+                <li>
+                  • <strong>Collaboration:</strong> We collaborate and partner with your team –
+                  seamlessly
+                </li>
+                <li>
+                  • <strong>Transparency:</strong> We provide clear, honest guidance throughout
+                </li>
+                <li>
+                  • <strong>Impact:</strong> We focus on measurable business outcomes
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
-              Meet Our Team
-            </h2>
-            <p className="text-lg text-charcoal font-body leading-relaxed">
-              Our expert team brings decades of combined experience in digital transformation,
-              technology, and business strategy.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member) => (
-              <Card
-                key={member.$id}
-                className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200"
-              >
-                <CardContent className="p-8">
-                  {member.imageUrl && (
-                    <div className="mb-6">
-                      <Image
-                        src={member.imageUrl}
-                        alt={`${member.name} photo`}
-                        width={120}
-                        height={120}
-                        className="mx-auto rounded-full object-cover"
-                      />
-                    </div>
-                  )}
-
-                  <h3 className="text-2xl font-heading text-charcoal mb-2">{member.name}</h3>
-
-                  <p className="text-primary font-heading text-base mb-4">{member.role}</p>
-
-                  <div className="text-sm text-charcoal font-body mb-6">
-                    <RichTextRenderer content={member.bio || null} />
-                  </div>
-
-                  <div className="flex justify-center space-x-4">
-                    {member.linkedinUrl && (
-                      <a
-                        href={member.linkedinUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:text-primary-hover transition-colors duration-200"
-                        aria-label={`${member.name} LinkedIn`}
-                      >
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                        </svg>
-                      </a>
-                    )}
-
-                    {member.email && (
-                      <a
-                        href={`mailto:${member.email}`}
-                        className="text-primary hover:text-primary-hover transition-colors duration-200"
-                        aria-label={`Email ${member.name}`}
-                      >
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                        </svg>
-                      </a>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CardSection
+        setup={teamMembers}
+        title="Meet Our Team"
+        description="Our expert team brings decades of combined experience in digital transformation, technology, and business strategy."
+        isGrid
+        hasBackground
+        minTitleHeight="2em"
+      />
 
       {/* Approach Section */}
       <section className="py-20 bg-white">

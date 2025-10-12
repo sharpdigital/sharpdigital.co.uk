@@ -149,6 +149,10 @@
     margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse))) !important;
   }
 
+  .space-y-6 > div.small-top-gap {
+    margin-top: 1rem !important;
+  }
+
   .zoom-background {
     z-index: -1;
     position: absolute;
@@ -197,7 +201,7 @@
   }
 
   .intro-container {
-    grid-template-columns: repeat(1, 0.44fr 1fr) !important;
+    grid-template-columns: repeat(1, 0.444fr 1fr) !important;
   }
 
   .service-card {
@@ -275,12 +279,16 @@
   }
 
   .horizontal .text-base {
-    margin-bottom: 2.4rem;
+    margin-bottom: 2rem;
   }
 
   .horizontal .anim-button-text > div {
     padding-top: 0.38rem;
     padding-bottom: 0.38rem;
+  }
+
+  .horizontal .service-card-details {
+    margin-top: 0.8rem;
   }
 
   .large-bottom-button {

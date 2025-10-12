@@ -30,7 +30,7 @@ export interface BlogPost {
   publishDate?: string | null; // ISO date string
   tags: string[];
   featuredImageUrl?: string | null;
-  $createdAt: string;
+  $createdAt?: string;
   $updatedAt: string;
 }
 
@@ -44,7 +44,7 @@ export interface CardSum {
   image?: string | null;
   orderIndex?: number | null;
   tags?: string[];
-  $createdAt: string;
+  $createdAt?: string;
   author?: string | null;
   publishDate?: string | null; // ISO date string
   buttonText?: string;

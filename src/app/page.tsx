@@ -14,7 +14,6 @@ import { fallbackBlogCards } from '@/lib/fallbackContent';
 export default async function Home() {
   const services = await getServices();
   // TODO: get this card list from the backend
-  // Suggestion: store all blog cards in store (without content) and filter on frontend
   const news = [...fallbackBlogCards];
 
   const organizationSchema = {
