@@ -22,12 +22,16 @@ html {
 }
 
 body {
-  font-family: Inter, serif;
+  font-family: Inter, sans-serif;
   line-height: 1.6;
   color: #333333;
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.title-font {
+  font-family: 'Manrope', sans-serif;
 }
 
 /* Screen Reader Only Content */

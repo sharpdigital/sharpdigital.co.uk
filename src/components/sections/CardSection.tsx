@@ -15,6 +15,7 @@ interface Props {
   linkBase?: string;
   largeButtonText?: string;
   largeButtonLink?: string;
+  secondaryButton?: boolean;
 }
 
 const CardSection: FC<Props> = ({
@@ -27,6 +28,7 @@ const CardSection: FC<Props> = ({
   linkBase,
   largeButtonText,
   largeButtonLink,
+  secondaryButton,
 }) => {
   return (
     <section className={`py-20 ${hasBackground ? 'bg-gray-50' : ''}`}>
@@ -48,6 +50,7 @@ const CardSection: FC<Props> = ({
               <ServiceCard
                 key={setupItem.$id}
                 title={setupItem.title}
+                subTitle={setupItem.subTitle}
                 description={setupItem.description || ''}
                 details={details}
                 features={setupItem.features}
@@ -57,6 +60,7 @@ const CardSection: FC<Props> = ({
                 minTitleHeight={minTitleHeight}
                 buttonText={setupItem.buttonText}
                 linkBase={linkBase}
+                secondaryButton={secondaryButton}
               />
             );
           })}

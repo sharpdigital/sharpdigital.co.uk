@@ -1,16 +1,15 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Layout from '@/components/Layout';
-import ServiceCard from '@/components/ServiceCard';
 import { getServices } from '@/lib/contentService';
-import AccordionPanel from '@/components/accordion/AccordionPanel';
+import AccordionPanel, { AccordionItem } from '@/components/accordion/AccordionPanel';
 import { sanitize } from '@/lib/utils';
 import FlaskIcon from '@/components/icons/FlaskIcon';
 import MeasureIcon from '@/components/icons/MeasureIcon';
 import TeamIcon from '@/components/icons/TeamIcon';
 import CardSection from '../../components/sections/CardSection';
-import ZoomBackground from '@/components/ZoomBackground';
 import PageHeader from '@/components/sections/PageHeader';
+import AccordionSection from '@/components/sections/AccordionSection';
 
 export const metadata: Metadata = {
   title: 'Digital Transformation Services - #sharp',
@@ -20,23 +19,7 @@ export const metadata: Metadata = {
     'digital transformation services, customer experience, operational efficiency, data analytics, AI solutions',
 };
 
-type AccordionPanelProps = {
-  title: string;
-  column: { title: string; details: string };
-  icon?: React.ReactNode;
-};
-
-type CarouselSetup = {
-  title: string;
-  subTitle: string;
-  textTitle: string;
-  text: string;
-  buttonText: string;
-  buttonLink: string;
-  image: string;
-};
-
-const accordion: AccordionPanelProps[] = [
+const accordion: AccordionItem[] = [
   {
     title: 'Proven Methodologies',
     icon: <FlaskIcon />,
@@ -141,7 +124,22 @@ export default async function ServicesPage() {
         />
 
         {/* Why Choose Sharp Section */}
-        <section className="py-21 bg-white">
+
+        <AccordionSection
+          setup={accordion}
+          title={
+            <>
+              Why Choose <span className="text-primary">#sharp</span>?
+            </>
+          }
+          description={
+            <>
+              We bring proven methodologies, deep expertise, and a track record of successful
+              transformations.
+            </>
+          }
+        />
+        {/* <section className="py-21 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-8">
@@ -153,7 +151,7 @@ export default async function ServicesPage() {
               </p>
             </div>
             <div className="w-full">
-              {accordion?.map((element: AccordionPanelProps) => {
+              {accordion?.map((element: AccordionItem) => {
                 const { title, column, icon } = element;
 
                 return (
@@ -219,9 +217,9 @@ export default async function ServicesPage() {
                   solutions that work in the real world.
                 </p>
               </div>
-            </div> */}
+            </div> 
           </div>
-        </section>
+        </section> */}
       </Layout>
     </>
   );

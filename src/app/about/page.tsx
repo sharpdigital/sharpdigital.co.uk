@@ -8,6 +8,12 @@ import { getTeamMembers } from '@/lib/contentService';
 import PageHeader from '@/components/sections/PageHeader';
 import { fallbackTeamMemberCards } from '@/lib/fallbackContent';
 import CardSection from '@/components/sections/CardSection';
+import { AccordionItem } from '@/components/accordion/AccordionPanel';
+import TeamIcon from '@/components/icons/TeamIcon';
+import AccordionSection from '@/components/sections/AccordionSection';
+import StrategyIcon from '@/components/icons/StrategyIcon';
+import DesignIcon from '@/components/icons/DesignIcon';
+import ExecuteIcon from '@/components/icons/ExecuteIcon';
 
 export const metadata: Metadata = {
   title: 'About #sharp - Digital Transformation Consultancy',
@@ -15,6 +21,36 @@ export const metadata: Metadata = {
     'Learn about #sharp, a leading digital transformation consultancy helping companies navigate their digital evolution with proven methodologies and measurable results.',
   keywords: 'digital transformation, consultancy, about sharp, company story, team',
 };
+
+const approachAccordion: AccordionItem[] = [
+  {
+    title: 'Assess & Strategy',
+    icon: <StrategyIcon />,
+    column: {
+      title: 'Understanding Your Foundation',
+      details:
+        'We begin by understanding your current state, business objectives, and transformation goals to create a tailored strategy.',
+    },
+  },
+  {
+    title: 'Design & Plan',
+    icon: <DesignIcon />,
+    column: {
+      title: 'Blueprint for Success',
+      details:
+        'We design comprehensive solutions and create detailed implementation plans with clear milestones and success metrics.',
+    },
+  },
+  {
+    title: 'Execute & Optimize',
+    icon: <ExecuteIcon />,
+    column: {
+      title: 'Continuous Improvement',
+      details:
+        'We implement solutions iteratively, measure performance, and continuously optimize for maximum business impact.',
+    },
+  },
+];
 
 export default async function AboutPage() {
   /* const teamMembers = await getTeamMembers(); */
@@ -69,7 +105,9 @@ export default async function AboutPage() {
             </p>
 
             <div className="bg-gray-50 p-8 mt-8">
-              <h3 className="text-2xl font-heading text-charcoal mb-6">Our Mission</h3>
+              <h3 className="text-2xl font-heading text-charcoal mb-6">
+                Our <span className="text-primary">Mission</span>
+              </h3>
               <p className="text-lg text-charcoal font-body leading-relaxed mb-4">
                 To empower businesses to thrive in the digital era by delivering innovative,
                 data-driven strategies and seamless technology solutions. We bridge the gap between
@@ -114,65 +152,15 @@ export default async function AboutPage() {
         description="Our expert team brings decades of combined experience in digital transformation, technology, and business strategy."
         isGrid
         hasBackground
-        minTitleHeight="2em"
+        minTitleHeight="2.05em"
       />
 
       {/* Approach Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
-              Our Approach
-            </h2>
-            <p className="text-lg text-charcoal font-body leading-relaxed">
-              We follow a proven methodology that ensures successful digital transformation
-              outcomes.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-orange-sharp to-yellow-sharp rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-heading text-charcoal mb-4">1. Assess & Strategy</h3>
-              <p className="text-base text-charcoal font-body leading-relaxed">
-                We begin by understanding your current state, business objectives, and
-                transformation goals to create a tailored strategy.
-              </p>
-            </div>
-
-            <div className="">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-sky-sharp to-blue-sharp rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-heading text-charcoal mb-4">2. Design & Plan</h3>
-              <p className="text-base text-charcoal font-body leading-relaxed">
-                We design comprehensive solutions and create detailed implementation plans with
-                clear milestones and success metrics.
-              </p>
-            </div>
-
-            <div className="">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-purple-sharp to-magenta-sharp rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M3 3v18h18v-2H5V3H3z" />
-                  <path d="M7 12l4-4 4 4 4-4v3l-4 4-4-4-4 4V12z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-heading text-charcoal mb-4">3. Execute & Optimize</h3>
-              <p className="text-base text-charcoal font-body leading-relaxed">
-                We implement solutions iteratively, measure performance, and continuously optimize
-                for maximum business impact.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AccordionSection
+        setup={approachAccordion}
+        title="Our Approach"
+        description="We follow a proven methodology that ensures successful digital transformation outcomes."
+      />
     </Layout>
   );
 }

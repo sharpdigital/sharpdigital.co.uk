@@ -37,6 +37,7 @@ export interface BlogPost {
 export interface CardSum {
   $id: string;
   title: string;
+  subTitle?: string;
   slug: string;
   description?: string | null;
   content?: string | null; // markdown content

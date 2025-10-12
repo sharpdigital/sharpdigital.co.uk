@@ -253,6 +253,7 @@ export const fallbackTeamMemberCards: CardSum[] = [
   {
     $id: '1',
     title: 'Loreen',
+    subTitle: 'Digital Transformation Strategist',
     slug: 'loreen',
     description:
       'Loreen is a seasoned digital transformation expert with 10+ years of experience helping organisations navigate their digital evolution. She specializes in AI strategy implementation and data-driven decision-making.',
@@ -284,6 +285,7 @@ Loreen has successfully led digital transformation initiatives for companies ran
   {
     $id: '2',
     title: 'Janos',
+    subTitle: 'Customer Experience Lead',
     slug: 'janos',
     description:
       'Janos brings deep expertise in customer experience optimization and user research. With a background in both technology and psychology, he helps organisations create truly user-centred digital experiences.',

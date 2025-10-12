@@ -123,6 +123,7 @@ export default async function Home() {
         linkBase="/blog/"
         largeButtonText="View All Posts"
         largeButtonLink="/blog/"
+        secondaryButton
       />
     </Layout>
   );

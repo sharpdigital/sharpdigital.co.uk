@@ -7,6 +7,12 @@ import { sanitize } from '@/lib/utils';
 
 const MOBILE_SAFE_RESIZE = 'mobile-safe-resize';
 
+export type AccordionItem = {
+  title: string;
+  column: { title: string; details: string };
+  icon?: React.ReactNode;
+};
+
 interface AccordionPanelProps {
   title: string;
   startOpen?: boolean;
