@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   return {
     title: `${service.title} - Digital Transformation Services | #sharp`,
     description: service.description || '',
-    keywords: `${service.title.toLowerCase()}, digital transformation, ${service.features.join(', ').toLowerCase()}`,
+    keywords: `${service.title.toLowerCase()}, digital transformation, ${(service.features ?? []).join(', ').toLowerCase()}`,
   };
 }
 
@@ -135,7 +135,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {service.features.map((feature, index) => (
+            {(service.features ?? []).map((feature, index) => (
               <Card
                 key={index}
                 className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-200"
