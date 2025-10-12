@@ -11,6 +11,7 @@ import { generateFeatureCards, parseContentSection } from '@/components/contentP
 import CardSection from '@/components/sections/CardSection';
 import AccordionSection from '@/components/sections/AccordionSection';
 import { AccordionItem } from '@/components/accordion/AccordionPanel';
+import AnimButton from '@/components/ui/AnimButton';
 
 interface ServicePageProps {
   params: Promise<{
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   };
 }
 
-export const accordionSetup: AccordionItem[] = [
+const accordionSetup: AccordionItem[] = [
   {
     title: 'Discovery',
     column: {
@@ -128,28 +129,25 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       />
 
       {/* Call to Action */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-21 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6">
+          <h2 className="bottom-cta-title text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-8">
             Ready to Transform Your {service.title}?
           </h2>
-          <p className="text-lg text-charcoal font-body leading-relaxed mb-8">
+          <p className="bottom-cta-text text-lg text-charcoal font-body leading-relaxed mb-8">
             Let&apos;s discuss how we can help you achieve your digital transformation goals with
             our proven {service.title.toLowerCase()} solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="bottom-cta-buttons flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button className="bg-primary text-white font-heading text-base px-8 py-4 hover:bg-primary-hover active:bg-primary-active transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                Get Started
-              </Button>
+              <AnimButton>
+                <div className="bottom-cta-button">Get Started</div>
+              </AnimButton>
             </Link>
             <Link href="/services">
-              <Button
-                variant="outline"
-                className="bg-transparent text-primary border-2 border-primary font-heading text-base px-8 py-4 hover:bg-primary hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              >
-                View All Services
-              </Button>
+              <AnimButton inverted>
+                <div className="bottom-cta-button">View All Services</div>
+              </AnimButton>
             </Link>
           </div>
         </div>

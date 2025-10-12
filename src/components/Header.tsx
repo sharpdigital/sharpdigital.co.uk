@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import AnimButton from './ui/AnimButton';
@@ -9,7 +10,11 @@ import AnimButton from './ui/AnimButton';
 const buttonClass =
   'font-heading text-base text-charcoal hover:text-primary transition-colors duration-200 focus:outline-none focus:text-primary px-2 py-1';
 
+const activeClass = `${buttonClass} active`;
+
 const Header = () => {
+  const pathname = usePathname();
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -36,16 +41,22 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className={buttonClass}>
+            <Link href="/" className={pathname === '/' ? activeClass : buttonClass}>
               Home
             </Link>
-            <Link href="/about" className={buttonClass}>
+            <Link
+              href="/about"
+              className={pathname.startsWith('/about') ? activeClass : buttonClass}
+            >
               About
             </Link>
-            <Link href="/services" className={buttonClass}>
+            <Link
+              href="/services"
+              className={pathname.startsWith('/services') ? activeClass : buttonClass}
+            >
               Services
             </Link>
-            <Link href="/blog" className={buttonClass}>
+            <Link href="/blog" className={pathname.startsWith('/blog') ? activeClass : buttonClass}>
               Blog
             </Link>
             <Link href="/contact">

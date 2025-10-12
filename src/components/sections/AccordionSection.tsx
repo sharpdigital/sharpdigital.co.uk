@@ -1,9 +1,5 @@
-import ServiceCard from '@/components/ServiceCard';
-import { CardSum } from '@/lib/appwrite';
-import { formatDate, sanitize } from '@/lib/utils';
+import { sanitize } from '@/lib/utils';
 import { FC } from 'react';
-import AnimButton from '../ui/AnimButton';
-import Link from 'next/link';
 import AccordionPanel, { AccordionItem } from '../accordion/AccordionPanel';
 
 interface Props {

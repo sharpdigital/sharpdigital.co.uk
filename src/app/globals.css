@@ -21,6 +21,9 @@
 }
 
 @layer utilities {
+  a.active {
+    color: var(--primaryColor);
+  }
   .line-clamp-2 {
     overflow: hidden;
     display: -webkit-box;
@@ -214,13 +217,15 @@
     z-index: 0;
     width: 100%;
     height: 100%;
-    box-shadow: 14px 28px 50px -6px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.5s cubic-bezier(0.5, 0.09, 0.7, 1);
+    /* box-shadow: 14px 28px 50px -6px rgba(0, 0, 0, 0.1); */
+    /* box-shadow: -26px 28px 130px -6px rgba(0, 0, 0, .1); */
+    box-shadow: -20px 24px 70px -6px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.48s cubic-bezier(0.5, 0.09, 0.7, 1);
   }
 
   .service-card:hover .service-card-shadow {
-    box-shadow: 5px 12px 24px -4px rgba(0, 0, 0, 0.18);
-    transition: box-shadow 0.5s cubic-bezier(0.29, 0.09, 0.31, 1);
+    box-shadow: -2px 8px 15px -4px rgba(0, 0, 0, 0.18);
+    transition: box-shadow 0.4s cubic-bezier(0.1, 0.09, 0.11, 1);
   }
 
   .service-card-content {
@@ -292,7 +297,7 @@
   }
 
   .service-card.horizontal {
-    margin-bottom: 1em;
+    margin-bottom: 2.8em;
   }
 
   .service-card.horizontal .service-card-content {
@@ -353,7 +358,25 @@
   .content-card-description > span {
     color: var(--primaryColor);
   }
+
   .content-card-list > span {
     font-weight: 600;
+  }
+
+  .bottom-cta-buttons {
+    margin-top: 4.4rem;
+  }
+
+  .bottom-cta-buttons a {
+    flex: 1;
+  }
+
+  .bottom-cta-button {
+    padding-top: 0.66rem;
+    padding-bottom: 0.66rem;
+  }
+
+  .bottom-cta-buttons button {
+    width: 100%;
   }
 }

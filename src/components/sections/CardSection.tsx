@@ -46,7 +46,7 @@ const CardSection: FC<Props> = ({
           {setup.map((setupItem) => {
             let details;
             if (setupItem.author || setupItem.$createdAt) {
-              details = `${setupItem.author ?? ''}${setupItem.author && setupItem.$createdAt ? ' • ' : ''}${setupItem.$createdAt ? formatDate(setupItem.$createdAt) : ''}`;
+              details = `${setupItem.author ? `By ${setupItem.author}` : ''}${setupItem.author && setupItem.$createdAt ? ' • ' : ''}${setupItem.$createdAt ? formatDate(setupItem.$createdAt) : ''}`;
             }
             return (
               <ServiceCard
