@@ -385,7 +385,7 @@
   .tags-section {
     position: relative;
     z-index: 0;
-    --padding: 2rem;
+    --padding: 2.4rem;
     padding-top: var(--padding);
     padding-bottom: calc(var(--padding) - 0.3rem);
     /* box-shadow: -20px 24px 40px -19px rgba(0, 0, 0, .07); */

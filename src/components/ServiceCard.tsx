@@ -51,13 +51,25 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
               isGrid ? 'service-card-image aspect-video w-full mb-2' : 'service-card-image'
             }
           >
-            <Image
-              src={imageUrl}
-              alt={title}
-              width={400}
-              height={225}
-              className="w-full h-full object-cover"
-            />
+            {noButton ? (
+              <Image
+                src={imageUrl}
+                alt={title}
+                width={400}
+                height={225}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <Link href={`${linkBase}${href}`}>
+                <Image
+                  src={imageUrl}
+                  alt={title}
+                  width={400}
+                  height={225}
+                  className="w-full h-full object-cover"
+                />
+              </Link>
+            )}
           </div>
         ) : null}
         <div className="service-card-text p-6 flex flex-col">

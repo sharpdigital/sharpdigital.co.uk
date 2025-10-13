@@ -112,7 +112,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         primaryButtonLink="/contact"
         secondaryButtonText="More Articles"
         secondaryButtonLink="/blog"
-        noBackground
+        noBackground={!!relatedPosts.length}
       />
     </Layout>
   );
