@@ -398,4 +398,9 @@
     flex-wrap: wrap;
     gap: 0.2rem;
   }
+
+  .page-header-details {
+    color: var(--primaryColor);
+    font-size: 1.11rem;
+  }
 }

@@ -9,6 +9,7 @@ interface Props {
   primaryButtonLink?: string;
   secondaryButtonText?: string;
   secondaryButtonLink?: string;
+  noBackground?: boolean;
 }
 
 const PageEndSection: FC<Props> = ({
@@ -18,9 +19,10 @@ const PageEndSection: FC<Props> = ({
   primaryButtonLink,
   secondaryButtonText,
   secondaryButtonLink,
+  noBackground,
 }) => {
   return (
-    <section className="py-21 bg-gray-50">
+    <section className={`py-21${noBackground ? '' : ' bg-gray-50'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {!!title && (
           <h2

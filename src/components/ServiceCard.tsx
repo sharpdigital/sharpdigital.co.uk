@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import AnimButton from './ui/AnimButton';
 import TagButton from './ui/TagButton';
+import { textToSlug } from './contentParsingUtils';
 
 interface ServiceCardProps {
   title: string;
@@ -80,9 +81,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           )}
           {tags && tags.length ? (
             <div className="service-card-tags mb-4">
-              {tags.map((tag: string) => (
-                <TagButton key={tag} text={tag} />
-              ))}
+              {tags.map((tag: string) => {
+                const slug = textToSlug(tag);
+                return <TagButton key={slug} text={slug} />;
+              })}
             </div>
           ) : null}
 

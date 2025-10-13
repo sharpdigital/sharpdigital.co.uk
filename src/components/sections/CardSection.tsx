@@ -1,9 +1,9 @@
 import ServiceCard from '@/components/ServiceCard';
 import { CardSum } from '@/lib/appwrite';
-import { formatDate } from '@/lib/utils';
 import { FC } from 'react';
 import AnimButton from '../ui/AnimButton';
 import Link from 'next/link';
+import { assembleDetails } from '../contentParsingUtils';
 
 interface Props {
   setup: CardSum[];
@@ -54,10 +54,8 @@ const CardSection: FC<Props> = ({
 
         <div className={isGrid ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : ''}>
           {setup.map((setupItem) => {
-            let details;
-            if (setupItem.author || setupItem.$createdAt) {
-              details = `${setupItem.author ? `By ${setupItem.author}` : ''}${setupItem.author && setupItem.$createdAt ? ' • ' : ''}${setupItem.$createdAt ? formatDate(setupItem.$createdAt) : ''}`;
-            }
+            const details = assembleDetails(setupItem);
+
             return (
               <ServiceCard
                 key={setupItem.$id}

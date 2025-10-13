@@ -1,5 +1,6 @@
 import { BlogPost, CardSum } from '@/lib/appwrite';
 import { ContentSectionProps } from './sections/ContentSection';
+import { formatDate } from '@/lib/utils';
 
 /** Convert simple markdown emphasis to inline HTML */
 function mdInlineToHtml(s: string): string {
@@ -141,4 +142,11 @@ export function slugToText(slug: string): string {
 
 export function textToSlug(text: string): string {
   return text.toLowerCase().replace(/\s+/g, '-');
+}
+
+export function assembleDetails(setupItem: CardSum): string | undefined {
+  if (setupItem.author || setupItem.$createdAt) {
+    return `${setupItem.author ? `By ${setupItem.author}` : ''}${setupItem.author && setupItem.$createdAt ? ' • ' : ''}${setupItem.$createdAt ? formatDate(setupItem.$createdAt) : ''}`;
+  }
+  return undefined;
 }

@@ -7,9 +7,11 @@ interface Props {
   description?: string | React.ReactNode;
   image?: string;
   tags?: string[];
+  details?: string;
 }
 
-const PageHeader: FC<Props> = ({ title, description, image, tags }) => {
+const PageHeader: FC<Props> = ({ title, description, image, tags, details }) => {
+  console.log('----', details);
   return (
     <section className="relative bg-transparent from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
       <ZoomBackground image={image} />
@@ -18,17 +20,21 @@ const PageHeader: FC<Props> = ({ title, description, image, tags }) => {
           {title}
         </h1>
         <div className="text-xl text-white font-body leading-relaxed px-1">
-          <>
-            {description}
-            {tags ? (
-              <div className="mt-6">
-                {[...(tags ?? [])].map((tag) => {
-                  const text = tag.toLowerCase().replace(/\s+/g, '-');
-                  return <TagButton key={text} text={text} />;
-                })}
-              </div>
-            ) : null}
-          </>
+          {details ? (
+            <span className="page-header-details">{details}</span>
+          ) : (
+            <>
+              {description}
+              {tags ? (
+                <div className="mt-6">
+                  {[...(tags ?? [])].map((tag) => {
+                    const text = tag.toLowerCase().replace(/\s+/g, '-');
+                    return <TagButton key={text} text={text} />;
+                  })}
+                </div>
+              ) : null}
+            </>
+          )}
         </div>
       </div>
     </section>
