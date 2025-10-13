@@ -145,7 +145,7 @@ const ContactForm: React.FC = () => {
             <Button
               onClick={() => setIsSubmitted(false)}
               variant="outline"
-              className="mt-4 border-green-300 text-green-700 hover:bg-green-100 w-full"
+              className="mt-4 border-green-600 text-green-700 hover:bg-green-100 w-full"
             >
               Send Another Message
             </Button>
