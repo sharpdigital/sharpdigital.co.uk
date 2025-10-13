@@ -12,6 +12,7 @@ import CardSection from '@/components/sections/CardSection';
 import AccordionSection from '@/components/sections/AccordionSection';
 import { AccordionItem } from '@/components/accordion/AccordionPanel';
 import AnimButton from '@/components/ui/AnimButton';
+import PageEndSection from '@/components/sections/PageEndSection';
 
 interface ServicePageProps {
   params: Promise<{
@@ -129,29 +130,15 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       />
 
       {/* Call to Action */}
-      <section className="py-21 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="bottom-cta-title text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-8">
-            Ready to Transform Your {service.title}?
-          </h2>
-          <p className="bottom-cta-text text-lg text-charcoal font-body leading-relaxed mb-8">
-            Let&apos;s discuss how we can help you achieve your digital transformation goals with
-            our proven {service.title.toLowerCase()} solutions.
-          </p>
-          <div className="bottom-cta-buttons flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <AnimButton>
-                <div className="bottom-cta-button">Get Started</div>
-              </AnimButton>
-            </Link>
-            <Link href="/services">
-              <AnimButton inverted>
-                <div className="bottom-cta-button">View All Services</div>
-              </AnimButton>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageEndSection
+        title={`Ready to Transform Your ${service.title}?`}
+        description={`Let&apos;s discuss how we can help you achieve your digital transformation goals with
+            our proven ${service.title.toLowerCase()} solutions.`}
+        primaryButtonText="Get Started"
+        primaryButtonLink="/contact"
+        secondaryButtonText="View All Services"
+        secondaryButtonLink="/services"
+      />
     </Layout>
   );
 }
