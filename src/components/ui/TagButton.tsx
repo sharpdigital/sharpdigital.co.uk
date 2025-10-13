@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { slugToText } from '../contentParsingUtils';
 
 interface TagButtonProps {
   text: string;
@@ -9,13 +10,8 @@ interface TagButtonProps {
 }
 
 const TagButton: FC<TagButtonProps> = ({ text, urlRoot = '/blog/tag/', href, active }) => {
-  const formatted = text
-    .replace(/(^[a-z])|-(\w)/g, (_, first, afterDash) => (first || ' ' + afterDash).toUpperCase())
-    .replace(/-/g, ' ')
-    .replace(/\b(Ux|Ui|Ai)\b/g, (match) => match.toUpperCase());
-
+  const formatted = slugToText(text);
   const link = href ? href : `${urlRoot}${text}`;
-
   const buttonClass = `tag-button${active ? ' active' : ''}`;
 
   return (

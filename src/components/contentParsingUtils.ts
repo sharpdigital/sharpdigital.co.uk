@@ -131,3 +131,14 @@ export function blogPostsToCardSums(posts: BlogPost[]): CardSum[] {
     buttonText: 'Read More',
   }));
 }
+
+export function slugToText(slug: string): string {
+  return slug
+    .replace(/(^[a-z])|-(\w)/g, (_, first, afterDash) => (first || ' ' + afterDash).toUpperCase())
+    .replace(/-/g, ' ')
+    .replace(/\b(Ux|Ui|Ai)\b/g, (match) => match.toUpperCase());
+}
+
+export function textToSlug(text: string): string {
+  return text.toLowerCase().replace(/\s+/g, '-');
+}
