@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import AnimButton from '../ui/AnimButton';
-import { Link } from 'lucide-react';
 import { sanitize } from '@/lib/utils';
 
 interface Props {

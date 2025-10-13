@@ -22,9 +22,10 @@ const PageHeader: FC<Props> = ({ title, description, image, tags }) => {
             {description}
             {tags ? (
               <div className="mt-6">
-                {[...(tags ?? [])].map((tag) => (
-                  <TagButton key={tag} text={tag} />
-                ))}
+                {[...(tags ?? [])].map((tag) => {
+                  const text = tag.toLowerCase().replace(/\s+/g, '-');
+                  return <TagButton key={text} text={text} />;
+                })}
               </div>
             ) : null}
           </>

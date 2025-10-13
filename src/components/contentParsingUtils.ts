@@ -1,4 +1,4 @@
-import { CardSum } from '@/lib/appwrite';
+import { BlogPost, CardSum } from '@/lib/appwrite';
 import { ContentSectionProps } from './sections/ContentSection';
 
 /** Convert simple markdown emphasis to inline HTML */
@@ -112,5 +112,22 @@ export function generateFeatureCards(features: string[]): CardSum[] {
     slug: slugify(feature),
     description: `Expert implementation of ${feature.toLowerCase()} to drive measurable business results.`,
     image: `/img/feature_${i + 1}.jpg`,
+  }));
+}
+
+export function blogPostsToCardSums(posts: BlogPost[]): CardSum[] {
+  return posts.map((post, index) => ({
+    $id: post.$id,
+    title: post.title,
+    slug: post.slug,
+    description: post.excerpt ?? null,
+    content: post.content ?? null,
+    image: post.featuredImageUrl ?? null,
+    tags: post.tags ?? [],
+    author: post.author ?? null,
+    publishDate: post.publishDate ?? null,
+    $createdAt: post.$createdAt ?? undefined,
+    orderIndex: index + 1,
+    buttonText: 'Read More',
   }));
 }

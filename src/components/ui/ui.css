@@ -125,7 +125,8 @@
   transition: background-color 0.36s cubic-bezier(0.01, 0.82, 0.43, 1);
 }
 
-.tag-button:hover::after {
+.tag-button:hover::after,
+.tag-button.active::after {
   background-color: var(--secondaryColor);
   transition: background-color 0.36s cubic-bezier(0.7, 0.01, 0.8, 0.99);
 }
@@ -151,10 +152,12 @@
   transition: var(--transition);
 }
 
-.tag-button:hover .tag-button-slider {
+.tag-button:hover .tag-button-slider,
+.tag-button.active .tag-button-slider {
   transform: translateX(0%);
 }
 
-.tag-button:hover .tag-button-slider .tag-button-inside {
+.tag-button:hover .tag-button-slider .tag-button-inside,
+.tag-button.active .tag-button-slider .tag-button-inside {
   transform: translateX(0%);
 }

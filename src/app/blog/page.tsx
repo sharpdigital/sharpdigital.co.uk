@@ -1,12 +1,11 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
 import Layout from '@/components/Layout';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { getBlogPosts, getAllTags } from '@/lib/contentService';
-import { formatDate } from '@/lib/utils';
 import PageHeader from '@/components/sections/PageHeader';
+import TagSection from '@/components/sections/TagSection';
+import CardSection from '@/components/sections/CardSection';
+import { blogPostsToCardSums } from '@/components/contentParsingUtils';
 
 export const metadata: Metadata = {
   title: 'Blog - Digital Transformation Insights | #sharp',
@@ -19,6 +18,8 @@ export const metadata: Metadata = {
 export default async function BlogPage() {
   const posts = await getBlogPosts();
   const tags = await getAllTags();
+
+  const postCards = blogPostsToCardSums(posts);
 
   return (
     <Layout>
@@ -39,37 +40,36 @@ export default async function BlogPage() {
         image="/img/blog_bg.jpg"
       />
 
-      {/* Tags Filter */}
-      <section className="py-12 bg-white border-b border-gray-200">
+      {/* <section className="py-12 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <h2 className="text-2xl font-heading text-charcoal mb-4">Browse by Topic</h2>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/blog">
-                <Badge
-                  variant="outline"
-                  className="text-base px-4 py-2 hover:bg-primary hover:text-white transition-colors"
-                >
-                  All Posts
-                </Badge>
-              </Link>
-              {tags.map((tag) => (
-                <Link key={tag} href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}>
-                  <Badge
-                    variant="outline"
-                    className="text-base px-4 py-2 hover:bg-primary hover:text-white transition-colors"
-                  >
-                    {tag}
-                  </Badge>
-                </Link>
-              ))}
+            <div className="flex flex-wrap gap-3">
+              <TagButton text={'all-posts'} href="/blog" />
+
+              {tags.map((tag) => {
+                const activeTag = 'ux';
+                const text = tag.toLowerCase().replace(/\s+/g, '-');
+                return <TagButton key={text} text={text} active={activeTag === text}/>;
+              })}
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Blog Posts Grid */}
-      <section className="py-20 bg-gray-50">
+      <TagSection tags={tags} />
+      <CardSection
+        setup={postCards}
+        minTitleHeight={'1em'}
+        linkBase="/blog/"
+        secondaryButton
+        extraPaddingTop
+      />
+
+      {/* Tags Filter */}
+
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {posts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -147,7 +147,7 @@ export default async function BlogPage() {
             </div>
           )}
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 }
