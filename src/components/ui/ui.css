@@ -22,6 +22,11 @@
   overflow: hidden;
 }
 
+.anim-button.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
 .anim-button-top,
 .anim-button.inverted:hover .anim-button-top {
   position: absolute;

@@ -38,7 +38,7 @@ const ContentSection: FC<ContentSectionProps> = ({ title, description, cards }) 
               {cards.map((card) => {
                 const { title, text, list } = card;
                 return (
-                  <div key={title} className="content-card bg-gray-50">
+                  <div key={title} className="content-card gradient-background">
                     {!!title && (
                       <h3
                         className="content-card-title font-heading text-charcoal"

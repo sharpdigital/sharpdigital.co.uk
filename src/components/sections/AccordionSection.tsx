@@ -6,11 +6,12 @@ interface Props {
   setup: AccordionItem[];
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
+  hasBackground?: boolean;
 }
 
-const AccordionSection: FC<Props> = ({ setup, title, description }) => {
+const AccordionSection: FC<Props> = ({ setup, title, description, hasBackground }) => {
   return (
-    <section className="py-21 bg-white">
+    <section className={`py-21 ${hasBackground ? 'bg-gray-50' : 'bg-white'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-8">

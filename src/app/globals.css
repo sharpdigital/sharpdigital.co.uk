@@ -346,6 +346,9 @@
   .content-card {
     padding: 2.3em 3rem 3em 3em;
     margin-top: 1rem !important;
+  }
+
+  .gradient-background {
     background: linear-gradient(to top left, #f0f0f0 16%, #f9fafb 80%);
   }
 
@@ -402,5 +405,106 @@
   .page-header-details {
     color: var(--primaryColor);
     font-size: 1.11rem;
+  }
+
+  .contact-cards {
+    padding-top: 1.2rem;
+  }
+
+  .contact-card {
+    margin-bottom: 1.2rem;
+    padding: 1.91rem 2em 2.46em 2em;
+  }
+
+  .contact-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+  }
+
+  .contact-card-icon {
+    --color: var(--secondaryColor);
+    background: var(--primaryColor);
+    aspect-ratio: 1;
+    height: 2.6rem;
+    color: var(--secondaryColor);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.3rem;
+    font-family: Manrope, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 330;
+    display: flex;
+  }
+
+  .contact-card-title {
+    font-family: Manrope, sans-serif;
+    font-size: 1.3rem;
+  }
+
+  .contact-card-icon > svg {
+    --size: 51%;
+    width: var(--size);
+    height: var(--size);
+  }
+
+  .contact-form > div {
+    margin-top: 3.1rem;
+  }
+
+  .contact-form input,
+  .contact-form button[role='combobox'],
+  .contact-form textarea {
+    border: none;
+    background: #f9fafb;
+    transition: box-shadow 0.4s cubic-bezier(0.1, 0.09, 0.11, 1);
+  }
+
+  .contact-form input:focus,
+  .contact-form button[role='combobox']:focus,
+  .contact-form textarea:focus {
+    box-shadow: none;
+    outline: 1px solid #c1c1c1;
+    outline-offset: 0;
+  }
+
+  .contact-form .font-medium {
+    font-size: 1.13rem;
+    font-weight: 300;
+    margin-bottom: 0.8rem;
+    padding-left: 2px;
+  }
+
+  .contact-form .anim-button {
+    width: 100%;
+    margin-top: 4.844em;
+  }
+
+  .contact-form p {
+    position: absolute;
+    font-size: 0.7rem;
+    padding-top: 0.2rem;
+    padding-left: 2px;
+  }
+
+  .contact-submit-button {
+    width: 100%;
+    padding: 0.6em;
+  }
+
+  .contact-success {
+    border: none;
+    padding: 1.2rem;
+  }
+
+  .contact-success-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
+  }
+
+  .contact-success-text {
+    margin-bottom: 0.6rem;
   }
 }
