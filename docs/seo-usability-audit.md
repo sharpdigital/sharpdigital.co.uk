@@ -61,12 +61,12 @@
 
 ### 🔴 Critical — Broken Functionality
 
-| #   | Issue                                                                                    | Location           | Impact        |
-| --- | ---------------------------------------------------------------------------------------- | ------------------ | ------------- |
-| 1   | **`/terms` page missing** — footer link returns 404                                      | `Footer.tsx:12`    | Legal & trust |
-| 2   | **`/privacy` page missing** — footer link returns 404                                    | `Footer.tsx:18`    | Legal & GDPR  |
-| 3   | **`/llm.txt` route missing** — footer link returns 404 (no public file or route handler) | `Footer.tsx:24`    | Broken link   |
-| 4   | **Placeholder Google/Yandex verification codes** — Search Console won't verify           | `layout.tsx:58–61` | SEO indexing  |
+| #   | Issue                                                                                     | Location           | Impact        |
+| --- | ----------------------------------------------------------------------------------------- | ------------------ | ------------- |
+| 1   | **`/terms` page missing** — footer link returns 404                                       | `Footer.tsx:12`    | Legal & trust |
+| 2   | **`/privacy` page missing** — footer link returns 404                                     | `Footer.tsx:18`    | Legal & GDPR  |
+| 3   | **`/llms.txt` route missing** — footer link returns 404 (no public file or route handler) | `Footer.tsx:24`    | Broken link   |
+| 4   | **Placeholder Google/Yandex verification codes** — Search Console won't verify            | `layout.tsx:58–61` | SEO indexing  |
 
 ---
 
@@ -165,17 +165,17 @@ Blog and service pages incur a ~780 ms redirect before serving HTML. This may be
 
 ### 4.5 Missing Pages (404s)
 
-| Route      | Linked from | Status                                     |
-| ---------- | ----------- | ------------------------------------------ |
-| `/terms`   | Footer      | 404 — no `src/app/terms/page.tsx`          |
-| `/privacy` | Footer      | 404 — no `src/app/privacy/page.tsx`        |
-| `/llm.txt` | Footer      | 404 — no `public/llm.txt` or route handler |
+| Route       | Linked from | Status                                      |
+| ----------- | ----------- | ------------------------------------------- |
+| `/terms`    | Footer      | 404 — no `src/app/terms/page.tsx`           |
+| `/privacy`  | Footer      | 404 — no `src/app/privacy/page.tsx`         |
+| `/llms.txt` | Footer      | 404 — no `public/llms.txt` or route handler |
 
 ---
 
 ## 5. Recommendations — Priority Order
 
-1. **Fix dead footer links** (`/terms`, `/privacy`, `/llm.txt`) — legal and usability blocker
+1. **Fix dead footer links** (`/terms`, `/privacy`, `/llms.txt`) — legal and usability blocker
 2. **Replace placeholder verification codes** in `layout.tsx` — unlock Search Console data
 3. **Add canonical URLs** to `blog/[slug]`, `services/[slug]`, `blog/tag/[tag]` — prevent duplicate content penalty
 4. **Preload first carousel image** or convert to Next.js `<Image>` — fix 7.9 s LCP on home
