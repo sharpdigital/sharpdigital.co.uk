@@ -54,12 +54,16 @@ export interface CardSum {
 export interface TeamMember {
   $id: string;
   name: string;
+  slug: string;
   role?: string | null;
-  bio?: string | null; // markdown content
+  description?: string | null; // short summary for cards
+  bio?: string | null; // full markdown content for detail page
+  features?: string[]; // skills list
   imageUrl?: string | null;
   linkedinUrl?: string | null;
   email?: string | null;
   $createdAt: string;
+  $updatedAt?: string;
 }
 
 // API functions
@@ -173,6 +177,27 @@ export async function getTeamMembers(): Promise<TeamMember[]> {
   } catch (error) {
     console.error('Error fetching team members:', error);
     return [];
+  }
+}
+
+export async function getTeamMember(slug: string): Promise<TeamMember | null> {
+  if (!databases || !appwriteDatabaseId) {
+    throw new Error('Appwrite client not configured');
+  }
+
+  try {
+    const response = await databases.listDocuments(appwriteDatabaseId, COLLECTIONS.TEAM_MEMBERS, [
+      Query.equal('slug', slug),
+      Query.limit(1),
+    ]);
+
+    if (response.documents.length > 0) {
+      return response.documents[0] as unknown as TeamMember;
+    }
+    return null;
+  } catch (error) {
+    console.error('Error fetching team member:', error);
+    return null;
   }
 }
 
