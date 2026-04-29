@@ -23,9 +23,8 @@ const Header = () => {
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-40" id="header">
-      <nav className="relative mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
-        <div className="menu-cover"></div>
-        <div className="relative flex justify-between items-center h-20">
+      <nav className="mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center mt-[5px]" aria-label="Sharp Digital - Home">
