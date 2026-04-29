@@ -47,8 +47,32 @@ export default async function TeamMemberPage({ params }: TeamMemberPageProps) {
     notFound();
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sharpdigital.co.uk' },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'About',
+        item: 'https://sharpdigital.co.uk/about',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: member.name,
+        item: `https://sharpdigital.co.uk/about/${name}`,
+      },
+    ],
+  };
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <PageHeader title={member.name} description={member.role ?? ''} image="/img/about_bg.jpg" />
 
       <section className="py-20 bg-white">

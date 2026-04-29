@@ -61,9 +61,28 @@ export default async function TagPage({ params }: TagPageProps) {
 
   const posts = await getBlogPostsByTag(originalTag);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sharpdigital.co.uk' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://sharpdigital.co.uk/blog' },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `${displayTag} Articles`,
+        item: `https://sharpdigital.co.uk/blog/tag/${tag}`,
+      },
+    ],
+  };
+
   const postCards = blogPostsToCardSums(posts);
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <PageHeader
         title={
           <>

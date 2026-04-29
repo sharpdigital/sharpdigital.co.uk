@@ -66,18 +66,15 @@ const Carousel: FC<Props> = ({ setup, interval = 6000, hasMouse }: Props) => {
         <div
           key={`bg-${i}`}
           className={`carousel-slide${i === index ? ' active' : ''}${i === startIndex || !mounted ? ' start' : ''}${i === startIndex && firstRound ? ' init' : ''}`}
-          style={i === 0 ? undefined : { backgroundImage: `url(${stage.imageUrl})` }}
         >
-          {i === 0 && (
-            <Image
-              src={stage.imageUrl}
-              alt=""
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover object-center"
-            />
-          )}
+          <Image
+            src={stage.imageUrl}
+            alt=""
+            fill
+            priority={i === 0}
+            sizes="100vw"
+            className="object-cover object-center"
+          />
         </div>
       ))}
 

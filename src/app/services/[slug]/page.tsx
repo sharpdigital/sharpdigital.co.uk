@@ -113,8 +113,32 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   const features = service.features ? generateFeatureCards(service.features) : null;
   const featDesc = `Our comprehensive approach to ${service.title.toLowerCase()} includes these essential components.`;
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sharpdigital.co.uk' },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://sharpdigital.co.uk/services',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: service.title,
+        item: `https://sharpdigital.co.uk/services/${slug}`,
+      },
+    ],
+  };
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <PageHeader
         title={service.title}

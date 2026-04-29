@@ -84,6 +84,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const related = relatedPosts.length ? blogPostsToCardSums(relatedPosts) : undefined;
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sharpdigital.co.uk' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://sharpdigital.co.uk/blog' },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `https://sharpdigital.co.uk/blog/${slug}`,
+      },
+    ],
+  };
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -103,6 +118,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
