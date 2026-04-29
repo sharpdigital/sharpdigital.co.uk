@@ -110,13 +110,13 @@
 
 ### 🔵 Low — Best Practices
 
-| #   | Issue                                                                                                                                 | Location                |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| 22  | **Missing `BreadcrumbList` JSON-LD schema** — Missed rich snippet opportunity on inner pages                                          | All pages               |
-| 23  | **Carousel background images bypass Next.js `<Image>`** — No srcset, no WebP conversion, no size hints                                | `Carousel.tsx:64`       |
-| 24  | **`ZoomBackground` uses plain `<img>`** — Same issue as carousel; not optimised                                                       | `ZoomBackground.tsx:13` |
-| 25  | **Missing `loading="lazy"` and `fetchpriority`** — Service card images below the fold don't declare lazy loading explicitly           | `ServiceCard.tsx`       |
-| 26  | **Card titles not clickable** — Service and blog card `<h3>` titles are plain text; only the image and button link to the detail page | `ServiceCard.tsx:75`    |
+| #   | Issue                                                                                                                                                                      | Location                |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| 22  | **Missing `BreadcrumbList` JSON-LD schema** — Missed rich snippet opportunity on inner pages                                                                               | All pages               |
+| 23  | **Carousel background images bypass Next.js `<Image>`** — No srcset, no WebP conversion, no size hints                                                                     | `Carousel.tsx:64`       |
+| 24  | **`ZoomBackground` uses plain `<img>`** — Same issue as carousel; not optimised. Carries `alt=""` which is valid for decorative images but could carry descriptive context | `ZoomBackground.tsx:13` |
+| 25  | **Missing `loading="lazy"` and `fetchpriority`** — Service card images below the fold don't declare lazy loading explicitly                                                | `ServiceCard.tsx`       |
+| 26  | **Card titles not clickable** — Service and blog card `<h3>` titles are plain text; only the image and button link to the detail page                                      | `ServiceCard.tsx:75`    |
 
 ---
 
