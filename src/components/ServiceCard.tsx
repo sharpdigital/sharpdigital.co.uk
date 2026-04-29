@@ -73,7 +73,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         ) : null}
         <div className="service-card-text p-6 flex flex-col">
           <h3 className="text-2xl font-heading leading-snug text-charcoal mb-4">
-            <div style={{ minHeight: minTitleHeight }}>{title}</div>
+            {noButton ? (
+              <div style={{ minHeight: minTitleHeight }}>{title}</div>
+            ) : (
+              <Link
+                href={`${linkBase}${href}`}
+                className="hover:text-primary transition-colors duration-200"
+              >
+                <div style={{ minHeight: minTitleHeight }}>{title}</div>
+              </Link>
+            )}
             {!!subTitle && <div className="service-card-subtitle">{subTitle}</div>}
             {!!details && <div className="service-card-details title-font">{details}</div>}
           </h3>
