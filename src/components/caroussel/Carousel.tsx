@@ -2,6 +2,7 @@
 
 import React, { FC, useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import './carousel.css';
 import AnimButton from '../ui/AnimButton';
 
@@ -65,8 +66,16 @@ const Carousel: FC<Props> = ({ setup, interval = 6000, hasMouse }: Props) => {
         <div
           key={`bg-${i}`}
           className={`carousel-slide${i === index ? ' active' : ''}${i === startIndex || !mounted ? ' start' : ''}${i === startIndex && firstRound ? ' init' : ''}`}
-          style={{ backgroundImage: `url(${stage.imageUrl})` }}
-        />
+        >
+          <Image
+            src={stage.imageUrl}
+            alt=""
+            fill
+            priority={i === 0}
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
       ))}
 
       {/* Text layers (one per slide). The wrapper with all text gets "active". */}

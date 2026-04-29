@@ -1,4 +1,4 @@
-import { BlogPost, CardSum } from '@/lib/appwrite';
+import { BlogPost, CardSum, TeamMember } from '@/lib/appwrite';
 import { ContentSectionProps } from './sections/ContentSection';
 import { formatDate } from '@/lib/utils';
 
@@ -130,6 +130,20 @@ export function blogPostsToCardSums(posts: BlogPost[]): CardSum[] {
     $createdAt: post.$createdAt ?? undefined,
     orderIndex: index + 1,
     buttonText: 'Read More',
+  }));
+}
+
+export function teamMembersToCardSums(members: TeamMember[]): CardSum[] {
+  return members.map((member) => ({
+    $id: member.$id,
+    title: member.name,
+    subTitle: member.role ?? undefined,
+    slug: member.slug,
+    description: member.description ?? null,
+    image: member.imageUrl ?? null,
+    features: member.features,
+    buttonText: 'View Profile',
+    $createdAt: member.$createdAt,
   }));
 }
 

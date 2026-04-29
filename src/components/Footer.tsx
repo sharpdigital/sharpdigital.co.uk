@@ -22,7 +22,7 @@ const Footer = () => {
             Privacy Policy
           </Link>
           <Link
-            href="/llm.txt"
+            href="/llms.txt"
             className="font-body text-sm text-grey hover:text-primary transition-colors duration-200"
           >
             llms.txt

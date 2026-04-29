@@ -249,78 +249,14 @@ Our comprehensive data strategy includes:
 ];
 
 // Fallback team members with Appwrite document structure
-export const fallbackTeamMemberCards: CardSum[] = [
-  {
-    $id: '1',
-    title: 'Loreen',
-    subTitle: 'Digital Transformation Strategist',
-    slug: 'loreen',
-    description:
-      'Loreen is a seasoned digital transformation expert with 10+ years of experience helping organisations navigate their digital evolution. She specializes in AI strategy implementation and data-driven decision-making.',
-    content: `# About Loreen
-
-Loreen is a seasoned digital transformation expert with over 10 years of experience helping organisations navigate their digital evolution. She specializes in AI strategy implementation and data-driven decision-making.
-
-## Expertise
-
-- AI Strategy & Implementation  
-- Digital Transformation Leadership  
-- Data Analytics & Business Intelligence  
-- Change Management  
-- Strategic Planning  
-
-Loreen has successfully led digital transformation initiatives for companies ranging from startups to Fortune 500 enterprises, consistently delivering measurable business results.`,
-    image: '/img/team_loreen.jpg',
-    orderIndex: 1,
-    features: [
-      'AI Strategy & Implementation',
-      'Digital Transformation Leadership',
-      'Data Analytics',
-      'Business Intelligence',
-      'Change Management',
-      'Strategic Planning',
-    ],
-    buttonText: 'View Profile',
-  },
-  {
-    $id: '2',
-    title: 'Janos',
-    subTitle: 'Customer Experience Lead',
-    slug: 'janos',
-    description:
-      'Janos brings deep expertise in customer experience optimization and user research. With a background in both technology and psychology, he helps organisations create truly user-centred digital experiences.',
-    content: `# About Janos
-
-Janos brings deep expertise in customer experience optimization and user research. With a background in both technology and psychology, he helps organisations create truly user-centred digital experiences.
-
-## Expertise
-
-- Customer Experience Design  
-- User Research & Testing  
-- Journey Mapping  
-- Personalization Strategies  
-- UX/UI Optimization  
-
-Janos has a unique ability to combine data-driven insights with human psychology to create experiences that resonate with users and drive business results.`,
-    image: '/img/team_janos.jpg',
-    orderIndex: 2,
-    features: [
-      'Customer Experience Design',
-      'User Research & Testing',
-      'Journey Mapping',
-      'Personalization Strategies',
-      'UX/UI Optimization',
-    ],
-    buttonText: 'View Profile',
-  },
-];
-
-//TODO: We might not need TeamMember
 export const fallbackTeamMembers: TeamMember[] = [
   {
     $id: '1',
     name: 'Loreen',
+    slug: 'loreen',
     role: 'Digital Transformation Strategist',
+    description:
+      'Loreen is a seasoned digital transformation expert with over 10 years of experience helping organisations navigate their digital evolution. She specializes in AI strategy implementation and data-driven decision-making.',
     bio: `# About Loreen
 
 Loreen is a seasoned digital transformation expert with over 10 years of experience helping organisations navigate their digital evolution. She specializes in AI strategy implementation and data-driven decision-making.
@@ -334,32 +270,51 @@ Loreen is a seasoned digital transformation expert with over 10 years of experie
 - Strategic Planning
 
 Loreen has successfully led digital transformation initiatives for companies ranging from startups to Fortune 500 enterprises, consistently delivering measurable business results.`,
-    imageUrl: undefined,
+    features: [
+      'AI Strategy & Implementation',
+      'Digital Transformation Leadership',
+      'Data Analytics & Business Intelligence',
+      'Change Management',
+      'Strategic Planning',
+    ],
+    imageUrl: '/img/team_loreen.jpg',
     linkedinUrl: 'https://linkedin.com/in/loreen',
     email: 'loreen@sharp.com',
     $createdAt: '2024-03-01T10:00:00Z',
+    $updatedAt: '2024-03-01T10:00:00Z',
   },
   {
     $id: '2',
     name: 'Janos',
+    slug: 'janos',
     role: 'Customer Experience Lead',
+    description:
+      'Janos brings deep expertise in customer experience optimisation and user research. With a background in both technology and psychology, he helps organisations create truly user-centred digital experiences.',
     bio: `# About Janos
 
-Janos brings deep expertise in customer experience optimization and user research. With a background in both technology and psychology, he helps organisations create truly user-centred digital experiences.
+Janos brings deep expertise in customer experience optimisation and user research. With a background in both technology and psychology, he helps organisations create truly user-centred digital experiences.
 
 ## Expertise
 
 - Customer Experience Design
 - User Research & Testing
 - Journey Mapping
-- Personalization Strategies
-- UX/UI Optimization
+- Personalisation Strategies
+- UX/UI Optimisation
 
 Janos has a unique ability to combine data-driven insights with human psychology to create experiences that resonate with users and drive business results.`,
-    imageUrl: undefined,
+    features: [
+      'Customer Experience Design',
+      'User Research & Testing',
+      'Journey Mapping',
+      'Personalisation Strategies',
+      'UX/UI Optimisation',
+    ],
+    imageUrl: '/img/team_janos.jpg',
     linkedinUrl: 'https://linkedin.com/in/janos',
     email: 'janos@sharp.com',
     $createdAt: '2024-03-01T10:00:00Z',
+    $updatedAt: '2024-03-01T10:00:00Z',
   },
 ];
 
@@ -382,6 +337,10 @@ export function getFallbackService(slug: string): CardSum | null {
 
 export function getFallbackTeamMembers(): TeamMember[] {
   return fallbackTeamMembers;
+}
+
+export function getFallbackTeamMember(slug: string): TeamMember | null {
+  return fallbackTeamMembers.find((m) => m.slug === slug) ?? null;
 }
 
 export function getFallbackTags(): string[] {
