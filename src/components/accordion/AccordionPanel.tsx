@@ -22,7 +22,7 @@ interface AccordionPanelProps {
 }
 
 const AccordionPanel: FC<AccordionPanelProps> = ({ title, startOpen, icon, children }) => {
-  const [_, setRender] = useState(0);
+  const [, setRender] = useState(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const headerRef = useRef<HTMLDivElement | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
@@ -34,10 +34,6 @@ const AccordionPanel: FC<AccordionPanelProps> = ({ title, startOpen, icon, child
     open.current = !open.current;
     setHeight(true);
     setRender((x) => x + 1);
-  };
-
-  const setHeightOnFrame = () => {
-    setHeight();
   };
 
   const setHeight = (animated?: boolean) => {
@@ -59,11 +55,8 @@ const AccordionPanel: FC<AccordionPanelProps> = ({ title, startOpen, icon, child
     }
   };
 
-  const onResize = () => {
-    requestAnimationFrame(setHeightOnFrame);
-  };
-
   useEffect(() => {
+    const onResize = () => requestAnimationFrame(() => setHeight());
     window.addEventListener(MOBILE_SAFE_RESIZE, onResize);
     setHeight();
     return () => {

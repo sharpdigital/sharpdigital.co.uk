@@ -1,12 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import Layout from '@/components/Layout';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { getBlogPostsByTag, getAllTags } from '@/lib/contentService';
-import { formatDate } from '@/lib/utils';
 import PageHeader from '@/components/sections/PageHeader';
 import { blogPostsToCardSums, slugToText, textToSlug } from '@/components/contentParsingUtils';
 import TagSection from '@/components/sections/TagSection';

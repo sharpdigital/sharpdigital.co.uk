@@ -44,26 +44,6 @@
     letter-spacing: -0.02em;
   }
 
-  .text-lg {
-    font-size: 1rem;
-    font-weight: 410;
-  }
-
-  .text-2xl {
-    font-size: 1.68rem;
-  }
-
-  .text-5xl {
-    font-size: 5rem;
-    line-height: 1.32;
-    font-weight: 200;
-  }
-
-  .text-4xl {
-    font-size: 2.6rem;
-    line-height: 1.224;
-  }
-
   .px-4 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -140,12 +120,6 @@
     margin-bottom: 3.6rem;
   }
 
-  .text-xl {
-    font-size: 1.22rem;
-    line-height: 1.485;
-    font-weight: 300;
-  }
-
   h1.carousel-title {
     font-size: 2.9rem;
   }
@@ -178,10 +152,6 @@
 
   .zoom-background.zoom img {
     transform: scale(var(--scale));
-  }
-
-  .max-w-7xl {
-    max-width: 66em;
   }
 
   .gap-8 {

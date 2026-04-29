@@ -11,7 +11,6 @@ interface Props {
 }
 
 const PageHeader: FC<Props> = ({ title, description, image, tags, details }) => {
-  console.log('----', details);
   return (
     <section className="relative bg-transparent from-charcoal via-gray-950 to-charcoal py-20 lg:py-24">
       <ZoomBackground image={image} />

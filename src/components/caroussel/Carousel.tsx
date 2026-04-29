@@ -1,6 +1,7 @@
 'use client';
 
 import React, { FC, useEffect, useState } from 'react';
+import Link from 'next/link';
 import './carousel.css';
 import AnimButton from '../ui/AnimButton';
 
@@ -98,7 +99,7 @@ const Carousel: FC<Props> = ({ setup, interval = 6000, hasMouse }: Props) => {
                   <div className="carousel-description">{stage.description}</div>
                 </div> */}
 
-                <a
+                <Link
                   href={stage.buttonUrl}
                   className="carousel-cta-button"
                   style={
@@ -110,7 +111,7 @@ const Carousel: FC<Props> = ({ setup, interval = 6000, hasMouse }: Props) => {
                   <AnimButton className="carousel-button-wrap">
                     <div className="carousel-button">{stage.description}</div>
                   </AnimButton>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -135,6 +136,7 @@ const Carousel: FC<Props> = ({ setup, interval = 6000, hasMouse }: Props) => {
             onClick={() => {
               setIndex(i);
               setBlockInterval(true);
+              setTimeout(() => setBlockInterval(false), interval);
             }}
           />
         ))}
@@ -144,61 +146,3 @@ const Carousel: FC<Props> = ({ setup, interval = 6000, hasMouse }: Props) => {
 };
 
 export default Carousel;
-
-/** Example content (3 slides) with constant title2 */
-export const exampleSetup: CarouselSetup[] = [
-  {
-    title: 'Transforming Customer Experience',
-    title2: 'AI-Powered Digital Solutions',
-    subtitle: 'Seamlessly',
-    description: 'Optimize every touchpoint for exceptional customer journeys',
-    imageUrl: '/img/customerExperience.jpg',
-    buttonText: 'Find out more',
-    buttonUrl: '/',
-  },
-  {
-    title: 'Transforming business operations',
-    title2: 'AI-Powered Digital Solutions',
-    subtitle: 'Smoothly',
-    description: 'Streamline processes through intelligent automation',
-    imageUrl: '/img/automation.jpg',
-    buttonText: 'Find out more',
-    buttonUrl: '/',
-  },
-  {
-    title: 'Leverage sharp insights with',
-    title2: 'AI-Powered Digital Solutions',
-    subtitle: 'Unmatched data & analytics',
-    description: 'Transform data into actionable business intelligence',
-    imageUrl: '/img/analyse.jpg',
-    buttonText: 'Find out more',
-    buttonUrl: '/',
-  },
-  {
-    title: 'Leverage sharp insights with 2',
-    title2: 'AI-Powered Digital Solutions',
-    subtitle: 'Unmatched data & analytics',
-    description: 'Transform data into actionable business intelligence',
-    imageUrl: '/img/analyse2.jpg',
-    buttonText: 'Find out more',
-    buttonUrl: '/',
-  },
-  {
-    title: 'Leverage sharp insights with 3',
-    title2: 'AI-Powered Digital Solutions',
-    subtitle: 'Unmatched data & analytics',
-    description: 'Transform data into actionable business intelligence',
-    imageUrl: '/img/analyse3.jpg',
-    buttonText: 'Find out more',
-    buttonUrl: '/',
-  },
-  {
-    title: 'Leverage sharp insights with 4',
-    title2: 'AI-Powered Digital Solutions',
-    subtitle: 'Unmatched data & analytics',
-    description: 'Transform data into actionable business intelligence',
-    imageUrl: '/img/analyse4.jpg',
-    buttonText: 'Find out more',
-    buttonUrl: '/',
-  },
-];

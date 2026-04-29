@@ -91,7 +91,6 @@ const ContactForm: React.FC = () => {
       // For this demo, we'll simulate a successful submission
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      console.log('Form submitted:', formData);
       setIsSubmitted(true);
 
       // Reset form

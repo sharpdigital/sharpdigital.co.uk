@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import AnimButton from './ui/AnimButton';
 import TagButton from './ui/TagButton';
 import { textToSlug } from './contentParsingUtils';

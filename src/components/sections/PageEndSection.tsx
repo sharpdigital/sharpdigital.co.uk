@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Link from 'next/link';
 import AnimButton from '../ui/AnimButton';
 import { sanitize } from '@/lib/utils';
 
@@ -43,18 +44,18 @@ const PageEndSection: FC<Props> = ({
         {(primaryButtonText || secondaryButtonText) && (
           <div className="bottom-cta-buttons flex flex-col sm:flex-row gap-4 justify-center">
             {!!primaryButtonText && !!primaryButtonLink && (
-              <a href={primaryButtonLink}>
+              <Link href={primaryButtonLink}>
                 <AnimButton>
                   <div className="bottom-cta-button">{primaryButtonText}</div>
                 </AnimButton>
-              </a>
+              </Link>
             )}
             {!!secondaryButtonText && !!secondaryButtonLink && (
-              <a href={secondaryButtonLink}>
+              <Link href={secondaryButtonLink}>
                 <AnimButton inverted>
                   <div className="bottom-cta-button">{secondaryButtonText}</div>
                 </AnimButton>
-              </a>
+              </Link>
             )}
           </div>
         )}

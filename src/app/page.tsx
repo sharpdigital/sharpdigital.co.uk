@@ -2,14 +2,41 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
-import HeroCarousel from '@/components/HeroCarousel';
-import ServiceCard from '@/components/ServiceCard';
-import { Button } from '@/components/ui/button';
-import Carousel, { exampleSetup } from '@/components/caroussel/Carousel';
+import Carousel, { CarouselSetup } from '@/components/caroussel/Carousel';
 import AnimButton from '@/components/ui/AnimButton';
 import CardSection from '../components/sections/CardSection';
 import { getServices } from '@/lib/contentService';
 import { fallbackBlogCards } from '@/lib/fallbackContent';
+
+const carouselSetup: CarouselSetup[] = [
+  {
+    title: 'Transforming Customer Experience',
+    title2: 'AI-Powered Digital Solutions',
+    subtitle: 'Seamlessly',
+    description: 'Optimize every touchpoint for exceptional customer journeys',
+    imageUrl: '/img/customerExperience.jpg',
+    buttonText: 'Find out more',
+    buttonUrl: '/services/customer-experience',
+  },
+  {
+    title: 'Transforming Business Operations',
+    title2: 'AI-Powered Digital Solutions',
+    subtitle: 'Smoothly',
+    description: 'Streamline processes through intelligent automation',
+    imageUrl: '/img/automation.jpg',
+    buttonText: 'Find out more',
+    buttonUrl: '/services/operational-efficiency',
+  },
+  {
+    title: 'Leverage Sharp Insights',
+    title2: 'AI-Powered Digital Solutions',
+    subtitle: 'Unmatched data & analytics',
+    description: 'Transform data into actionable business intelligence',
+    imageUrl: '/img/analyse.jpg',
+    buttonText: 'Find out more',
+    buttonUrl: '/services/data-and-analytics',
+  },
+];
 
 export default async function Home() {
   const services = await getServices();
@@ -70,7 +97,7 @@ export default async function Home() {
         }}
       />
       {/* Hero Carousel Section */}
-      <Carousel setup={exampleSetup} hasMouse />
+      <Carousel setup={carouselSetup} hasMouse />
 
       {/* #sharp Statement Section */}
       <section className="py-19 bg-white" aria-label="About Sharp">

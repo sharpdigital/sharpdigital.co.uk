@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Link from 'next/link';
 import { slugToText } from '../contentParsingUtils';
 
 interface TagButtonProps {
@@ -15,14 +16,14 @@ const TagButton: FC<TagButtonProps> = ({ text, urlRoot = '/blog/tag/', href, act
   const buttonClass = `tag-button${active ? ' active' : ''}`;
 
   return (
-    <a href={link}>
+    <Link href={link}>
       <div className={buttonClass}>
         <div className="tag-button-slider">
           <div className="tag-button-inside">{formatted}</div>
         </div>
         <div className="tag-button-inside">{formatted}</div>
       </div>
-    </a>
+    </Link>
   );
 };
 

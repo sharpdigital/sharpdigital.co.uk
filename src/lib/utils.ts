@@ -1,5 +1,6 @@
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import DOMPurify from 'isomorphic-dompurify';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -14,7 +15,6 @@ export function formatDate(dateString: string): string {
   });
 }
 
-export const sanitize = (text: string) => {
-  //TODO: find a sanitizer which works with Next better than dompurify
-  return text;
+export const sanitize = (text: string): string => {
+  return DOMPurify.sanitize(text);
 };

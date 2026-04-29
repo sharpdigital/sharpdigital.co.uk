@@ -33,6 +33,16 @@ module.exports = {
         body: ['Inter', 'serif'],
         sans: ['Inter', 'sans-serif'],
       },
+      fontSize: {
+        lg: ['1rem', { fontWeight: '410' }],
+        xl: ['1.22rem', { lineHeight: '1.485', fontWeight: '300' }],
+        '2xl': '1.68rem',
+        '4xl': ['2.6rem', { lineHeight: '1.224' }],
+        '5xl': ['5rem', { lineHeight: '1.32', fontWeight: '200' }],
+      },
+      maxWidth: {
+        '7xl': '66em',
+      },
       container: {
         center: true,
         padding: '2rem',

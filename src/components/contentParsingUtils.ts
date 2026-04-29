@@ -144,9 +144,15 @@ export function textToSlug(text: string): string {
   return text.toLowerCase().replace(/\s+/g, '-');
 }
 
-export function assembleDetails(setupItem: CardSum): string | undefined {
-  if (setupItem.author || setupItem.$createdAt) {
-    return `${setupItem.author ? `By ${setupItem.author}` : ''}${setupItem.author && setupItem.$createdAt ? ' • ' : ''}${setupItem.$createdAt ? formatDate(setupItem.$createdAt) : ''}`;
+export function assembleDetails({
+  author,
+  $createdAt,
+}: {
+  author?: string | null;
+  $createdAt?: string;
+}): string | undefined {
+  if (author || $createdAt) {
+    return `${author ? `By ${author}` : ''}${author && $createdAt ? ' • ' : ''}${$createdAt ? formatDate($createdAt) : ''}`;
   }
   return undefined;
 }

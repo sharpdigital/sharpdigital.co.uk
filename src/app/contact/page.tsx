@@ -2,7 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Layout from '@/components/Layout';
 import ContactForm from '@/components/ContactForm';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import PageHeader from '@/components/sections/PageHeader';
 import ColumnHeader from '@/components/ui/ColumnHeader';
 import ContactCard from '@/components/ui/ContactCard';

@@ -1,14 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import Layout from '@/components/Layout';
-import RichTextRenderer from '@/components/RichTextRenderer';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { getBlogPost, getBlogPosts } from '@/lib/contentService';
-import { formatDate } from '@/lib/utils';
 import PageHeader from '@/components/sections/PageHeader';
 import {
   assembleDetails,
@@ -88,13 +82,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         details={assembleDetails({
           $createdAt: post.$createdAt,
           author: post.author,
-          title: '',
-          slug: '',
-          $id: '',
         })}
       />
       <TagSection tags={post.tags} single />
-      <ContentSection {...contentSetup} />$
+      <ContentSection {...contentSetup} />
       {!!related && (
         <CardSection
           setup={related}

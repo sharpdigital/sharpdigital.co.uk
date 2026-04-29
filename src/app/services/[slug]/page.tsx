@@ -1,9 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import Layout from '@/components/Layout';
-import { Button } from '@/components/ui/button';
 import { getService, getServices } from '@/lib/contentService';
 import PageHeader from '@/components/sections/PageHeader';
 import ContentSection, { ContentSectionProps } from '@/components/sections/ContentSection';
@@ -11,7 +9,6 @@ import { generateFeatureCards, parseContentSection } from '@/components/contentP
 import CardSection from '@/components/sections/CardSection';
 import AccordionSection from '@/components/sections/AccordionSection';
 import { AccordionItem } from '@/components/accordion/AccordionPanel';
-import AnimButton from '@/components/ui/AnimButton';
 import PageEndSection from '@/components/sections/PageEndSection';
 
 interface ServicePageProps {
@@ -93,8 +90,9 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     notFound();
   }
 
-  if (!service.content) return null;
-  const contentSetup: ContentSectionProps = parseContentSection(service.content);
+  const contentSetup: ContentSectionProps | null = service.content
+    ? parseContentSection(service.content)
+    : null;
   const features = service.features ? generateFeatureCards(service.features) : null;
   const featDesc = `Our comprehensive approach to ${service.title.toLowerCase()} includes these essential components.`;
 
@@ -108,7 +106,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       />
 
       {/* Main Content */}
-      <ContentSection {...contentSetup} />
+      {!!contentSetup && <ContentSection {...contentSetup} />}
 
       {/* Key Features */}
       {!!features && (
@@ -132,8 +130,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       {/* Call to Action */}
       <PageEndSection
         title={`Ready to Transform Your ${service.title}?`}
-        description={`Let&apos;s discuss how we can help you achieve your digital transformation goals with
-            our proven ${service.title.toLowerCase()} solutions.`}
+        description={`Let's discuss how we can help you achieve your digital transformation goals with our proven ${service.title.toLowerCase()} solutions.`}
         primaryButtonText="Get Started"
         primaryButtonLink="/contact"
         secondaryButtonText="View All Services"

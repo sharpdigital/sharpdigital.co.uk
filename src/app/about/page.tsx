@@ -1,15 +1,10 @@
 import React from 'react';
-import Image from 'next/image';
 import { Metadata } from 'next';
 import Layout from '@/components/Layout';
-import RichTextRenderer from '@/components/RichTextRenderer';
-import { Card, CardContent } from '@/components/ui/card';
-import { getTeamMembers } from '@/lib/contentService';
 import PageHeader from '@/components/sections/PageHeader';
 import { fallbackTeamMemberCards } from '@/lib/fallbackContent';
 import CardSection from '@/components/sections/CardSection';
 import { AccordionItem } from '@/components/accordion/AccordionPanel';
-import TeamIcon from '@/components/icons/TeamIcon';
 import AccordionSection from '@/components/sections/AccordionSection';
 import StrategyIcon from '@/components/icons/StrategyIcon';
 import DesignIcon from '@/components/icons/DesignIcon';
