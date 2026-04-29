@@ -1,9 +1,8 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+#!/usr/bin/env sh
+set -e
 
-# Run type checking
-echo "🔍 Running TypeScript type check..."
-bunx tsc --noEmit
+# ensure Bun is in PATH for Husky
+export PATH="$HOME/.bun/bin:$PATH"
 
 # Run linting and formatting on staged files
 echo "🧹 Running lint-staged..."

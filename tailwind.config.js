@@ -29,15 +29,25 @@ module.exports = {
         info: '#218BED',
       },
       fontFamily: {
-        'heading': ['Frutiger45Light', 'Inter', 'sans-serif'],
-        'body': ['Georgia', 'serif'],
-        'sans': ['Inter', 'sans-serif'],
+        heading: ['Manrope', 'Inter', 'sans-serif'],
+        body: ['Inter', 'serif'],
+        sans: ['Inter', 'sans-serif'],
+      },
+      fontSize: {
+        lg: ['1rem', { fontWeight: '410' }],
+        xl: ['1.22rem', { lineHeight: '1.485', fontWeight: '300' }],
+        '2xl': '1.68rem',
+        '4xl': ['2.6rem', { lineHeight: '1.224' }],
+        '5xl': ['5rem', { lineHeight: '1.32', fontWeight: '200' }],
+      },
+      maxWidth: {
+        '7xl': '66em',
       },
       container: {
         center: true,
-        padding: "2rem",
+        padding: '2rem',
         screens: {
-          "2xl": "1400px",
+          '2xl': '1400px',
         },
       },
       animation: {
@@ -62,4 +72,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

@@ -5,11 +5,10 @@ const appwriteEndpoint = process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT;
 const appwriteProjectId = process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID;
 const appwriteDatabaseId = process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID;
 
-export const client = appwriteEndpoint && appwriteProjectId 
-  ? new Client()
-      .setEndpoint(appwriteEndpoint)
-      .setProject(appwriteProjectId)
-  : null;
+export const client =
+  appwriteEndpoint && appwriteProjectId
+    ? new Client().setEndpoint(appwriteEndpoint).setProject(appwriteProjectId)
+    : null;
 
 export const databases = client ? new Databases(client) : null;
 
@@ -31,21 +30,25 @@ export interface BlogPost {
   publishDate?: string | null; // ISO date string
   tags: string[];
   featuredImageUrl?: string | null;
-  $createdAt: string;
+  $createdAt?: string;
   $updatedAt: string;
 }
 
-export interface Service {
+export interface CardSum {
   $id: string;
   title: string;
+  subTitle?: string;
   slug: string;
   description?: string | null;
   content?: string | null; // markdown content
-  features: string[];
-  icon?: string | null;
-  color?: string | null;
+  features?: string[];
+  image?: string | null;
   orderIndex?: number | null;
-  $createdAt: string;
+  tags?: string[];
+  $createdAt?: string;
+  author?: string | null;
+  publishDate?: string | null; // ISO date string
+  buttonText?: string;
 }
 
 export interface TeamMember {
@@ -64,16 +67,12 @@ export async function getBlogPosts(limit = 100): Promise<BlogPost[]> {
   if (!databases || !appwriteDatabaseId) {
     throw new Error('Appwrite client not configured');
   }
-  
+
   try {
-    const response = await databases.listDocuments(
-      appwriteDatabaseId,
-      COLLECTIONS.BLOG_POSTS,
-      [
-        Query.orderDesc('publishDate'),
-        Query.limit(limit)
-      ]
-    );
+    const response = await databases.listDocuments(appwriteDatabaseId, COLLECTIONS.BLOG_POSTS, [
+      Query.orderDesc('publishDate'),
+      Query.limit(limit),
+    ]);
 
     return response.documents as unknown as BlogPost[];
   } catch (error) {
@@ -86,16 +85,12 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
   if (!databases || !appwriteDatabaseId) {
     throw new Error('Appwrite client not configured');
   }
-  
+
   try {
-    const response = await databases.listDocuments(
-      appwriteDatabaseId,
-      COLLECTIONS.BLOG_POSTS,
-      [
-        Query.equal('slug', slug),
-        Query.limit(1)
-      ]
-    );
+    const response = await databases.listDocuments(appwriteDatabaseId, COLLECTIONS.BLOG_POSTS, [
+      Query.equal('slug', slug),
+      Query.limit(1),
+    ]);
 
     if (response.documents.length > 0) {
       return response.documents[0] as unknown as BlogPost;
@@ -111,17 +106,13 @@ export async function getBlogPostsByTag(tag: string, limit = 10): Promise<BlogPo
   if (!databases || !appwriteDatabaseId) {
     throw new Error('Appwrite client not configured');
   }
-  
+
   try {
-    const response = await databases.listDocuments(
-      appwriteDatabaseId,
-      COLLECTIONS.BLOG_POSTS,
-      [
-        Query.search('tags', tag),
-        Query.orderDesc('publishDate'),
-        Query.limit(limit)
-      ]
-    );
+    const response = await databases.listDocuments(appwriteDatabaseId, COLLECTIONS.BLOG_POSTS, [
+      Query.search('tags', tag),
+      Query.orderDesc('publishDate'),
+      Query.limit(limit),
+    ]);
 
     return response.documents as unknown as BlogPost[];
   } catch (error) {
@@ -130,44 +121,36 @@ export async function getBlogPostsByTag(tag: string, limit = 10): Promise<BlogPo
   }
 }
 
-export async function getServices(): Promise<Service[]> {
+export async function getServices(): Promise<CardSum[]> {
   if (!databases || !appwriteDatabaseId) {
     throw new Error('Appwrite client not configured');
   }
-  
-  try {
-    const response = await databases.listDocuments(
-      appwriteDatabaseId,
-      COLLECTIONS.SERVICES,
-      [
-        Query.orderAsc('orderIndex')
-      ]
-    );
 
-    return response.documents as unknown as Service[];
+  try {
+    const response = await databases.listDocuments(appwriteDatabaseId, COLLECTIONS.SERVICES, [
+      Query.orderAsc('orderIndex'),
+    ]);
+
+    return response.documents as unknown as CardSum[];
   } catch (error) {
     console.error('Error fetching services:', error);
     return [];
   }
 }
 
-export async function getService(slug: string): Promise<Service | null> {
+export async function getService(slug: string): Promise<CardSum | null> {
   if (!databases || !appwriteDatabaseId) {
     throw new Error('Appwrite client not configured');
   }
-  
+
   try {
-    const response = await databases.listDocuments(
-      appwriteDatabaseId,
-      COLLECTIONS.SERVICES,
-      [
-        Query.equal('slug', slug),
-        Query.limit(1)
-      ]
-    );
+    const response = await databases.listDocuments(appwriteDatabaseId, COLLECTIONS.SERVICES, [
+      Query.equal('slug', slug),
+      Query.limit(1),
+    ]);
 
     if (response.documents.length > 0) {
-      return response.documents[0] as unknown as Service;
+      return response.documents[0] as unknown as CardSum;
     }
     return null;
   } catch (error) {
@@ -180,15 +163,11 @@ export async function getTeamMembers(): Promise<TeamMember[]> {
   if (!databases || !appwriteDatabaseId) {
     throw new Error('Appwrite client not configured');
   }
-  
+
   try {
-    const response = await databases.listDocuments(
-      appwriteDatabaseId,
-      COLLECTIONS.TEAM_MEMBERS,
-      [
-        Query.orderAsc('name')
-      ]
-    );
+    const response = await databases.listDocuments(appwriteDatabaseId, COLLECTIONS.TEAM_MEMBERS, [
+      Query.orderAsc('name'),
+    ]);
 
     return response.documents as unknown as TeamMember[];
   } catch (error) {
@@ -201,12 +180,9 @@ export async function getAllTags(): Promise<string[]> {
   if (!databases || !appwriteDatabaseId) {
     throw new Error('Appwrite client not configured');
   }
-  
+
   try {
-    const response = await databases.listDocuments(
-      appwriteDatabaseId,
-      COLLECTIONS.BLOG_POSTS
-    );
+    const response = await databases.listDocuments(appwriteDatabaseId, COLLECTIONS.BLOG_POSTS);
 
     // Extract all tags from all posts and get unique values
     const allTags = (response.documents as unknown as BlogPost[])

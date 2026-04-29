@@ -16,7 +16,7 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ content, className 
   return (
     <div className={`prose prose-lg max-w-none ${className}`}>
       <div className="space-y-4 text-charcoal font-body leading-relaxed">
-        <ReactMarkdown 
+        <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{
             // Custom styling for markdown elements
@@ -36,9 +36,7 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ content, className 
               </h3>
             ),
             p: ({ children }) => (
-              <p className="text-lg text-charcoal font-body leading-relaxed mb-4">
-                {children}
-              </p>
+              <p className="text-lg text-charcoal font-body leading-relaxed mb-4">{children}</p>
             ),
             ul: ({ children }) => (
               <ul className="list-disc list-inside space-y-2 mb-4 text-lg text-charcoal font-body">
@@ -51,20 +49,12 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ content, className 
               </ol>
             ),
             li: ({ children }) => (
-              <li className="text-lg text-charcoal font-body leading-relaxed">
-                {children}
-              </li>
+              <li className="text-lg text-charcoal font-body leading-relaxed">{children}</li>
             ),
             strong: ({ children }) => (
-              <strong className="font-semibold text-charcoal">
-                {children}
-              </strong>
+              <strong className="font-semibold text-charcoal">{children}</strong>
             ),
-            em: ({ children }) => (
-              <em className="italic text-charcoal">
-                {children}
-              </em>
-            ),
+            em: ({ children }) => <em className="italic text-charcoal">{children}</em>,
             blockquote: ({ children }) => (
               <blockquote className="border-l-4 border-primary pl-4 italic text-charcoal bg-gray-50 p-4 rounded-r-lg mb-4">
                 {children}
@@ -76,13 +66,11 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({ content, className 
               </code>
             ),
             pre: ({ children }) => (
-              <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">
-                {children}
-              </pre>
+              <pre className="bg-gray-100 p-4 overflow-x-auto mb-4">{children}</pre>
             ),
             a: ({ href, children }) => (
-              <a 
-                href={href} 
+              <a
+                href={href}
                 className="text-primary hover:text-primary-hover underline"
                 target={href?.startsWith('http') ? '_blank' : undefined}
                 rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}

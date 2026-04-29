@@ -1,8 +1,9 @@
-import { type ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+import sanitizeHtml from 'sanitize-html';
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
 export function formatDate(dateString: string): string {
@@ -10,6 +11,13 @@ export function formatDate(dateString: string): string {
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric'
+    day: 'numeric',
   });
 }
+
+export const sanitize = (text: string): string => {
+  return sanitizeHtml(text, {
+    allowedTags: ['b', 'i', 'em', 'strong', 'span', 'br'],
+    allowedAttributes: {},
+  });
+};
