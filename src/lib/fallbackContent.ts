@@ -103,7 +103,7 @@ Our methodology helps organizations move from intuition-based to evidence-based 
     author: 'Loreen',
     publishDate: '2024-03-05T10:00:00Z',
     tags: ['Data Analytics', 'Business Intelligence', 'Decision Making'],
-    featuredImageUrl: '/img/blog_3.jpg',
+    featuredImageUrl: '/img/pexels-yankrukov-7693692.jpg',
     $createdAt: '2024-03-05T10:00:00Z',
     $updatedAt: '2024-03-05T10:00:00Z',
   },
@@ -142,7 +142,7 @@ export const fallbackBlogCards: CardSum[] = [
     $id: '3',
     title: 'Data-Driven Decision Making',
     slug: 'data-driven-decision-making',
-    image: '/img/blog_3.jpg',
+    image: '/img/pexels-yankrukov-7693692.jpg',
     description:
       'Transform your data into actionable business intelligence with advanced analytics and visualization tools.',
     /* features: ['Analytics', 'Data Visualization', 'Insights Automation'], */
