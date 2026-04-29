@@ -1,6 +1,6 @@
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import DOMPurify from 'isomorphic-dompurify';
+import sanitizeHtml from 'sanitize-html';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -16,5 +16,8 @@ export function formatDate(dateString: string): string {
 }
 
 export const sanitize = (text: string): string => {
-  return DOMPurify.sanitize(text);
+  return sanitizeHtml(text, {
+    allowedTags: ['b', 'i', 'em', 'strong', 'span', 'br'],
+    allowedAttributes: {},
+  });
 };
