@@ -39,10 +39,15 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     };
   }
 
+  const ogImage = post.featuredImageUrl || '/img/blog_bg.jpg';
+
   return {
     title: `${post.title} | #sharp Blog`,
     description: post.excerpt || '',
     keywords: post.tags.join(', '),
+    alternates: {
+      canonical: `https://sharpdigital.co.uk/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt || '',
@@ -50,6 +55,13 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       publishedTime: post.publishDate || '',
       authors: [post.author || ''],
       tags: post.tags,
+      images: [{ url: ogImage, alt: post.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt || '',
+      images: [ogImage],
     },
   };
 }
@@ -72,8 +84,48 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const related = relatedPosts.length ? blogPostsToCardSums(relatedPosts) : undefined;
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sharpdigital.co.uk' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://sharpdigital.co.uk/blog' },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `https://sharpdigital.co.uk/blog/${slug}`,
+      },
+    ],
+  };
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt || '',
+    datePublished: post.publishDate || post.$createdAt,
+    dateModified: post.$updatedAt || post.$createdAt,
+    author: { '@type': 'Person', name: post.author || '#sharp' },
+    publisher: {
+      '@type': 'Organization',
+      name: '#sharp',
+      logo: { '@type': 'ImageObject', url: 'https://sharpdigital.co.uk/img/sharp_logo.svg' },
+    },
+    image: post.featuredImageUrl || 'https://sharpdigital.co.uk/img/blog_bg.jpg',
+    url: `https://sharpdigital.co.uk/blog/${slug}`,
+  };
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       {/* Hero Section */}
       <PageHeader
         title={post.title}

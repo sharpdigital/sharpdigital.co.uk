@@ -36,10 +36,27 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     };
   }
 
+  const ogImage = service.image || '/img/services_bg.jpg';
+
   return {
     title: `${service.title} - Digital Transformation Services | #sharp`,
     description: service.description || '',
     keywords: `${service.title.toLowerCase()}, digital transformation, ${(service.features ?? []).join(', ').toLowerCase()}`,
+    alternates: {
+      canonical: `https://sharpdigital.co.uk/services/${slug}`,
+    },
+    openGraph: {
+      title: `${service.title} - Digital Transformation Services | #sharp`,
+      description: service.description || '',
+      type: 'website',
+      images: [{ url: ogImage, alt: service.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${service.title} - Digital Transformation Services | #sharp`,
+      description: service.description || '',
+      images: [ogImage],
+    },
   };
 }
 
@@ -96,8 +113,32 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   const features = service.features ? generateFeatureCards(service.features) : null;
   const featDesc = `Our comprehensive approach to ${service.title.toLowerCase()} includes these essential components.`;
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sharpdigital.co.uk' },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://sharpdigital.co.uk/services',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: service.title,
+        item: `https://sharpdigital.co.uk/services/${slug}`,
+      },
+    ],
+  };
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <PageHeader
         title={service.title}

@@ -5,8 +5,8 @@ import Layout from '@/components/Layout';
 import Carousel, { CarouselSetup } from '@/components/caroussel/Carousel';
 import AnimButton from '@/components/ui/AnimButton';
 import CardSection from '../components/sections/CardSection';
-import { getServices } from '@/lib/contentService';
-import { fallbackBlogCards } from '@/lib/fallbackContent';
+import { getServices, getBlogPosts } from '@/lib/contentService';
+import { blogPostsToCardSums } from '@/components/contentParsingUtils';
 
 const carouselSetup: CarouselSetup[] = [
   {
@@ -40,8 +40,7 @@ const carouselSetup: CarouselSetup[] = [
 
 export default async function Home() {
   const services = await getServices();
-  // TODO: get this card list from the backend
-  const news = [...fallbackBlogCards];
+  const news = blogPostsToCardSums(await getBlogPosts(3));
 
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -109,6 +108,7 @@ export default async function Home() {
                 alt="#sharp logo"
                 width={200}
                 height={80}
+                priority
                 className="h-20 w-[14em] mx-auto lg:mx-0 mb-6"
               />
             </div>

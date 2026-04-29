@@ -2,7 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 import Layout from '@/components/Layout';
 import PageHeader from '@/components/sections/PageHeader';
-import { fallbackTeamMemberCards } from '@/lib/fallbackContent';
+import { getTeamMembers } from '@/lib/contentService';
+import { teamMembersToCardSums } from '@/components/contentParsingUtils';
 import CardSection from '@/components/sections/CardSection';
 import { AccordionItem } from '@/components/accordion/AccordionPanel';
 import AccordionSection from '@/components/sections/AccordionSection';
@@ -84,9 +85,7 @@ const contentSetup: ContentSectionProps = {
 };
 
 export default async function AboutPage() {
-  /* const teamMembers = await getTeamMembers(); */
-  // TODO: make it dynamic
-  const teamMembers = [...fallbackTeamMemberCards];
+  const teamMembers = teamMembersToCardSums(await getTeamMembers());
 
   return (
     <Layout>
@@ -114,6 +113,7 @@ export default async function AboutPage() {
         setup={teamMembers}
         title="Meet Our Team"
         description="Our expert team brings decades of combined experience in digital transformation, technology, and business strategy."
+        linkBase="/about/"
         isGrid
         hasBackground
         minTitleHeight="2.05em"

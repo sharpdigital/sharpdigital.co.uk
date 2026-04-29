@@ -5,6 +5,7 @@ import {
   getServices as appwriteGetServices,
   getService as appwriteGetService,
   getTeamMembers as appwriteGetTeamMembers,
+  getTeamMember as appwriteGetTeamMember,
   getAllTags as appwriteGetAllTags,
 } from './appwrite';
 
@@ -14,6 +15,7 @@ import {
   getFallbackServices,
   getFallbackService,
   getFallbackTeamMembers,
+  getFallbackTeamMember,
   getFallbackTags,
 } from './fallbackContent';
 
@@ -101,6 +103,18 @@ export async function getTeamMembers(): Promise<TeamMember[]> {
     }
   }
   return getFallbackTeamMembers();
+}
+
+export async function getTeamMember(slug: string): Promise<TeamMember | null> {
+  if (isAppwriteConfigured()) {
+    try {
+      return await appwriteGetTeamMember(slug);
+    } catch (error) {
+      console.warn('Appwrite not available, using fallback content', error);
+      return getFallbackTeamMember(slug);
+    }
+  }
+  return getFallbackTeamMember(slug);
 }
 
 export async function getAllTags(): Promise<string[]> {

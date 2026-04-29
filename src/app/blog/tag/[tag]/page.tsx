@@ -30,6 +30,21 @@ export async function generateMetadata({ params }: TagPageProps): Promise<Metada
     title: `${displayTag} Articles - #sharp Blog`,
     description: `Expert insights and articles about ${displayTag.toLowerCase()} in digital transformation from the #sharp team.`,
     keywords: `${displayTag.toLowerCase()}, digital transformation, business optimization, ${displayTag.toLowerCase()} articles`,
+    alternates: {
+      canonical: `https://sharpdigital.co.uk/blog/tag/${tag}`,
+    },
+    openGraph: {
+      title: `${displayTag} Articles - #sharp Blog`,
+      description: `Expert insights and articles about ${displayTag.toLowerCase()} in digital transformation from the #sharp team.`,
+      type: 'website',
+      images: [{ url: '/img/blog_bg.jpg', alt: `${displayTag} articles` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${displayTag} Articles - #sharp Blog`,
+      description: `Expert insights and articles about ${displayTag.toLowerCase()} in digital transformation from the #sharp team.`,
+      images: ['/img/blog_bg.jpg'],
+    },
   };
 }
 
@@ -46,9 +61,28 @@ export default async function TagPage({ params }: TagPageProps) {
 
   const posts = await getBlogPostsByTag(originalTag);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sharpdigital.co.uk' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://sharpdigital.co.uk/blog' },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `${displayTag} Articles`,
+        item: `https://sharpdigital.co.uk/blog/tag/${tag}`,
+      },
+    ],
+  };
+
   const postCards = blogPostsToCardSums(posts);
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <PageHeader
         title={
           <>

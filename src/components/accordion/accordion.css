@@ -129,6 +129,29 @@
     --border: 0.5px solid var(--fontColor);
   }
 
+  .accordion-panel-header {
+    height: auto;
+    min-height: calc(1.3rem * 2.5);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .accordion-panel-title {
+    font-size: 1.3rem;
+  }
+
+  .accordion-icon {
+    height: 2rem;
+    flex-shrink: 0;
+    margin-right: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .accordion-icon-graphics {
+    width: 1.2rem;
+    flex-shrink: 0;
+  }
+
   .accordion-panel-content {
     flex-direction: column;
     gap: 0;
