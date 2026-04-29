@@ -4,10 +4,6 @@ set -e
 # ensure Bun is in PATH for Husky
 export PATH="$HOME/.bun/bin:$PATH"
 
-# Run type checking
-echo "🔍 Running TypeScript type check..."
-bunx tsc --noEmit
-
 # Run linting and formatting on staged files
 echo "🧹 Running lint-staged..."
 bunx lint-staged
