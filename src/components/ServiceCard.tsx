@@ -111,7 +111,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           {!noButton && (
             <>
               <div className="flex-1"></div>
-              <Link href={`${linkBase}${href}`} className="mb-[0.5rem]">
+              <Link
+                href={`${linkBase}${href}`}
+                className="mb-[0.5rem]"
+                aria-label={`${buttonText} — ${title}`}
+              >
                 {secondaryButton ? (
                   <div className="service-card-secondary-button underlined">{buttonText}</div>
                 ) : (

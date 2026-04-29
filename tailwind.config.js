@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#ED2224',
-        'primary-hover': '#D41E20',
-        'primary-active': '#C01A1C',
+        primary: '#D41F21',
+        'primary-hover': '#BC1B1D',
+        'primary-active': '#A41719',
         charcoal: '#333333',
         'orange-sharp': '#ED8421',
         'yellow-sharp': '#EDEA21',

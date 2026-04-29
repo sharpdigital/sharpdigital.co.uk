@@ -109,6 +109,7 @@ export default async function Home() {
                 alt="#sharp logo"
                 width={200}
                 height={80}
+                priority
                 className="h-20 w-[14em] mx-auto lg:mx-0 mb-6"
               />
             </div>

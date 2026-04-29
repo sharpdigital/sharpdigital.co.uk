@@ -166,8 +166,8 @@
 }
 
 .carousel-indicator {
-  width: 0.84rem;
-  height: 0.84rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background-color: var(--secondaryColor);
   transition: background-color 0.3s ease;
   cursor: pointer;

@@ -36,10 +36,27 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     };
   }
 
+  const ogImage = service.image || '/img/services_bg.jpg';
+
   return {
     title: `${service.title} - Digital Transformation Services | #sharp`,
     description: service.description || '',
     keywords: `${service.title.toLowerCase()}, digital transformation, ${(service.features ?? []).join(', ').toLowerCase()}`,
+    alternates: {
+      canonical: `https://sharpdigital.co.uk/services/${slug}`,
+    },
+    openGraph: {
+      title: `${service.title} - Digital Transformation Services | #sharp`,
+      description: service.description || '',
+      type: 'website',
+      images: [{ url: ogImage, alt: service.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${service.title} - Digital Transformation Services | #sharp`,
+      description: service.description || '',
+      images: [ogImage],
+    },
   };
 }
 
