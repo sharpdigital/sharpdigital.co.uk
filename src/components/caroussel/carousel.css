@@ -265,3 +265,35 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 767px) {
+  .carousel {
+    --paddingLeft: 1.2rem;
+    --gap: 2.4rem;
+  }
+
+  .carousel-title-wrap {
+    font-size: 1.75rem;
+    line-height: 1.28;
+  }
+
+  .carousel-field {
+    width: calc(100vw - var(--paddingLeft) - 0.5rem);
+    max-width: calc(100vw - var(--paddingLeft) - 0.5rem);
+  }
+
+  .carousel-field > div {
+    white-space: normal;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+  }
+
+  .carousel-text-wrapper {
+    margin-top: 7lvh;
+  }
+
+  .carousel-button {
+    font-size: 0.95rem;
+  }
+}
