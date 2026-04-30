@@ -143,7 +143,6 @@ export function teamMembersToCardSums(members: TeamMember[]): CardSum[] {
     image: member.imageUrl ?? null,
     features: member.features,
     buttonText: 'View Profile',
-    $createdAt: member.$createdAt,
   }));
 }
 
