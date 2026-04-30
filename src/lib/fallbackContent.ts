@@ -254,7 +254,7 @@ export const fallbackTeamMembers: TeamMember[] = [
     $id: '1',
     name: 'Loreen',
     slug: 'loreen',
-    role: 'Digital Transformation Strategist',
+    role: 'Business Transformation Strategist',
     description:
       'Loreen is a seasoned digital transformation expert with over 10 years of experience helping organisations navigate their digital evolution. She specializes in AI strategy implementation and data-driven decision-making.',
     bio: `# About Loreen
@@ -267,7 +267,8 @@ Loreen is a seasoned digital transformation expert with over 10 years of experie
 - Digital Transformation Leadership
 - Data Analytics & Business Intelligence
 - Change Management
-- Strategic Planning
+- Strategic Communications
+- Market Growth
 
 Loreen has successfully led digital transformation initiatives for companies ranging from startups to Fortune 500 enterprises, consistently delivering measurable business results.`,
     features: [
@@ -275,11 +276,12 @@ Loreen has successfully led digital transformation initiatives for companies ran
       'Digital Transformation Leadership',
       'Data Analytics & Business Intelligence',
       'Change Management',
-      'Strategic Planning',
+      'Strategic Communications',
+      'Market Growth',
     ],
     imageUrl: '/img/team_loreen.jpg',
-    linkedinUrl: 'https://linkedin.com/in/loreen',
-    email: 'loreen@sharp.com',
+    linkedinUrl: 'https://www.linkedin.com/in/loreen-fraser-owusu/',
+    email: 'loreen@sharpdigital.co.uk',
     $createdAt: '2024-03-01T10:00:00Z',
     $updatedAt: '2024-03-01T10:00:00Z',
   },
@@ -311,8 +313,8 @@ Janos has a unique ability to combine data-driven insights with human psychology
       'UX/UI Optimisation',
     ],
     imageUrl: '/img/team_janos.jpg',
-    linkedinUrl: 'https://linkedin.com/in/janos',
-    email: 'janos@sharp.com',
+    linkedinUrl: 'https://www.linkedin.com/in/janos-csikos/',
+    email: 'janos@sharpdigital.co.uk',
     $createdAt: '2024-03-01T10:00:00Z',
     $updatedAt: '2024-03-01T10:00:00Z',
   },
