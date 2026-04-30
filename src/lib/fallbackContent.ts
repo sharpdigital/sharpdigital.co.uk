@@ -256,10 +256,10 @@ export const fallbackTeamMembers: TeamMember[] = [
     slug: 'loreen',
     role: 'Business Transformation Strategist',
     description:
-      'Loreen is a seasoned digital transformation expert with over 10 years of experience helping organisations navigate their digital evolution. She specializes in AI strategy implementation and data-driven decision-making.',
+      'Loreen is a business transformation strategist with over a decade of experience guiding organisations through complex commercial and digital change. She combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.',
     bio: `# About Loreen
 
-Loreen is a seasoned digital transformation expert with over 10 years of experience helping organisations navigate their digital evolution. She specializes in AI strategy implementation and data-driven decision-making.
+Loreen is a business transformation strategist with over a decade of experience guiding organisations through complex commercial and digital change. She combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.
 
 ## Expertise
 
@@ -268,9 +268,7 @@ Loreen is a seasoned digital transformation expert with over 10 years of experie
 - Data Analytics & Business Intelligence
 - Change Management
 - Strategic Communications
-- Market Growth
-
-Loreen has successfully led digital transformation initiatives for companies ranging from startups to Fortune 500 enterprises, consistently delivering measurable business results.`,
+- Market Growth`,
     features: [
       'AI Strategy & Implementation',
       'Digital Transformation Leadership',
@@ -291,10 +289,10 @@ Loreen has successfully led digital transformation initiatives for companies ran
     slug: 'janos',
     role: 'Customer Experience Lead',
     description:
-      'Janos brings deep expertise in customer experience optimisation and user research. With a background in both technology and psychology, he helps organisations create truly user-centred digital experiences.',
+      'Janos is a customer experience leader who blends technology and human insight to help organisations build products and services people love. With a background spanning user research, journey mapping, and UX/UI design, he brings a distinctly human-centred approach to digital transformation.',
     bio: `# About Janos
 
-Janos brings deep expertise in customer experience optimisation and user research. With a background in both technology and psychology, he helps organisations create truly user-centred digital experiences.
+Janos is a customer experience leader who blends technology and human insight to help organisations build products and services people love. With a background spanning user research, journey mapping, and UX/UI design, he brings a distinctly human-centred approach to digital transformation.
 
 ## Expertise
 
@@ -302,9 +300,7 @@ Janos brings deep expertise in customer experience optimisation and user researc
 - User Research & Testing
 - Journey Mapping
 - Personalisation Strategies
-- UX/UI Optimisation
-
-Janos has a unique ability to combine data-driven insights with human psychology to create experiences that resonate with users and drive business results.`,
+- UX/UI Optimisation`,
     features: [
       'Customer Experience Design',
       'User Research & Testing',
