@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "verify:brand": "node scripts/verify-brand-docs.mjs",
     "prepare": "husky"
   },
   "dependencies": {
