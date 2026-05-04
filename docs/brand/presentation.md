@@ -320,10 +320,10 @@ All assets below are relative to the repository root.
 | Service imagery — analyse  | `img/analyse.jpg`            | Visual-heavy slides for data and analytics services     |
 | Service imagery — automate | `img/automation.jpg`         | Visual-heavy slides for operational efficiency services |
 | Service imagery — CX       | `img/customerExperience.jpg` | Visual-heavy slides for customer experience services    |
-| Team photo — Janos         | `img/janos.*`                | Team intro slide (square-cropped per component spec)    |
-| Team photo — Loreen        | `img/loreen.*`               | Team intro slide (square-cropped per component spec)    |
+| Team photo — Janos         | `public/img/team_janos.jpg`  | Team intro slide (square-cropped per component spec)    |
+| Team photo — Loreen        | `public/img/team_loreen.jpg` | Team intro slide (square-cropped per component spec)    |
 
-**Note on team photos:** the `janos.*` and `loreen.*` files are referenced by convention; confirm the current filename and format with the team before building a deck.
+**Note on team photos:** the team photos currently live in `public/img/`. If a square-cropped variant for slide use is needed it should be exported alongside the source landscape file.
 
 Generated deck files live wherever the team's Google Drive convention places them (Google Drive folder structure is out of scope for this document).
 
