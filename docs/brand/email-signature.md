@@ -393,4 +393,4 @@ Until the PNG is available, teams may use a base64-encoded data URI generated fr
 
 - [`brand/foundations.md`](foundations.md) — full visual reference: colours, typography, logo rules, spacing, accessibility, and token reference. Signature colour and typography values are derived from foundations.
 - [`brand/voice.md`](voice.md) — full verbal reference: voice attributes, tone spectrum, writing principles, and vocabulary. Signature tone and brand name formatting follow voice guidelines.
-- [`brand/enquiry.md`](enquiry.md) — signatures appear at the bottom of every enquiry reply. The enquiry channel document governs the message body; this document governs the signature block beneath it. _(Note: enquiry.md is planned in Task 10; the link path is correct for when it exists.)_
+- [`brand/enquiry.md`](enquiry.md) — signatures appear at the bottom of every enquiry reply. The enquiry channel document governs the message body; this document governs the signature block beneath it.

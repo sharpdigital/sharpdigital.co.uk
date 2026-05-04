@@ -333,4 +333,4 @@ Generated deck files live wherever the team's Google Drive convention places the
 
 - [`brand/foundations.md`](foundations.md) — full visual reference: colours, typography, logo, spacing, motion, imagery, composition, accessibility, token reference.
 - [`brand/voice.md`](voice.md) — full verbal reference: voice attributes, tone spectrum, writing principles, vocabulary, audience messaging, value propositions.
-- [`brand/proposal.md`](proposal.md) — sibling channel document; proposals often accompany decks. The proposal carries the reasoning; the deck carries the points. _(This file will be created in the next task.)_
+- [`brand/proposal.md`](proposal.md) — sibling channel document; proposals often accompany decks. The proposal carries the reasoning; the deck carries the points.

@@ -243,7 +243,7 @@ _(74 words)_
 
 **Structure:** `[Name] · [Role] · #sharp`
 
-**Worked example:** `Janos Csikos · Director · #sharp`
+**Worked example:** `Janos Csikos · Co-Founder · #sharp`
 
 Do not add URLs, phone numbers, or social handles to the sign-off line itself — those belong in the full email signature block governed by `docs/brand/email-signature.md` (planned — created in Task 9 of the brand guideline rollout).
 
@@ -328,7 +328,7 @@ What's wrong: no specificity about the enquiry, four items from the avoid list, 
 >
 > I have availability on [two specific dates and times]. Does either of those work, or would you prefer to send me your calendar link?
 >
-> Janos Csikos · Director · #sharp
+> Janos Csikos · Co-Founder · #sharp
 
 What's right: references the enquiry specifically, names the relevant service area, proposes a concrete next step with a defined format (45 minutes), removes the "obligation" concern, gives two specific time options rather than an open-ended "let me know what works".
 

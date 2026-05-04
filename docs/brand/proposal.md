@@ -360,4 +360,4 @@ All paths are relative to the repository root.
 - [`brand/foundations.md`](foundations.md) — full visual reference: colours, typography, logo, spacing, imagery, composition, accessibility, and token reference. Proposals must not define new visual values without updating foundations first.
 - [`brand/voice.md`](voice.md) — full verbal reference: voice attributes, tone spectrum, writing principles, vocabulary, audience messaging, and value propositions.
 - [`brand/presentation.md`](presentation.md) — sibling channel document; presentations often accompany proposals. The deck carries the points; the proposal carries the reasoning. Never paste proposal prose into a slide.
-- [`brand/invoice.md`](invoice.md) — the commercial terms in a proposal must align with the invoice template. VAT rate, payment schedule, and company registration details are governed by invoice.md. _(Note: invoice.md is planned in a future task; the link path is correct for when it exists.)_
+- [`brand/invoice.md`](invoice.md) — the commercial terms in a proposal must align with the invoice template. VAT rate, payment schedule, and company registration details are governed by invoice.md.

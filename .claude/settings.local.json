@@ -28,7 +28,8 @@
       "mcp__appwrite__users_list",
       "Bash(appwrite databases:*)",
       "Bash(appwrite login:*)",
-      "mcp__appwrite__databases_list"
+      "mcp__appwrite__databases_list",
+      "WebFetch(domain:)"
     ],
     "deny": []
   }
