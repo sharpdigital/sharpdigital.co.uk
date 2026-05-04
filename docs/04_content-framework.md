@@ -10,7 +10,7 @@ This document defines the comprehensive content framework for #sharp's digital t
 
 **Content Philosophy**: Clear, authoritative, and results-driven communication that positions #sharp as the leading AI-powered digital transformation partner.
 
-> **Verbal authority:** Tone of voice, vocabulary rules, audience personas, and value proposition language are canonically defined in [`docs/brand/voice.md`](brand/voice.md). This file defers to that document for all brand voice decisions and provides web-page-specific copy (headlines, CTAs, SEO metadata) only.
+> **Brand-level verbal rules (voice, tone, vocabulary, value propositions, audience messaging) live in [`brand/voice.md`](brand/voice.md).** This document is the **web copy reference** — page-by-page H1/H2/H3 copy, on-page CTAs, SEO keyword strategy, content calendar. When this doc and `brand/voice.md` disagree on tone or vocabulary, voice wins.
 
 ---
 
@@ -102,86 +102,6 @@ This document defines the comprehensive content framework for #sharp's digital t
 - **Contact Info**: "We'd love to hear from you"
 - **Alternative Contact**: "Prefer to Talk Directly?"
 - **Consultation**: "Schedule a consultation call to discuss your specific needs"
-
----
-
-## Value Propositions & Key Messaging
-
-### Core Value Proposition
-
-**Primary Value Proposition**: "#sharp delivers AI-powered digital transformation solutions that drive measurable business impact through strategic planning, expert implementation, and continuous optimization."
-
-### Messaging Hierarchy
-
-#### Level 1: Core Brand Promise
-
-- **Authority**: "Leading digital transformation consultancy"
-- **Expertise**: "AI-first approach to business transformation"
-- **Results**: "Measurable impact on your bottom line"
-- **Trust**: "Proven methodologies and strategic approach"
-
-#### Level 2: Service Value Propositions
-
-**Customer Experience**
-
-- **Primary**: "Optimize every touchpoint for exceptional customer journeys"
-- **Secondary**: "Transform customer interactions with AI-powered personalization"
-- **Tertiary**: "Drive loyalty and business growth through superior experiences"
-
-**Operational Efficiency**
-
-- **Primary**: "Streamline processes through intelligent automation"
-- **Secondary**: "Reduce operational costs while improving performance"
-- **Tertiary**: "Scale your business with smart workflow optimization"
-
-**Data & Analytics**
-
-- **Primary**: "Transform data into actionable business intelligence"
-- **Secondary**: "Make data-driven decisions with advanced analytics"
-- **Tertiary**: "Unlock insights that drive competitive advantage"
-
-#### Level 3: Supporting Messages
-
-**Methodology & Approach**
-
-- "Strategic planning meets practical implementation"
-- "End-to-end transformation from assessment to optimization"
-- "Customized solutions for your unique business challenges"
-- "Future-ready technology built for scalability"
-
-**Team & Expertise**
-
-- "Decades of combined experience in digital transformation"
-- "Deep industry expertise across multiple sectors"
-- "Proven track record of successful implementations"
-- "Thought leadership in AI and digital innovation"
-
-**Results & Outcomes**
-
-- "Measurable ROI on digital transformation investments"
-- "Improved operational efficiency and customer satisfaction"
-- "Competitive advantage through strategic technology adoption"
-- "Sustainable growth through intelligent automation"
-
-### Target Audience Messaging
-
-#### C-Suite Executives
-
-- **Message**: "Drive successful digital transformation with measurable business impact"
-- **Focus**: Strategic outcomes, ROI, competitive advantage
-- **Tone**: Executive-level, results-oriented, strategic
-
-#### Operations & Technology Managers
-
-- **Message**: "Streamline operations and reduce costs through intelligent technology"
-- **Focus**: Process optimization, efficiency gains, implementation
-- **Tone**: Technical expertise, practical solutions, detailed
-
-#### Business Development Professionals
-
-- **Message**: "Accelerate growth through customer experience optimization"
-- **Focus**: Customer acquisition, retention, marketing automation
-- **Tone**: Growth-focused, innovative, scalable solutions
 
 ---
 
@@ -326,88 +246,6 @@ This document defines the comprehensive content framework for #sharp's digital t
 
 ---
 
-## Content Guidelines & Tone of Voice
-
-### Brand Voice Attributes
-
-#### Professional Characteristics
-
-- **Authoritative**: Industry expertise and thought leadership
-- **Trustworthy**: Reliable partner for transformation
-- **Innovative**: AI-first approach and cutting-edge solutions
-- **Results-Focused**: Measurable impact and ROI
-
-#### Communication Style
-
-- **Clear**: Straightforward, jargon-free communication
-- **Confident**: Assertive without being aggressive
-- **Helpful**: Educational and supportive approach
-- **Strategic**: Big-picture thinking with practical application
-
-### Writing Guidelines
-
-#### Language & Tone
-
-- **Active Voice**: Use active voice for clarity and impact
-- **Present Tense**: Communicate current capabilities and immediate benefits
-- **Professional Vocabulary**: Industry-appropriate terminology without excessive jargon
-- **Inclusive Language**: Welcoming and accessible to all audiences
-
-#### Content Structure
-
-- **Scannable Format**: Use bullet points, numbered lists, and short paragraphs
-- **Clear Hierarchy**: Logical flow from overview to specific details
-- **Visual Breaks**: Subheadings, whitespace, and formatting for readability
-- **Conclusion**: Always end with clear next steps or call-to-action
-
-### Content Types & Formats
-
-#### Educational Content
-
-- **How-to Guides**: Step-by-step instructions for transformation processes
-- **Best Practices**: Industry standards and recommended approaches
-- **Case Studies**: Real-world examples of successful transformations
-- **Whitepapers**: In-depth analysis of digital transformation topics
-
-#### Persuasive Content
-
-- **Value Propositions**: Clear benefits and competitive advantages
-- **Testimonials**: Client success stories and endorsements
-- **ROI Calculators**: Quantified benefits and return on investment
-- **Comparisons**: Competitive analysis and differentiation
-
-#### Supporting Content
-
-- **FAQs**: Common questions and detailed answers
-- **Glossaries**: Technical terms and industry definitions
-- **Resource Lists**: Tools, templates, and additional reading
-- **Contact Information**: Multiple ways to engage and connect
-
-### Content Quality Standards
-
-#### Accuracy & Credibility
-
-- **Fact-Checking**: Verify all statistics and claims
-- **Source Attribution**: Credit external sources and research
-- **Regular Updates**: Keep content current and relevant
-- **Expert Review**: Technical accuracy validation
-
-#### Readability & Accessibility
-
-- **Reading Level**: Appropriate for professional audiences
-- **Accessibility**: WCAG 2.1 AA compliance for text content
-- **Mobile Optimization**: Readable on all device sizes
-- **Visual Hierarchy**: Clear structure and organization
-
-#### SEO Optimization
-
-- **Keyword Integration**: Natural keyword placement
-- **Meta Information**: Optimized titles and descriptions
-- **Internal Linking**: Strategic content connections
-- **Performance Monitoring**: Regular SEO analysis and improvement
-
----
-
 ## Content Calendar & Strategy
 
 ### Content Publication Schedule
@@ -460,4 +298,4 @@ This document defines the comprehensive content framework for #sharp's digital t
 
 ---
 
-This content framework provides the foundation for creating compelling, SEO-optimized, and conversion-focused content across all #sharp digital touchpoints. The framework ensures consistency while allowing for creative flexibility in execution and should be referenced throughout the content creation and optimization process.
+This document is the web copy reference for #sharp. Use it to source page headlines, on-page CTAs, SEO keywords, and content scheduling. For brand voice rules, vocabulary, value propositions, and audience messaging, refer to [`brand/voice.md`](brand/voice.md), which takes precedence over this document on all verbal brand decisions.
