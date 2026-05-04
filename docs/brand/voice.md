@@ -65,7 +65,7 @@ The same idea — "we help businesses with digital transformation" — sounds di
 
 | Register                     | Context                                                          | Example phrasings                                                                                                                                                                                                                                                                              |
 | ---------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Formal-corporate**         | Proposals, contracts, T&Cs, invoices, board-level reports        | "#sharp provides digital transformation consultancy services, comprising strategic assessment, programme design, and implementation oversight." / "The scope of services detailed herein is subject to the terms and conditions set out in Schedule A."                                        |
+| **Formal-corporate**         | Proposals, contracts, T&Cs, invoices, board-level reports        | "The team at #sharp provides digital transformation consultancy services, comprising strategic assessment, programme design, and implementation oversight." / "The scope of services detailed herein is subject to the terms and conditions set out in Schedule A."                            |
 | **Professional-warm**        | Website pages, service brochures, presentations, enquiry replies | "We help organisations navigate digital transformation — from the first strategic question to the point where new ways of working are embedded." / "Not sure where to start? We can run a focused assessment session to map your current state and identify the highest-impact opportunities." |
 | **Conversational-confident** | LinkedIn posts, short-form video captions, social commentary     | "Most digital transformation programmes stall not because of technology, but because the change wasn't designed with the people in mind. We fix that." / "AI isn't magic. It's engineering. Here's what that actually looks like in practice."                                                 |
 
@@ -245,7 +245,7 @@ _(74 words)_
 
 **Worked example:** `Janos Csikos · Director · #sharp`
 
-Do not add URLs, phone numbers, or social handles to the sign-off line itself — those belong in the full email signature block governed by `docs/brand/email-signature.md`.
+Do not add URLs, phone numbers, or social handles to the sign-off line itself — those belong in the full email signature block governed by `docs/brand/email-signature.md` (planned — created in Task 9 of the brand guideline rollout).
 
 ---
 
