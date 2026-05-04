@@ -6,9 +6,7 @@
 
 ## Overview
 
-This document defines the comprehensive content framework for #sharp's digital transformation consultancy website. The framework ensures consistent, persuasive, and SEO-optimized content across all pages while maintaining the professional tone and conversion-focused messaging strategy.
-
-**Content Philosophy**: Clear, authoritative, and results-driven communication that positions #sharp as the leading AI-powered digital transformation partner.
+This document is the web copy reference for #sharp's digital transformation consultancy website — page-by-page H1/H2/H3 copy, on-page CTAs, SEO keyword strategy, and content calendar. For tone, voice, vocabulary, and messaging strategy, see [`brand/voice.md`](brand/voice.md).
 
 > **Brand-level verbal rules (voice, tone, vocabulary, value propositions, audience messaging) live in [`brand/voice.md`](brand/voice.md).** This document is the **web copy reference** — page-by-page H1/H2/H3 copy, on-page CTAs, SEO keyword strategy, content calendar. When this doc and `brand/voice.md` disagree on tone or vocabulary, voice wins.
 
