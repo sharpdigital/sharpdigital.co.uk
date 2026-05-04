@@ -77,3 +77,27 @@ Currently no build process exists. Future Next.js implementation will need:
 ## Content Management
 
 Content is stored in Appwrite and fetched at build time for static generation.
+
+## Branching Model
+
+This repository follows the **git flow** branching model.
+
+### Long-lived branches
+
+- **`master`** — Production. Only `release/*` and `hotfix/*` merges land here.
+- **`develop`** — Integration branch. All feature work is integrated here before release.
+
+### Working branch prefixes
+
+- **`feature/<name>`** — New features. Branch from `develop`, PR back to `develop`.
+- **`bugfix/<name>`** — Non-urgent bug fixes. Branch from `develop`, PR back to `develop`.
+- **`release/<version>`** — Release preparation. Branch from `develop`, merge to both `master` and `develop`.
+- **`hotfix/<name>`** — Urgent production fixes. Branch from `master`, merge to both `master` and `develop`.
+
+### Pull request rules
+
+- Feature and bugfix PRs target `develop`.
+- Release and hotfix PRs target `master`, and are also merged back into `develop` after.
+- Delete branches after merge (local and remote).
+
+Local `gitflow.*` git config is set so the `git-flow` CLI extension works out of the box if installed (`brew install git-flow-avh`).
