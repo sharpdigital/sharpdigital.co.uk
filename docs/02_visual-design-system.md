@@ -79,16 +79,19 @@ Fonts are loaded via `next/font/google` in `src/app/layout.tsx`. For typeface sp
 - **Headings**: Manrope — **Tailwind**: `font-heading`
 - **Body**: Inter — **Tailwind**: `font-body`
 - **UI / micro-copy**: Inter — **Tailwind**: `font-sans`
-- **Code**: Fira Code — **Tailwind**: `font-mono`
+
+No `font-mono` token defined; for code formatting use the system monospace stack inline.
 
 ### Desktop Typography Scale
 
-- **H1**: `text-5xl font-heading leading-tight` (5rem / line-height 1.32)
-- **H2**: `text-4xl font-heading leading-tight` (2.6rem / line-height 1.224)
-- **H3**: `text-3xl font-heading leading-snug`
-- **H4**: `text-2xl font-heading leading-snug`
-- **H5**: `text-xl font-heading leading-normal`
-- **H6**: `text-lg font-heading leading-normal`
+| Tag | Tailwind class                        | Size / line-height                    | Source           |
+| --- | ------------------------------------- | ------------------------------------- | ---------------- |
+| H1  | `text-5xl font-heading leading-tight` | 5rem / 1.32                           | custom config    |
+| H2  | `text-4xl font-heading leading-tight` | 2.6rem / 1.224                        | custom config    |
+| H3  | `text-3xl font-heading leading-snug`  | 1.875rem / 2.25rem (Tailwind default) | Tailwind default |
+| H4  | `text-2xl font-heading leading-snug`  | 1.68rem                               | custom config    |
+| H5  | `text-xl font-heading leading-normal` | 1.22rem / line-height 1.485           | custom config    |
+| H6  | `text-lg font-heading leading-normal` | 1rem, weight 410                      | custom config    |
 
 ### Body Text Scale
 
@@ -197,7 +200,12 @@ On hover (`.service-card:hover .service-card-shadow`):
 box-shadow: -2px 8px 15px -4px rgba(0, 0, 0, 0.18);
 ```
 
-Shadow easing uses `cubic-bezier(0.5, 0.09, 0.7, 1)` at `0.48s` (see [`brand/foundations.md`](brand/foundations.md) §8).
+Shadow transition uses two distinct easing curves (source: `globals.css` lines 185 and 190):
+
+- **Entry** (rest state): `transition: box-shadow 0.48s cubic-bezier(0.5, 0.09, 0.7, 1)` — gradual deceleration into the large ambient shadow
+- **Return** (hover state): `transition: box-shadow 0.4s cubic-bezier(0.1, 0.09, 0.11, 1)` — fast initial pull, then near-linear settle into the tighter hover shadow
+
+See also [`brand/foundations.md`](brand/foundations.md) §8 for motion rationale.
 
 - **Tailwind base**: `bg-white border border-gray-200 p-8 service-card-shadow transition-shadow`
 - **Icon**: `w-12 h-12 mb-4`
@@ -353,7 +361,7 @@ module.exports = {
         // Semantic colors — hex values in brand/foundations.md §12
         success: '#25ED21',
         warning: '#EDEA21',
-        error: /* hex defined in brand/foundations.md §2 semantic table */,
+        // error: hex defined in brand/foundations.md §2 semantic table — do not hardcode here
         info: '#218BED',
       },
     },
@@ -373,7 +381,7 @@ module.exports = {
         heading: ['Manrope', 'Inter', 'sans-serif'],
         body: ['Inter', 'serif'],
         sans: ['Inter', 'sans-serif'],
-        mono: ['Fira Code', 'Courier New', 'monospace'],
+        // No mono family defined — for code formatting use the system monospace stack inline
       },
     },
   },
@@ -381,21 +389,6 @@ module.exports = {
 ```
 
 Fonts are loaded via `next/font/google` in `src/app/layout.tsx`. Legacy webfont assets in `public/font/` are no longer loaded — do not reference them in new work. See [`brand/foundations.md`](brand/foundations.md) §3.
-
-### CSS Variables (globals.css)
-
-```css
-:root {
-  --primary: #d41f21;
-  --primary-hover: #bc1b1d;
-  --primary-active: #a41719;
-  --charcoal: #333333;
-  --success: #25ed21;
-  --warning: #edea21;
-  /* --error: see brand/foundations.md §2 semantic table */
-  --info: #218bed;
-}
-```
 
 ### Shadcn/UI Configuration (components.json)
 
