@@ -101,3 +101,14 @@ This repository follows the **git flow** branching model.
 - Delete branches after merge (local and remote).
 
 Local `gitflow.*` git config is set so the `git-flow` CLI extension works out of the box if installed (`brew install git-flow-avh`).
+
+### Worktrees for feature work
+
+New features and bugfixes should be started in a **git worktree**, not the main repo checkout:
+
+```bash
+git worktree add -b feature/<name> ../sharpdigital-<name> develop
+cd ../sharpdigital-<name>
+```
+
+See [docs/development-guidelines.md](./docs/development-guidelines.md) for the full worktree workflow, including how to finish features cleanly. A Claude Code hook (`.claude/hooks/check-worktree-feature.sh`) reminds you when a feature/bugfix branch is about to be created in the main worktree.
