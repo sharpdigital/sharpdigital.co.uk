@@ -1,208 +1,118 @@
 # Visual Design System
 
-## #sharp - Digital Transformation Consultancy
+> **Brand-level visual rules live in [`brand/foundations.md`](brand/foundations.md).** This document is the **web implementation reference** — Tailwind class mappings, component CSS, web-specific WCAG verification. When this doc and `brand/foundations.md` disagree, foundations wins.
 
 ---
 
-## Overview
+## Color Tokens — Tailwind Mappings
 
-This document defines the comprehensive visual design system for #sharp's digital transformation consultancy website. The system ensures consistent, accessible, and professional visual communication across all digital touchpoints while supporting the brand's positioning as a leading AI-powered digital transformation partner.
+All values sourced from `tailwind.config.js`. For hex values, extended palette, semantic colors, and WCAG contrast pairings, see [`brand/foundations.md`](brand/foundations.md) §2.
 
-**Design Philosophy**: Clean, professional, and trustworthy with strategic use of color to communicate innovation and reliability.
+### Primary Palette
 
----
-
-## Color Palette
-
-### Primary Colors
-
-#### Core Brand Colors
-
-- **Primary Red**: `#ED2224`
+- **Primary Red**: `#D41F21`
   - Usage: Primary CTAs, links, accent elements
-  - Contrast: White text (#FFFFFF)
-  - WCAG AA: 4.5:1 contrast ratio
-  - Hex: #ED2224 | RGB: 237, 34, 36 | HSL: 359, 85%, 53%
+  - Hover: `#BC1B1D` (Tailwind `bg-primary-hover`)
+  - Active: `#A41719` (Tailwind `bg-primary-active`)
+  - Contrast: White text (`#FFFFFF`)
+  - WCAG AA: ~5.0:1 contrast ratio against white
   - **Tailwind**: `bg-primary`, `text-primary`, `border-primary`
 
 - **Charcoal Text**: `#333333`
   - Usage: Primary text, headings, body copy
-  - Contrast: White background (#FFFFFF)
-  - WCAG AA: 12.6:1 contrast ratio
-  - Hex: #333333 | RGB: 51, 51, 51 | HSL: 0, 0%, 20%
+  - Contrast: White background (`#FFFFFF`) — ~12.6:1
   - **Tailwind**: `bg-charcoal`, `text-charcoal`, `border-charcoal`
 
 - **Pure White**: `#FFFFFF`
-  - Usage: Background, card backgrounds, contrast text
-  - Contrast: Works with all dark colors
-  - Hex: #FFFFFF | RGB: 255, 255, 255 | HSL: 0, 0%, 100%
+  - Usage: Page backgrounds, card surfaces, contrast text on dark backgrounds
   - **Tailwind**: `bg-white`, `text-white`, `border-white`
 
-### Extended Color Palette
+### Extended #sharp Spectrum
 
-#### Warm Spectrum
+Use for data visualisation, tag labels, and infographic accents only — not body text or structural elements.
 
-- **Orange**: `#ED8421` - Contrast: Dark text (#333333)
-  - **Tailwind**: `bg-orange-sharp`, `text-orange-sharp`
-- **Yellow**: `#EDEA21` - Contrast: Dark text (#333333)
-  - **Tailwind**: `bg-yellow-sharp`, `text-yellow-sharp`
-- **Yellow-Green**: `#8BED21` - Contrast: Dark text (#333333)
-  - **Tailwind**: `bg-lime-sharp`, `text-lime-sharp`
-- **Green**: `#25ED21` - Contrast: Dark text (#333333)
-  - **Tailwind**: `bg-green-sharp`, `text-green-sharp`
+- **Orange**: `#ED8421` — **Tailwind**: `bg-orange-sharp`, `text-orange-sharp`
+- **Yellow**: `#EDEA21` — **Tailwind**: `bg-yellow-sharp`, `text-yellow-sharp`
+- **Yellow-Green**: `#8BED21` — **Tailwind**: `bg-lime-sharp`, `text-lime-sharp`
+- **Green**: `#25ED21` — **Tailwind**: `bg-green-sharp`, `text-green-sharp`
+- **Mint**: `#21ED84` — **Tailwind**: `bg-mint-sharp`, `text-mint-sharp`
+- **Cyan**: `#21EDEA` — **Tailwind**: `bg-cyan-sharp`, `text-cyan-sharp`
+- **Sky Blue**: `#218BED` — **Tailwind**: `bg-sky-sharp`, `text-sky-sharp`
+- **Blue**: `#2125ED` — **Tailwind**: `bg-blue-sharp`, `text-blue-sharp`
+- **Purple**: `#8421ED` — **Tailwind**: `bg-purple-sharp`, `text-purple-sharp`
+- **Magenta**: `#EA21ED` — **Tailwind**: `bg-magenta-sharp`, `text-magenta-sharp`
+- **Pink**: `#ED218B` — **Tailwind**: `bg-pink-sharp`, `text-pink-sharp`
 
-#### Cool Spectrum
+### Semantic Colors
 
-- **Mint**: `#21ED84` - Contrast: Dark text (#333333)
-  - **Tailwind**: `bg-mint-sharp`, `text-mint-sharp`
-- **Cyan**: `#21EDEA` - Contrast: Dark text (#333333)
-  - **Tailwind**: `bg-cyan-sharp`, `text-cyan-sharp`
-- **Sky Blue**: `#218BED` - Contrast: Dark text (#333333)
-  - **Tailwind**: `bg-sky-sharp`, `text-sky-sharp`
-- **Blue**: `#2125ED` - Contrast: White text (#FFFFFF)
-  - **Tailwind**: `bg-blue-sharp`, `text-blue-sharp`
+Error hex lives in `tailwind.config.js` and `brand/foundations.md` §12. Reference by class name only here.
 
-#### Deep Spectrum
+- **Success**: `#25ED21` — **Tailwind**: `bg-success`, `text-success`, `border-success`
+- **Warning**: `#EDEA21` — **Tailwind**: `bg-warning`, `text-warning`, `border-warning`
+- **Error**: See `brand/foundations.md` §2 — **Tailwind**: `bg-error`, `text-error`, `border-error`
+- **Info**: `#218BED` — **Tailwind**: `bg-info`, `text-info`, `border-info`
 
-- **Purple**: `#8421ED` - Contrast: White text (#FFFFFF)
-  - **Tailwind**: `bg-purple-sharp`, `text-purple-sharp`
-- **Magenta**: `#EA21ED` - Contrast: White text (#FFFFFF)
-  - **Tailwind**: `bg-magenta-sharp`, `text-magenta-sharp`
-- **Pink**: `#ED218B` - Contrast: White text (#FFFFFF)
-  - **Tailwind**: `bg-pink-sharp`, `text-pink-sharp`
+### Neutral Colors
 
-### Functional Colors
+- **Light Gray**: `#F8F9FA` — Section backgrounds, card backgrounds — **Tailwind**: `bg-gray-50`
+- **Medium Gray**: `#6C757D` — Secondary text, placeholders — **Tailwind**: `text-gray-500`
+- **Dark Gray**: `#495057` — Tertiary text, borders — **Tailwind**: `text-gray-600`
+- **Border Gray**: `#DEE2E6` — Borders, dividers — **Tailwind**: `border-gray-200`
 
-#### Semantic Colors
+### WCAG Web-Component Verification
 
-- **Success**: `#25ED21` (Green) - Form success, positive status
-  - **Tailwind**: `bg-success`, `text-success`, `border-success`
-- **Warning**: `#EDEA21` (Yellow) - Caution, pending status
-  - **Tailwind**: `bg-warning`, `text-warning`, `border-warning`
-- **Error**: `#ED2224` (Primary Red) - Error states, required fields
-  - **Tailwind**: `bg-error`, `text-error`, `border-error`
-- **Info**: `#218BED` (Sky Blue) - Informational content
-  - **Tailwind**: `bg-info`, `text-info`, `border-info`
+Full contrast pairings in [`brand/foundations.md`](brand/foundations.md) §11. Web-component-specific notes:
 
-#### Neutral Colors
-
-- **Light Gray**: `#F8F9FA` - Background sections, card backgrounds
-  - **Tailwind**: `bg-gray-50`, `text-gray-50`
-- **Medium Gray**: `#6C757D` - Secondary text, placeholders
-  - **Tailwind**: `bg-gray-500`, `text-gray-500`
-- **Dark Gray**: `#495057` - Tertiary text, borders
-  - **Tailwind**: `bg-gray-600`, `text-gray-600`
-- **Border Gray**: `#DEE2E6` - Borders, dividers
-  - **Tailwind**: `bg-gray-200`, `border-gray-200`
-
-### Accessibility Compliance
-
-#### WCAG 2.1 AA Standards
-
-- **Minimum Contrast**: 4.5:1 for normal text
-- **Large Text**: 3:1 for text 18pt+ or 14pt+ bold
-- **Non-text Elements**: 3:1 for UI components and graphics
-
-#### Color Usage Guidelines
-
-- Never rely solely on color to convey information
-- Provide alternative indicators (icons, text, patterns)
-- Test all color combinations with accessibility tools
-- Ensure sufficient contrast in all interactive states
+- Primary red (`#D41F21`) on white: ~5.0:1 — passes AA for normal text and large text. Permitted for CTA buttons, accent spans, and nav active state.
+- Charcoal on white: ~12.6:1 — passes AAA. Default for body text and headings.
+- Do **not** place primary red on charcoal — ~2.4:1, fails AA at all sizes.
+- High-luminance extended hues (`yellow-sharp`, `lime-sharp`, `mint-sharp`, `cyan-sharp`, `green-sharp`) fail AA on white as foreground text — use as background fills with dark text only.
 
 ---
 
-## Typography
+## Typography — Tailwind Mappings
 
-### Font Hierarchy
+Fonts are loaded via `next/font/google` in `src/app/layout.tsx`. For typeface specifications, weight rationale, and the full type scale sourced from `tailwind.config.js`, see [`brand/foundations.md`](brand/foundations.md) §3.
 
-#### Primary Font: Manrope
+### Font Tokens
 
-- **Source**: Local font files in `/font/` directory
-- **Type**: Sans-serif
-- **Usage**: Headlines, titles, navigation, CTAs
-- **Fallback**: `'Manrope', 'Helvetica Neue', Arial, sans-serif`
+- **Headings**: Manrope — **Tailwind**: `font-heading`
+- **Body**: Inter — **Tailwind**: `font-body`
+- **UI / micro-copy**: Inter — **Tailwind**: `font-sans`
+- **Code**: Fira Code — **Tailwind**: `font-mono`
 
-#### Secondary Font: Inter
+### Desktop Typography Scale
 
-- **Type**: Serif
-- **Usage**: Body text, paragraphs, long-form content
-- **Fallback**: `Inter, 'Times New Roman', serif`
+- **H1**: `text-5xl font-heading leading-tight` (5rem / line-height 1.32)
+- **H2**: `text-4xl font-heading leading-tight` (2.6rem / line-height 1.224)
+- **H3**: `text-3xl font-heading leading-snug`
+- **H4**: `text-2xl font-heading leading-snug`
+- **H5**: `text-xl font-heading leading-normal`
+- **H6**: `text-lg font-heading leading-normal`
 
-#### Monospace Font: Fira Code
+### Body Text Scale
 
-- **Type**: Monospace
-- **Usage**: Code snippets, technical content
-- **Fallback**: `'Fira Code', 'Courier New', monospace`
+- **Body Large**: `text-lg font-body leading-relaxed` (1rem per `tailwind.config.js`)
+- **Body Regular**: `text-base font-body leading-normal`
+- **Body Small**: `text-sm font-body leading-snug`
+- **Caption**: `text-xs font-body leading-snug`
 
-### Typography Scale
+### Mobile Typography Scale
 
-#### Desktop Typography Scale
+Apply responsive prefixes to scale down 15–20% on mobile:
 
-- **H1**: 48px / 3rem - Manrope - Line height: 1.2
-  - **Tailwind**: `text-5xl font-heading leading-tight`
-- **H2**: 40px / 2.5rem - Manrope - Line height: 1.3
-  - **Tailwind**: `text-4xl font-heading leading-tight`
-- **H3**: 32px / 2rem - Manrope - Line height: 1.4
-  - **Tailwind**: `text-3xl font-heading leading-snug`
-- **H4**: 24px / 1.5rem - Manrope - Line height: 1.5
-  - **Tailwind**: `text-2xl font-heading leading-snug`
-- **H5**: 20px / 1.25rem - Manrope - Line height: 1.6
-  - **Tailwind**: `text-xl font-heading leading-normal`
-- **H6**: 16px / 1rem - Manrope - Line height: 1.6
-  - **Tailwind**: `text-lg font-heading leading-normal`
+- **H1**: `text-4xl md:text-5xl font-heading leading-tight`
+- **H2**: `text-3xl md:text-4xl font-heading leading-tight`
+- **H3**: `text-2xl md:text-3xl font-heading leading-snug`
+- **H4**: `text-xl md:text-2xl font-heading leading-snug`
+- **H5**: `text-lg md:text-xl font-heading leading-normal`
+- **H6**: `text-base md:text-lg font-heading leading-normal`
 
-#### Body Text Scale
+### Typography Usage
 
-- **Body Large**: 18px / 1.125rem - Inter - Line height: 1.7
-  - **Tailwind**: `text-lg font-body leading-relaxed`
-- **Body Regular**: 16px / 1rem - Inter - Line height: 1.6
-  - **Tailwind**: `text-base font-body leading-normal`
-- **Body Small**: 14px / 0.875rem - Inter - Line height: 1.5
-  - **Tailwind**: `text-sm font-body leading-snug`
-- **Caption**: 12px / 0.75rem - Inter - Line height: 1.4
-  - **Tailwind**: `text-xs font-body leading-snug`
-
-#### Mobile Typography Scale
-
-- **H1**: 36px / 2.25rem - Manrope - Line height: 1.2
-  - **Tailwind**: `text-4xl md:text-5xl font-heading leading-tight`
-- **H2**: 30px / 1.875rem - Manrope - Line height: 1.3
-  - **Tailwind**: `text-3xl md:text-4xl font-heading leading-tight`
-- **H3**: 24px / 1.5rem - Manrope - Line height: 1.4
-  - **Tailwind**: `text-2xl md:text-3xl font-heading leading-snug`
-- **H4**: 20px / 1.25rem - Manrope - Line height: 1.5
-  - **Tailwind**: `text-xl md:text-2xl font-heading leading-snug`
-- **H5**: 18px / 1.125rem - Manrope - Line height: 1.6
-  - **Tailwind**: `text-lg md:text-xl font-heading leading-normal`
-- **H6**: 16px / 1rem - Manrope - Line height: 1.6
-  - **Tailwind**: `text-base md:text-lg font-heading leading-normal`
-
-### Typography Usage Guidelines
-
-#### Headings
-
-- Use sentence case for all headings
-- Maximum 2-3 heading levels per page
-- Maintain consistent hierarchy
-- Add appropriate margins (top: 2rem, bottom: 1rem)
-- **Tailwind**: `mt-8 mb-4` for standard heading margins
-
-#### Body Text
-
-- Use Inter for readability and professionalism
-- Maintain 16px minimum font size
-- Use 1.6 line height for optimal readability
-- Paragraph spacing: 1rem bottom margin
-- **Tailwind**: `mb-4` for paragraph spacing
-
-#### Links
-
-- Primary Red (#ED2224) color
-- Underline on hover state
-- Focus states with outline
-- Visited links: slightly darker shade
-- **Tailwind**: `text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2`
+- Headings: sentence case; max 2–3 heading levels per page; `mt-8 mb-4` for standard margins
+- Body: 16px minimum; paragraph spacing `mb-4`
+- Links: `text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2`
 
 ---
 
@@ -212,194 +122,131 @@ This document defines the comprehensive visual design system for #sharp's digita
 
 #### Primary Button
 
-- **Background**: Primary Red (#ED2224)
-- **Text**: White (#FFFFFF)
-- **Font**: Manrope, 16px
-- **Padding**: 12px 24px
-- **Border Radius**: 6px
-- **Hover**: Darken 10% (#D41E20)
-- **Active**: Darken 15% (#C01A1C)
-- **Disabled**: 50% opacity
-- **Tailwind**: `bg-primary text-white font-heading text-base px-6 py-3 hover:bg-primary-hover active:bg-primary-active disabled:opacity-50 transition-colors duration-200`
+- **Background**: `bg-primary` (`#D41F21`)
+- **Text**: `text-white`
+- **Font**: `font-heading text-base`
+- **Padding**: `px-6 py-3` (12px 24px)
+- **Border Radius**: `rounded` (6px)
+- **Hover**: `hover:bg-primary-hover` (`#BC1B1D`)
+- **Active**: `active:bg-primary-active` (`#A41719`)
+- **Tailwind**: `bg-primary text-white font-heading text-base px-6 py-3 rounded hover:bg-primary-hover active:bg-primary-active disabled:opacity-50 transition-colors duration-200`
 
 #### Secondary Button
 
-- **Background**: Transparent
-- **Text**: Primary Red (#ED2224)
-- **Border**: 2px solid Primary Red
-- **Font**: Manrope, 16px
-- **Padding**: 10px 22px
-- **Border Radius**: 6px
-- **Hover**: Primary Red background, White text
-- **Active**: Darken 15% (#C01A1C)
-- **Tailwind**: `bg-transparent text-primary border-2 border-primary font-heading text-base px-6 py-2.5 hover:bg-primary hover:text-white active:bg-primary-active transition-colors duration-200`
+- **Background**: `bg-transparent`
+- **Text**: `text-primary`
+- **Border**: `border-2 border-primary`
+- **Hover**: Primary background, white text
+- **Tailwind**: `bg-transparent text-primary border-2 border-primary font-heading text-base px-6 py-2.5 rounded hover:bg-primary hover:text-white active:bg-primary-active transition-colors duration-200`
 
 #### Tertiary Button
 
-- **Background**: Transparent
-- **Text**: Charcoal (#333333)
-- **Border**: None
-- **Font**: Manrope, 16px
-- **Padding**: 8px 16px
-- **Hover**: Light Gray background (#F8F9FA)
-- **Active**: Medium Gray background (#E9ECEF)
+- **Background**: `bg-transparent`
+- **Text**: `text-charcoal`
+- **Hover**: Light Gray background
 - **Tailwind**: `bg-transparent text-charcoal font-heading text-base px-4 py-2 hover:bg-gray-50 active:bg-gray-100 transition-colors duration-200`
 
 #### Button Sizes
 
-- **Large**: 16px font, 16px 32px padding
-  - **Tailwind**: `text-lg px-8 py-4`
-- **Regular**: 14px font, 12px 24px padding
-  - **Tailwind**: `text-base px-6 py-3`
-- **Small**: 12px font, 8px 16px padding
-  - **Tailwind**: `text-sm px-4 py-2`
+- **Large**: `text-lg px-8 py-4`
+- **Regular**: `text-base px-6 py-3`
+- **Small**: `text-sm px-4 py-2`
+
+---
 
 ### Form Elements
 
 #### Input Fields
 
-- **Background**: White (#FFFFFF)
-- **Border**: 1px solid Border Gray (#DEE2E6)
-- **Border Radius**: 4px
-- **Padding**: 12px 16px
-- **Font**: Inter, 16px
-- **Focus**: Primary Red border, box-shadow
-- **Error**: Primary Red border and text
-- **Placeholder**: Medium Gray (#6C757D)
 - **Tailwind**: `bg-white border border-gray-200 rounded px-4 py-3 font-body text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary`
 - **Error State**: `border-error text-error focus:ring-error focus:border-error`
 
 #### Select Dropdowns
 
-- **Background**: White (#FFFFFF)
-- **Border**: 1px solid Border Gray (#DEE2E6)
-- **Border Radius**: 4px
-- **Padding**: 12px 16px
-- **Font**: Inter, 16px
-- **Arrow**: Custom SVG icon
-- **Focus**: Primary Red border
 - **Tailwind**: `bg-white border border-gray-200 rounded px-4 py-3 font-body text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary appearance-none`
 
 #### Checkboxes & Radio Buttons
 
-- **Size**: 18px x 18px
-- **Border**: 2px solid Border Gray (#DEE2E6)
-- **Border Radius**: 3px (checkbox), 50% (radio)
-- **Checked**: Primary Red background and checkmark
-- **Focus**: Primary Red outline
-- **Tailwind Checkbox**: `w-4 h-4 border-2 border-gray-200 rounded text-primary focus:ring-primary focus:ring-2`
-- **Tailwind Radio**: `w-4 h-4 border-2 border-gray-200 rounded-full text-primary focus:ring-primary focus:ring-2`
+- **Checkbox**: `w-4 h-4 border-2 border-gray-200 rounded text-primary focus:ring-primary focus:ring-2`
+- **Radio**: `w-4 h-4 border-2 border-gray-200 rounded-full text-primary focus:ring-primary focus:ring-2`
 
 #### Labels
 
-- **Font**: Manrope, 14px
-- **Color**: Charcoal (#333333)
-- **Weight**: Semi-bold
-- **Margin**: 0 0 8px 0
-- **Required**: Red asterisk (\*)
 - **Tailwind**: `block font-heading text-sm font-semibold text-charcoal mb-2`
 - **Required Asterisk**: `text-error`
+
+---
 
 ### Cards
 
 #### Basic Card
 
-- **Background**: White (#FFFFFF)
-- **Border**: 1px solid Border Gray (#DEE2E6)
-- **Border Radius**: 8px
-- **Padding**: 24px
-- **Shadow**: 0 2px 4px rgba(0,0,0,0.1)
-- **Hover**: Slight shadow increase
-- **Tailwind**: `bg-white border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-200`
+- **Tailwind**: `bg-white border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200`
 
 #### Service Card
 
-- **Background**: White (#FFFFFF)
-- **Border**: 1px solid Border Gray (#DEE2E6)
-- **Border Radius**: 8px
-- **Padding**: 32px 24px
-- **Icon**: 48px x 48px
-- **Title**: H4 styling
-- **Description**: Body Regular
-- **CTA**: Primary Button
-- **Tailwind**: `bg-white border border-gray-200 p-8 shadow-sm hover:shadow-md transition-shadow duration-200`
+The `.service-card-shadow` CSS class applies the brand signature shadow (source: `globals.css` line 184):
+
+```css
+box-shadow: -20px 24px 70px -6px rgba(0, 0, 0, 0.12);
+```
+
+On hover (`.service-card:hover .service-card-shadow`):
+
+```css
+box-shadow: -2px 8px 15px -4px rgba(0, 0, 0, 0.18);
+```
+
+Shadow easing uses `cubic-bezier(0.5, 0.09, 0.7, 1)` at `0.48s` (see [`brand/foundations.md`](brand/foundations.md) §8).
+
+- **Tailwind base**: `bg-white border border-gray-200 p-8 service-card-shadow transition-shadow`
 - **Icon**: `w-12 h-12 mb-4`
 - **Title**: `text-2xl font-heading leading-snug text-charcoal mb-4`
 - **Description**: `text-base font-body leading-normal text-charcoal mb-6`
 
 #### Blog Card
 
-- **Background**: White (#FFFFFF)
-- **Border Radius**: 8px
-- **Image**: 16:9 aspect ratio
-- **Padding**: 24px
-- **Title**: H5 styling
-- **Excerpt**: Body Small
-- **Meta**: Caption styling
-- **Tailwind**: `bg-white shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden`
+- **Container**: `bg-white shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden rounded-lg`
 - **Image**: `w-full aspect-video object-cover`
 - **Content**: `p-6`
 - **Title**: `text-xl font-heading leading-normal text-charcoal mb-2`
 - **Excerpt**: `text-sm font-body leading-snug text-charcoal mb-4`
 - **Meta**: `text-xs font-body leading-snug text-gray-500`
 
+---
+
 ### Navigation
 
 #### Header Navigation
 
-- **Background**: White (#FFFFFF)
-- **Border**: 1px solid Border Gray (#DEE2E6)
-- **Height**: 80px
-- **Logo**: 40px height
-- **Links**: Manrope, 16px
-- **Active**: Primary Red color
-- **Hover**: Primary Red underline
-- **Tailwind**: `bg-white border-b border-gray-200 h-20 flex items-center justify-between px-6 lg:px-8`
-- **Logo**: `h-10 w-auto`
-- **Nav Links**: `hidden md:flex space-x-8`
+- **Container**: `bg-white border-b border-gray-200 h-20 flex items-center justify-between px-6 lg:px-8`
+- **Logo**: `h-10 w-auto` (40px height per `src/components/Header.tsx` line 36)
+- **Nav Links wrapper**: `hidden md:flex space-x-8`
 - **Link**: `font-heading text-base text-charcoal hover:text-primary transition-colors duration-200`
 - **Active Link**: `font-heading text-base text-primary`
 - **Mobile Menu**: `md:hidden`
 
 #### Footer Navigation
 
-- **Background**: Light Gray (#F8F9FA)
-- **Padding**: 48px 0
-- **Links**: Inter, 14px
-- **Color**: Dark Gray (#495057)
-- **Hover**: Primary Red color
-- **Tailwind**: `bg-gray-50 py-12 px-6 lg:px-8`
+- **Container**: `bg-gradient-to-br from-charcoal via-gray-950 to-charcoal py-12 px-6 lg:px-8`
 - **Links**: `font-body text-sm text-gray-600 hover:text-primary transition-colors duration-200`
+
+---
 
 ### Alerts & Messages
 
 #### Success Message
 
-- **Background**: Light Green (#D4EDDA)
-- **Border**: 1px solid Success (#25ED21)
-- **Text**: Dark Green (#155724)
-- **Icon**: Checkmark
-- **Padding**: 16px 20px
 - **Tailwind**: `bg-green-50 border border-success text-green-800 px-5 py-4 flex items-center space-x-3`
 - **Icon**: `w-5 h-5 text-success`
 
 #### Warning Message
 
-- **Background**: Light Yellow (#FFF3CD)
-- **Border**: 1px solid Warning (#EDEA21)
-- **Text**: Dark Yellow (#856404)
-- **Icon**: Warning triangle
-- **Padding**: 16px 20px
 - **Tailwind**: `bg-yellow-50 border border-warning text-yellow-800 px-5 py-4 flex items-center space-x-3`
 - **Icon**: `w-5 h-5 text-warning`
 
 #### Error Message
 
-- **Background**: Light Red (#F8D7DA)
-- **Border**: 1px solid Error (#ED2224)
-- **Text**: Dark Red (#721C24)
-- **Icon**: X mark
-- **Padding**: 16px 20px
 - **Tailwind**: `bg-red-50 border border-error text-red-800 px-5 py-4 flex items-center space-x-3`
 - **Icon**: `w-5 h-5 text-error`
 
@@ -407,193 +254,89 @@ This document defines the comprehensive visual design system for #sharp's digita
 
 ## Spacing & Grid System
 
-### Spacing Scale
+### Spacing Scale (Base Unit: 4px)
 
-#### Base Unit: 4px
+| px  | rem     | Tailwind |
+| --- | ------- | -------- |
+| 4   | 0.25rem | `1`      |
+| 8   | 0.5rem  | `2`      |
+| 12  | 0.75rem | `3`      |
+| 16  | 1rem    | `4`      |
+| 20  | 1.25rem | `5`      |
+| 24  | 1.5rem  | `6`      |
+| 32  | 2rem    | `8`      |
+| 40  | 2.5rem  | `10`     |
+| 48  | 3rem    | `12`     |
+| 64  | 4rem    | `16`     |
+| 80  | 5rem    | `20`     |
 
-- **4px**: 0.25rem - xs - **Tailwind**: `1`
-- **8px**: 0.5rem - sm - **Tailwind**: `2`
-- **12px**: 0.75rem - md - **Tailwind**: `3`
-- **16px**: 1rem - base - **Tailwind**: `4`
-- **20px**: 1.25rem - lg - **Tailwind**: `5`
-- **24px**: 1.5rem - xl - **Tailwind**: `6`
-- **32px**: 2rem - 2xl - **Tailwind**: `8`
-- **40px**: 2.5rem - 3xl - **Tailwind**: `10`
-- **48px**: 3rem - 4xl - **Tailwind**: `12`
-- **64px**: 4rem - 5xl - **Tailwind**: `16`
-- **80px**: 5rem - 6xl - **Tailwind**: `20`
+### Custom Vertical Rhythm (globals.css overrides)
 
-#### Common Spacing Patterns
+See [`brand/foundations.md`](brand/foundations.md) §6 for the full table. Key custom classes:
 
-- **Component Padding**: 16px-24px - **Tailwind**: `p-4` to `p-6`
-- **Section Padding**: 48px-80px - **Tailwind**: `py-12` to `py-20`
-- **Element Margins**: 16px-32px - **Tailwind**: `mb-4` to `mb-8`
-- **Card Gaps**: 24px-32px - **Tailwind**: `gap-6` to `gap-8`
+| Class    | Padding-top / bottom | Mobile (≤767px)     |
+| -------- | -------------------- | ------------------- |
+| `.py-19` | `8rem` / `8rem`      | `3.5rem` / `3.5rem` |
+| `.py-20` | `4.8rem` / `8rem`    | `3rem` / `5rem`     |
+| `.py-21` | `4.8rem` / `8.7rem`  | `3rem` / `5rem`     |
+| `.py-24` | `8rem` / `11.6rem`   | `4rem` / `5rem`     |
+
+### Common Spacing Patterns
+
+- **Component Padding**: `p-4` to `p-6` (16px–24px)
+- **Section Padding**: `py-12` to `py-20` (48px–80px)
+- **Element Margins**: `mb-4` to `mb-8` (16px–32px)
+- **Card Gaps**: `gap-6` to `gap-8` (24px–32px)
 
 ### Grid System
 
-#### Desktop Grid (1200px+)
+#### Container
 
-- **Columns**: 12
-- **Gutter**: 24px
-- **Margins**: 24px
-- **Max Width**: 1200px
-- **Breakpoints**:
-  - xl: 1200px+ - **Tailwind**: `xl:`
-  - lg: 992px-1199px - **Tailwind**: `lg:`
-  - md: 768px-991px - **Tailwind**: `md:`
-  - sm: 576px-767px - **Tailwind**: `sm:`
-  - xs: <576px - **Tailwind**: default
-- **Tailwind Grid**: `grid grid-cols-12 gap-6`
-
-#### Container Widths
-
-- **Full Width**: 100% - **Tailwind**: `w-full`
-- **Constrained**: 1200px max-width - **Tailwind**: `max-w-7xl mx-auto`
-- **Narrow**: 800px max-width - **Tailwind**: `max-w-4xl mx-auto`
-- **Text**: 600px max-width - **Tailwind**: `max-w-2xl mx-auto`
+- **Max-width**: `max-w-7xl mx-auto` (66em per `tailwind.config.js`)
+- **Page sections**: `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`
+- **Narrow**: `max-w-4xl mx-auto` (800px)
+- **Text column**: `max-w-2xl mx-auto` (600px)
 
 #### Layout Patterns
 
-- **Two Column**: 8/4 or 6/6 split - **Tailwind**: `grid grid-cols-1 lg:grid-cols-3 gap-6` (8/4) or `grid grid-cols-1 lg:grid-cols-2 gap-6` (6/6)
-- **Three Column**: 4/4/4 split - **Tailwind**: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6`
-- **Four Column**: 3/3/3/3 split - **Tailwind**: `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6`
-- **Sidebar**: 8/4 or 9/3 split - **Tailwind**: `grid grid-cols-1 lg:grid-cols-4 gap-6` with `lg:col-span-3` and `lg:col-span-1`
+- **Two Column (8/4)**: `grid grid-cols-1 lg:grid-cols-3 gap-6`
+- **Two Column (6/6)**: `grid grid-cols-1 lg:grid-cols-2 gap-6`
+- **Three Column**: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6`
+- **Four Column**: `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6`
+- **Sidebar (8/4)**: `grid grid-cols-1 lg:grid-cols-4 gap-6` with `lg:col-span-3` / `lg:col-span-1`
+- **Asymmetric intro**: `.intro-container` applies `grid-template-columns: repeat(1, 0.444fr 1fr)` (collapses to single column on mobile)
 
-### Responsive Breakpoints
+#### Responsive Breakpoints
 
-#### Mobile First Approach
-
-```css
-/* Mobile: 320px+ */
-@media (min-width: 320px) {
-} /* Tailwind: default */
-
-/* Tablet: 768px+ */
-@media (min-width: 768px) {
-} /* Tailwind: md: */
-
-/* Desktop: 1024px+ */
-@media (min-width: 1024px) {
-} /* Tailwind: lg: */
-
-/* Large Desktop: 1200px+ */
-@media (min-width: 1200px) {
-} /* Tailwind: xl: */
-```
+| Breakpoint   | Width   | Tailwind prefix |
+| ------------ | ------- | --------------- |
+| xs (default) | 320px+  | (none)          |
+| sm           | 576px+  | `sm:`           |
+| md           | 768px+  | `md:`           |
+| lg           | 1024px+ | `lg:`           |
+| xl           | 1200px+ | `xl:`           |
 
 #### Component Responsive Behavior
 
-- **Typography**: Scale down 15-20% on mobile
-  - **Tailwind**: `text-2xl md:text-3xl lg:text-4xl` (responsive sizing)
-- **Buttons**: Full width on mobile
-  - **Tailwind**: `w-full md:w-auto`
-- **Cards**: Stack vertically on mobile
-  - **Tailwind**: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3`
-- **Navigation**: Hamburger menu on mobile
-  - **Tailwind**: `hidden md:flex` for desktop nav, `md:hidden` for mobile menu
+- **Typography**: `text-2xl md:text-3xl lg:text-4xl`
+- **Buttons**: Full width on mobile — `w-full md:w-auto`
+- **Cards**: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3`
+- **Navigation**: `hidden md:flex` (desktop nav) + `md:hidden` (mobile menu)
 
 ---
 
-## Brand Application Guidelines
+## TailwindCSS Configuration Reference
 
-### Logo Usage
-
-#### Logo Specifications
-
-- **File Format**: SVG (scalable vector)
-- **Location**: `img/sharp_logo.svg`
-- **Minimum Size**: 120px width
-- **Clear Space**: 2x logo height on all sides
-- **Backgrounds**: White or very light backgrounds only
-
-#### Logo Variations
-
-- **Primary**: Full color logo
-- **Monochrome**: Black version for print
-- **Reverse**: White version for dark backgrounds
-- **Simplified**: Icon-only version for small spaces
-
-### Brand Voice & Tone
-
-#### Professional Attributes
-
-- **Authoritative**: Industry expertise and thought leadership
-- **Trustworthy**: Reliable partner for transformation
-- **Innovative**: AI-first approach and cutting-edge solutions
-- **Results-Focused**: Measurable impact and ROI
-
-#### Communication Style
-
-- **Clear**: Straightforward, jargon-free communication
-- **Confident**: Assertive without being aggressive
-- **Helpful**: Educational and supportive approach
-- **Strategic**: Big-picture thinking with practical application
-
-### Visual Hierarchy
-
-#### Content Priority
-
-1. **Hero Message**: Largest, most prominent
-2. **Service CTAs**: Secondary prominence
-3. **Supporting Content**: Balanced emphasis
-4. **Legal/Footer**: Minimal emphasis
-
-#### Page Layout Principles
-
-- **F-Pattern**: Important content follows reading pattern
-- **White Space**: Generous spacing for clarity
-- **Focal Points**: Strategic use of color and size
-- **Visual Flow**: Logical progression through content
-
-### Imagery Guidelines
-
-#### Photography Style
-
-- **Professional**: High-quality, business-focused
-- **Authentic**: Real people, genuine interactions
-- **Modern**: Contemporary office and technology settings
-- **Diverse**: Inclusive representation
-
-#### Iconography
-
-- **Style**: Minimalist, geometric
-- **Weight**: Consistent stroke width
-- **Size**: 24px, 32px, 48px standard sizes
-- **Color**: Primary Red or Charcoal
-
-### Accessibility Standards
-
-#### Universal Design Principles
-
-- **Keyboard Navigation**: All interactive elements
-- **Screen Readers**: Proper ARIA labels and structure
-- **Color Blindness**: Information not solely color-dependent
-- **Motor Impairments**: Large touch targets (44px minimum)
-
-#### Testing Requirements
-
-- **WAVE**: Web accessibility evaluation
-- **axe**: Automated accessibility testing
-- **Manual Testing**: Keyboard and screen reader testing
-- **User Testing**: Include users with disabilities
-
----
-
-## Implementation Guidelines
-
-### TailwindCSS Configuration
-
-#### Custom Colors
+### Custom Colors (tailwind.config.js)
 
 ```javascript
 module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#ED2224',
-        'primary-hover': '#D41E20',
-        'primary-active': '#C01A1C',
+        primary: '#D41F21',
+        'primary-hover': '#BC1B1D',
+        'primary-active': '#A41719',
         charcoal: '#333333',
         // Extended palette
         'orange-sharp': '#ED8421',
@@ -607,10 +350,10 @@ module.exports = {
         'purple-sharp': '#8421ED',
         'magenta-sharp': '#EA21ED',
         'pink-sharp': '#ED218B',
-        // Semantic colors
+        // Semantic colors — hex values in brand/foundations.md §12
         success: '#25ED21',
         warning: '#EDEA21',
-        error: '#ED2224',
+        error: /* hex defined in brand/foundations.md §2 semantic table */,
         info: '#218BED',
       },
     },
@@ -618,15 +361,18 @@ module.exports = {
 };
 ```
 
-#### Custom Typography
+**Note:** The `error` token hex is intentionally distinct from the brand primary — it is the semantic error red shipped in `tailwind.config.js`. Do not use it as a brand accent. See [`brand/foundations.md`](brand/foundations.md) §2 for the rationale.
+
+### Custom Typography (tailwind.config.js)
 
 ```javascript
 module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['Manrope', 'Helvetica Neue', 'Arial', 'sans-serif'],
-        body: ['Inter', 'Times New Roman', 'serif'],
+        heading: ['Manrope', 'Inter', 'sans-serif'],
+        body: ['Inter', 'serif'],
+        sans: ['Inter', 'sans-serif'],
         mono: ['Fira Code', 'Courier New', 'monospace'],
       },
     },
@@ -634,12 +380,26 @@ module.exports = {
 };
 ```
 
-### Shadcn/UI Customization
+Fonts are loaded via `next/font/google` in `src/app/layout.tsx`. Legacy webfont assets in `public/font/` are no longer loaded — do not reference them in new work. See [`brand/foundations.md`](brand/foundations.md) §3.
 
-#### Component Theme Configuration
+### CSS Variables (globals.css)
 
-```javascript
-// components.json
+```css
+:root {
+  --primary: #d41f21;
+  --primary-hover: #bc1b1d;
+  --primary-active: #a41719;
+  --charcoal: #333333;
+  --success: #25ed21;
+  --warning: #edea21;
+  /* --error: see brand/foundations.md §2 semantic table */
+  --info: #218bed;
+}
+```
+
+### Shadcn/UI Configuration (components.json)
+
+```json
 {
   "style": "default",
   "rsc": true,
@@ -657,54 +417,37 @@ module.exports = {
 }
 ```
 
-#### CSS Variables for Theme
+### Shadcn/UI Component Overrides
 
-```css
-/* globals.css */
-:root {
-  --primary: #ed2224;
-  --primary-hover: #d41e20;
-  --primary-active: #c01a1c;
-  --charcoal: #333333;
-  --success: #25ed21;
-  --warning: #edea21;
-  --error: #ed2224;
-  --info: #218bed;
-}
-```
-
-#### Component Customization Examples
-
-- **Button**: Override default primary color with `bg-primary hover:bg-primary-hover`
-- **Input**: Use `border-gray-200 focus:border-primary focus:ring-primary`
-- **Card**: Apply `bg-white border-gray-200 shadow-sm hover:shadow-md`
-- **Badge**: Use semantic colors `bg-success text-white` or `bg-warning text-charcoal`
-
-#### Component Consistency
-
-- Use consistent spacing and sizing across all components
-- Apply brand colors to all interactive elements
-- Ensure accessibility standards in all custom components
-- Maintain Shadcn/UI component functionality while updating appearance
-
-### Quality Assurance
-
-#### Design Review Checklist
-
-- [ ] Brand colors used correctly
-- [ ] Typography hierarchy followed
-- [ ] Spacing system applied consistently
-- [ ] Accessibility standards met
-- [ ] Mobile responsiveness verified
-- [ ] Cross-browser compatibility tested
-
-#### Performance Considerations
-
-- **Font Loading**: Optimize web font loading
-- **Color Optimization**: Use efficient color formats
-- **Component Bundle**: Tree-shake unused components
-- **Image Optimization**: Compress and optimize imagery
+- **Button**: `bg-primary hover:bg-primary-hover`
+- **Input**: `border-gray-200 focus:border-primary focus:ring-primary`
+- **Card**: `bg-white border-gray-200 shadow-sm hover:shadow-md`
+- **Badge**: `bg-success text-white` or `bg-warning text-charcoal`
 
 ---
 
-This visual design system provides the foundation for creating a cohesive, professional, and accessible digital experience for #sharp's digital transformation consultancy. The system should be referenced throughout the development process to ensure consistency and brand alignment across all digital touchpoints.
+## Quality Assurance
+
+### Design Review Checklist
+
+- [ ] Brand colors used correctly (primary `#D41F21`, not legacy value)
+- [ ] Typography hierarchy followed (`font-heading` for headings, `font-body` for copy)
+- [ ] Spacing system applied consistently
+- [ ] WCAG AA contrast met for all text — verify against [`brand/foundations.md`](brand/foundations.md) §11
+- [ ] Mobile responsiveness verified
+- [ ] Cross-browser compatibility tested
+
+### Accessibility Checklist
+
+- [ ] Keyboard navigation works for all interactive elements
+- [ ] ARIA labels present on icon-only buttons and form controls
+- [ ] Touch targets minimum 44px (use `min-h-[44px] min-w-[44px]`)
+- [ ] Color is not the sole indicator for state (add icon or text label alongside color)
+- [ ] Focus states visible (`focus:ring-2 focus:ring-primary`)
+- [ ] Motion: wrap significant animations in `@media (prefers-reduced-motion: no-preference)`
+
+### Performance Notes
+
+- Fonts are served via `next/font/google` — no manual `<link>` tags needed
+- Tree-shake unused Shadcn/UI components — import only what's used
+- Use `next/image` for all imagery to get automatic optimisation
