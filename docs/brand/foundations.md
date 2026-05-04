@@ -86,10 +86,11 @@ High-luminance hues (`yellow-sharp`, `lime-sharp`, `mint-sharp`, `cyan-sharp`, `
 
 Both fonts loaded via `next/font/google` in `src/app/layout.tsx` (lines 2, 6–14). They are served as CSS custom properties (`--font-inter`, `--font-manrope`) injected on the `<body>` element (line 83).
 
-| Role              | Font    | Token                    | CSS variable     |
-| ----------------- | ------- | ------------------------ | ---------------- |
-| Headings / titles | Manrope | `font-heading`           | `--font-manrope` |
-| Body / UI         | Inter   | `font-body`, `font-sans` | `--font-inter`   |
+| Role                   | Font    | Token          | CSS variable     |
+| ---------------------- | ------- | -------------- | ---------------- |
+| Headings / titles      | Manrope | `font-heading` | `--font-manrope` |
+| Body reading text      | Inter   | `font-body`    | `--font-inter`   |
+| UI / form / micro-copy | Inter   | `font-sans`    | `--font-inter`   |
 
 Font family stacks from `tailwind.config.js` (lines 31–35):
 
@@ -98,6 +99,10 @@ heading: ['Manrope', 'Inter', 'sans-serif']
 body:    ['Inter', 'serif']
 sans:    ['Inter', 'sans-serif']
 ```
+
+`font-body` and `font-sans` share the same primary typeface (Inter) but carry different fallback stacks: `font-body` falls back to `serif` and is intended for body reading text, while `font-sans` falls back to `sans-serif` and is used for UI elements, form controls, and micro-copy.
+
+Note: legacy webfont assets in `public/font/` are no longer loaded; the active implementation uses `next/font/google` via `src/app/layout.tsx`.
 
 ### Type scale
 
@@ -302,7 +307,7 @@ All transitions are defined in `globals.css`. Use these exact curves — do not 
 
 - Page transitions: keep calm, no slide or fade between routes.
 - Content text: no animated entrance for body copy in static page sections.
-- Avoid animations on elements where `prefers-reduced-motion: reduce` is active. Wrap motion in a `@media (prefers-reduced-motion: no-preference)` guard where possible.
+- Avoid animations on elements where `prefers-reduced-motion: reduce` is active. Wrap motion in a `@media (prefers-reduced-motion: no-preference)` guard where possible. The shipping `globals.css` does not yet implement this guard; tracked as a future accessibility improvement.
 
 ---
 
@@ -431,7 +436,7 @@ All interactive elements require visible focus states. The `Layout.tsx` componen
 </a>
 ```
 
-Focus ring on the mobile menu button uses `focus:ring-2 focus:ring-inset focus:ring-primary` (`src/components/Header.tsx` line 74). Ensure all shadcn/ui interactive components maintain equivalent focus visibility.
+Focus ring on the mobile menu button uses `focus:ring-2 focus:ring-inset focus:ring-primary` (`src/components/Header.tsx` line 73). Ensure all shadcn/ui interactive components maintain equivalent focus visibility.
 
 ### Motion / vestibular
 
