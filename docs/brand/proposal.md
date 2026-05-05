@@ -91,7 +91,7 @@ Proposal decks use the **professional-warm** register from the tone spectrum, le
 - **PDF export:** 150 DPI for circulation. The PDF is read-only; the Google Slides working copy remains the editable source for that proposal.
 - **Margins:** ≥ 10% of frame edge on all sides (≥ 192 px left/right, ≥ 108 px top/bottom at 1920 × 1080).
 
-**Documented type-size exception (solutions slide):** The solutions slide uses Inter 11pt body type — well below `presentation.md`'s 18–24pt body range. This is required by the 5-cards-in-one-row density and is the only slide on which the exception applies.
+**Documented type-size exceptions (solutions slide):** The solutions slide carries three distinct type sizes within the content zone — slide title (Manrope 36pt), card title (Manrope 14pt weight 500), and card body (Inter 11pt) — plus the 9pt VAT note. This is two simultaneous overrides of `presentation.md` rules: (a) Inter 11pt body type sits well below `presentation.md`'s 18–24pt body range, required by the 5-cards-in-one-row density; (b) the 14pt card title introduces a third type size on the slide, overriding `presentation.md` §2's two-sizes-per-slide rule. Both exceptions apply only to the solutions slide.
 
 → See `presentation.md` §4 for full deck format conventions; this section overrides only where stated.
 
@@ -126,7 +126,7 @@ The template ships in V1 order. To switch to V2 in Google Slides, drag slide 2 (
 
 ### Footer
 
-`Confidential · #sharp` only — Inter 9pt, `#333333`, applied via slide master. **No company registration number on the deck.** T&Cs and company registration are handled in the separate signed agreement at contract time, not in the proposal deck.
+`Confidential · #sharp` only — Inter 9pt, `#333333`, applied via slide master. This replaces `presentation.md` §5's footer treatment (accent line + page number + logo lockup) for proposals; do not add a page number or footer logo lockup to a proposal slide. **No company registration number on the deck.** T&Cs and company registration are handled in the separate signed agreement at contract time, not in the proposal deck.
 
 ---
 
