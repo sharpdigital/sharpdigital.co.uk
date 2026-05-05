@@ -306,7 +306,7 @@ All paths are relative to the repository root.
 
 | Asset                      | Path                                  | Use in proposals                                                          |
 | -------------------------- | ------------------------------------- | ------------------------------------------------------------------------- |
-| Primary logo (light bg)    | `img/sharp_logo.svg`                  | Cover top-left; master footer logo lockup                                 |
+| Primary logo (light bg)    | `img/sharp_logo.svg`                  | Cover top-left only (no footer logo — see §5)                              |
 | Inverted logo (dark bg)    | `img/sharp_logo_invert.svg`           | Reserved for any optional dark accent (not used in default V1 deck)       |
 | Team photo — Janos         | `public/img/team_janos.jpg`           | Reference asset; not used by default in the 5-slide deck                  |
 | Team photo — Loreen        | `public/img/team_loreen.jpg`          | Reference asset; not used by default in the 5-slide deck                  |

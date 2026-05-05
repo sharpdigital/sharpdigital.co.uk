@@ -27,7 +27,7 @@ pptx.title = '#sharp · Proposal · Template';
 pptx.subject = 'Proposal deck template';
 pptx.company = '#sharp';
 
-// --- Master slide: footer "Confidential · #sharp" + small logo lockup ---
+// --- Master slide: footer "Confidential · #sharp" (text only — no footer logo per proposal.md §5) ---
 pptx.defineSlideMaster({
   title: 'SHARP_PROPOSAL',
   background: { color: 'FFFFFF' },
