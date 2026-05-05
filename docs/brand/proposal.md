@@ -27,11 +27,13 @@ A proposal is a **5-slide Google Slides deck** sent to a prospect's buying commi
 | Role                         | Hex       | Where used                                                                |
 | ---------------------------- | --------- | ------------------------------------------------------------------------- |
 | Body text / headings         | `#333333` | All slide body copy, table text, footer                                   |
-| Background                   | `#FFFFFF` | All slides; never replaced with a fill colour                             |
+| Background — header / content | `#FFFFFF` | Header strip and content area on every slide. Never replaced with a fill colour. |
+| Hero band imagery            | per slide | Page-specific bg image (matched to the equivalent website page) with a `#333333` overlay at ≈ 35% opacity. Slides 2–5; cover full-bleed. See §5 and §11. |
+| Hero band title text         | `#FFFFFF` | Slide titles overlaid on the hero band; reads on the dark overlay.        |
 | Accent / primary (sparingly) | `#D41F21` | Cover accent line, slide-title underline, solutions-card price text       |
 | Logo (light bg)              | —         | Use `img/sharp_logo.svg`                                                  |
 
-Brand primary `#D41F21` only — no other red shades. Red must never be used as a slide background. See `docs/brand/foundations.md §2`.
+Brand primary `#D41F21` only — no other red shades. Red must never be used as a slide background or as a hero overlay; the overlay is always `#333333`. See `docs/brand/foundations.md §2`.
 
 ### Typography
 
@@ -48,10 +50,9 @@ Manrope and Inter are Google Fonts; Google Slides loads them automatically on im
 
 ### Logo
 
-- **Light-background slides** (default white): `img/sharp_logo.svg`.
-- Minimum rendered height: 24 px in a 1920 × 1080 frame.
+- **Every slide** carries `img/sharp_logo.svg` in the white header strip, top-left, ~0.4" tall (≥ 24 px in a 1920 × 1080 frame).
 - Logo never recoloured, rotated, skewed, or stretched.
-- Cover slide places the logo **top-left** (per `presentation.md` §6 cover convention). Body slides do not require the logo; the master-slide footer carries it.
+- The master slide adds the text-only footer "Confidential · #sharp"; no footer logo lockup.
 
 → For full visual rules, see [`brand/foundations.md`](foundations.md).
 
@@ -99,13 +100,24 @@ Proposal decks use the **professional-warm** register from the tone spectrum, le
 
 ## 5. Layout & composition
 
-### Three-zone slide grid
+### Four-zone slide grid
 
-Inherited from `presentation.md` §5: title zone (~15%), content zone (~72%), footer zone (~13%). Left-align all body copy; centring is permitted only on the cover slide.
+The proposal deck mirrors the website's page chrome (`Header` + `PageHeader` + content sections). Every slide carries:
+
+| Zone           | Vertical band (1080-px frame)   | Treatment                                                                       |
+| -------------- | ------------------------------- | ------------------------------------------------------------------------------- |
+| Header strip   | top 0–10% (≈ 0.7" / 100 px)     | White; logo top-left; thin `#eeeeee` hairline along the bottom (mirrors the site's `border-b border-gray-200`). |
+| Hero band      | 10–34% (≈ 1.85" / 265 px)       | Page-specific bg image with a `#333333` overlay at ≈ 35% opacity; slide title in white, Manrope 36pt, left-aligned, vertically centred. 4–8 px `#D41F21` underline along the bottom edge of the band, beneath the title. |
+| Content area   | 34–93% (≈ 4.25" / 610 px)       | White. Bullets, cards, and per-slide content live here.                         |
+| Footer         | bottom 7% (≈ 0.5" / 75 px)      | White; "Confidential · #sharp" Inter 9pt, applied via slide master.             |
+
+The cover slide is the exception: its hero band fills the full content area below the header strip (down to the footer line), with the project topic and red accent overlaid in white.
+
+This four-zone grid replaces the inherited three-zone treatment from `presentation.md` §5 — proposals get the website's page chrome instead of the deck-style three-zone grid. Left-align all body copy; centring is permitted only on the cover slide.
 
 ### Slide-title underline
 
-Every body slide carries a 2–4 px `#D41F21` line beneath the slide title. This is the brand "underline" motif; it is the structural use of red on body slides.
+Every body slide (2–5) carries a 4–8 px `#D41F21` line along the bottom edge of the hero band, beneath the slide title. The cover slide carries the same accent beneath its centred-vertically title, on the hero. This is the brand "underline" motif; it is the structural use of red on body slides.
 
 ### Two ordering variants
 
@@ -118,11 +130,11 @@ The template ships in V1 order. To switch to V2 in Google Slides, drag slide 2 (
 
 ### The 5 slides — V1 order
 
-1. **Cover** *(per-proposal)* — project topic (Manrope 200, 60–80pt, `#333333`); 4–8 px `#D41F21` accent line beneath the title **or** first-word red, choose one not both; logo top-left ≥ 24 px high; client name + proposal date bottom-right (Inter 14pt). Footer applied via slide master.
-2. **About us / Why us** *(static across all proposals)* — single slide, two-column layout. Slide title "About #sharp" with red underline. Left column "About us" (Manrope 14pt weight 500 sub-heading + 2–3 short paragraphs/bullets). Right column "Why us" (same sub-heading style + 3–4 bullets ≤ 12 words). Snapshotted from the website `/about` page; refreshed periodically (see `docs/templates/README.md`).
-3. **Your brief** *(placeholder)* — 3–5 bullets ≤ 12 words. Covers problem, key goals, scope as understood from the discovery call. Author types this in per proposal.
-4. **Proposed solutions** *(placeholder, distinctive slide)* — single row of 5 cards. See §6 for the card spec. "All prices exclude VAT." footer note bottom-left, Inter 9pt `#333333`.
-5. **Next steps** *(placeholder + standard contact)* — 1–3 numbered actions; contact lockup (name · email · booking link) at the bottom.
+1. **Cover** *(per-proposal)* — full-bleed hero with `public/img/services_bg.jpg` (matches the website's services-page hero) + `#333333` overlay (≈ 35% opacity). Project topic in white, Manrope 200, 60–80pt, left-aligned, vertically centred in the hero. 4–8 px `#D41F21` accent line beneath the title. Client name + proposal date bottom-right in white (Inter 14pt). Logo top-left in the white header strip. Footer applied via slide master.
+2. **About us / Why us** *(static across all proposals)* — hero band carries `public/img/about_bg.jpg` (matches the website's `/about` page hero) with slide title "About #sharp" in white. Content area below: two columns. Left column "About us" (Manrope 14pt weight 500 sub-heading + 2–3 short paragraphs/bullets). Right column "Why us" (same sub-heading style + 3–4 bullets ≤ 12 words). Snapshotted from the website `/about` page; refreshed periodically (see `docs/templates/README.md`).
+3. **Your brief** *(placeholder)* — hero band carries `public/img/analyse.jpg` (the discovery / analyse imagery from the website services) with slide title "Your brief" in white. Content area: 3–5 bullets ≤ 12 words. Covers problem, key goals, scope as understood from the discovery call. Author types this in per proposal.
+4. **Proposed solutions** *(placeholder, distinctive slide)* — hero band carries `public/img/automation.jpg` (the doing / building imagery from the website services) with slide title "Proposed solutions" in white. Content area: single row of 5 cards. See §6 for the card spec. "All prices exclude VAT." footer note bottom-left, Inter 9pt `#333333`.
+5. **Next steps** *(placeholder + standard contact)* — hero band carries `public/img/contact_bg.jpg` (matches the website's `/contact` page hero) with slide title "Next steps" in white. Content area: 1–3 numbered actions; contact lockup (name · email · booking link) at the bottom.
 
 ### Footer
 
@@ -132,7 +144,20 @@ The template ships in V1 order. To switch to V2 in Google Slides, drag slide 2 (
 
 ## 6. Component / element library
 
-Two proposal-specific components, defined here because they are not in `presentation.md`'s component library.
+Three proposal-specific components, defined here because they are not in `presentation.md`'s component library.
+
+### Header strip + hero band
+
+Every slide opens with a two-band chrome that mirrors the website's `Header` + `PageHeader` pattern. Treat this as one shared slide-master frame; never override per-slide.
+
+| Element            | Spec                                                                                                                          |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| Header strip       | Top 0.7" (≈ 100 px in 1080). White. Logo `img/sharp_logo.svg` top-left, ~0.4" tall. Thin `#eeeeee` hairline along the bottom (mirrors the site's `border-b border-gray-200`). |
+| Hero band          | 1.85" tall directly below the header strip on slides 2–5. Cover slide's hero fills the full content area below the header strip, down to the footer line. |
+| Hero image source  | Per slide — see §5 ("The 5 slides — V1 order") and §11 (asset paths).                                                         |
+| Overlay            | `#333333` rectangle at ≈ 35% opacity over the full hero band. Lifts white-text legibility while keeping the photo readable.   |
+| Title              | Manrope 36pt weight 200–300 (60–80pt on cover), `#FFFFFF`, left-aligned at 0.9" margin, vertically centred in the hero band.  |
+| Underline accent   | 4–8 px `#D41F21` line, ~1.8" wide, sitting along the bottom edge of the hero band (slides 2–5) or beneath the cover title.    |
 
 ### 5-card solutions grid
 
@@ -190,16 +215,22 @@ Authors fill in placeholder text — clearly marked with `[Square brackets]` —
 ```
 Slide type: Cover
 
-Title (Manrope 72pt weight 200):
+Header strip (top 0.7"): white; logo top-left (sharp_logo.svg, ~0.4" tall);
+  thin #eeeeee hairline along the bottom edge.
+
+Hero (full-bleed below the header strip, down to the footer line):
+  Background image: public/img/services_bg.jpg
+  Overlay: #333333 at ~35% opacity
+
+Title (Manrope 72pt weight 200, white, vertically centred in the hero,
+left-aligned at 0.9" margin):
   AI Transformation Assessment
 
-Red accent: 5 px horizontal line beneath the title (#D41F21)
+Red accent: 5 px #D41F21 line beneath the title
 
-Bottom-right (Inter 14pt, #333333):
+Bottom-right (Inter 14pt, white):
   Meridian Retail Group
   4 May 2026
-
-Logo: top-left, sharp_logo.svg, ≥ 24 px height
 
 Footer (master): Confidential · #sharp
 ```
@@ -209,9 +240,16 @@ Footer (master): Confidential · #sharp
 Each card is a column in a single row across the slide. Cards numbered 1–5.
 
 ```
-Slide title (Manrope 36pt weight 300):
-  Proposed solutions
-  ──────────  (#D41F21 underline, 2 px)
+Header strip (top 0.7"): white; logo top-left.
+
+Hero band (1.85" tall directly below the header strip):
+  Background image: public/img/automation.jpg
+  Overlay: #333333 at ~35% opacity
+  Slide title (Manrope 36pt, white, left-aligned, vertically centred):
+    Proposed solutions
+  ──────────  (#D41F21 underline, ~6 px, along the bottom edge of the band)
+
+Content area (white, below the hero band):
 
 Card 1
   1. Discovery (Manrope 14pt 500)
@@ -306,8 +344,13 @@ All paths are relative to the repository root.
 
 | Asset                      | Path                                  | Use in proposals                                                          |
 | -------------------------- | ------------------------------------- | ------------------------------------------------------------------------- |
-| Primary logo (light bg)    | `img/sharp_logo.svg`                  | Cover top-left only (no footer logo — see §5)                              |
+| Primary logo (light bg)    | `img/sharp_logo.svg`                  | Header strip top-left on every slide (no footer logo — see §5)             |
 | Inverted logo (dark bg)    | `img/sharp_logo_invert.svg`           | Reserved for any optional dark accent (not used in default V1 deck)       |
+| Hero — cover               | `public/img/services_bg.jpg`          | Slide 1 (Cover) hero — matches the website services-page hero              |
+| Hero — about               | `public/img/about_bg.jpg`             | Slide 2 (About us / Why us) hero — matches the website `/about` hero       |
+| Hero — brief               | `public/img/analyse.jpg`              | Slide 3 (Your brief) hero — discovery / analyse imagery                    |
+| Hero — solutions           | `public/img/automation.jpg`           | Slide 4 (Proposed solutions) hero — doing / building imagery               |
+| Hero — next steps          | `public/img/contact_bg.jpg`           | Slide 5 (Next steps) hero — matches the website `/contact` hero            |
 | Team photo — Janos         | `public/img/team_janos.jpg`           | Reference asset; not used by default in the 5-slide deck                  |
 | Team photo — Loreen        | `public/img/team_loreen.jpg`          | Reference asset; not used by default in the 5-slide deck                  |
 | Template source            | `docs/templates/proposal-template.pptx` | The committed `.pptx` file; imported to the #sharp Drive folder for use |

@@ -15,13 +15,15 @@ Source-of-truth template files for #sharp client-facing artefacts. Files here ar
 
 ## `proposal-template.pptx` — what it is
 
-The #sharp proposal deck specified in [`docs/brand/proposal.md`](../brand/proposal.md). Five slides, 16:9, in **V1 (Forwarded context)** order:
+The #sharp proposal deck specified in [`docs/brand/proposal.md`](../brand/proposal.md). Five slides, 16:9, in **V1 (Forwarded context)** order. Each slide carries the website's page chrome (white header strip with logo · page-specific hero band with the slide title in white · white content area below):
 
-1. Cover
-2. About us / Why us
-3. Your brief
-4. Proposed solutions (5-card grid)
-5. Next steps
+| # | Slide                  | Hero image                                                 |
+| - | ---------------------- | ---------------------------------------------------------- |
+| 1 | Cover                  | `public/img/services_bg.jpg` (full-bleed below the header) |
+| 2 | About us / Why us      | `public/img/about_bg.jpg`                                  |
+| 3 | Your brief             | `public/img/analyse.jpg`                                   |
+| 4 | Proposed solutions     | `public/img/automation.jpg`                                |
+| 5 | Next steps             | `public/img/contact_bg.jpg`                                |
 
 Use this template whenever you need to issue a client proposal — a deck that proposes solutions and pricing. For a post-discovery recap (no pricing, no sign-off ask), use the leave-behind structure documented in [`docs/brand/presentation.md`](../brand/presentation.md) §7 instead.
 
@@ -73,11 +75,12 @@ Slide 2 ("About #sharp") carries snapshotted, not-live copy. Refresh the snapsho
 
 - The website `/about` page changes materially (new positioning statement, new mission, new values).
 - The "Why us" bullets become out of date (e.g. capability claims that no longer hold).
+- The website's hero photography is replaced (any of `services_bg.jpg`, `about_bg.jpg`, `analyse.jpg`, `automation.jpg`, `contact_bg.jpg` — see the table at the top of this file). The deck's heroes track the website's heroes; refresh together.
 
 To refresh:
 
 1. Read the current `/about` page (`https://sharpdigital.co.uk/about` or `src/app/about/page.tsx` `contentSetup` block).
-2. Edit `scripts/generate-proposal-template.mjs` — update the About us / Why us text in the slide-2 block. Preserve the constraints: 2–3 About us bullets ≤ 15 words; 3–4 Why us bullets ≤ 12 words.
+2. Edit `scripts/generate-proposal-template.mjs` — update the About us / Why us text in the slide-2 block. Preserve the constraints: 2–3 About us bullets ≤ 15 words; 3–4 Why us bullets ≤ 12 words. If a hero asset has been replaced, update the corresponding entry in the `HEROES` map at the top of the script.
 3. Run `npm run generate:proposal-template` to rebuild the `.pptx`.
 4. Verify the file opens correctly (Google Slides drag-import).
 5. Commit the script change and the regenerated `.pptx` together.
