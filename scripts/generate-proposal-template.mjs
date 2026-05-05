@@ -63,7 +63,7 @@ pptx.defineSlideMaster({
       { text: '[Client name]', options: { fontFace: 'Inter', fontSize: 14, color: CHARCOAL } },
       { text: '\n[Proposal date]', options: { fontFace: 'Inter', fontSize: 14, color: CHARCOAL } },
     ],
-    { x: 8.5, y: 6.3, w: 4.3, h: 0.7, align: 'right', valign: 'bottom' }
+    { x: 8.5, y: 6.0, w: 4.3, h: 0.7, align: 'right', valign: 'bottom' }
   );
 }
 
@@ -156,8 +156,9 @@ pptx.defineSlideMaster({
     fill: { color: RED }, line: { color: RED },
   });
 
-  // Card layout: 5 columns across the 12.33" usable width.
-  // Margin 0.9" left/right -> 11.53" content; gutter 0.2"; card width = (11.53 - 4*0.2)/5 = 2.146"
+  // Card layout: 5 cards × 2.15" + 4 × 0.2" gutters = 11.55" total content row,
+  // starting at 0.9" left margin → cards span 0.9" to 12.45", leaving 0.88" right margin
+  // within the 13.333" LAYOUT_WIDE frame.
   const cardY = 1.6;
   const cardH = 4.6;
   const cardW = 2.15;
