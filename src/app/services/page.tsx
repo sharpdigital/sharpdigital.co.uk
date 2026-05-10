@@ -26,48 +26,47 @@ const accordion: AccordionItem[] = [
     column: {
       title: 'Tried & True Systems',
       details:
-        'Our battle-tested frameworks and methodologies have helped dozens of organizations achieve successful digital transformation.',
+        "We've refined our approach through dozens of successful transformations across diverse industries. Our frameworks are battle-tested, iterative, and designed to deliver real results in real situations that solve specific challenges.",
     },
   },
   {
-    /* title: 'Measurable <span class="text-primary">Results</span>', */
     title: 'Measurable Results',
     icon: <MeasureIcon />,
     column: {
-      title: 'Verifiable Performance',
+      title: 'Accountable to Outcomes',
       details:
-        'We focus on delivering tangible business outcomes with clear metrics and KPIs that demonstrate ROI.',
+        "We're accountable to outcomes. Every engagement is anchored to clear KPIs and business metrics that matter to you, whether that's revenue growth, cost reduction, customer acquisition, or operational efficiency. You'll see where value is being created and why.",
     },
   },
   {
-    title: 'Expert Team',
+    title: 'Specialist Team',
     icon: <TeamIcon />,
     column: {
-      title: 'Specialized Professionals',
+      title: 'Rare Depth, Holistic Solutions',
       details:
-        'Our team combines deep technical expertise with business acumen to deliver solutions that work in the real world.',
+        'Our leadership combines rare depth: full-stack technical architects, strategic communications experts, and data-driven strategists. What sets us apart is that we collaborate across disciplines to solve problems holistically, ensuring technology decisions align with your business priorities and culture.',
     },
   },
 ];
 
 const contentSetup: ContentSectionProps = {
-  title: 'What is Digital Transformation?',
+  title: 'Our <span>Approach</span>',
   description: [
-    `Digital transformation is the integration of digital technology into all areas of a
-                business, fundamentally changing how you operate and deliver value to customers.
-                It&apos;s also a cultural change that requires organizations to continually
-                challenge the status quo, experiment, and get comfortable with failure.`,
-    `At <span>#sharp</span>, we understand that
-                digital transformation isn&apos;t just about technology—it&apos;s about people,
-                processes, and culture. Our approach ensures that your transformation initiatives
-                deliver real, measurable business value.`,
+    `We offer business and digital transformation support to give your organisation what it needs most: winning customer experience, operational efficiency, and unmatched data-driven insight.`,
+    `We partner with you to identify what&apos;s working well, uncover opportunities for improvement, and implement practical strategies that create measurable business impact. Through a seamless, end-to-end approach, we help your business streamline operations, strengthen performance, and position itself for sustainable growth in an increasingly competitive market.`,
+    `Our team brings deep expertise in full-stack architecture, customer experience design, and data-driven strategy. We work collaboratively across your organisation to ensure technology decisions align with your business goals, your teams are equipped to innovate confidently, and your business can create real, measurable impact.`,
   ],
   cards: [
     {
+      title: 'Future-Ready <span>Digital Transformation</span>',
+      text: [
+        `We help ambitious organisations architect, launch or digitise their offering to drive growth, strengthen customer relationships, and create competitive advantage. Whether you&apos;re modernising legacy systems, building next-generation platforms, or scaling proven digital experiences, we partner with you to deliver solutions that work — technically sound, commercially smart, and built to last.`,
+      ],
+    },
+    {
       title: 'Our <span>AI Transformation</span> Approach',
       text: [
-        `We leverage artificial intelligence and machine learning to accelerate your
-                  digital transformation journey. Our AI-powered solutions help you:`,
+        `We leverage artificial intelligence and machine learning to accelerate your digital transformation journey. Our AI-powered solutions help you:`,
       ],
       list: [
         'Automate complex processes and reduce operational costs',

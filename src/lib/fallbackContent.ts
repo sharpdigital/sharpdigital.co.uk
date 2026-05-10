@@ -161,28 +161,14 @@ export const fallbackServices: CardSum[] = [
     slug: 'customer-experience',
     image: '/img/service_1.jpg',
     description:
-      'Optimize every touchpoint for exceptional customer journeys through digital transformation, user journey mapping, and personalization strategies.',
+      'We help organisations optimise every touchpoint to create seamless customer experiences that drive loyalty, engagement, and growth.',
     content: `# Customer Experience Transformation
 
-Customer experience transformation is about creating seamless, personalized interactions that delight customers at every touchpoint. We help organizations map their customer journeys, identify pain points, and implement digital solutions that enhance satisfaction and loyalty.
+In today's competitive landscape, customer experience is a key differentiator. We map your customer journeys to identify friction points, uncover opportunities, and implement smarter, more personalised digital experiences across web, mobile, email, and in-app interactions.
 
-## Our Approach
+By combining user journey strategy with data-driven personalisation, we help turn disconnected interactions into meaningful customer relationships that increase conversion, reduce churn, and strengthen brand loyalty.
 
-Our comprehensive approach includes:
-
-- **User Research**: Deep understanding of customer needs and behaviors
-- **Journey Mapping**: Visualizing the complete customer experience
-- **Touchpoint Optimization**: Enhancing every interaction point
-- **Personalization Technologies**: Implementing AI-driven personalization
-
-## Outcomes
-
-We work with you to create experiences that not only meet but exceed customer expectations, resulting in:
-
-- Increased customer satisfaction scores
-- Higher retention rates
-- Improved brand loyalty
-- Better customer lifetime value`,
+Whether improving an existing platform or launching new digital services, we work with your team to create experiences that not only perform better, but leave a lasting impression.`,
     features: ['Journey Mapping', 'Touchpoint Optimization', 'Personalization'],
     orderIndex: 1,
   },
@@ -192,27 +178,14 @@ We work with you to create experiences that not only meet but exceed customer ex
     slug: 'operational-efficiency',
     image: '/img/service_2.jpg',
     description:
-      'Streamline processes through intelligent automation, workflow optimization, and digital tool integration to improve efficiency.',
+      'Streamlining processes through intelligent automation, workflow optimisation, and digital tool integration to improve efficiency.',
     content: `# Operational Efficiency Transformation
 
-Operational efficiency transformation focuses on streamlining processes, eliminating waste, and leveraging technology to maximize productivity. We help organizations identify bottlenecks, implement automation solutions, and optimize workflows for peak performance.
+Inefficient processes drain resources, frustrate teams, and hold back growth. We help organisations identify where automation, workflow optimisation, and strategic tool integration can deliver immediate wins, freeing your people to focus on high-value work that actually drives business results.
 
-## Our Methodology
+Our approach begins with clarity. We audit your current operations to understand where bottlenecks exist, where manual work dominates, and where the right technology can create meaningful impact. From there, we design and implement solutions that connect your systems, automate repetitive tasks, and create seamless workflows that your teams actually want to use. Whether it's automating customer onboarding, streamlining internal approvals, or integrating disparate tools into a unified ecosystem, we ensure every change delivers both efficiency gains and improved user experience.
 
-Our proven methodology includes:
-
-- **Process Analysis**: Comprehensive review of current operations
-- **Automation Implementation**: Smart automation for repetitive tasks
-- **Workflow Optimization**: Redesigning processes for efficiency
-- **Change Management**: Ensuring sustainable adoption
-
-## Key Benefits
-
-- Reduced operational costs
-- Faster process execution
-- Improved accuracy and quality
-- Enhanced employee satisfaction
-- Better resource utilization`,
+The payoff is significant: faster turnaround times, reduced operational costs, fewer errors, and teams with the bandwidth to innovate.`,
     features: ['Process Automation', 'Workflow Optimization', 'Digital Tools'],
     orderIndex: 2,
   },
@@ -222,27 +195,14 @@ Our proven methodology includes:
     slug: 'data-and-analytics',
     image: '/img/service_3.jpg',
     description:
-      'Transform data into actionable business intelligence through BI dashboards, predictive analytics, and data visualization.',
+      'Transforming data into actionable business intelligence through BI dashboards, predictive analytics, and data visualisation.',
     content: `# Data & Analytics Transformation
 
-Data and analytics transformation enables organizations to make informed decisions based on insights rather than intuition. We help businesses build robust data pipelines, implement advanced analytics, and create compelling visualizations that drive strategic decision-making.
+Most organisations have data but lack the capability to see the stories the data is telling, spot opportunities, or make confident decisions fast. We build custom BI solutions that give your leadership team and frontline managers the insights they need, in real time. From revenue trends and customer behaviour to operational performance and market opportunities, we design dashboards and analytics that answer your toughest questions.
 
-## Our Approach
+Beyond reporting the past, we help you anticipate the future. Our predictive analytics capabilities identify emerging patterns and potential risks before they impact your business, giving you the foresight to stay ahead.
 
-Our comprehensive data strategy includes:
-
-- **Data Strategy Development**: Aligning data initiatives with business goals
-- **Analytics Implementation**: Advanced analytics and machine learning
-- **Dashboard Creation**: Interactive business intelligence dashboards
-- **Team Training**: Enabling your team to leverage data effectively
-
-## Delivered Value
-
-- Real-time business insights
-- Predictive analytics capabilities
-- Data-driven decision making
-- Competitive advantage through analytics
-- Improved ROI on data investments`,
+The impact is immediate and measurable: faster decision-making, reduced risk, improved resource allocation, and growth fuelled by genuine market insight rather than guesswork. Your data becomes your competitive edge.`,
     features: ['BI Dashboards', 'Predictive Analytics', 'Data Visualization'],
     orderIndex: 3,
   },
