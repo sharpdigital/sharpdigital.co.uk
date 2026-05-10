@@ -256,26 +256,24 @@ export const fallbackTeamMembers: TeamMember[] = [
     slug: 'loreen',
     role: 'Business Transformation Strategist',
     description:
-      'Loreen is a business transformation strategist with over a decade of experience guiding organisations through complex commercial and digital change. She combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.',
+      'Strategic digital strategist and partnerships specialist with deep expertise in brand positioning, AI implementation, and stakeholder engagement. Expertise in guiding organisations through complex commercial and digital change, driving measurable business impact. She combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.',
     bio: `# About Loreen
 
-Loreen is a business transformation strategist with over a decade of experience guiding organisations through complex commercial and digital change. She combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.
+Strategic digital strategist and partnerships specialist with deep expertise in brand positioning, AI implementation, and stakeholder engagement. Expertise in guiding organisations through complex commercial and digital change, driving measurable business impact. She combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.
 
 ## Expertise
 
 - AI Strategy & Implementation
 - Digital Transformation Leadership
 - Data Analytics & Business Intelligence
-- Change Management
-- Strategic Communications
-- Market Growth`,
+- Change Management & Market Growth
+- Strategic Communications`,
     features: [
       'AI Strategy & Implementation',
       'Digital Transformation Leadership',
       'Data Analytics & Business Intelligence',
-      'Change Management',
+      'Change Management & Market Growth',
       'Strategic Communications',
-      'Market Growth',
     ],
     imageUrl: '/img/team_loreen.jpg',
     linkedinUrl: 'https://www.linkedin.com/in/loreen-fraser-owusu/',
@@ -287,32 +285,63 @@ Loreen is a business transformation strategist with over a decade of experience 
     $id: '2',
     name: 'Janos',
     slug: 'janos',
-    role: 'Customer Experience Lead',
+    role: 'Principal Full Stack Architect',
     description:
-      'Janos is a customer experience leader who blends technology and human insight to help organisations build products and services people love. With a background spanning user research, journey mapping, and UX/UI design, he brings a distinctly human-centred approach to digital transformation.',
+      'Senior full-stack creative engineer and digital systems specialist with deep expertise in scalable web platforms, modern product architecture, and AI-enabled platform optimisation. As a key co-founder of #sharp, Janos brings rare technical depth combined with strategic systems-level thinking, enabling organisations to balance innovation with reliability across complex digital challenges.',
     bio: `# About Janos
 
-Janos is a customer experience leader who blends technology and human insight to help organisations build products and services people love. With a background spanning user research, journey mapping, and UX/UI design, he brings a distinctly human-centred approach to digital transformation.
+Senior full-stack creative engineer and digital systems specialist with deep expertise in scalable web platforms, modern product architecture, and AI-enabled platform optimisation. As a key co-founder of #sharp, Janos brings rare technical depth combined with strategic systems-level thinking, enabling organisations to balance innovation with reliability across complex digital challenges.
 
 ## Expertise
 
-- Customer Experience Design
-- User Research & Testing
-- Journey Mapping
-- Personalisation Strategies
-- UX/UI Optimisation`,
+- Full-Stack Architecture & AI-powered Platform Engineering
+- Scalable Web Systems & Performance Optimisation
+- Product Engineering & Digital Strategy
+- Legacy System Modernisation
+- Next-Generation Web Technologies`,
     features: [
-      'Customer Experience Design',
-      'User Research & Testing',
-      'Journey Mapping',
-      'Personalisation Strategies',
-      'UX/UI Optimisation',
+      'Full-Stack Architecture & AI-powered Platform Engineering',
+      'Scalable Web Systems & Performance Optimisation',
+      'Product Engineering & Digital Strategy',
+      'Legacy System Modernisation',
+      'Next-Generation Web Technologies',
     ],
     imageUrl: '/img/team_janos.jpg',
     linkedinUrl: 'https://www.linkedin.com/in/janos-csikos/',
     email: 'janos@sharpdigital.co.uk',
     $createdAt: '2024-03-01T10:00:00Z',
     $updatedAt: '2024-03-01T10:00:00Z',
+  },
+  {
+    $id: '3',
+    name: 'David',
+    slug: 'david',
+    role: 'Creative Technology Director',
+    description:
+      'David is an intuitive digital experience specialist bringing deep expertise in web development, creative direction, branding, AI-enabled application development, and immersive digital technologies. Known for bridging technical execution with strategic thinking, delivering high-performance digital products that balance creative excellence with commercial impact.',
+    bio: `# About David
+
+David is an intuitive digital experience specialist bringing deep expertise in web development, creative direction, branding, AI-enabled application development, and immersive digital technologies. Known for bridging technical execution with strategic thinking, delivering high-performance digital products that balance creative excellence with commercial impact.
+
+## Expertise
+
+- Creative Application Architecture
+- Digital Experience & User Experience Design
+- Mobile & Immersive Technologies
+- High-Performance Development
+- Technical Problem-Solving & Innovation`,
+    features: [
+      'Creative Application Architecture',
+      'Digital Experience & User Experience Design',
+      'Mobile & Immersive Technologies',
+      'High-Performance Development',
+      'Technical Problem-Solving & Innovation',
+    ],
+    imageUrl: '/img/team_david.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/davidszucs/',
+    email: 'david@sharpdigital.co.uk',
+    $createdAt: '2026-05-10T10:00:00Z',
+    $updatedAt: '2026-05-10T10:00:00Z',
   },
 ];
 
