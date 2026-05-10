@@ -2,6 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Layout from '@/components/Layout';
 import { getServices } from '@/lib/contentService';
+import { servicesToCardSums } from '@/components/contentParsingUtils';
 import { AccordionItem } from '@/components/accordion/AccordionPanel';
 import FlaskIcon from '@/components/icons/FlaskIcon';
 import MeasureIcon from '@/components/icons/MeasureIcon';
@@ -79,7 +80,7 @@ const contentSetup: ContentSectionProps = {
   ],
 };
 export default async function ServicesPage() {
-  const services = await getServices();
+  const services = servicesToCardSums(await getServices());
 
   return (
     <>

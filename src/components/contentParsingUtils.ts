@@ -1,4 +1,4 @@
-import { BlogPost, CardSum, TeamMember } from '@/lib/appwrite';
+import { BlogPost, CardSum, Service, TeamMember } from '@/lib/appwrite';
 import { ContentSectionProps } from './sections/ContentSection';
 import { formatDate } from '@/lib/utils';
 
@@ -98,21 +98,16 @@ export function parseContentSection(markdown: string): ContentSectionProps {
   return result;
 }
 
-export function generateFeatureCards(features: string[]): CardSum[] {
-  const slugify = (s: string) =>
-    s
-      .toLowerCase()
-      .normalize('NFKD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
-
-  return features.map((feature, i) => ({
-    $id: String(i + 1),
-    title: feature,
-    slug: slugify(feature),
-    description: `Expert implementation of ${feature.toLowerCase()} to drive measurable business results.`,
-    image: `/img/feature_${i + 1}.jpg`,
+export function servicesToCardSums(services: Service[]): CardSum[] {
+  return services.map((service) => ({
+    $id: service.$id,
+    title: service.title,
+    slug: service.slug,
+    description: service.description ?? null,
+    image: service.imageUrl ?? null,
+    features: service.features,
+    orderIndex: service.orderIndex,
+    buttonText: 'Learn More',
   }));
 }
 

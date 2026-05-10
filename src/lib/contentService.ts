@@ -19,7 +19,7 @@ import {
   getFallbackTags,
 } from './fallbackContent';
 
-import type { BlogPost, CardSum, TeamMember } from './appwrite';
+import type { BlogPost, Service, TeamMember } from './appwrite';
 
 // Check if Appwrite is configured
 const isAppwriteConfigured = () => {
@@ -69,7 +69,7 @@ export async function getBlogPostsByTag(tag: string, limit = 10): Promise<BlogPo
   return allPosts.filter((post) => post.tags.includes(tag)).slice(0, limit);
 }
 
-export async function getServices(): Promise<CardSum[]> {
+export async function getServices(): Promise<Service[]> {
   if (isAppwriteConfigured()) {
     try {
       return await appwriteGetServices();
@@ -81,7 +81,7 @@ export async function getServices(): Promise<CardSum[]> {
   return getFallbackServices();
 }
 
-export async function getService(slug: string): Promise<CardSum | null> {
+export async function getService(slug: string): Promise<Service | null> {
   if (isAppwriteConfigured()) {
     try {
       return await appwriteGetService(slug);

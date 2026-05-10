@@ -51,6 +51,19 @@ export interface CardSum {
   buttonText?: string;
 }
 
+export interface Service {
+  $id: string;
+  title: string;
+  slug: string;
+  description?: string | null; // short summary for cards and detail page header
+  content?: string | null; // full markdown content for detail page
+  features?: string[]; // capabilities list
+  imageUrl?: string | null;
+  orderIndex?: number | null;
+  $createdAt: string;
+  $updatedAt?: string;
+}
+
 export interface TeamMember {
   $id: string;
   name: string;
@@ -125,7 +138,7 @@ export async function getBlogPostsByTag(tag: string, limit = 10): Promise<BlogPo
   }
 }
 
-export async function getServices(): Promise<CardSum[]> {
+export async function getServices(): Promise<Service[]> {
   if (!databases || !appwriteDatabaseId) {
     throw new Error('Appwrite client not configured');
   }
@@ -135,14 +148,14 @@ export async function getServices(): Promise<CardSum[]> {
       Query.orderAsc('orderIndex'),
     ]);
 
-    return response.documents as unknown as CardSum[];
+    return response.documents as unknown as Service[];
   } catch (error) {
     console.error('Error fetching services:', error);
     return [];
   }
 }
 
-export async function getService(slug: string): Promise<CardSum | null> {
+export async function getService(slug: string): Promise<Service | null> {
   if (!databases || !appwriteDatabaseId) {
     throw new Error('Appwrite client not configured');
   }
@@ -154,7 +167,7 @@ export async function getService(slug: string): Promise<CardSum | null> {
     ]);
 
     if (response.documents.length > 0) {
-      return response.documents[0] as unknown as CardSum;
+      return response.documents[0] as unknown as Service;
     }
     return null;
   } catch (error) {

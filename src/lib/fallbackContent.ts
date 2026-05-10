@@ -1,4 +1,4 @@
-import { BlogPost, CardSum, TeamMember } from './appwrite';
+import { BlogPost, CardSum, Service, TeamMember } from './appwrite';
 
 // Fallback blog posts with Appwrite document structure
 export const fallbackBlogPosts: BlogPost[] = [
@@ -154,57 +154,57 @@ export const fallbackBlogCards: CardSum[] = [
 ];
 
 // Fallback services with Appwrite document structure
-export const fallbackServices: CardSum[] = [
+export const fallbackServices: Service[] = [
   {
     $id: '1',
     title: 'Customer Experience',
     slug: 'customer-experience',
-    image: '/img/service_1.jpg',
+    imageUrl: '/img/service_1.jpg',
     description:
       'We help organisations optimise every touchpoint to create seamless customer experiences that drive loyalty, engagement, and growth.',
-    content: `# Customer Experience Transformation
-
-In today's competitive landscape, customer experience is a key differentiator. We map your customer journeys to identify friction points, uncover opportunities, and implement smarter, more personalised digital experiences across web, mobile, email, and in-app interactions.
+    content: `In today's competitive landscape, customer experience is a key differentiator. We map your customer journeys to identify friction points, uncover opportunities, and implement smarter, more personalised digital experiences across web, mobile, email, and in-app interactions.
 
 By combining user journey strategy with data-driven personalisation, we help turn disconnected interactions into meaningful customer relationships that increase conversion, reduce churn, and strengthen brand loyalty.
 
 Whether improving an existing platform or launching new digital services, we work with your team to create experiences that not only perform better, but leave a lasting impression.`,
     features: ['Journey Mapping', 'Touchpoint Optimization', 'Personalization'],
     orderIndex: 1,
+    $createdAt: '2024-03-01T10:00:00Z',
+    $updatedAt: '2026-05-11T10:00:00Z',
   },
   {
     $id: '2',
     title: 'Operational Efficiency',
     slug: 'operational-efficiency',
-    image: '/img/service_2.jpg',
+    imageUrl: '/img/service_2.jpg',
     description:
       'Streamlining processes through intelligent automation, workflow optimisation, and digital tool integration to improve efficiency.',
-    content: `# Operational Efficiency Transformation
-
-Inefficient processes drain resources, frustrate teams, and hold back growth. We help organisations identify where automation, workflow optimisation, and strategic tool integration can deliver immediate wins, freeing your people to focus on high-value work that actually drives business results.
+    content: `Inefficient processes drain resources, frustrate teams, and hold back growth. We help organisations identify where automation, workflow optimisation, and strategic tool integration can deliver immediate wins, freeing your people to focus on high-value work that actually drives business results.
 
 Our approach begins with clarity. We audit your current operations to understand where bottlenecks exist, where manual work dominates, and where the right technology can create meaningful impact. From there, we design and implement solutions that connect your systems, automate repetitive tasks, and create seamless workflows that your teams actually want to use. Whether it's automating customer onboarding, streamlining internal approvals, or integrating disparate tools into a unified ecosystem, we ensure every change delivers both efficiency gains and improved user experience.
 
 The payoff is significant: faster turnaround times, reduced operational costs, fewer errors, and teams with the bandwidth to innovate.`,
     features: ['Process Automation', 'Workflow Optimization', 'Digital Tools'],
     orderIndex: 2,
+    $createdAt: '2024-03-01T10:00:00Z',
+    $updatedAt: '2026-05-11T10:00:00Z',
   },
   {
     $id: '3',
     title: 'Data & Analytics',
     slug: 'data-and-analytics',
-    image: '/img/service_3.jpg',
+    imageUrl: '/img/service_3.jpg',
     description:
       'Transforming data into actionable business intelligence through BI dashboards, predictive analytics, and data visualisation.',
-    content: `# Data & Analytics Transformation
-
-Most organisations have data but lack the capability to see the stories the data is telling, spot opportunities, or make confident decisions fast. We build custom BI solutions that give your leadership team and frontline managers the insights they need, in real time. From revenue trends and customer behaviour to operational performance and market opportunities, we design dashboards and analytics that answer your toughest questions.
+    content: `Most organisations have data but lack the capability to see the stories the data is telling, spot opportunities, or make confident decisions fast. We build custom BI solutions that give your leadership team and frontline managers the insights they need, in real time. From revenue trends and customer behaviour to operational performance and market opportunities, we design dashboards and analytics that answer your toughest questions.
 
 Beyond reporting the past, we help you anticipate the future. Our predictive analytics capabilities identify emerging patterns and potential risks before they impact your business, giving you the foresight to stay ahead.
 
 The impact is immediate and measurable: faster decision-making, reduced risk, improved resource allocation, and growth fuelled by genuine market insight rather than guesswork. Your data becomes your competitive edge.`,
     features: ['BI Dashboards', 'Predictive Analytics', 'Data Visualization'],
     orderIndex: 3,
+    $createdAt: '2024-03-01T10:00:00Z',
+    $updatedAt: '2026-05-11T10:00:00Z',
   },
 ];
 
@@ -314,11 +314,11 @@ export function getFallbackBlogPost(slug: string): BlogPost | null {
   return fallbackBlogPosts.find((post) => post.slug === slug) || null;
 }
 
-export function getFallbackServices(): CardSum[] {
+export function getFallbackServices(): Service[] {
   return fallbackServices;
 }
 
-export function getFallbackService(slug: string): CardSum | null {
+export function getFallbackService(slug: string): Service | null {
   return fallbackServices.find((service) => service.slug === slug) || null;
 }
 
