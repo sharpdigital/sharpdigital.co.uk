@@ -6,7 +6,7 @@ import Carousel, { CarouselSetup } from '@/components/caroussel/Carousel';
 import AnimButton from '@/components/ui/AnimButton';
 import CardSection from '../components/sections/CardSection';
 import { getServices, getBlogPosts } from '@/lib/contentService';
-import { blogPostsToCardSums } from '@/components/contentParsingUtils';
+import { blogPostsToCardSums, servicesToCardSums } from '@/components/contentParsingUtils';
 
 const carouselSetup: CarouselSetup[] = [
   {
@@ -39,7 +39,7 @@ const carouselSetup: CarouselSetup[] = [
 ];
 
 export default async function Home() {
-  const services = await getServices();
+  const services = servicesToCardSums(await getServices());
   const news = blogPostsToCardSums(await getBlogPosts(3));
 
   const organizationSchema = {

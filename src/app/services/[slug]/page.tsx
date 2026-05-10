@@ -1,15 +1,14 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Layout from '@/components/Layout';
 import { getService, getServices } from '@/lib/contentService';
 import PageHeader from '@/components/sections/PageHeader';
-import ContentSection, { ContentSectionProps } from '@/components/sections/ContentSection';
-import { generateFeatureCards, parseContentSection } from '@/components/contentParsingUtils';
-import CardSection from '@/components/sections/CardSection';
 import AccordionSection from '@/components/sections/AccordionSection';
 import { AccordionItem } from '@/components/accordion/AccordionPanel';
 import PageEndSection from '@/components/sections/PageEndSection';
+import RichTextRenderer from '@/components/RichTextRenderer';
 
 interface ServicePageProps {
   params: Promise<{
@@ -36,7 +35,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     };
   }
 
-  const ogImage = service.image || '/img/services_bg.jpg';
+  const ogImage = service.imageUrl || '/img/services_bg.jpg';
 
   return {
     title: `${service.title} - Digital Transformation Services | #sharp`,
@@ -107,12 +106,6 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     notFound();
   }
 
-  const contentSetup: ContentSectionProps | null = service.content
-    ? parseContentSection(service.content)
-    : null;
-  const features = service.features ? generateFeatureCards(service.features) : null;
-  const featDesc = `Our comprehensive approach to ${service.title.toLowerCase()} includes these essential components.`;
-
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -139,36 +132,55 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      {/* Hero Section */}
       <PageHeader
         title={service.title}
-        description={service.description}
-        image={service.image ?? ''}
+        description={service.description ?? ''}
+        image="/img/services_bg.jpg"
       />
 
-      {/* Main Content */}
-      {!!contentSetup && <ContentSection {...contentSetup} />}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {service.imageUrl && (
+            <div className="mb-12">
+              <Image
+                src={service.imageUrl}
+                alt={service.title}
+                width={1200}
+                height={675}
+                className="w-full object-cover"
+              />
+            </div>
+          )}
 
-      {/* Key Features */}
-      {!!features && (
-        <CardSection
-          setup={features}
-          title="Key Features"
-          description={featDesc}
-          isGrid
-          hasBackground
-          noCardButton
-        />
-      )}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            <div className="lg:col-span-2">
+              {service.content && <RichTextRenderer content={service.content} />}
+            </div>
 
-      {/* Process Section */}
+            {service.features && service.features.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-heading font-light text-charcoal mb-4">
+                  Capabilities
+                </h2>
+                <ul className="space-y-2">
+                  {service.features.map((feature) => (
+                    <li key={feature} className="text-lg text-charcoal font-body">
+                      • {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
       <AccordionSection
         title="Our Process"
         description={`We follow a proven methodology to ensure successful ${service.title.toLowerCase()} implementation.`}
         setup={accordionSetup}
       />
 
-      {/* Call to Action */}
       <PageEndSection
         title={`Ready to Transform Your ${service.title}?`}
         description={`Let's discuss how we can help you achieve your digital transformation goals with our proven ${service.title.toLowerCase()} solutions.`}
