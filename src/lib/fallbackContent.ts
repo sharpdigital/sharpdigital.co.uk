@@ -1,4 +1,4 @@
-import { BlogPost, CardSum, TeamMember } from './appwrite';
+import { BlogPost, CardSum, Service, TeamMember } from './appwrite';
 
 // Fallback blog posts with Appwrite document structure
 export const fallbackBlogPosts: BlogPost[] = [
@@ -154,97 +154,57 @@ export const fallbackBlogCards: CardSum[] = [
 ];
 
 // Fallback services with Appwrite document structure
-export const fallbackServices: CardSum[] = [
+export const fallbackServices: Service[] = [
   {
     $id: '1',
     title: 'Customer Experience',
     slug: 'customer-experience',
-    image: '/img/service_1.jpg',
+    imageUrl: '/img/service_1.jpg',
     description:
-      'Optimize every touchpoint for exceptional customer journeys through digital transformation, user journey mapping, and personalization strategies.',
-    content: `# Customer Experience Transformation
+      'We help organisations optimise every touchpoint to create seamless customer experiences that drive loyalty, engagement, and growth.',
+    content: `In today's competitive landscape, customer experience is a key differentiator. We map your customer journeys to identify friction points, uncover opportunities, and implement smarter, more personalised digital experiences across web, mobile, email, and in-app interactions.
 
-Customer experience transformation is about creating seamless, personalized interactions that delight customers at every touchpoint. We help organizations map their customer journeys, identify pain points, and implement digital solutions that enhance satisfaction and loyalty.
+By combining user journey strategy with data-driven personalisation, we help turn disconnected interactions into meaningful customer relationships that increase conversion, reduce churn, and strengthen brand loyalty.
 
-## Our Approach
-
-Our comprehensive approach includes:
-
-- **User Research**: Deep understanding of customer needs and behaviors
-- **Journey Mapping**: Visualizing the complete customer experience
-- **Touchpoint Optimization**: Enhancing every interaction point
-- **Personalization Technologies**: Implementing AI-driven personalization
-
-## Outcomes
-
-We work with you to create experiences that not only meet but exceed customer expectations, resulting in:
-
-- Increased customer satisfaction scores
-- Higher retention rates
-- Improved brand loyalty
-- Better customer lifetime value`,
+Whether improving an existing platform or launching new digital services, we work with your team to create experiences that not only perform better, but leave a lasting impression.`,
     features: ['Journey Mapping', 'Touchpoint Optimization', 'Personalization'],
     orderIndex: 1,
+    $createdAt: '2024-03-01T10:00:00Z',
+    $updatedAt: '2026-05-11T10:00:00Z',
   },
   {
     $id: '2',
     title: 'Operational Efficiency',
     slug: 'operational-efficiency',
-    image: '/img/service_2.jpg',
+    imageUrl: '/img/service_2.jpg',
     description:
-      'Streamline processes through intelligent automation, workflow optimization, and digital tool integration to improve efficiency.',
-    content: `# Operational Efficiency Transformation
+      'Streamlining processes through intelligent automation, workflow optimisation, and digital tool integration to improve efficiency.',
+    content: `Inefficient processes drain resources, frustrate teams, and hold back growth. We help organisations identify where automation, workflow optimisation, and strategic tool integration can deliver immediate wins, freeing your people to focus on high-value work that actually drives business results.
 
-Operational efficiency transformation focuses on streamlining processes, eliminating waste, and leveraging technology to maximize productivity. We help organizations identify bottlenecks, implement automation solutions, and optimize workflows for peak performance.
+Our approach begins with clarity. We audit your current operations to understand where bottlenecks exist, where manual work dominates, and where the right technology can create meaningful impact. From there, we design and implement solutions that connect your systems, automate repetitive tasks, and create seamless workflows that your teams actually want to use. Whether it's automating customer onboarding, streamlining internal approvals, or integrating disparate tools into a unified ecosystem, we ensure every change delivers both efficiency gains and improved user experience.
 
-## Our Methodology
-
-Our proven methodology includes:
-
-- **Process Analysis**: Comprehensive review of current operations
-- **Automation Implementation**: Smart automation for repetitive tasks
-- **Workflow Optimization**: Redesigning processes for efficiency
-- **Change Management**: Ensuring sustainable adoption
-
-## Key Benefits
-
-- Reduced operational costs
-- Faster process execution
-- Improved accuracy and quality
-- Enhanced employee satisfaction
-- Better resource utilization`,
+The payoff is significant: faster turnaround times, reduced operational costs, fewer errors, and teams with the bandwidth to innovate.`,
     features: ['Process Automation', 'Workflow Optimization', 'Digital Tools'],
     orderIndex: 2,
+    $createdAt: '2024-03-01T10:00:00Z',
+    $updatedAt: '2026-05-11T10:00:00Z',
   },
   {
     $id: '3',
     title: 'Data & Analytics',
     slug: 'data-and-analytics',
-    image: '/img/service_3.jpg',
+    imageUrl: '/img/service_3.jpg',
     description:
-      'Transform data into actionable business intelligence through BI dashboards, predictive analytics, and data visualization.',
-    content: `# Data & Analytics Transformation
+      'Transforming data into actionable business intelligence through BI dashboards, predictive analytics, and data visualisation.',
+    content: `Most organisations have data but lack the capability to see the stories the data is telling, spot opportunities, or make confident decisions fast. We build custom BI solutions that give your leadership team and frontline managers the insights they need, in real time. From revenue trends and customer behaviour to operational performance and market opportunities, we design dashboards and analytics that answer your toughest questions.
 
-Data and analytics transformation enables organizations to make informed decisions based on insights rather than intuition. We help businesses build robust data pipelines, implement advanced analytics, and create compelling visualizations that drive strategic decision-making.
+Beyond reporting the past, we help you anticipate the future. Our predictive analytics capabilities identify emerging patterns and potential risks before they impact your business, giving you the foresight to stay ahead.
 
-## Our Approach
-
-Our comprehensive data strategy includes:
-
-- **Data Strategy Development**: Aligning data initiatives with business goals
-- **Analytics Implementation**: Advanced analytics and machine learning
-- **Dashboard Creation**: Interactive business intelligence dashboards
-- **Team Training**: Enabling your team to leverage data effectively
-
-## Delivered Value
-
-- Real-time business insights
-- Predictive analytics capabilities
-- Data-driven decision making
-- Competitive advantage through analytics
-- Improved ROI on data investments`,
+The impact is immediate and measurable: faster decision-making, reduced risk, improved resource allocation, and growth fuelled by genuine market insight rather than guesswork. Your data becomes your competitive edge.`,
     features: ['BI Dashboards', 'Predictive Analytics', 'Data Visualization'],
     orderIndex: 3,
+    $createdAt: '2024-03-01T10:00:00Z',
+    $updatedAt: '2026-05-11T10:00:00Z',
   },
 ];
 
@@ -256,26 +216,24 @@ export const fallbackTeamMembers: TeamMember[] = [
     slug: 'loreen',
     role: 'Business Transformation Strategist',
     description:
-      'Loreen is a business transformation strategist with over a decade of experience guiding organisations through complex commercial and digital change. She combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.',
+      'Strategic digital strategist and partnerships specialist with deep expertise in brand positioning, AI implementation, and stakeholder engagement. Expertise in guiding organisations through complex commercial and digital change, driving measurable business impact. She combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.',
     bio: `# About Loreen
 
-Loreen is a business transformation strategist with over a decade of experience guiding organisations through complex commercial and digital change. She combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.
+Strategic digital strategist and partnerships specialist with deep expertise in brand positioning, AI implementation, and stakeholder engagement. Expertise in guiding organisations through complex commercial and digital change, driving measurable business impact. She combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.
 
 ## Expertise
 
 - AI Strategy & Implementation
 - Digital Transformation Leadership
 - Data Analytics & Business Intelligence
-- Change Management
-- Strategic Communications
-- Market Growth`,
+- Change Management & Market Growth
+- Strategic Communications`,
     features: [
       'AI Strategy & Implementation',
       'Digital Transformation Leadership',
       'Data Analytics & Business Intelligence',
-      'Change Management',
+      'Change Management & Market Growth',
       'Strategic Communications',
-      'Market Growth',
     ],
     imageUrl: '/img/team_loreen.jpg',
     linkedinUrl: 'https://www.linkedin.com/in/loreen-fraser-owusu/',
@@ -287,32 +245,63 @@ Loreen is a business transformation strategist with over a decade of experience 
     $id: '2',
     name: 'Janos',
     slug: 'janos',
-    role: 'Customer Experience Lead',
+    role: 'Principal Full Stack Architect',
     description:
-      'Janos is a customer experience leader who blends technology and human insight to help organisations build products and services people love. With a background spanning user research, journey mapping, and UX/UI design, he brings a distinctly human-centred approach to digital transformation.',
+      'Senior full-stack creative engineer and digital systems specialist with deep expertise in scalable web platforms, modern product architecture, and AI-enabled platform optimisation. As a key co-founder of #sharp, Janos brings rare technical depth combined with strategic systems-level thinking, enabling organisations to balance innovation with reliability across complex digital challenges.',
     bio: `# About Janos
 
-Janos is a customer experience leader who blends technology and human insight to help organisations build products and services people love. With a background spanning user research, journey mapping, and UX/UI design, he brings a distinctly human-centred approach to digital transformation.
+Senior full-stack creative engineer and digital systems specialist with deep expertise in scalable web platforms, modern product architecture, and AI-enabled platform optimisation. As a key co-founder of #sharp, Janos brings rare technical depth combined with strategic systems-level thinking, enabling organisations to balance innovation with reliability across complex digital challenges.
 
 ## Expertise
 
-- Customer Experience Design
-- User Research & Testing
-- Journey Mapping
-- Personalisation Strategies
-- UX/UI Optimisation`,
+- Full-Stack Architecture & AI-powered Platform Engineering
+- Scalable Web Systems & Performance Optimisation
+- Product Engineering & Digital Strategy
+- Legacy System Modernisation
+- Next-Generation Web Technologies`,
     features: [
-      'Customer Experience Design',
-      'User Research & Testing',
-      'Journey Mapping',
-      'Personalisation Strategies',
-      'UX/UI Optimisation',
+      'Full-Stack Architecture & AI-powered Platform Engineering',
+      'Scalable Web Systems & Performance Optimisation',
+      'Product Engineering & Digital Strategy',
+      'Legacy System Modernisation',
+      'Next-Generation Web Technologies',
     ],
     imageUrl: '/img/team_janos.jpg',
     linkedinUrl: 'https://www.linkedin.com/in/janos-csikos/',
     email: 'janos@sharpdigital.co.uk',
     $createdAt: '2024-03-01T10:00:00Z',
     $updatedAt: '2024-03-01T10:00:00Z',
+  },
+  {
+    $id: '3',
+    name: 'David',
+    slug: 'david',
+    role: 'Creative Technology Director',
+    description:
+      'David is an intuitive digital experience specialist bringing deep expertise in web development, creative direction, branding, AI-enabled application development, and immersive digital technologies. Known for bridging technical execution with strategic thinking, delivering high-performance digital products that balance creative excellence with commercial impact.',
+    bio: `# About David
+
+David is an intuitive digital experience specialist bringing deep expertise in web development, creative direction, branding, AI-enabled application development, and immersive digital technologies. Known for bridging technical execution with strategic thinking, delivering high-performance digital products that balance creative excellence with commercial impact.
+
+## Expertise
+
+- Creative Application Architecture
+- Digital Experience & User Experience Design
+- Mobile & Immersive Technologies
+- High-Performance Development
+- Technical Problem-Solving & Innovation`,
+    features: [
+      'Creative Application Architecture',
+      'Digital Experience & User Experience Design',
+      'Mobile & Immersive Technologies',
+      'High-Performance Development',
+      'Technical Problem-Solving & Innovation',
+    ],
+    imageUrl: '/img/team_david.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/davidszucs/',
+    email: 'david@sharpdigital.co.uk',
+    $createdAt: '2026-05-10T10:00:00Z',
+    $updatedAt: '2026-05-10T10:00:00Z',
   },
 ];
 
@@ -325,11 +314,11 @@ export function getFallbackBlogPost(slug: string): BlogPost | null {
   return fallbackBlogPosts.find((post) => post.slug === slug) || null;
 }
 
-export function getFallbackServices(): CardSum[] {
+export function getFallbackServices(): Service[] {
   return fallbackServices;
 }
 
-export function getFallbackService(slug: string): CardSum | null {
+export function getFallbackService(slug: string): Service | null {
   return fallbackServices.find((service) => service.slug === slug) || null;
 }
 
