@@ -27,31 +27,6 @@ All values sourced from `tailwind.config.js`. For hex values, extended palette, 
   - Usage: Page backgrounds, card surfaces, contrast text on dark backgrounds
   - **Tailwind**: `bg-white`, `text-white`, `border-white`
 
-### Extended #sharp Spectrum
-
-Use for data visualisation, tag labels, and infographic accents only — not body text or structural elements.
-
-- **Orange**: `#ED8421` — **Tailwind**: `bg-orange-sharp`, `text-orange-sharp`
-- **Yellow**: `#EDEA21` — **Tailwind**: `bg-yellow-sharp`, `text-yellow-sharp`
-- **Yellow-Green**: `#8BED21` — **Tailwind**: `bg-lime-sharp`, `text-lime-sharp`
-- **Green**: `#25ED21` — **Tailwind**: `bg-green-sharp`, `text-green-sharp`
-- **Mint**: `#21ED84` — **Tailwind**: `bg-mint-sharp`, `text-mint-sharp`
-- **Cyan**: `#21EDEA` — **Tailwind**: `bg-cyan-sharp`, `text-cyan-sharp`
-- **Sky Blue**: `#218BED` — **Tailwind**: `bg-sky-sharp`, `text-sky-sharp`
-- **Blue**: `#2125ED` — **Tailwind**: `bg-blue-sharp`, `text-blue-sharp`
-- **Purple**: `#8421ED` — **Tailwind**: `bg-purple-sharp`, `text-purple-sharp`
-- **Magenta**: `#EA21ED` — **Tailwind**: `bg-magenta-sharp`, `text-magenta-sharp`
-- **Pink**: `#ED218B` — **Tailwind**: `bg-pink-sharp`, `text-pink-sharp`
-
-### Semantic Colors
-
-Error hex lives in `tailwind.config.js` and `brand/foundations.md` §12. Reference by class name only here.
-
-- **Success**: `#25ED21` — **Tailwind**: `bg-success`, `text-success`, `border-success`
-- **Warning**: `#EDEA21` — **Tailwind**: `bg-warning`, `text-warning`, `border-warning`
-- **Error**: See `brand/foundations.md` §2 — **Tailwind**: `bg-error`, `text-error`, `border-error`
-- **Info**: `#218BED` — **Tailwind**: `bg-info`, `text-info`, `border-info`
-
 ### Neutral Colors
 
 - **Light Gray**: `#F8F9FA` — Section backgrounds, card backgrounds — **Tailwind**: `bg-gray-50`
@@ -66,7 +41,6 @@ Full contrast pairings in [`brand/foundations.md`](brand/foundations.md) §11. W
 - Primary red (`#D41F21`) on white: ~5.0:1 — passes AA for normal text and large text. Permitted for CTA buttons, accent spans, and nav active state.
 - Charcoal on white: ~12.6:1 — passes AAA. Default for body text and headings.
 - Do **not** place primary red on charcoal — ~2.4:1, fails AA at all sizes.
-- High-luminance extended hues (`yellow-sharp`, `lime-sharp`, `mint-sharp`, `cyan-sharp`, `green-sharp`) fail AA on white as foreground text — use as background fills with dark text only.
 
 ---
 
@@ -346,30 +320,11 @@ module.exports = {
         'primary-hover': '#BC1B1D',
         'primary-active': '#A41719',
         charcoal: '#333333',
-        // Extended palette
-        'orange-sharp': '#ED8421',
-        'yellow-sharp': '#EDEA21',
-        'lime-sharp': '#8BED21',
-        'green-sharp': '#25ED21',
-        'mint-sharp': '#21ED84',
-        'cyan-sharp': '#21EDEA',
-        'sky-sharp': '#218BED',
-        'blue-sharp': '#2125ED',
-        'purple-sharp': '#8421ED',
-        'magenta-sharp': '#EA21ED',
-        'pink-sharp': '#ED218B',
-        // Semantic colors — hex values in brand/foundations.md §12
-        success: '#25ED21',
-        warning: '#EDEA21',
-        // error: hex defined in brand/foundations.md §2 semantic table — do not hardcode here
-        info: '#218BED',
       },
     },
   },
 };
 ```
-
-**Note:** The `error` token hex is intentionally distinct from the brand primary — it is the semantic error red shipped in `tailwind.config.js`. Do not use it as a brand accent. See [`brand/foundations.md`](brand/foundations.md) §2 for the rationale.
 
 ### Custom Typography (tailwind.config.js)
 
