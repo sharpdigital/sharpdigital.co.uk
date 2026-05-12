@@ -31,9 +31,9 @@ Canonical: `docs/brand/foundations.md` §3.
 
 - Primary / Text: #333333
 - Background: #FFFFFF
-- Highlight / Accent / link: #ED2224
+- Highlight / Accent / link: #D41F21
 - Other colors:
-  - #ED2224 (contrast: #FFFFFF)
+  - #D41F21 (contrast: #FFFFFF)
   - #ED8421 (contrast: #333333)
   - #EDEA21 (contrast: #333333)
   - #8BED21 (contrast: #333333)

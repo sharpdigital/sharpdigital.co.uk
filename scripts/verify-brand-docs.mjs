@@ -118,6 +118,12 @@ const SCAN_PATHS = [
   ...REQUIRED_FILES,
   'docs/02_visual-design-system.md',
   'docs/04_content-framework.md',
+  // Added for #34 — Frutiger drift guard
+  'CLAUDE.md',
+  'docs/00_specifications.md',
+  'docs/01_web-design-strategy.md',
+  'docs/06_migration-plan.md',
+  'src/app/globals.css',
 ];
 
 console.log('\n→ Checking required files exist…');
