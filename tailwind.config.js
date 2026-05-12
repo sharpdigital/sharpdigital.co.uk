@@ -12,21 +12,6 @@ module.exports = {
         'primary-hover': '#BC1B1D',
         'primary-active': '#A41719',
         charcoal: '#333333',
-        'orange-sharp': '#ED8421',
-        'yellow-sharp': '#EDEA21',
-        'lime-sharp': '#8BED21',
-        'green-sharp': '#25ED21',
-        'mint-sharp': '#21ED84',
-        'cyan-sharp': '#21EDEA',
-        'sky-sharp': '#218BED',
-        'blue-sharp': '#2125ED',
-        'purple-sharp': '#8421ED',
-        'magenta-sharp': '#EA21ED',
-        'pink-sharp': '#ED218B',
-        success: '#25ED21',
-        warning: '#EDEA21',
-        error: '#ED2224',
-        info: '#218BED',
       },
       fontFamily: {
         heading: ['Manrope', 'Inter', 'sans-serif'],
@@ -42,32 +27,6 @@ module.exports = {
       },
       maxWidth: {
         '7xl': '66em',
-      },
-      container: {
-        center: true,
-        padding: '2rem',
-        screens: {
-          '2xl': '1400px',
-        },
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
-        'bounce-gentle': 'bounceGentle 2s infinite',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        bounceGentle: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
       },
     },
   },
