@@ -14,7 +14,7 @@ Canonical visual reference for #sharp. Every colour, typeface, logo rule, spacin
 
 ### Primary palette
 
-All values sourced from `tailwind.config.js` (lines 10–13).
+All values sourced from `tailwind.config.js` (lines 11–14).
 
 | Token            | Hex       | Usage                                                                |
 | ---------------- | --------- | -------------------------------------------------------------------- |
@@ -24,36 +24,7 @@ All values sourced from `tailwind.config.js` (lines 10–13).
 | `charcoal`       | `#333333` | Body text, headings, icon fill                                       |
 | White            | `#FFFFFF` | Page backgrounds, card surfaces                                      |
 
-**Important:** `#D41F21` is the brand primary. The value `#ED2224` is the semantic **error** colour only (see semantic table below) — never use it as the brand primary. The legacy doc `02_visual-design-system.md` incorrectly lists `#ED2224` as primary and must be updated.
-
-### Extended #sharp spectrum
-
-Eleven extended hues. Sourced from `tailwind.config.js` (lines 15–25). Use for data visualisation, tag labels, and infographic accents only — not for body text or structural elements.
-
-| Token           | Hex       |
-| --------------- | --------- |
-| `orange-sharp`  | `#ED8421` |
-| `yellow-sharp`  | `#EDEA21` |
-| `lime-sharp`    | `#8BED21` |
-| `green-sharp`   | `#25ED21` |
-| `mint-sharp`    | `#21ED84` |
-| `cyan-sharp`    | `#21EDEA` |
-| `sky-sharp`     | `#218BED` |
-| `blue-sharp`    | `#2125ED` |
-| `purple-sharp`  | `#8421ED` |
-| `magenta-sharp` | `#EA21ED` |
-| `pink-sharp`    | `#ED218B` |
-
-### Semantic colours
-
-Sourced from `tailwind.config.js` (lines 26–29).
-
-| Token     | Hex       | Usage                                   |
-| --------- | --------- | --------------------------------------- |
-| `success` | `#25ED21` | Confirmation states                     |
-| `warning` | `#EDEA21` | Caution states                          |
-| `error`   | `#ED2224` | Error states, required-field validation |
-| `info`    | `#218BED` | Informational states                    |
+**Important:** `#D41F21` is the brand primary. The legacy doc `02_visual-design-system.md` historically listed `#ED2224` (a different red) as primary — that should be reconciled to `#D41F21` if any references survive.
 
 ### WCAG 2.1 AA contrast pairings
 
@@ -67,16 +38,10 @@ Contrast ratios are calculated against sRGB. Values marked ✓ pass AA for norma
 | `#FFFFFF` white    | `#D41F21` primary  | ~5.0:1  | ✓ AA        | ✓ AA                         |
 | `#FFFFFF` white    | `#333333` charcoal | ~12.6:1 | ✓✓ AAA      | ✓✓ AAA                       |
 
-**Extended hues against white (approximate):**
-
-High-luminance hues (`yellow-sharp`, `lime-sharp`, `mint-sharp`, `cyan-sharp`, `green-sharp`) produce contrast ratios below 3:1 against white — do **not** use them as foreground text colours on white backgrounds. Lower-luminance hues (`blue-sharp`, `purple-sharp`) approach 4–7:1 and may pass AA for large text only; verify before use.
-
 ### Do / Don't
 
 - **Do** use `primary` on white backgrounds for CTA text and key accent spans.
-- **Don't** use `primary` (`#D41F21`) on `yellow-sharp` or other light extended hues — the red-on-yellow combination fails contrast and reads poorly.
-- **Don't** use extended spectrum hues as body text on white without checking contrast.
-- **Don't** use `error` (`#ED2224`) as the brand primary colour in any context.
+- **Do** verify contrast (≥4.5:1 for body text, ≥3:1 for large text) before using `primary` on coloured backgrounds.
 
 ---
 
@@ -92,7 +57,7 @@ Both fonts loaded via `next/font/google` in `src/app/layout.tsx` (lines 2, 6–1
 | Body reading text      | Inter   | `font-body`    | `--font-inter`   |
 | UI / form / micro-copy | Inter   | `font-sans`    | `--font-inter`   |
 
-Font family stacks from `tailwind.config.js` (lines 31–35):
+Font family stacks from `tailwind.config.js` (lines 16–20):
 
 ```
 heading: ['Manrope', 'Inter', 'sans-serif']
@@ -102,11 +67,11 @@ sans:    ['Inter', 'sans-serif']
 
 `font-body` and `font-sans` share the same primary typeface (Inter) but carry different fallback stacks: `font-body` falls back to `serif` and is intended for body reading text, while `font-sans` falls back to `sans-serif` and is used for UI elements, form controls, and micro-copy.
 
-Note: legacy webfont assets in `public/font/` are no longer loaded; the active implementation uses `next/font/google` via `src/app/layout.tsx`.
+Fonts are loaded via `next/font/google` in `src/app/layout.tsx`. No local webfont assets are bundled.
 
 ### Type scale
 
-Sourced from `tailwind.config.js` (lines 36–42).
+Sourced from `tailwind.config.js` (lines 21–27).
 
 | Class      | Font size | Line-height | Weight    | Usage                            |
 | ---------- | --------- | ----------- | --------- | -------------------------------- |
@@ -126,7 +91,7 @@ Manrope → Inter → sans-serif. If Manrope fails to load, Inter maintains the 
 
 ### Print / PDF substitution policy
 
-When Manrope is unavailable (e.g., print or PDF export), substitute **Helvetica Neue** (or **Arial** as a secondary fallback). The legacy font files located in `public/font/` (the old webfont assets) are superseded and must not be referenced in new work — they are present only for backward compatibility with the pre-migration static site.
+When Manrope is unavailable (e.g., print or PDF export), substitute **Helvetica Neue** (or **Arial** as a secondary fallback). No local webfont assets are bundled — fonts are loaded exclusively via `next/font/google`.
 
 ---
 
