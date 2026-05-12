@@ -46,3 +46,6 @@ next-env.d.ts
 
 # superpowers skill scratch state (per-machine)
 /.superpowers/
+
+# Claude Code per-feature worktrees (local scratch)
+/.claude/worktrees/
