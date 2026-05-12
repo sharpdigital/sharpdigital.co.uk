@@ -136,7 +136,7 @@ Apply responsive prefixes to scale down 15–20% on mobile:
 #### Input Fields
 
 - **Tailwind**: `bg-white border border-gray-200 rounded px-4 py-3 font-body text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary`
-- **Error State**: `border-error text-error focus:ring-error focus:border-error`
+- **Error State**: `border-red-500 text-red-500 focus:ring-red-500 focus:border-red-500`
 
 #### Select Dropdowns
 
@@ -150,7 +150,7 @@ Apply responsive prefixes to scale down 15–20% on mobile:
 #### Labels
 
 - **Tailwind**: `block font-heading text-sm font-semibold text-charcoal mb-2`
-- **Required Asterisk**: `text-error`
+- **Required Asterisk**: `text-red-500`
 
 ---
 
@@ -217,20 +217,22 @@ See also [`brand/foundations.md`](brand/foundations.md) §8 for motion rationale
 
 ### Alerts & Messages
 
+Status (`success`, `warning`, `error`, `info`) colour classes are **not** defined in `tailwind.config.js`. Use Tailwind's stock palette for state surfaces:
+
 #### Success Message
 
-- **Tailwind**: `bg-green-50 border border-success text-green-800 px-5 py-4 flex items-center space-x-3`
-- **Icon**: `w-5 h-5 text-success`
+- **Tailwind**: `bg-green-50 border border-green-500 text-green-800 px-5 py-4 flex items-center space-x-3`
+- **Icon**: `w-5 h-5 text-green-500`
 
 #### Warning Message
 
-- **Tailwind**: `bg-yellow-50 border border-warning text-yellow-800 px-5 py-4 flex items-center space-x-3`
-- **Icon**: `w-5 h-5 text-warning`
+- **Tailwind**: `bg-yellow-50 border border-yellow-500 text-yellow-800 px-5 py-4 flex items-center space-x-3`
+- **Icon**: `w-5 h-5 text-yellow-500`
 
 #### Error Message
 
-- **Tailwind**: `bg-red-50 border border-error text-red-800 px-5 py-4 flex items-center space-x-3`
-- **Icon**: `w-5 h-5 text-error`
+- **Tailwind**: `bg-red-50 border border-red-500 text-red-800 px-5 py-4 flex items-center space-x-3`
+- **Icon**: `w-5 h-5 text-red-500`
 
 ---
 
@@ -343,7 +345,7 @@ module.exports = {
 };
 ```
 
-Fonts are loaded via `next/font/google` in `src/app/layout.tsx`. Legacy webfont assets in `public/font/` are no longer loaded — do not reference them in new work. See [`brand/foundations.md`](brand/foundations.md) §3.
+Fonts are loaded via `next/font/google` in `src/app/layout.tsx`. No local webfont assets are bundled. See [`brand/foundations.md`](brand/foundations.md) §3.
 
 ### Shadcn/UI Configuration (components.json)
 
@@ -370,7 +372,7 @@ Fonts are loaded via `next/font/google` in `src/app/layout.tsx`. Legacy webfont 
 - **Button**: `bg-primary hover:bg-primary-hover`
 - **Input**: `border-gray-200 focus:border-primary focus:ring-primary`
 - **Card**: `bg-white border-gray-200 shadow-sm hover:shadow-md`
-- **Badge**: `bg-success text-white` or `bg-warning text-charcoal`
+- **Badge**: `bg-green-500 text-white` or `bg-yellow-500 text-charcoal` (no `success`/`warning` tokens — use Tailwind defaults)
 
 ---
 
