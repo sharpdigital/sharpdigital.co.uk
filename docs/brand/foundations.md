@@ -24,7 +24,7 @@ All values sourced from `tailwind.config.js` (lines 11–14).
 | `charcoal`       | `#333333` | Body text, headings, icon fill                                       |
 | White            | `#FFFFFF` | Page backgrounds, card surfaces                                      |
 
-**Important:** `#D41F21` is the brand primary. The legacy doc `02_visual-design-system.md` historically listed `#ED2224` (a different red) as primary — that should be reconciled to `#D41F21` if any references survive.
+**Important:** `#D41F21` is the brand primary. Any other red is drift and is rejected by `scripts/verify-brand-docs.mjs`.
 
 ### WCAG 2.1 AA contrast pairings
 
@@ -190,9 +190,8 @@ Mobile breakpoint: `@media (max-width: 767px)` (from `globals.css` line 473).
 
 ### Container
 
-- **Max-width:** `66em` — from `tailwind.config.js` (line 44, `maxWidth['7xl']`). Applied via `max-w-7xl` class.
-- **Padding:** `2rem` on all sides — from `tailwind.config.js` (line 48, `container.padding`).
-- **2xl breakpoint:** `1400px` — from `tailwind.config.js` (line 50, `container.screens['2xl']`).
+- **Max-width:** `66em` — from `tailwind.config.js` (line 29, `maxWidth['7xl']`). Applied via `max-w-7xl` class.
+- **Container utility:** No Tailwind `container` block is defined. Horizontal padding is applied per-section using `px-4 sm:px-6 lg:px-8`.
 - **Standard page sections** use `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8` (as seen in `src/app/page.tsx` line 103 and `src/app/contact/page.tsx` line 71).
 
 ### Custom horizontal padding overrides
@@ -323,7 +322,7 @@ This produces high contrast for white text placed on top. Do not increase image 
 
 ### Hero headline pattern
 
-`text-5xl` (5 rem, line-height `1.32`, font-weight `200`) from `tailwind.config.js` (line 41). The ultra-light weight is deliberate — it creates airiness and contrasts with the bold red accent. The combination reads as confident without being aggressive.
+`text-5xl` (5 rem, line-height `1.32`, font-weight `200`) from `tailwind.config.js` (line 26). The ultra-light weight is deliberate — it creates airiness and contrasts with the bold red accent. The combination reads as confident without being aggressive.
 
 ### Red accent placement
 
@@ -381,8 +380,6 @@ WCAG 2.1 Level AA is the minimum standard for all shipping UI.
 
 **Primary red on white passes AA** for normal text (5.0:1 > 4.5:1). This permits use on body-size text when the intent is an accent span — but do not use red as continuous body text.
 
-**Extended hues on white:** high-luminance colours (`yellow-sharp`, `lime-sharp`, `mint-sharp`, `cyan-sharp`, `green-sharp`) all fail AA for normal text on white. They may only be used as background fills paired with dark foreground text (`charcoal` or black).
-
 ### Minimum text sizes
 
 - **Web:** 14 px (0.875 rem) minimum for any readable text. The smallest text in the current codebase is `0.7rem` in contact form error messages (`globals.css` line 448) — this should be reviewed.
@@ -413,8 +410,6 @@ Wrap significant animations in `@media (prefers-reduced-motion: no-preference)`.
 
 Machine-readable token definitions. All values verified against `tailwind.config.js` and `globals.css`. Use this block as the single source for automated tooling.
 
-**Note on `error` colour:** `#ED2224` is the shipping value from `tailwind.config.js` line 28. This differs from the brand primary `#D41F21` — the discrepancy is intentional (error red is a slightly more vivid hue).
-
 ```json
 {
   "color": {
@@ -422,26 +417,7 @@ Machine-readable token definitions. All values verified against `tailwind.config
     "primary-hover": "#BC1B1D",
     "primary-active": "#A41719",
     "charcoal": "#333333",
-    "white": "#FFFFFF",
-    "extended": {
-      "orange-sharp": "#ED8421",
-      "yellow-sharp": "#EDEA21",
-      "lime-sharp": "#8BED21",
-      "green-sharp": "#25ED21",
-      "mint-sharp": "#21ED84",
-      "cyan-sharp": "#21EDEA",
-      "sky-sharp": "#218BED",
-      "blue-sharp": "#2125ED",
-      "purple-sharp": "#8421ED",
-      "magenta-sharp": "#EA21ED",
-      "pink-sharp": "#ED218B"
-    },
-    "semantic": {
-      "success": "#25ED21",
-      "warning": "#EDEA21",
-      "error": "#ED2224",
-      "info": "#218BED"
-    }
+    "white": "#FFFFFF"
   },
   "typography": {
     "heading": "Manrope",
@@ -473,6 +449,6 @@ Machine-readable token definitions. All values verified against `tailwind.config
 
 **Source files:**
 
-- `tailwind.config.js` — colours (lines 10–29), typography stack (lines 31–35), type scale (lines 36–42), container (lines 43–52).
+- `tailwind.config.js` — colours (lines 10–15), typography stack (lines 16–20), type scale (lines 21–27), max-width (lines 28–30). No `container` block is defined.
 - `src/app/layout.tsx` — Google Fonts loading via `next/font/google` (lines 2, 6–14), font CSS variables applied to `<body>` (line 83).
 - `globals.css` — spacing utilities (lines 62–80), shadow definitions (lines 184–190), motion curves (lines 150, 185, 190, 242), overlay pattern (lines 135–155), grid composition (line 170), red accent rules (lines 321–326, 367).

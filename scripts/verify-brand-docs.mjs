@@ -98,9 +98,7 @@ const FORBIDDEN_VALUE_RULES = [
   {
     needle: '#ED2224',
     reason: 'old primary red — should be #D41F21',
-    // Allowed in foundations.md only, where it's documented as the
-    // intentional semantic error color (still #ED2224 in tailwind.config.js).
-    allowedIn: ['docs/brand/foundations.md'],
+    allowedIn: [],
   },
   {
     needle: 'Frutiger',

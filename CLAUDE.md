@@ -71,7 +71,7 @@ See `docs/brand/foundations.md` §3 for the canonical typography rules.
 
 ## Key Files
 
-- `docs/specifications.md`: Complete project requirements and design specs
+- `docs/00_specifications.md`: Complete project requirements and design specs
 - `img/sharp_logo.svg`: Brand logo for new design
 - `index.html`: Current implementation (will be replaced with Next.js)
 

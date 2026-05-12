@@ -80,9 +80,9 @@ the voice exactly.
 
 Three rules:
 
-1. `brand/foundations.md` is canonical for all visual tokens; `brand/voice.md` is canonical for all verbal rules. Do not define values in channel docs — cite this file instead.
+1. `brand/foundations.md` is canonical for all visual tokens within this repo; `brand/voice.md` is canonical for all verbal rules. Do not define values in channel docs — cite this file instead.
 2. Channel docs inline only the subset they need, and must re-sync when the canonical ref changes.
-3. [`sharp-hub/brand/tokens/`](https://github.com/sharpdigital/sharp-hub/tree/main/brand/tokens) (in the operations repo) is canonical — locally, it sits at `../sharp-hub/` alongside this repo. This repo's `tailwind.config.js` is reconciled to those tokens; when in doubt, `sharp-hub` wins.
+3. [`sharp-hub/brand/tokens/`](https://github.com/sharpdigital/sharp-hub/tree/main/brand/tokens) (in the operations repo, locally at `../sharp-hub/`) is the **eventual** organisation-wide canonical source. **Status:** until the sharp-hub token-sync mechanism lands (see the #34 follow-up), `brand/foundations.md` remains operationally canonical for this repo. When sharp-hub tokens diverge from this repo, raise an issue rather than ad-hoc-updating either side.
 
 ---
 
