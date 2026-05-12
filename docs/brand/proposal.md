@@ -1,24 +1,22 @@
 # Brand: Proposal channel guidelines
 
-Client proposals are the highest-stakes written artefact #sharp produces — they convert a discovery conversation into a signed engagement. The visual and verbal standards here carry full brand weight. This document is self-contained for AI consumption; it inlines the relevant visual and verbal subsets and cites canonical refs for depth. Do not alter values found here without first updating `docs/brand/foundations.md` and `docs/brand/voice.md`.
+Client proposals are the highest-stakes client-facing artefact #sharp produces — they convert a discovery conversation into a signed engagement. The visual and verbal standards here carry full brand weight. This document is self-contained for AI consumption; it inlines the relevant visual and verbal subsets and cites canonical refs for depth. Do not alter values found here without first updating `docs/brand/foundations.md` and `docs/brand/voice.md`.
 
 ---
 
 ## 1. Purpose & context
 
-Client proposals are formal PDF documents sent to a prospect's decision-making committee after a discovery call, to convert a qualified opportunity into a signed engagement.
+A proposal is a **5-slide Google Slides deck** sent to a prospect's buying committee after a discovery call, to convert a qualified opportunity into a signed engagement. The deck is the proposal artefact; PDF is a derivative export for emailing.
 
-**Audience:** A buying committee — typically a mix of business sponsor (budget holder), technical lead, and operational stakeholder. They read proposals at a desk, often across multiple sittings. They compare options. They share the document internally. Every section must hold up to close, sceptical reading without a presenter in the room.
+**Audience:** A buying committee — typically a mix of business sponsor (budget holder), technical lead, and operational stakeholder. The deck must work in two modes: presented live by #sharp, and forwarded for internal review without a presenter in the room.
 
 **When to issue a proposal:** After a discovery call confirms genuine fit and a prospect has explicitly requested a proposal. Never issue a proposal speculatively; it devalues the document and wastes both sides' time.
 
-**Three standard proposal types:**
+**Engagement-size variation:** A single 5-slide structure covers all engagement sizes (discovery, full-engagement, follow-on). Variation is handled by adjusting per-slide content density — not by switching templates.
 
-- **Discovery-phase proposal** — a short, focused proposal for a bounded discovery or assessment engagement. Typically the first commercial step with a new client. Scope is tightly defined; the proposal primarily establishes trust and frames the problem correctly.
-- **Full-engagement proposal** — a comprehensive proposal for a multi-workstream programme, often following a completed discovery. Contains detailed scope, methodology, team, timeline, and commercial breakdown.
-- **Follow-on / extension proposal** — issued to an existing client to extend or expand a current engagement. References the prior work; builds on established trust.
+**Proposal-deck vs. `presentation.md` leave-behind:** A proposal **proposes solutions with pricing**. A leave-behind (see `brand/presentation.md` §7) **recaps a discovery call** without commercials. If the deck contains pricing or a "next steps" sign-off ask, it is a proposal — use this document. Otherwise it is a leave-behind — use `presentation.md`.
 
-**Relationship to other channels:** A proposal often accompanies a presentation deck (see `brand/presentation.md`). The deck carries the points; the proposal carries the reasoning. Never paste deck bullets into proposal prose. After signature, a proposal's commercial section informs the invoice (see `brand/invoice.md`).
+**Relationship to other channels:** After signature, a proposal's per-card pricing informs the invoice (see `brand/invoice.md`). Commercial terms (VAT rate, payment schedule) are governed by `invoice.md`, not by the proposal deck.
 
 ---
 
@@ -26,314 +24,317 @@ Client proposals are formal PDF documents sent to a prospect's decision-making c
 
 ### Colour
 
-Proposals use a restrained colour application. Red is reserved for moments of structural emphasis only.
+| Role                         | Hex       | Where used                                                                |
+| ---------------------------- | --------- | ------------------------------------------------------------------------- |
+| Body text / headings         | `#333333` | All slide body copy, table text, footer                                   |
+| Background — header / content | `#FFFFFF` | Header strip and content area on every slide. Never replaced with a fill colour. |
+| Hero band imagery            | per slide | Page-specific bg image (matched to the equivalent website page) with a `#333333` overlay at ≈ 35% opacity. Slides 2–5; cover full-bleed. See §5 and §11. |
+| Hero band title text         | `#FFFFFF` | Slide titles overlaid on the hero band; reads on the dark overlay.        |
+| Accent / primary (sparingly) | `#D41F21` | Cover accent line, slide-title underline, solutions-card price text       |
+| Logo (light bg)              | —         | Use `img/sharp_logo.svg`                                                  |
 
-| Role                         | Hex       | Where used                                                           |
-| ---------------------------- | --------- | -------------------------------------------------------------------- |
-| Body text / headings         | `#333333` | All body copy, table text, footnotes                                 |
-| Background                   | `#FFFFFF` | All pages; clean, professional, printable                            |
-| Accent / primary (sparingly) | `#D41F21` | Cover section heading, section divider lines, pricing Total row only |
-| Logo (light pages)           | —         | Use `img/sharp_logo.svg`                                             |
-| Logo (dark section dividers) | —         | Use `img/sharp_logo_invert.svg` on `#333333` divider backgrounds     |
-
-**Do not** use red as a background fill for body pages. Do not use any additional red shades — the brand primary is `#D41F21` only. See `docs/brand/foundations.md §2` for deprecated values.
+Brand primary `#D41F21` only — no other red shades. Red must never be used as a slide background or as a hero overlay; the overlay is always `#333333`. See `docs/brand/foundations.md §2`.
 
 ### Typography
 
-| Role               | Font    | Weight / size          | Notes                                                          |
-| ------------------ | ------- | ---------------------- | -------------------------------------------------------------- |
-| Cover title        | Manrope | Weight 300, 60pt       | Large and authoritative; the first thing the reader encounters |
-| Section headings   | Manrope | Weight 400, 18pt       | Clear section delineation without visual heaviness             |
-| Sub-headings       | Manrope | Weight 500, 14pt       | Hierarchy within a section                                     |
-| Body copy          | Inter   | Regular (400), 11pt    | Optimised for dense reading at print size                      |
-| Table content      | Inter   | Regular (400), 10–11pt | Consistent with body; numbers right-aligned in pricing tables  |
-| Footnotes / labels | Inter   | Regular (400), 9pt     | Footer metadata, source citations, confidentiality marking     |
+| Role                | Font    | Weight / size                       | Notes                                                       |
+| ------------------- | ------- | ----------------------------------- | ----------------------------------------------------------- |
+| Cover title         | Manrope | Weight 200, 60–80pt                 | One-line project topic                                      |
+| Slide titles        | Manrope | Weight 200–300, 36–48pt             | Sentence case, with a `#D41F21` underline                   |
+| Sub-headings        | Manrope | Weight 500, 14pt                    | Hierarchy within a slide (e.g. About us / Why us columns)   |
+| Body / bullets      | Inter   | Regular (400), 18–24pt              | Standard slide body                                         |
+| Solutions-card body | Inter   | Regular (400) / Semibold (600), 11pt | Documented exception (see §4) — required by 5-card density |
+| Footer              | Inter   | Regular (400), 9pt                  | "Confidential · #sharp", every slide                        |
 
-Manrope and Inter are both available via Google Fonts. All fonts must be embedded in the exported PDF.
+Manrope and Inter are Google Fonts; Google Slides loads them automatically on import.
 
 ### Logo
 
-- **Body pages** (white background): use `img/sharp_logo.svg`, top-right of cover page.
-- **Section divider pages** (dark background): use `img/sharp_logo_invert.svg`, small, bottom-right or top-right.
-- Never recolour, rotate, skew, or stretch the logo.
-- Minimum rendered size: sufficient to remain legible at A4 print resolution (≥ 18mm height on the cover).
+- **Every slide** carries `img/sharp_logo.svg` in the white header strip, top-left, ~0.4" tall (≥ 24 px in a 1920 × 1080 frame).
+- Logo never recoloured, rotated, skewed, or stretched.
+- The master slide adds the text-only footer "Confidential · #sharp"; no footer logo lockup.
 
-→ See [`brand/foundations.md`](foundations.md) for full visual rules.
+→ For full visual rules, see [`brand/foundations.md`](foundations.md).
 
 ---
 
 ## 3. Verbal specs (inlined subset)
 
-### Tone for proposals
+### Tone register
 
-Proposals use the **formal-corporate** register from the tone spectrum. This is the most structured, precise voice #sharp uses. The register is appropriate because the document will be scrutinised by a procurement process, legal review, or finance team — not just the person who invited the proposal.
-
-Formal-corporate does not mean cold. The writing is warm in its intent (we want to work with you; we understand your challenge) but disciplined in its execution (precise scope, clear terms, unambiguous pricing).
+Proposal decks use the **professional-warm** register from the tone spectrum, leaning toward the formal end. Confident enough to be credible, human enough to be approachable, disciplined enough to survive scrutiny by a procurement or finance reviewer reading the deck without #sharp present.
 
 ### Voice attributes engaged
 
-- **Authoritative** — heavily emphasised. Every claim about approach or capability must be specific and method-grounded. "Our AI transformation framework moves clients from assessment to measurable operational change in twelve weeks" is authoritative. "We have extensive experience in AI" is not.
-- **Trustworthy** — heavily emphasised. Proposals convert when the reader believes #sharp will do what it says. Over-claiming destroys this. State what is included, what is excluded, and what depends on client inputs. Precision builds trust.
-- **Results-focused** — frame every proposed workstream in terms of business outcomes, not tasks. "Reduce manual processing time by mapping and automating three core data flows" beats "conduct a process analysis workshop."
-- **Innovative** — evidence-led, not adjective-led. Reference specific methods (AI pipeline design, LLM integration, operational change management) rather than claiming general innovation.
+- **Authoritative** — every claim is specific and method-grounded.
+- **Trustworthy** — state what is included, what is excluded, what depends on client inputs. No over-claiming.
+- **Results-focused** — every solution card frames an outcome, not a task.
+- **Innovative** — evidence-led, not adjective-led.
 
-### Copy rules specific to proposals
+### Slide copy rules
 
-- Use "we" and "you" throughout — never refer to #sharp or the client in the third person ("the client", "#sharp will"). Third-person distancing reads as bureaucratic.
-- Scope and T&Cs sections use legal-adjacent precision: define terms on first use, use consistent defined terms thereafter (e.g., "the Services", "the Engagement Period").
-- Executive summary: 100–200 words, active voice, outcome-focused. Must stand alone if extracted.
-- Long paragraphs are permitted in narrative sections (understanding, approach). Use bullet lists in scope, methodology, and assumptions sections.
+- **Slide titles in sentence case.** "Your brief" not "Your Brief".
+- **Bullets ≤ 12 words each.** If a bullet needs more, the point belongs in speaker notes.
+- **Active voice.** "We design" not "solutions are designed."
+- **No emoji.** Ever.
+- **No unsubstantiated superlatives.** "Leading" needs proof; "world-class" is forbidden.
+- `#sharp` is always lowercase with hash prefix; it never starts a sentence.
 - UK English throughout. "Programme" not "program". "Optimise" not "optimize".
-- `#sharp` is always lowercase with hash prefix; it never starts a sentence. Write "The team at #sharp…" not "#sharp delivers…".
-- No emoji, no exclamation marks.
-- No unsubstantiated superlatives. "World-class" is forbidden; "leading" requires citation.
 
-→ See [`brand/voice.md`](voice.md) for full verbal rules.
+→ For full verbal rules, see [`brand/voice.md`](voice.md).
 
 ---
 
 ## 4. Format & dimensions
 
-### Page dimensions
+- **Aspect ratio:** 16:9, 1920 × 1080 px (preferred). 4:3 (1024 × 768) only on explicit client request.
+- **File format:** Google Slides; source-of-truth `.pptx` lives at `docs/templates/proposal-template.pptx` and is imported into a #sharp Google Drive shared folder for working copies.
+- **PDF export:** 150 DPI for circulation. The PDF is read-only; the Google Slides working copy remains the editable source for that proposal.
+- **Margins:** ≥ 10% of frame edge on all sides (≥ 192 px left/right, ≥ 108 px top/bottom at 1920 × 1080).
 
-- **Size:** A4 portrait — 210 × 297 mm.
-- **Margins:** 25 mm top and bottom; 20 mm left and right.
-- **Gutter:** No additional gutter; single-column layout throughout.
+**Documented type-size exceptions (solutions slide):** The solutions slide carries three distinct type sizes within the content zone — slide title (Manrope 36pt), card title (Manrope 14pt weight 500), and card body (Inter 11pt) — plus the 9pt VAT note. This is two simultaneous overrides of `presentation.md` rules: (a) Inter 11pt body type sits well below `presentation.md`'s 18–24pt body range, required by the 5-cards-in-one-row density; (b) the 14pt card title introduces a third type size on the slide, overriding `presentation.md` §2's two-sizes-per-slide rule. Both exceptions apply only to the solutions slide.
 
-### Typography scale
-
-| Element        | Font    | Size | Weight | Line-height |
-| -------------- | ------- | ---- | ------ | ----------- |
-| H1 (cover)     | Manrope | 60pt | 300    | 1.1         |
-| H2 (sections)  | Manrope | 18pt | 400    | 1.3         |
-| H3 (sub-heads) | Manrope | 14pt | 500    | 1.3         |
-| Body           | Inter   | 11pt | 400    | 1.4         |
-| Tables         | Inter   | 10pt | 400    | 1.4         |
-| Footnotes      | Inter   | 9pt  | 400    | 1.3         |
-
-### Footer
-
-- **Footer left:** Page number (e.g., `3 of 18`).
-- **Footer right:** `[Project reference] · Confidential` — the project reference is set per engagement (e.g., `SHARPx-2026-04 · Confidential`).
-- Footer text: Inter 9pt, `#333333`.
-- The confidentiality marking must appear on every page without exception.
-
-### Output format
-
-- **Delivery format:** PDF, embedded fonts, no form fields.
-- **Document metadata:** Title field set to `[Client name] · [Project name] · Proposal` (e.g., `Meridian Retail Group · AI Transformation Assessment · Proposal`).
-- **Source file:** The editable source (e.g., Google Docs, InDesign) is kept in the team's Google Drive; the PDF is the client-facing artefact.
+→ See `presentation.md` §4 for full deck format conventions; this section overrides only where stated.
 
 ---
 
 ## 5. Layout & composition
 
-### Section flow
+### Four-zone slide grid
 
-Every numbered section begins on a new page. A section divider page (see §6) precedes each major section. Body pages follow immediately after the divider.
+The proposal deck mirrors the website's page chrome (`Header` + `PageHeader` + content sections). Every slide carries:
 
-### Page anatomy
+| Zone           | Vertical band (1080-px frame)   | Treatment                                                                       |
+| -------------- | ------------------------------- | ------------------------------------------------------------------------------- |
+| Header strip   | top 0–10% (≈ 0.7" / 100 px)     | White; logo top-left; thin `#eeeeee` hairline along the bottom (mirrors the site's `border-b border-gray-200`). |
+| Hero band      | 10–34% (≈ 1.85" / 265 px)       | Page-specific bg image with a `#333333` overlay at ≈ 35% opacity; slide title in white, Manrope 36pt, left-aligned, vertically centred. 4–8 px `#D41F21` underline along the bottom edge of the band, beneath the title. |
+| Content area   | 34–93% (≈ 4.25" / 610 px)       | White. Bullets, cards, and per-slide content live here.                         |
+| Footer         | bottom 7% (≈ 0.5" / 75 px)      | White; "Confidential · #sharp" Inter 9pt, applied via slide master.             |
 
-```
-┌───────────────────────────────────────────────┐
-│  [Project ref]               [Page n of N]    │  ← header, Inter 9pt
-├───────────────────────────────────────────────┤
-│                                               │
-│  BODY CONTENT                                 │
-│  (single-column, full width within margins)   │
-│                                               │
-├───────────────────────────────────────────────┤
-│  [Page number]     [Project ref · Confidential]│  ← footer, Inter 9pt
-└───────────────────────────────────────────────┘
-```
+The cover slide is the exception: its hero band fills the full content area below the header strip (down to the footer line), with the project topic and red accent overlaid in white.
 
-### Section number and name
+This four-zone grid replaces the inherited three-zone treatment from `presentation.md` §5 — proposals get the website's page chrome instead of the deck-style three-zone grid. Left-align all body copy; centring is permitted only on the cover slide.
 
-The first body page of each section carries the section number and name as an H2 heading, set in Manrope 18pt. A 2pt red (`#D41F21`) horizontal rule sits immediately beneath the section heading, spanning the full text width. This is the only structural use of red on a body page.
+### Slide-title underline
 
-### Pricing tables
+Every body slide (2–5) carries a 4–8 px `#D41F21` line along the bottom edge of the hero band, beneath the slide title. The cover slide carries the same accent beneath its centred-vertically title, on the hero. This is the brand "underline" motif; it is the structural use of red on body slides.
 
-- Numbers are right-aligned in all pricing columns.
-- Line items use Inter 10pt, regular weight.
-- The Total row uses Manrope 11pt, weight 500. The Total cell background is `#D41F21`; the Total label and amount are white Inter — this is the one permitted use of red as a background on a body page.
-- Subtotal and VAT rows use Inter 10pt, no colour distinction beyond row spacing.
+### Two ordering variants
 
-### Text density
+| Variant                | Slide order                                                       | When to use                                                              |
+| ---------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| **V1 — Forwarded context** | Cover · About us / Why us · Your brief · Proposed solutions · Next steps | Default. Use when the deck will be **forwarded for internal review** without a #sharp presenter. |
+| **V2 — Situation first**   | Cover · Your brief · Proposed solutions · About us / Why us · Next steps | Use when the deck will be **presented live by #sharp**. Honours the brand "credentials live late" rule. |
 
-- Narrative sections (executive summary, understanding, approach): prose paragraphs, 3–5 sentences. A proposal earns the reader's sustained attention here.
-- Scope, methodology, assumptions sections: bulleted or numbered lists, one idea per bullet, ≤ 25 words per bullet.
-- Never use red text in body copy. Red is structural, not expressive.
+The template ships in V1 order. To switch to V2 in Google Slides, drag slide 2 (About us / Why us) to position 4. See `docs/templates/README.md` for the step-by-step.
 
-### Images
+### The 5 slides — V1 order
 
-- Keep images (team photos, diagrams) in distinct page regions — never place text over an image.
-- Service photography (`img/analyse.jpg`, `img/automation.jpg`, `img/customerExperience.jpg`) may appear in the cover, understanding section, or approach section only — not in commercial or T&Cs sections.
+1. **Cover** *(per-proposal)* — full-bleed hero with `public/img/services_bg.jpg` (matches the website's services-page hero) + `#333333` overlay (≈ 35% opacity). Project topic in white, Manrope 200, 60–80pt, left-aligned, vertically centred in the hero. 4–8 px `#D41F21` accent line beneath the title. Client name + proposal date bottom-right in white (Inter 14pt). Logo top-left in the white header strip. Footer applied via slide master.
+2. **About us / Why us** *(static across all proposals)* — hero band carries `public/img/about_bg.jpg` (matches the website's `/about` page hero) with slide title "About #sharp" in white. Content area below: two columns. Left column "About us" (Manrope 14pt weight 500 sub-heading + 2–3 short paragraphs/bullets). Right column "Why us" (same sub-heading style + 3–4 bullets ≤ 12 words). Snapshotted from the website `/about` page; refreshed periodically (see `docs/templates/README.md`).
+3. **Your brief** *(placeholder)* — hero band carries `public/img/analyse.jpg` (the discovery / analyse imagery from the website services) with slide title "Your brief" in white. Content area: 3–5 bullets ≤ 12 words. Covers problem, key goals, scope as understood from the discovery call. Author types this in per proposal.
+4. **Proposed solutions** *(placeholder, distinctive slide)* — hero band carries `public/img/automation.jpg` (the doing / building imagery from the website services) with slide title "Proposed solutions" in white. Content area: single row of 5 cards. See §6 for the card spec. "All prices exclude VAT." footer note bottom-left, Inter 9pt `#333333`.
+5. **Next steps** *(placeholder + standard contact)* — hero band carries `public/img/contact_bg.jpg` (matches the website's `/contact` page hero) with slide title "Next steps" in white. Content area: 1–3 numbered actions; contact lockup (name · email · booking link) at the bottom.
+
+### Footer
+
+`Confidential · #sharp` only — Inter 9pt, `#333333`, applied via slide master. This replaces `presentation.md` §5's footer treatment (accent line + page number + logo lockup) for proposals; do not add a page number or footer logo lockup to a proposal slide. **No company registration number on the deck.** T&Cs and company registration are handled in the separate signed agreement at contract time, not in the proposal deck.
 
 ---
 
 ## 6. Component / element library
 
-Named page types that function as primitives when assembling a proposal. Every proposal is built from these components.
+Three proposal-specific components, defined here because they are not in `presentation.md`'s component library.
 
-**Cover page**
-Full-bleed white. Title in Manrope 60pt weight 300, `#333333`. A single `#D41F21` accent line (3pt) beneath the title. Client name in Manrope 18pt below the title. Project reference, date, and engagement type in Inter 11pt, one line each, beneath the client name. The #sharp logo (`img/sharp_logo.svg`) sits top-right at a consistent size. No other imagery on the cover page unless explicitly approved.
+### Header strip + hero band
 
-**Section divider page**
-Dark background (`#333333`). Section number and name centred vertically and horizontally in white Manrope 36pt weight 200. A `#D41F21` 3pt horizontal accent line above the section name. Page number in Inter 9pt white, bottom-centre. The #sharp inverted logo (`img/sharp_logo_invert.svg`) sits bottom-right, small. No body copy on this page type.
+Every slide opens with a two-band chrome that mirrors the website's `Header` + `PageHeader` pattern. Treat this as one shared slide-master frame; never override per-slide.
 
-**Body page**
-Standard page within a section. Header line (Inter 9pt): project reference left, page number right. Body content (see layout above). Footer line (Inter 9pt): page number left, `[Project ref] · Confidential` right.
+| Element            | Spec                                                                                                                          |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| Header strip       | Top 0.7" (≈ 100 px in 1080). White. Logo `img/sharp_logo.svg` top-left, ~0.4" tall. Thin `#eeeeee` hairline along the bottom (mirrors the site's `border-b border-gray-200`). |
+| Hero band          | 1.85" tall directly below the header strip on slides 2–5. Cover slide's hero fills the full content area below the header strip, down to the footer line. |
+| Hero image source  | Per slide — see §5 ("The 5 slides — V1 order") and §11 (asset paths).                                                         |
+| Overlay            | `#333333` rectangle at ≈ 35% opacity over the full hero band. Lifts white-text legibility while keeping the photo readable.   |
+| Title              | Manrope 36pt weight 200–300 (60–80pt on cover), `#FFFFFF`, left-aligned at 0.9" margin, vertically centred in the hero band.  |
+| Underline accent   | 4–8 px `#D41F21` line, ~1.8" wide, sitting along the bottom edge of the hero band (slides 2–5) or beneath the cover title.    |
 
-**Pricing table**
-Itemised line-by-line breakdown. Columns: Description | Unit | Rate | Quantity | Amount. Subtotal row, VAT row (rate from engagement config — see §10), Total row. Total row in `#D41F21` background, white Inter text. Numbers right-aligned throughout.
+### 5-card solutions grid
 
-**Team page**
-Small team photo (square crop, consistent across all team members), right-aligned. Name in Manrope 14pt weight 500. Role in Inter 11pt. Two-line bio in Inter 11pt. Relevant credentials or certifications in Inter 10pt. Team photos: `public/img/team_janos.jpg` (Janos) and `public/img/team_loreen.jpg` (Loreen).
+Single row of 5 equal-width cards with a consistent gutter, filling the content zone of the solutions slide.
 
-**Timeline / Gantt page**
-Horizontal bar chart. Primary `#D41F21` bars for #sharp-led phases; `#333333` bars for client-led or joint phases. Phase labels left-aligned in Inter 10pt. Week numbers or calendar week references on the horizontal axis. Each phase clearly bounded; no overlapping bars unless genuinely concurrent.
+| Element        | Spec                                                                                                                            |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Card title     | Manrope 14pt weight 500, ≤ 4 words. Numbered prefix (`1. `, `2. `, …) for orientation.                                          |
+| Description    | Inter 11pt regular, ≤ 15 words. Sits directly under the card title.                                                             |
+| Outcome line   | Inter 11pt; prefix `Outcome:` in semibold; outcome text ≤ 10 words. What the client gets.                                       |
+| Card footer    | 1 px `#eee` divider above. Effort (`8 days`) Inter 11pt `#666` left; price (`£9,600`) Inter 11pt weight 600 `#D41F21` right.    |
+| VAT note       | "All prices exclude VAT." — Inter 9pt `#333333`, bottom-left of the slide content area, below the cards.                        |
 
-**Appendix divider page**
-Same visual treatment as section divider. Text reads: `Appendix [letter]: [Appendix name]` (e.g., `Appendix A: Terms and Conditions`). Used to open each appendix.
+The 11pt body type on this slide is the only documented exception to `presentation.md`'s 18–24pt body range — required by the 5-cards-in-one-row density.
+
+### About us / Why us split slide
+
+Two-column slide with one slide title spanning both columns.
+
+| Element        | Spec                                                                                                                                  |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Slide title    | "About #sharp" — sentence case, Manrope 36–48pt weight 200–300. Single title for the whole slide.                                     |
+| Underline      | 2–4 px `#D41F21` line beneath the slide title.                                                                                        |
+| Layout         | Two columns, equal width, left-aligned within each. Each column has its own sub-heading.                                              |
+| Left column    | Sub-heading "About us" (Manrope 14pt weight 500). Body: 2–3 short paragraphs or bullets — #sharp positioning.                         |
+| Right column   | Sub-heading "Why us" (Manrope 14pt weight 500). Body: 3–4 bullets, ≤ 12 words each — the case for robust digital processes.           |
+| Refresh        | Snapshotted, not live. Refreshed periodically when website `/about` content changes materially.                                       |
+
+→ For non-proposal-specific slide components (cover, agenda, content, stat highlight, etc.), see `presentation.md` §6.
 
 ---
 
 ## 7. Templates / starters
 
-Three named proposal structures. Use these as starting frameworks; adjust page count and section depth to fit the engagement. Preserve the narrative logic — particularly the principle that #sharp's credentials come near the end, after the client has seen a compelling picture of their own situation.
+A single 5-slide structure replaces the prior three engagement-size sub-types (discovery / full-engagement / follow-on). Engagement-size variation is handled by adjusting per-slide content density, not by switching templates.
 
-### Discovery-phase proposal (~10–15 pages)
+The implementation file at `docs/templates/proposal-template.pptx` ships in **V1 (Forwarded context)** order:
 
-Page sequence:
+1. Cover
+2. About us / Why us
+3. Your brief
+4. Proposed solutions
+5. Next steps
 
-1. Cover — client name, engagement type ("Discovery"), project reference, date.
-2. Executive summary — 1 page; situation, proposed response, expected outcome, and investment at a glance.
-3. Our understanding — the client's current situation and the challenge as #sharp understood it from the discovery call.
-4. Proposed discovery scope — the specific activities, outputs, and boundaries of the proposed discovery engagement.
-5. Timeline — indicative schedule (typically 2–4 weeks); Gantt or simple milestone list.
-6. Fee and commercials — day rate or fixed fee; total; VAT; payment terms.
-7. Next steps — two or three concrete actions (sign-off, kickoff date, introductions needed).
-8. About #sharp — brief credentials; team; relevant prior work. (After the substance, not before.)
-9. Terms and conditions — summary or Schedule A reference.
-10. Appendix A: [if applicable] — supporting materials.
+To use V2 (Situation first), open the file in Google Slides and drag slide 2 to position 4. See `docs/templates/README.md` for the per-step procedure and the V1/V2 selection rule.
 
-### Full-engagement proposal (~20–30 pages)
-
-Page sequence:
-
-1. Cover.
-2. Executive summary.
-3. Our understanding — detailed situation analysis; the challenge and its root causes.
-4. Proposed approach — the #sharp transformation framework applied to this engagement.
-5. Scope — detailed by workstream; clearly states what is included and excluded.
-6. Methodology — how the work is done; governance model; client team involvement.
-7. Team — named leads with photos and credentials.
-8. Timeline — Gantt by phase and workstream; key milestones and dependencies.
-9. Commercials — full pricing table; payment schedule; assumptions underlying the fee.
-10. Assumptions and dependencies — what #sharp requires from the client to deliver the scope.
-11. Terms — contractual summary; reference to full T&Cs in appendix.
-12. Appendix A: Terms and conditions (full).
-13. Appendix B: [Additional materials as required].
-
-### Follow-on / extension proposal (~6–10 pages)
-
-Page sequence:
-
-1. Cover — notes "extension to [prior engagement name]".
-2. What we delivered — a concise summary of outcomes from the prior engagement; sets the baseline.
-3. What we propose next — the rationale for the extension and what changes.
-4. Updated scope — specific additions, removals, or amendments relative to the prior engagement.
-5. Commercials — updated fee; any changes to rate or structure.
-6. Sign-off — confirmation of continuation and next steps.
+Authors fill in placeholder text — clearly marked with `[Square brackets]` — for the cover, brief, solutions, and next-steps slides. The About us / Why us slide is static across all proposals.
 
 ---
 
 ## 8. Worked examples
 
-### Example A: Cover page (visual layout)
+### Example A: Cover slide
 
 ```
-COVER PAGE — A4 portrait, 210 × 297 mm
+Slide type: Cover
 
-┌─────────────────────────────────────────────┐  ← 25mm top margin
-│                          [sharp_logo.svg]   │  ← logo top-right, ~18mm height
-│                                             │
-│                                             │
-│                                             │
-│  AI Transformation Assessment               │  ← Manrope 60pt, weight 300, #333333
-│  ─────────────────────────────────          │  ← 3pt red (#D41F21) rule
-│                                             │
-│  Meridian Retail Group                      │  ← Manrope 18pt, weight 400, #333333
-│                                             │
-│  Project reference: SHARPx-2026-04          │  ← Inter 11pt, #333333
-│  Proposal date: 4 May 2026                  │
-│  Prepared by: #sharp                        │
-│                                             │
-│                                             │
-│                                             │  ← 25mm bottom margin
-└─────────────────────────────────────────────┘
+Header strip (top 0.7"): white; logo top-left (sharp_logo.svg, ~0.4" tall);
+  thin #eeeeee hairline along the bottom edge.
+
+Hero (full-bleed below the header strip, down to the footer line):
+  Background image: public/img/services_bg.jpg
+  Overlay: #333333 at ~35% opacity
+
+Title (Manrope 72pt weight 200, white, vertically centred in the hero,
+left-aligned at 0.9" margin):
+  AI Transformation Assessment
+
+Red accent: 5 px #D41F21 line beneath the title
+
+Bottom-right (Inter 14pt, white):
+  Meridian Retail Group
+  4 May 2026
+
+Footer (master): Confidential · #sharp
 ```
 
-### Example B: Executive summary (on-brand prose)
+### Example B: Proposed solutions slide — all 5 cards filled in
 
-> Meridian Retail Group is carrying the operational cost of three manual data processes that were designed for a business half its current size. The team at #sharp proposes a four-week discovery engagement to map those processes in detail, identify the highest-value automation opportunities, and produce a costed implementation roadmap. At the end of the discovery, you will have a clear, evidenced picture of where intelligent automation delivers the greatest return — and a plan you can act on immediately, with or without #sharp's continued involvement.
+Each card is a column in a single row across the slide. Cards numbered 1–5.
 
-_(86 words. Formal-corporate register. Outcome-focused. Authoritative without over-claiming.)_
+```
+Header strip (top 0.7"): white; logo top-left.
 
-### Example C: Pricing table
+Hero band (1.85" tall directly below the header strip):
+  Background image: public/img/automation.jpg
+  Overlay: #333333 at ~35% opacity
+  Slide title (Manrope 36pt, white, left-aligned, vertically centred):
+    Proposed solutions
+  ──────────  (#D41F21 underline, ~6 px, along the bottom edge of the band)
 
-| Description                            | Unit | Rate (£) | Qty |          Amount (£) |
-| -------------------------------------- | ---- | -------: | --: | ------------------: |
-| Process mapping and analysis           | Day  |    1,200 |   5 |               6,000 |
-| AI opportunity assessment              | Day  |    1,200 |   3 |               3,600 |
-| Implementation roadmap and costed plan | Day  |    1,200 |   2 |               2,400 |
-| **Subtotal**                           |      |          |     |          **12,000** |
-| VAT at `{{vat_rate}}`                  |      |          |     |    `{{vat_amount}}` |
-| **Total (inc. VAT)**                   |      |          |     | `{{total_inc_vat}}` |
+Content area (white, below the hero band):
 
-`{{vat_rate}}`, `{{vat_amount}}`, and `{{total_inc_vat}}` are populated from the engagement configuration at issue time — never hardcoded in the template. See §10 for the VAT constraint.
+Card 1
+  1. Discovery (Manrope 14pt 500)
+  Map current-state operations and define the brief. (Inter 11pt)
+  Outcome: a costed, prioritised opportunity list. (Inter 11pt; "Outcome:" semibold)
+  ──────────  (1 px #eee)
+  5 days (Inter 11pt #666)         £6,000 (Inter 11pt 600 #D41F21)
 
-_Payment terms: 50% on engagement commencement, 50% on delivery of final outputs. Invoices payable within 30 days._
+Card 2
+  2. CX uplift
+  Redesign the customer support journey end-to-end.
+  Outcome: faster first-response, fewer escalations.
+  ──────────
+  10 days                          £12,000
+
+Card 3
+  3. AI triage
+  Integrate an LLM-based triage layer into the support queue.
+  Outcome: 30–40% reduction in routing time.
+  ──────────
+  8 days                           £9,600
+
+Card 4
+  4. Data pipeline
+  Automate three highest-value manual data flows.
+  Outcome: hours-not-days reporting cycle.
+  ──────────
+  12 days                          £14,400
+
+Card 5
+  5. Enablement
+  Train the in-house team to operate the new processes.
+  Outcome: durable capability — no #sharp dependency.
+  ──────────
+  4 days                           £4,800
+
+Bottom-left (Inter 9pt #333333):
+  All prices exclude VAT.
+
+Footer (master): Confidential · #sharp
+```
+
+Placeholder day rate: £1,200/day. All five card prices in this example are computed from that rate.
 
 ---
 
 ## 9. Do / Don't
 
-**Don't** open with "About #sharp" before the executive summary.
-**Do** put credentials, team, and company background near the end of the proposal — after the scope, timeline, and commercials. The prospect's buying committee cares about their own situation first; they reach for your credentials only after they believe you understand the problem.
+**Don't** include a company registration number, full T&Cs, or a counter-signature block on the deck.
+**Do** keep the deck as the proposal artefact only. T&Cs and company registration belong in the separate signed agreement at contract time.
 
 ---
 
-**Don't** use generic management-consulting language: "synergies", "best-in-class", "world-class", "holistic", "leverage" (as a verb), "cutting-edge", "innovative solutions".
-**Do** name the specific outcome, the specific method, and the specific timeframe. "We reduce first-response time by integrating an LLM-based triage layer into your support queue" is concrete. "We leverage cutting-edge AI to enhance customer experience" is not.
+**Don't** present V1 (forwarded order) live, with About us / Why us as slide 2. It puts credentials before the client's situation.
+**Do** switch to V2 (situation first) when presenting live — drag slide 2 to position 4. Keep V1 only when the deck will be forwarded without a presenter.
 
 ---
 
-**Don't** bury pricing in an appendix or present it without a clearly labelled total.
-**Do** include a clearly named "Commercials" or "Fee and commercials" section in the main body, with an unambiguous Total row. Decision-makers resent having to hunt for a number.
+**Don't** hardcode a VAT rate or compute a VAT-inclusive total on any card.
+**Do** quote ex-VAT prices on every card and include the single "All prices exclude VAT." footer note on the solutions slide. Templates do not auto-update when rates change; invoices apply VAT at issue time per `brand/invoice.md`.
 
 ---
 
-**Don't** introduce typefaces beyond Manrope and Inter in any section of the proposal.
-**Do** use Manrope weight variations (300, 400, 500) to create typographic hierarchy without adding visual noise. Weight changes carry hierarchy; typeface changes carry chaos.
+**Don't** introduce a sixth solutions card or split solutions across two slides.
+**Do** keep the deck at exactly 5 slides and the solutions slide at exactly 5 cards. The single-row, all-five comparison is the slide's job.
 
 ---
 
-**Don't** place body text over images or diagrams at any point in the document.
-**Do** keep images and text in distinct page regions. If a diagram needs a label, position the label above, below, or beside the image — never overlaid.
+**Don't** introduce a third type size on the solutions slide.
+**Do** use Manrope 14pt weight 500 for card titles and Inter 11pt for everything else on that slide. The one body-size exception is documented in §4 and must not be extended elsewhere.
 
 ---
 
 ## 10. Hard constraints
 
-Non-negotiable rules. A proposal that violates any item here must be corrected before it is issued.
+Non-negotiable rules. A proposal that violates any item must be corrected before issue.
 
-- **Company registration:** Every proposal must include the registered company name and company number in the footer of the T&Cs section or in a document footer. This is a legal requirement.
-- **VAT calculation:** The VAT rate must be drawn from the current engagement configuration or invoice config — never hardcoded in the proposal template. Rates change; templates do not automatically update. Use a placeholder (e.g., `{{vat_rate}}`) that is populated at issue time.
-- **Confidentiality marking:** The text `[Project reference] · Confidential` must appear on every page, in the footer, without exception. This includes cover, divider, and appendix pages.
-- **PDF document metadata:** The PDF Title field must be set to `[Client name] · [Project name] · Proposal` before the file is sent. Empty or generic metadata (e.g., "Document1") is not acceptable.
-- **No tracking pixels or embedded scripts:** The PDF is a static document. No form fields, no tracking pixels, no JavaScript. The recipient must be able to read the document offline with no network calls.
-- **Brand primary only:** The accent colour used in the proposal is `#D41F21` — the single, versioned brand primary. No other red shades are permitted, including deprecated historical values. See `docs/brand/foundations.md §2`.
+- **Brand primary only:** `#D41F21` is the only red used. No other red shades, including deprecated historical values. See `docs/brand/foundations.md §2`.
+- **Manrope and Inter only:** No other typefaces in any slide.
+- **Confidentiality marking:** The text `Confidential · #sharp` appears in the footer of every slide, applied via the slide master. No exceptions.
+- **No company registration number on the deck.** Company registration is handled in the separate signed agreement at contract time.
+- **Pricing is ex-VAT:** Per-card prices are ex-VAT. The "All prices exclude VAT." footer note is mandatory on the solutions slide. The deck never computes or stores a VAT rate.
+- **No emoji on any slide.**
+- **5 slides total.** The deck never grows or shrinks. Engagement-size variation is handled by per-slide content density.
+- **Logo never rendered below 24 px height** in a 1920 × 1080 frame, never recoloured, rotated, skewed, or stretched.
 
 ---
 
@@ -341,23 +342,27 @@ Non-negotiable rules. A proposal that violates any item here must be corrected b
 
 All paths are relative to the repository root.
 
-| Asset                      | Path                         | Use in proposals                                                    |
-| -------------------------- | ---------------------------- | ------------------------------------------------------------------- |
-| Primary logo (light bg)    | `img/sharp_logo.svg`         | Cover page top-right; body page header (optional)                   |
-| Inverted logo (dark bg)    | `img/sharp_logo_invert.svg`  | Section divider pages (dark background)                             |
-| Service imagery — analyse  | `img/analyse.jpg`            | Understanding or approach sections; data and analytics workstreams  |
-| Service imagery — automate | `img/automation.jpg`         | Approach or scope sections; operational efficiency workstreams      |
-| Service imagery — CX       | `img/customerExperience.jpg` | Understanding or approach sections; customer experience workstreams |
-| Team photo — Janos         | `public/img/team_janos.jpg`  | Team page; square crop consistent with presentation.md spec         |
-| Team photo — Loreen        | `public/img/team_loreen.jpg` | Team page; square crop consistent with presentation.md spec         |
+| Asset                      | Path                                  | Use in proposals                                                          |
+| -------------------------- | ------------------------------------- | ------------------------------------------------------------------------- |
+| Primary logo (light bg)    | `img/sharp_logo.svg`                  | Header strip top-left on every slide (no footer logo — see §5)             |
+| Inverted logo (dark bg)    | `img/sharp_logo_invert.svg`           | Reserved for any optional dark accent (not used in default V1 deck)       |
+| Hero — cover               | `public/img/services_bg.jpg`          | Slide 1 (Cover) hero — matches the website services-page hero              |
+| Hero — about               | `public/img/about_bg.jpg`             | Slide 2 (About us / Why us) hero — matches the website `/about` hero       |
+| Hero — brief               | `public/img/analyse.jpg`              | Slide 3 (Your brief) hero — discovery / analyse imagery                    |
+| Hero — solutions           | `public/img/automation.jpg`           | Slide 4 (Proposed solutions) hero — doing / building imagery               |
+| Hero — next steps          | `public/img/contact_bg.jpg`           | Slide 5 (Next steps) hero — matches the website `/contact` hero            |
+| Team photo — Janos         | `public/img/team_janos.jpg`           | Reference asset; not used by default in the 5-slide deck                  |
+| Team photo — Loreen        | `public/img/team_loreen.jpg`          | Reference asset; not used by default in the 5-slide deck                  |
+| Template source            | `docs/templates/proposal-template.pptx` | The committed `.pptx` file; imported to the #sharp Drive folder for use |
+| Template README            | `docs/templates/README.md`            | How to use, refresh, and switch between V1 and V2 ordering                |
 
-**Note on generated proposals:** Completed proposal PDFs are stored according to the team's Google Drive convention — a folder per client, named by project reference. The Google Drive structure is out of scope for this document.
+**Note on generated proposal PDFs:** Completed proposal PDFs are stored according to the team's Google Drive convention — a folder per client, named by project reference. The Google Drive folder structure is out of scope for this document.
 
 ---
 
 ## 12. Related docs
 
-- [`brand/foundations.md`](foundations.md) — full visual reference: colours, typography, logo, spacing, imagery, composition, accessibility, and token reference. Proposals must not define new visual values without updating foundations first.
-- [`brand/voice.md`](voice.md) — full verbal reference: voice attributes, tone spectrum, writing principles, vocabulary, audience messaging, and value propositions.
-- [`brand/presentation.md`](presentation.md) — sibling channel document; presentations often accompany proposals. The deck carries the points; the proposal carries the reasoning. Never paste proposal prose into a slide.
-- [`brand/invoice.md`](invoice.md) — the commercial terms in a proposal must align with the invoice template. VAT rate, payment schedule, and company registration details are governed by invoice.md.
+- [`brand/foundations.md`](foundations.md) — full visual reference: colours, typography, logo, spacing, imagery, composition, accessibility, token reference.
+- [`brand/voice.md`](voice.md) — full verbal reference: voice attributes, tone spectrum, writing principles, vocabulary, audience messaging, value propositions.
+- [`brand/presentation.md`](presentation.md) — sibling channel document for non-proposal decks (pitch, leave-behind, case study). Proposals propose solutions with pricing; leave-behinds recap a discovery call. See `presentation.md` §12 for the disambiguation note.
+- [`brand/invoice.md`](invoice.md) — commercial terms in a proposal must align with the invoice template. VAT rate, payment schedule, and company registration details are governed by `invoice.md`, not by the proposal deck.
