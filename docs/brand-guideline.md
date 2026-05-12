@@ -82,7 +82,7 @@ Three rules:
 
 1. `brand/foundations.md` is canonical for all visual tokens; `brand/voice.md` is canonical for all verbal rules. Do not define values in channel docs — cite this file instead.
 2. Channel docs inline only the subset they need, and must re-sync when the canonical ref changes.
-3. [`sharp-hub/brand/tokens/`](https://github.com/sharpdigital/sharp-hub/tree/main/brand/tokens) (in the operations repo) is canonical — locally, it sits at `../sharp-hub/` alongside this repo. This repo's `tailwind.config.js` is reconciled to those tokens; when in doubt, `sharp-hub` wins.
+3. The website code itself (`tailwind.config.js`, `src/app/layout.tsx`, `src/app/globals.css`) is the ultimate truth — docs are reconciled to code, never the reverse.
 
 ---
 

@@ -30,10 +30,8 @@ Currently no build process exists. Future Next.js implementation will need:
 
 ### Typography
 
-See `docs/brand/foundations.md` §3 for the canonical typography rules.
-
-- **Headings/Titles**: Manrope, loaded via `next/font/google` in `src/app/layout.tsx`
-- **Body / paragraphs / UI**: Inter, loaded via `next/font/google`
+- **Headings/Titles**: Manrope (sans-serif) from `/font/` directory
+- **Body/Paragraphs**: Web-safe serif font
 - **Logo**: Use `img/sharp_logo.svg`
 
 ### Layout
@@ -73,6 +71,7 @@ See `docs/brand/foundations.md` §3 for the canonical typography rules.
 
 - `docs/specifications.md`: Complete project requirements and design specs
 - `img/sharp_logo.svg`: Brand logo for new design
+- `font/`: Frutiger font files for headings/titles
 - `index.html`: Current implementation (will be replaced with Next.js)
 
 ## Content Management

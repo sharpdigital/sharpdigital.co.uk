@@ -2,7 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fonts (Manrope, Inter) are loaded via next/font/google in src/app/layout.tsx. */
+/* Frutiger font face declarations */
+/* @font-face {
+  font-family: 'Manrope';
+  src:
+    url('/font/frutiger-light.woff') format('woff'),
+    url('/font/frutiger-light.ttf') format('truetype'),
+    url('/font/frutiger-light.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
 
 @layer base {
   body {

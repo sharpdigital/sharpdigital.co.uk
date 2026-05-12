@@ -22,18 +22,16 @@ The goal is to transform the #sharp website into a Next.js based statically gene
 
 ### Typography
 
-Canonical: `docs/brand/foundations.md` §3.
-
-- **Headings and titles**: Manrope, loaded via `next/font/google` in `src/app/layout.tsx`
-- **Paragraphs / body / UI**: Inter, loaded via `next/font/google`
+- **Headings and titles**: Manrope (sans-serif) from `font` folder
+- **Paragraphs and body text**: Web-safe serif font
 
 ### Colors
 
 - Primary / Text: #333333
 - Background: #FFFFFF
-- Highlight / Accent / link: #D41F21
+- Highlight / Accent / link: #ED2224
 - Other colors:
-  - #D41F21 (contrast: #FFFFFF)
+  - #ED2224 (contrast: #FFFFFF)
   - #ED8421 (contrast: #333333)
   - #EDEA21 (contrast: #333333)
   - #8BED21 (contrast: #333333)
