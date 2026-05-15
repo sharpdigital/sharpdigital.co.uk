@@ -174,7 +174,16 @@ export default async function Home() {
                 <dt className="font-heading font-semibold">Time:</dt>
                 <dd>09.00–11.00 am</dd>
                 <dt className="font-heading font-semibold">Venue:</dt>
-                <dd>Blumi Cafe, Al Quoz</dd>
+                <dd>
+                  <a
+                    href="https://www.google.com/maps/place/Blumi+Cafe/@25.1204796,55.2184786,17z/data=!4m15!1m8!3m7!1s0x3e5f6b2c0004b2df:0x381ce9dc237608b6!2sBlumi+Cafe!8m2!3d25.1204796!4d55.2184786!10e5!16s%2Fg%2F11x6rz3vbs!3m5!1s0x3e5f6b2c0004b2df:0x381ce9dc237608b6!8m2!3d25.1204796!4d55.2184786!16s%2Fg%2F11x6rz3vbs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underlined"
+                  >
+                    Blumi Cafe, Al Quoz
+                  </a>
+                </dd>
               </dl>
               <Link
                 href="https://pay.ziina.com/blumicafedxb/FoxafYOQC"
