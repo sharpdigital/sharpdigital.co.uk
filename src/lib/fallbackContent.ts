@@ -216,10 +216,10 @@ export const fallbackTeamMembers: TeamMember[] = [
     slug: 'loreen',
     role: 'Business Transformation Strategist',
     description:
-      'Strategic digital strategist and partnerships specialist with deep expertise in brand positioning, AI implementation, and stakeholder engagement. Expertise in guiding organisations through complex commercial and digital change, driving measurable business impact. She combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.',
+      'Loreen is a strategic communications expert and partnerships specialist with deep expertise in positioning, AI implementation, and stakeholder engagement. She has decades experience in guiding organisations through complex commercial and digital change, leading to measurable business impact. Loreen combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.',
     bio: `# About Loreen
 
-Strategic digital strategist and partnerships specialist with deep expertise in brand positioning, AI implementation, and stakeholder engagement. Expertise in guiding organisations through complex commercial and digital change, driving measurable business impact. She combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.
+Loreen is a strategic communications expert and partnerships specialist with deep expertise in positioning, AI implementation, and stakeholder engagement. She has decades experience in guiding organisations through complex commercial and digital change, leading to measurable business impact. Loreen combines deep expertise in AI strategy, data analytics, and change management with a sharp focus on strategic communications and market growth to deliver outcomes that last.
 
 ## Expertise
 
@@ -247,10 +247,10 @@ Strategic digital strategist and partnerships specialist with deep expertise in 
     slug: 'janos',
     role: 'Principal Full Stack Architect',
     description:
-      'Senior full-stack creative engineer and digital systems specialist with deep expertise in scalable web platforms, modern product architecture, and AI-enabled platform optimisation. As a key co-founder of #sharp, Janos brings rare technical depth combined with strategic systems-level thinking, enabling organisations to balance innovation with reliability across complex digital challenges.',
+      'Janos is a senior full-stack creative engineer and digital systems specialist with deep expertise in scalable web platforms, modern product architecture, and AI-enabled platform optimisation. As a key co-founder of #sharp, Janos brings rare technical depth combined with strategic systems-level thinking, enabling organisations to balance innovation with reliability across complex digital challenges.',
     bio: `# About Janos
 
-Senior full-stack creative engineer and digital systems specialist with deep expertise in scalable web platforms, modern product architecture, and AI-enabled platform optimisation. As a key co-founder of #sharp, Janos brings rare technical depth combined with strategic systems-level thinking, enabling organisations to balance innovation with reliability across complex digital challenges.
+Janos is a senior full-stack creative engineer and digital systems specialist with deep expertise in scalable web platforms, modern product architecture, and AI-enabled platform optimisation. As a key co-founder of #sharp, Janos brings rare technical depth combined with strategic systems-level thinking, enabling organisations to balance innovation with reliability across complex digital challenges.
 
 ## Expertise
 
