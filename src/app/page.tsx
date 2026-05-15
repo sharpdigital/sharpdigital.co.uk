@@ -132,6 +132,64 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* Dubai Event Promo */}
+      <section
+        id="dubai-event"
+        className="py-19 bg-gray-50 scroll-mt-20"
+        aria-labelledby="dubai-event-heading"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-1 lg:order-1">
+              <Image
+                src="/img/dubai-event-2026.jpg"
+                alt="Unstoppable in the UAE job market — expert-led workshop poster"
+                width={1200}
+                height={1200}
+                className="w-full h-auto rounded-lg shadow-md"
+              />
+            </div>
+            <div className="order-2 lg:order-2">
+              <p className="text-sm uppercase tracking-[0.18em] text-primary font-heading font-semibold mb-3">
+                Featured Event · Dubai, UAE
+              </p>
+              <h2
+                id="dubai-event-heading"
+                className="text-3xl md:text-4xl font-heading leading-tight text-charcoal mb-6"
+              >
+                What skills will make you <span className="text-primary">UNSTOPPABLE</span> in the
+                UAE job market?
+              </h2>
+              <p className="text-lg text-charcoal font-body leading-relaxed mb-5">
+                The UAE can be one of the most amazing places to work. But opportunities have become
+                a lot more challenging due to recent geo-politics.
+              </p>
+              <p className="text-lg text-charcoal font-body leading-relaxed mb-7">
+                Find out at our expert-led workshop! Learn what companies are hiring for, master
+                your personal brand, and get practical tips to stand out with recruiters.
+              </p>
+              <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 mb-8 font-body text-charcoal">
+                <dt className="font-heading font-semibold">Date:</dt>
+                <dd>June 18 2026</dd>
+                <dt className="font-heading font-semibold">Time:</dt>
+                <dd>09.00–11.00 am</dd>
+                <dt className="font-heading font-semibold">Venue:</dt>
+                <dd>Blumi Cafe, Al Quoz</dd>
+              </dl>
+              <Link
+                href="https://pay.ziina.com/blumicafedxb/FoxafYOQC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AnimButton>
+                  <div className="px-6 py-2">Secure your spot now!</div>
+                </AnimButton>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <CardSection
         setup={services}
@@ -139,7 +197,6 @@ export default async function Home() {
         linkBase="/services/"
         description="We focus on three core areas that are essential for successful digital transformation."
         isGrid
-        hasBackground
       />
 
       <CardSection
@@ -151,6 +208,7 @@ export default async function Home() {
         largeButtonText="View All Posts"
         largeButtonLink="/blog/"
         secondaryButton
+        hasBackground
       />
     </Layout>
   );
