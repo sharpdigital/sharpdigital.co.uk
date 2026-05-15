@@ -21,12 +21,12 @@ const Footer = () => {
           >
             Privacy Policy
           </Link>
-          <Link
+          <a
             href="/llms.txt"
             className="font-body text-sm text-grey hover:text-primary transition-colors duration-200"
           >
             llms.txt
-          </Link>
+          </a>
         </div>
         <p className="sm:absolute sm:right-[0] text-sm font-body text-grey text-center sm:text-left">
           &copy; {new Date().getFullYear()} #sharp. All rights reserved.

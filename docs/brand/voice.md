@@ -1,4 +1,4 @@
-# Brand voice
+﻿# Brand voice
 
 Canonical verbal reference for #sharp. This file governs all written and spoken language produced under the #sharp brand: tone, vocabulary, audience messaging, value propositions, and format templates. Visual brand rules live in `docs/brand/foundations.md`. Web-page-specific copy (headlines, CTAs, SEO metadata) lives in `docs/04_content-framework.md`, which cites this file as its upstream authority.
 
@@ -17,13 +17,13 @@ Two principles underpin this document:
 
 ## Voice attributes
 
-Four pillars define how #sharp sounds in every piece of content. Each pillar has a definition, a positive example, and a counter-example of the trap to avoid.
+Four pillars define how #sharp sounds in every piece of content. Each pillar has a clear definition, with a relatable outcome.
 
 ### Authoritative
 
-**Definition:** #sharp speaks from earned expertise. Statements are specific, grounded in methodology, and free of hedging language that undermines confidence.
+**Definition:** #sharp speaks from earned expertise. Statements are specific, grounded in methodology, and free of hedging language.
 
-**Sounds like:** "Our AI transformation framework moves clients from assessment to measurable operational change in twelve weeks."
+**Sounds like:** "Our AI transformation framework moves clients from assessment to measurable operational change within a sustainable timeframe"
 
 **Is not:** "We have a lot of experience and really believe we can help you with your transformation challenges."
 
@@ -31,9 +31,9 @@ Four pillars define how #sharp sounds in every piece of content. Each pillar has
 
 ### Trustworthy
 
-**Definition:** #sharp builds trust through consistency, honesty, and precision — not through superlatives or borrowed credibility. Claims are stated plainly; proof follows where available.
+**Definition:** #sharp builds trust through consistency, honesty, and precision. Claims are stated plainly; proof follows where available, stated only in positive phrases.
 
-**Sounds like:** "We work alongside your operations team from day one, so knowledge stays in-house when the engagement ends."
+**Sounds like:** "We embed into your operations team from day one, to ensure legacy knowledge is developed in-house."
 
 **Is not:** "As a world-class, best-in-class partner with a proven track record of excellence, we guarantee results."
 
@@ -41,9 +41,9 @@ Four pillars define how #sharp sounds in every piece of content. Each pillar has
 
 ### Innovative
 
-**Definition:** #sharp treats AI and digital transformation as a practical capability, not a marketing concept. Innovation is evidenced by approach, not claimed by adjective.
+**Definition:** #sharp treats AI and digital transformation as a practical capability and innovation is evidenced by approach.
 
-**Sounds like:** "We integrate large-language-model pipelines directly into your support workflows, reducing first-response time without replacing your agents."
+**Sounds like:** "We integrate large-language-model pipelines directly into your support workflows, reducing first-response time in partnership with your agents."
 
 **Is not:** "We leverage cutting-edge, game-changing AI technology to revolutionise how your business operates in the digital ecosystem."
 
@@ -53,9 +53,9 @@ Four pillars define how #sharp sounds in every piece of content. Each pillar has
 
 **Definition:** #sharp anchors every service description and conversation to measurable business outcomes. The question "so what does that mean for the client?" is answered before it is asked.
 
-**Sounds like:** "Clients in the retail sector typically see a 15–20% reduction in manual processing time within the first quarter."
+**Sounds like:** "Clients in the retail sector typically see a significant reduction in manual processing time within the first quarter."
 
-**Is not:** "Our solutions drive significant improvements across your key business metrics and deliver real value to stakeholders."
+**Is not:** "Our solutions drive improvements across your key business metrics and deliver real value to stakeholders."
 
 ---
 
@@ -65,9 +65,9 @@ The same idea — "we help businesses with digital transformation" — sounds di
 
 | Register                     | Context                                                          | Example phrasings                                                                                                                                                                                                                                                                              |
 | ---------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Formal-corporate**         | Proposals, contracts, T&Cs, invoices, board-level reports        | "The team at #sharp provides digital transformation consultancy services, comprising strategic assessment, programme design, and implementation oversight." / "The scope of services detailed herein is subject to the terms and conditions set out in Schedule A."                            |
+| **Formal-corporate**         | Proposals, contracts, T&Cs, invoices, board-level reports        | "The experts at #sharp provides digital transformation consultancy services, comprising strategic assessment, programme design, and implementation oversight." / "The scope of services detailed herein is subject to the terms and conditions set out in Schedule A."                         |
 | **Professional-warm**        | Website pages, service brochures, presentations, enquiry replies | "We help organisations navigate digital transformation — from the first strategic question to the point where new ways of working are embedded." / "Not sure where to start? We can run a focused assessment session to map your current state and identify the highest-impact opportunities." |
-| **Conversational-confident** | LinkedIn posts, short-form video captions, social commentary     | "Most digital transformation programmes stall not because of technology, but because the change wasn't designed with the people in mind. We fix that." / "AI isn't magic. It's engineering. Here's what that actually looks like in practice."                                                 |
+| **Conversational-confident** | LinkedIn posts, short-form video captions, social commentary     | "Most digital transformation programmes stall not because of technology, but because the change wasn't designed with the people in mind. We fix that." / "At its core, AI precision engineering. The magic is in how it is applied. Here's the sorcery in practice."                           |
 
 ---
 
@@ -83,8 +83,8 @@ Operational rules. Apply these before publishing any piece of #sharp copy.
 - **Title Case for H1 only; Sentence case for H2–H4.** "Customer Experience Transformation" (H1) / "How we approach customer experience" (H2).
 - **`#sharp` is always lowercase with hash prefix.** The brand name is `#sharp`. Never `Sharp`, `SHARP`, or `sharp` without the hash.
 - **`#sharp` never starts a sentence.** The leading `#` character causes parsing problems in many contexts and looks odd at sentence-start. Rephrase: "The team at #sharp…" or "Our approach at #sharp…" rather than "#sharp believes…".
-- **No unsubstantiated superlatives.** "Leading" requires proof. "World-class" is forbidden. If you cannot cite evidence, remove the superlative.
-- **Scannable structure.** Use subheadings, short paragraphs (3–4 sentences maximum), and bullet lists for complex information. Long blocks of prose are acceptable only in long-form articles or proposals.
+
+- **Scannable structure.** Use subheadings, short paragraphs (4–5 sentences maximum), and sentences that make the point quickly. Occasional long blocks of prose are acceptable only in long-form articles or proposals.
 
 ---
 
@@ -95,7 +95,7 @@ Operational rules. Apply these before publishing any piece of #sharp copy.
 Pre-approved language that accurately describes #sharp's work. Use these verbatim in marketing copy, proposals, and web content.
 
 1. digital transformation
-2. AI-first approach
+2. AI-smart leverage
 3. measurable impact
 4. operational efficiency
 5. customer experience
@@ -150,9 +150,9 @@ Three primary audience segments shape how #sharp frames its value. The core mess
 
 **Focus:** Process improvement, implementation practicality, team impact, efficiency gains.
 
-**Tone:** Practical, technically credible, detail-comfortable. These readers want to know how, not just what. They will spot vague claims immediately.
+**Tone:** Practical, technically credible, detail-comfortable. These readers want to know how, as well as what. They will spot vague claims immediately.
 
-**Sample:** "We map your current operational workflows against your technology stack and identify automation opportunities that can be implemented without requiring full system replacement. Our assessments typically surface three to five high-value interventions within the first four weeks."
+**Sample:** "We map your current operational workflows against your technology stack and identify automation opportunities that can be implemented without requiring full system replacement. Our assessments typically surface three to five high-value interventions within the first few weeks."
 
 ---
 
@@ -162,7 +162,7 @@ Three primary audience segments shape how #sharp frames its value. The core mess
 
 **Tone:** Growth-focused, opportunity-framing, commercially grounded.
 
-**Sample:** "Improving the customer journey is not a UX project — it's a revenue strategy. We help business development teams understand where friction in the customer experience is costing you conversions, and we build the roadmap to fix it."
+**Sample:** "Improving the customer journey is a key revenue builder. We help business development teams understand where friction in the customer experience is costing you conversions, and we build the roadmap to fix it."
 
 ---
 
@@ -170,7 +170,7 @@ Three primary audience segments shape how #sharp frames its value. The core mess
 
 ### Core brand promise
 
-The team at #sharp delivers AI-powered digital transformation that produces measurable business impact. We combine strategic rigour with practical implementation: assessing your current state, designing the programme, executing with your team, and optimising continuously. The result is not a report — it is an organisation that operates differently, and better, than it did before we arrived.
+The team at #sharp delivers AI-powered digital transformation that produces measurable business impact. We combine strategic rigour with practical implementation: assessing your current state, designing the programme, executing with your team, and optimising continuously. The result is an organisation that visibly operates differently and better than it did before we arrived.
 
 ### Service-level value propositions
 
@@ -185,8 +185,8 @@ Pre-approved phrasings for each service area. Use primary phrasings as headlines
 #### Operational efficiency
 
 - **Primary:** Streamline processes through intelligent automation.
-- **Secondary:** Reduce operational costs while improving throughput — without replacing the people who know your business best.
-- **Tertiary:** Scale your operations with workflow optimisation that grows with demand rather than breaking under it.
+- **Secondary:** Reduce operational costs while improving throughput — while retaining the people who know your business best.
+- **Tertiary:** Scale your operations with workflow optimisation that grows with demand.
 
 #### Data and analytics
 
@@ -220,7 +220,7 @@ Six reusable templates with worked examples. Copy these structures directly; rep
 
 **Structure:** Who we are → what we do → for whom → why it works
 
-**Worked example:** "The team at #sharp helps mid-market and enterprise organisations navigate digital transformation — from strategic assessment through to embedded operational change. Our AI-first approach means every programme is designed around measurable outcomes, not activity metrics. We work alongside your team rather than handing over a report, which is why our programmes produce results that last."
+**Worked example:** "The team at #sharp helps mid-market and enterprise organisations navigate digital transformation — from strategic assessment through to embedded operational change. Our AI-smart approach means every programme is designed around measurable outcomes, using digital tools that are the best fit for your team. We collaborate with your team, iterating and improving as we learn more - which is why our programmes produce results that last."
 
 _(74 words)_
 
@@ -253,9 +253,9 @@ Do not add URLs, phone numbers, or social handles to the sign-off line itself �
 
 Used in proposals, press releases, and partner introductions. Copy verbatim or adapt minimally.
 
-"The team at #sharp is a digital transformation consultancy specialising in AI-powered business improvement. We work with mid-market and enterprise organisations across the UK to design and deliver transformation programmes in three areas: customer experience, operational efficiency, and data and analytics. Our approach is practical, outcome-led, and built to leave lasting capability inside the organisations we work with."
+"Digital transformation consultancy focussed on delivering measurable change across customer experience, operational efficiency, and data and analytics. We combine digital design, pristine stakeholder communications, and technology architecture in a single integrated team, with AI applied strategically where it strengthens outcomes. Our work is practical, outcome-led, and built to leave lasting capability inside every organisation we partner with."
 
-_(65 words)_
+_(57 words)_
 
 ---
 
@@ -273,7 +273,7 @@ What's wrong: "leverage" as verb, "cutting-edge", "revolutionise", "synergies", 
 
 **On-brand:**
 
-> We help businesses use AI to make their operations measurably better.
+> We help businesses implement AI to make their operations measurably better.
 
 What's right: active verb ("help"), concrete subject ("businesses"), specific mechanism ("AI"), grounded outcome ("measurably better"). Thirteen words. Zero filler.
 
@@ -289,7 +289,7 @@ What's wrong: every sentence is a forbidden-phrase lottery win. No specific serv
 
 **On-brand:**
 
-> The team at #sharp maps your current operational processes, identifies where intelligent automation produces the greatest return, and designs the implementation programme. We work directly with your operations and technology teams — not alongside them on paper, but embedded in the same delivery cadence. Clients typically see measurable efficiency gains within the first quarter, with the operational changes governed and sustained by your own people rather than an ongoing consultancy dependency.
+> The team at #sharp maps your current operational processes, identifies where intelligent automation produces the greatest return, and designs the implementation programme. We work directly with your operations and technology teams, embedded in the same delivery cadence for maximum impact. Clients typically see measurable efficiency gains within the first quarter, with the operational changes governed and sustained by your own people rather than an ongoing consultancy dependency.
 
 What's right: describes a real process, names the audiences involved, states a concrete timeline, and pre-empts the "will we be dependent on you?" concern.
 
@@ -324,7 +324,7 @@ What's wrong: no specificity about the enquiry, four items from the avoid list, 
 >
 > Thank you for getting in touch. Based on what you've described — [one-line summary of their situation] — this sounds like it sits squarely in our operational efficiency work, where we focus on process mapping and intelligent automation.
 >
-> The most useful next step is usually a 45-minute discovery call where we cover your current state, the specific pressure points you are trying to address, and whether our approach is the right fit. There is no obligation, and you will come away with a clearer picture of your options regardless.
+> The most useful next step is usually a 45-minute discovery call where we cover your current position, the specific pressure points you are trying to address, and whether our approach is the right fit. There is no obligation, and you will come away with a clearer picture of your options regardless.
 >
 > I have availability on [two specific dates and times]. Does either of those work, or would you prefer to send me your calendar link?
 >
