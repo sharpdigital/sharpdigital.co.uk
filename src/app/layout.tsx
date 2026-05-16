@@ -5,6 +5,7 @@ import './globals.css';
 import '../components/ui/ui.css';
 
 const GTM_ID = 'GTM-5CC6DQ8L';
+const GA_ID = 'G-LTTYDCF3WC';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -81,6 +82,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','${GTM_ID}');`}
         </Script>
         {/* End Google Tag Manager */}
+        {/* Google tag (gtag.js) */}
+        <Script
+          id="gtag-src"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="beforeInteractive"
+        />
+        <Script id="gtag-init" strategy="beforeInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`}
+        </Script>
+        {/* End Google tag (gtag.js) */}
         <link rel="canonical" href="https://sharpdigital.co.uk" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
